@@ -1,0 +1,64 @@
+﻿@inject IApplicationThemeService ApplicationThemeService
+@inject BrowserService BrowserService
+
+<CascadingAuthenticationState>
+    <CascadingValue Value="Theme">
+        <Router AppAssembly="@typeof(App).Assembly">
+            <Found Context="routeData">
+                <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+                <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+            </Found>
+            <NotFound>
+                <PageTitle>Not found</PageTitle>
+                <LayoutView Layout="@typeof(MainLayout)">
+                    <p role="alert">Sorry, there's nothing at this address.</p>
+                </LayoutView>
+            </NotFound>
+        </Router>
+    </CascadingValue>
+</CascadingAuthenticationState>
+
+@code {
+
+    Theme Theme;
+    
+    /// <summary>
+    ///     Entry point
+    /// </summary>
+    /// <returns></returns>
+    protected override void OnInitialized()
+    {
+        Console.WriteLine($"{nameof(App)} {nameof(OnInitialized)} at {DateTime.UtcNow.Ticks}");
+        
+        // is user logged
+
+
+        // load theme
+        var organizationId = "UnitFirst"; // IT Engineer Portfolio, Enterprise Automation System
+        var theme = ApplicationThemeService.FindTheme(organizationId);
+        if (theme == null)
+        {
+            Console.WriteLine("Theme is null.");
+            return;
+        }
+
+        // use theme
+        ApplicationThemeService.UseTheme(theme);
+
+        // cascade value
+        Theme = theme;
+
+        Console.WriteLine($"Organization default theme loaded.\n" +
+                          $"OrganizationName: {Theme.Organization}");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // browser
+        var dimensions = await BrowserService.Initialize();
+        Console.WriteLine($"{nameof(App)}: {nameof(OnInitializedAsync)}\n" +
+                          $"Browser service loaded.\n" +
+                          $"Dimensions: [{dimensions.Width} px x {dimensions.Height} px]");
+    }
+}
+

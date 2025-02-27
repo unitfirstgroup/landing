@@ -1,0 +1,55 @@
+﻿@inherits MvvmComponentBase<WallPaperViewModel>
+
+<main class="@ViewModel.Theme.Dark">
+
+    <div class="mx-auto w-full @ViewModel.Theme.Dark bg-white text-black dark:bg-gray-900 dark:text-white">
+        <div class="items-center justify-center bg-white p-4 py-8 text-center text-black dark:bg-gray-900 dark:text-white md:py-20">
+            <h1 class="text-md mb-6 mb-6 items-center justify-center text-center font-sans text-3xl text-4xl font-medium tracking-tight dark:text-white">"UnitFirst is a leading IT company providing innovative solutions for businesses and individuals."</h1>
+            <span class="text-md mb-6 block text-neutral-600 dark:text-white md:text-lg">Our team of experienced professionals with a passion for technology and innovation. We are committed to delivering high-quality solutions that meet our clients' needs and exceed their expectations.</span>
+            <button type="button"
+                    @onclick="@ViewModel.StartUsing"
+                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+                Get Started
+            </button>
+        </div>
+    </div>
+
+    <div class="mx-auto w-full @ViewModel.Theme.Dark bg-white dark:bg-gray-900">
+        <hr class="mx-auto h-1 w-1/3 rounded border-0 bg-gray-100">
+    </div>
+
+    <div class="mx-auto w-full @ViewModel.Theme.Dark bg-white text-black dark:bg-gray-900 dark:text-white">
+        <div class="bg-white p-4 py-8 text-center text-black dark:bg-gray-900 dark:text-white md:py-20">
+            <h1 class="mb-6 text-3xl text-4xl font-medium tracking-tight dark:text-white">Our Services</h1>
+            <span class="text-md mb-6 block text-neutral-600 dark:text-white md:text-lg">We offer a range of services including software development, IT consulting, cybersecurity, and more.</span>
+            <button type="button"
+                    @onclick="ViewModel.Join"
+                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+                Get more info
+            </button>
+        </div>
+    </div>
+
+    <div class="mx-auto w-full @ViewModel.Theme.Dark bg-white dark:bg-gray-900">
+        <hr class="mx-auto h-1 w-1/3 rounded border-0 bg-gray-100 dark:">
+    </div>
+
+    <div class="mx-auto w-full @ViewModel.Theme.Dark bg-white text-black dark:bg-gray-900 dark:text-white">
+        <div class="bg-white p-4 py-8 text-center text-black dark:bg-gray-900 dark:text-white md:py-20">
+            <h1 class="mb-6 text-3xl text-4xl font-medium tracking-tight dark:text-white">Newsletter</h1>
+            <span class="text-md mb-6 block text-neutral-600 dark:text-white md:text-lg">Sign up to stay in the loop with the latest features and updates!</span>
+            <div class="flex justify-center">
+                <input type="email" id="email" class="mr-2 block max-h-10 w-full max-w-sm rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required>
+                <button type="button"
+                        @onclick="ViewModel.Subscribe"
+                        class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto w-full @ViewModel.Theme.Dark bg-white dark:bg-gray-900">
+        <hr class="mx-auto h-1 w-1/3 rounded border-0 bg-gray-100 dark:">
+    </div>
+</main>

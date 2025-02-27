@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+@inject IApplicationThemeService ApplicationThemeService;
+@inject IJSRuntime Js
+
+<div class="dark flex size-full flex-col bg-white text-black dark:bg-black dark:text-white">
+    <NavMenu></NavMenu>
+    @Body
+    <Footer></Footer>
+</div>
+
+
+@code
+{
+    public Theme Theme;
+
+    protected override void OnInitialized()
+    {
+        Theme = ApplicationThemeService.Load() ?? throw new Exception("ViewModelBase load theme exception.");
+        Theme.PropertyChanged += ThemeOnPropertyChanged;
+        base.OnInitialized();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool isFirstRender)
+    {
+        if (isFirstRender)
+        {
+            Console.WriteLine($"{nameof(MainLayout)} OnAfterRenderAsync");
+            await Js.InvokeVoidAsync("window.initializeFlowbite");
+        }
+    }
+
+    private void ThemeOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        StateHasChanged();
+    }
+}

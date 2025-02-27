@@ -1,0 +1,44 @@
+﻿@inherits MvvmComponentBase<NavMenuViewModel>
+
+<!-- Main navigation container -->
+<nav class="flex items-center justify-between gap-x-1 bg-white px-5 py-2.5 text-black @ViewModel.Theme.Dark dark:bg-gray-900 dark:text-white sm:gap-x-2 lg:gap-x-6" aria-label="Global">
+    <div class="flex @ViewModel.Theme.Dark bg-white px-2 dark:bg-yellow-400 sm:px-6 lg:px-8">
+        <a href="./">
+            <div class="flex items-center justify-center">
+                <span class="sr-only"></span>
+                <img src="@ViewModel.Theme.Logo" class="h-10 max-w-none p-1" alt="logo">
+                <div class="flex hidden lg:flex">
+                    <p class="flex items-center justify-center text-nowrap p-2 text-center align-middle font-sans text-xs font-bold text-black dark:text-black sm:text-xs md:text-xl lg:block lg:text-xl xl:text-xl 2xl:text-xl">@ViewModel.Theme.Organization</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="flex hidden items-center justify-center gap-x-2 p-6 lg:flex">
+        @foreach (var navItem in ViewModel.Theme.NavItems)
+        {
+            <a class="flex h-10 items-center rounded-md bg-white px-8 font-medium text-black dark:bg-gray-900 dark:text-white" href="@navItem.Link">@navItem.Name</a>
+        }
+    </div>
+
+    <div class="flex basis-auto items-end justify-end gap-x-6 p-6 px-4">
+        <button @onclick="ViewModel.DarkModeSwitch"
+                type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white p-2.5 text-sm text-gray-500 text-black hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+            <svg id="theme-toggle-dark-icon" class="hidden h-8 w-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="h-8 w-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z"></path>
+            </svg>
+            <span class="sr-only">Toggle dark mode</span>
+        </button>
+
+        <button type="button"
+                @onclick="ViewModel.GetStarted"
+                class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-rose-600 px-2.5 py-2.5 text-center text-sm text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+            Get Started
+        </button>
+    </div>
+
+</nav>
