@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using UnitFirst.Landing.Interfaces;
+using UnitFirst.Landing.Models;
 
 namespace UnitFirst.Landing.ViewModels;
 
@@ -9,12 +10,16 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
 {
-    [ObservableProperty] private string _joinText;
-    [ObservableProperty] private string _startUsingText;
-    [ObservableProperty] private string _subscribeText;
+    [ObservableProperty] private WallPaperModel _model;
 
     public override Task OnInitializedAsync()
     {
+        _model = new WallPaperModel()
+        {
+            JoinText = "JOIN!!!",
+            StartUsingText = "STAddsRT",
+            SubscribeText = "SUB"
+        };
         return Task.CompletedTask;
     }
 

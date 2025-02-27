@@ -1,0 +1,23 @@
+﻿<div class="mx-auto w-full @Dark bg-white text-black dark:bg-gray-900 dark:text-white">
+    <div class="items-center justify-center bg-white p-4 py-8 text-center text-black dark:bg-gray-900 dark:text-white md:py-20">
+        <h1 class="text-md mb-6 mb-6 items-center justify-center text-center font-sans text-3xl text-4xl font-medium tracking-tight dark:text-white">@Main</h1>
+        <span class="text-md mb-6 block text-neutral-600 dark:text-white md:text-lg">@Description</span>
+        <button type="button"
+                @onclick="@Click"
+                class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+            @ButtonText
+        </button>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Dark { get; set; }
+
+    [Parameter] public string Main { get; set; }
+
+    [Parameter] public string Description { get; set; }
+
+    [Parameter] public string ButtonText { get; set; }
+
+    [Parameter] public Action Click { get; set; }
+}
