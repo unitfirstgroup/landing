@@ -4,7 +4,7 @@ using UnitFirst.Landing.Models;
 
 namespace UnitFirst.Landing.Services;
 
-public class ApplicationStateService() : IApplicationStateService
+public class ApplicationStateService(ILocalStorageService localStorageService) : IApplicationStateService
 {
     public ApplicationState State { get; } = new();
 
@@ -13,15 +13,14 @@ public class ApplicationStateService() : IApplicationStateService
         if (string.IsNullOrWhiteSpace(theme))
             throw new ArgumentNullException(nameof(theme));
 
-        //await localStorageService.SetItemAsStringAsync("theme", theme);
+        await localStorageService.SetItemAsStringAsync("theme", theme);
         Console.WriteLine($"Theme changed to {theme}");
     }
 
     public async Task<string> LoadOrganizationId(string clientId)
     {
-        //var theme = await localStorageService.GetItemAsStringAsync("theme");
-        //return theme ?? "EAS";
-        return "EAS";
+        var theme = await localStorageService.GetItemAsStringAsync("theme");
+        return theme ?? "EAS";
     }
 
     public void SubmitRegistrationForm()
