@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using UnitFirst.Landing.Interfaces;
@@ -16,11 +17,33 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
     {
         _model = new WallPaperModel()
         {
-            JoinText = "JOIN!!!",
-            StartUsingText = "STAddsRT",
-            SubscribeText = "SUB"
+            ThesisCollection = new ObservableCollection<ThesisModel>
+            {
+                new()
+                {
+                    Main = "UnitFirst is a leading IT company providing innovative solutions for businesses and individuals.",
+                    Description = "Our team of experienced professionals with a passion for technology and innovation. We are committed to delivering high-quality solutions that meet our clients' needs and exceed their expectations.",
+                    ButtonText = "Get Started",
+                    ButtonClick = GetStartedClicked
+                },
+                new()
+                {
+                    Main = "Our Services",
+                    Description = "We offer a range of services including software development, IT consulting, cybersecurity, and more.",
+                    ButtonText = "Get more info",
+                    ButtonClick = GetMoreInfoClicked
+                }
+            }
         };
         return Task.CompletedTask;
+    }
+
+    private void GetStartedClicked()
+    {
+    }
+
+    private void GetMoreInfoClicked()
+    {
     }
 
     [RelayCommand]
