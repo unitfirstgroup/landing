@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using CommunityToolkit.Mvvm.Input;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Services;
 
 namespace UnitFirst.Landing.ViewModels;
 
-public class IndexViewModel(IApplicationStateService applicationStateService,
+public partial class IndexViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
         BrowserService browserService, NavigationManager navigationManager)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
@@ -18,9 +19,9 @@ public class IndexViewModel(IApplicationStateService applicationStateService,
     {
         var theme = applicationThemeService.Load();
         Organization = theme.Organization;
-        
+
         Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");
-        
+
         return base.OnInitializedAsync();
     }
 
@@ -35,13 +36,13 @@ public class IndexViewModel(IApplicationStateService applicationStateService,
     public void LeftClick(PointerEventArgs args)
     {
         // Get Dimensions
-        var click = ($"{nameof(IndexViewModel)}: {nameof(LeftClick)}\n" +
-                                 $"{nameof(args.ScreenX)}: {args.ScreenX:F0}\n" +
-                                 $"{nameof(args.ScreenY)}: {args.ScreenY:F0}\n" +
-                                 $"{nameof(args.PageX)}: {args.PageX:F0}\n" +
-                                 $"{nameof(args.PageY)}: {args.PageY:F0}\n" +
-                                 $"{nameof(args.ClientX)}: {args.ClientX:F0}\n" +
-                                 $"{nameof(args.ClientY)}: {args.ClientY:F0}\n");
+        var click = $"{nameof(IndexViewModel)}: {nameof(LeftClick)}\n" +
+                    $"{nameof(args.ScreenX)}: {args.ScreenX:F0}\n" +
+                    $"{nameof(args.ScreenY)}: {args.ScreenY:F0}\n" +
+                    $"{nameof(args.PageX)}: {args.PageX:F0}\n" +
+                    $"{nameof(args.PageY)}: {args.PageY:F0}\n" +
+                    $"{nameof(args.ClientX)}: {args.ClientX:F0}\n" +
+                    $"{nameof(args.ClientY)}: {args.ClientY:F0}\n";
 
         Console.WriteLine($"Left click: {click}");
     }
@@ -54,5 +55,17 @@ public class IndexViewModel(IApplicationStateService applicationStateService,
     public void MouseOver()
     {
         //Console.WriteLine($"{nameof(IndexViewModel)}. MouseOver");
+    }
+
+    [RelayCommand]
+    public void Accept()
+    {
+        Console.WriteLine("Accept");
+    }
+
+    [RelayCommand]
+    public void Decline()
+    {
+        Console.WriteLine("Decline");
     }
 }

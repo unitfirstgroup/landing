@@ -25,7 +25,6 @@
  */
 @tailwind variants;
 
-
 .loading-progress {
   position: relative;
   display: block;

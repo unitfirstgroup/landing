@@ -1,11 +1,10 @@
 ﻿using System.Collections.ObjectModel;
-using Blazored.LocalStorage;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
 namespace UnitFirst.Landing.Services;
 
-public class ApplicationThemeService() : IApplicationThemeService
+public class ApplicationThemeService : IApplicationThemeService
 {
     private const string OrganizationId = "organizationId";
     private const string DarkMode = "darkMode";
@@ -26,7 +25,11 @@ public class ApplicationThemeService() : IApplicationThemeService
                     new NavItem { Name = "Blog", Link = "./" },
                     new NavItem { Name = "About the company", Link = "./" },
                     new NavItem { Name = "Contacts", Link = "./" }
-
+                }),
+                Background = new Dictionary<string, string>(new[]
+                {
+                    new KeyValuePair<string, string>("white", "bg-blue-400"),
+                    new KeyValuePair<string, string>("dark", "bg-green-500")
                 })
             }
         }
@@ -53,7 +56,8 @@ public class ApplicationThemeService() : IApplicationThemeService
     {
         theme.Dark = string.IsNullOrWhiteSpace(theme.Dark) ? "dark" : null;
 
-        Console.WriteLine($"Organization theme changed. OrganizationName: {theme.Organization}. DarkMode: {theme.Dark == "dark"}");
+        Console.WriteLine(
+            $"Organization theme changed. OrganizationName: {theme.Organization}. DarkMode: {theme.Dark == "dark"}");
     }
 
     public Task<Theme> Generate()

@@ -4,5 +4,7 @@
 <PageTitle>@ViewModel.Organization</PageTitle>
 <div @ref="@ViewModel.MyTarget" @onpointerdown="@ViewModel.LeftClick" @onmouseout="ViewModel.MouseOut" @onmouseover="ViewModel.MouseOver">
     <WallPaper></WallPaper>
-    <AcceptUsing></AcceptUsing>
+    <AcceptUsing Theme="@ViewModel.Theme" 
+                 Accept="@ViewModel.Accept"
+                 Decline="@ViewModel.Decline"></AcceptUsing>
 </div>

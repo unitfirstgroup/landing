@@ -10,4 +10,5 @@ public partial class Theme : ObservableObject
     [ObservableProperty] private ObservableCollection<NavItem> _navItems;
     [ObservableProperty] private string _dark;
     [ObservableProperty] private bool _isLogged;
+    [ObservableProperty] private Dictionary<string, string> _background;
 }
