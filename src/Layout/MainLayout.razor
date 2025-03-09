@@ -17,7 +17,7 @@
 
     protected override void OnInitialized()
     {
-        Theme = ApplicationThemeService.Load() ?? throw new Exception("ViewModelBase load theme exception.");
+        Theme = ApplicationThemeService.Theme ?? throw new Exception("ViewModelBase load theme exception.");
         Theme.PropertyChanged += ThemeOnPropertyChanged;
         base.OnInitialized();
     }

@@ -4,13 +4,7 @@ namespace UnitFirst.Landing.Interfaces;
 
 public interface IApplicationThemeService
 {
-    Theme? FindTheme(string organizationId);
-
-    Theme Load();
-
-    void UseTheme(Theme theme);
-
+    Theme Theme { get; }
+    
     void DarkModeSwitch(Theme theme);
-
-    Task<Theme> Generate();
 }

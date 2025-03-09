@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
@@ -9,47 +10,10 @@ public class ApplicationThemeService : IApplicationThemeService
     private const string OrganizationId = "organizationId";
     private const string DarkMode = "darkMode";
 
-    private readonly Dictionary<string, Theme> _themes = new()
+    
+    public ApplicationThemeService(IStringLocalizer<App> localizer)
     {
-        {
-            "UnitFirst", new Theme
-            {
-                Organization = "UnitFirst",
-                Logo = "images/simple-logo.svg",
-                Dark = "dark",
-                NavItems = new ObservableCollection<NavItem>(new[]
-                {
-                    new NavItem { Name = "Services", Link = "./" },
-                    new NavItem { Name = "Laboratories", Link = "./" },
-                    new NavItem { Name = "Cases", Link = "./" },
-                    new NavItem { Name = "Blog", Link = "./" },
-                    new NavItem { Name = "About the company", Link = "./" },
-                    new NavItem { Name = "Contacts", Link = "./" }
-                }),
-                Background = new Dictionary<string, string>(new[]
-                {
-                    new KeyValuePair<string, string>("white", "bg-blue-400"),
-                    new KeyValuePair<string, string>("dark", "bg-green-500")
-                })
-            }
-        }
-    };
-
-    private Theme _currentTheme;
-
-    public Theme? FindTheme(string organizationId)
-    {
-        return _themes.TryGetValue(organizationId, out var theme) ? theme : null;
-    }
-
-    public Theme Load()
-    {
-        return _currentTheme;
-    }
-
-    public void UseTheme(Theme theme)
-    {
-        _currentTheme = theme;
+        var s = localizer["GET_STARTED"];
     }
 
     public void DarkModeSwitch(Theme theme)
@@ -60,29 +24,29 @@ public class ApplicationThemeService : IApplicationThemeService
             $"Organization theme changed. OrganizationName: {theme.Organization}. DarkMode: {theme.Dark == "dark"}");
     }
 
-    public Task<Theme> Generate()
+    public Theme Theme { get; } = new()
     {
-        //var theme = new Theme
-        //{
-        //    LogoImg = "images/document-svgrepo-com.svg",
-
-        //    Dashboard = "Pes",
-        //    Team = "Kot",
-        //    Projects = "Ezik",
-
-        //    CartImg = "images/pie-chart-svgrepo-com.svg",
-        //    AvatarImg = "images/cell-phone-svgrepo-com.svg",
-        //    ThemeImg = "images/creativity-svgrepo-com.svg",
-
-        //    HeadMessage = "Family",
-        //    DetailsMessage = "Forever",
-        //    ButtonText = "Join",
-
-        //    MainColor = "bg-[#FBFBFB]"
-        //};
-
-        //return theme;
-
-        return Task.FromResult(new Theme());
+        Organization = "UnitFirst",
+        Logo = "images/simple-logo.svg",
+        Dark = "dark",
+        NavItems = new ObservableCollection<NavItem>(new[]
+        {
+            new NavItem { Name = "Services", Link = "./" },
+            new NavItem { Name = "Laboratories", Link = "./" },
+            new NavItem { Name = "Cases", Link = "./" },
+            new NavItem { Name = "Blog", Link = "./" },
+            new NavItem { Name = "About the company", Link = "./" },
+            new NavItem { Name = "Contacts", Link = "./" }
+        }),
+        Background = new Dictionary<string, string>(new[]
+        {
+            new KeyValuePair<string, string>("white", "bg-blue-400"),
+            new KeyValuePair<string, string>("dark", "bg-green-500")
+        })
+    };
+    
+    public void DarkModeSwitch()
+    {
+        throw new NotImplementedException();
     }
 }

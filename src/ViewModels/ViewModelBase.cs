@@ -20,7 +20,7 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
         ApplicationThemeService = applicationThemeService;
         NavigationManager = navigationManager;
 
-        Theme = applicationThemeService.Load() ?? throw new Exception("ViewModelBase load theme exception.");
+        Theme = applicationThemeService.Theme ?? throw new Exception("ViewModelBase load theme exception.");
         Theme.PropertyChanged += Theme_PropertyChanged;
     }
 

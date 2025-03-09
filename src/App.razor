@@ -30,23 +30,8 @@
     {
         Console.WriteLine($"{nameof(App)} {nameof(OnInitialized)} at {DateTime.UtcNow.Ticks}");
         
-        // is user logged
-
-
-        // load theme
-        var organizationId = "UnitFirst"; // IT Engineer Portfolio, Enterprise Automation System
-        var theme = ApplicationThemeService.FindTheme(organizationId);
-        if (theme == null)
-        {
-            Console.WriteLine("Theme is null.");
-            return;
-        }
-
-        // use theme
-        ApplicationThemeService.UseTheme(theme);
-
         // cascade value
-        Theme = theme;
+        Theme = ApplicationThemeService.Theme;
 
         Console.WriteLine($"Organization default theme loaded.\n" +
                           $"OrganizationName: {Theme.Organization}");

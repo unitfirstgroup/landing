@@ -17,7 +17,7 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
 
     public override Task OnInitializedAsync()
     {
-        var theme = applicationThemeService.Load();
+        var theme = applicationThemeService.Theme;
         Organization = theme.Organization;
 
         browserService.GetDimensions().ContinueWith(task => Console.WriteLine($"[{task.Result.Width:N0} x {task.Result.Height:N0}]"));
