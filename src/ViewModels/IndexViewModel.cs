@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Services;
 
@@ -8,10 +9,9 @@ namespace UnitFirst.Landing.ViewModels;
 
 public partial class IndexViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
-        BrowserService browserService, NavigationManager navigationManager)
+        BrowserService browserService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
 {
-    public BrowserService BrowserService { get; } = browserService;
     public ElementReference MyTarget { get; set; }
     public string Organization { get; set; }
 
@@ -20,8 +20,13 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
         var theme = applicationThemeService.Load();
         Organization = theme.Organization;
 
-        Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");
+        browserService.GetDimensions().ContinueWith(task => Console.WriteLine($"[{task.Result.Width:N0} x {task.Result.Height:N0}]"));
 
+        var localizedString = localizer["GET_STARTED"];
+        Console.WriteLine($"{localizedString.Name}: {localizedString.Value}");
+
+        Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");
+        
         return base.OnInitializedAsync();
     }
 
@@ -37,12 +42,12 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
     {
         // Get Dimensions
         var click = $"{nameof(IndexViewModel)}: {nameof(LeftClick)}\n" +
-                    $"{nameof(args.ScreenX)}: {args.ScreenX:F0}\n" +
-                    $"{nameof(args.ScreenY)}: {args.ScreenY:F0}\n" +
-                    $"{nameof(args.PageX)}: {args.PageX:F0}\n" +
-                    $"{nameof(args.PageY)}: {args.PageY:F0}\n" +
-                    $"{nameof(args.ClientX)}: {args.ClientX:F0}\n" +
-                    $"{nameof(args.ClientY)}: {args.ClientY:F0}\n";
+                    $"{nameof(args.ScreenX)}: {args.ScreenX:N0}\n" +
+                    $"{nameof(args.ScreenY)}: {args.ScreenY:N0}\n" +
+                    $"{nameof(args.PageX)}: {args.PageX:N0}\n" +
+                    $"{nameof(args.PageY)}: {args.PageY:N0}\n" +
+                    $"{nameof(args.ClientX)}: {args.ClientX:N0}\n" +
+                    $"{nameof(args.ClientY)}: {args.ClientY:N0}\n";
 
         Console.WriteLine($"Left click: {click}");
     }

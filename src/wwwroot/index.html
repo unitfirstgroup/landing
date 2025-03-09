@@ -34,6 +34,13 @@
             initFlowbite();
         }
     </script>
+    <script>
+        window.appCulture = {
+            get: () => window.localStorage['AppLanguage'],
+            set: (value) => window.localStorage['AppLanguage'] = value
+        };
+
+    </script>
 </body>
 
 </html>
