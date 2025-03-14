@@ -2298,6 +2298,16 @@ input:checked + .toggle-bg {
   color: rgb(227 160 8 / var(--tw-text-opacity, 1));
 }
 
+.dark\:text-red-700:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(200 30 30 / var(--tw-text-opacity, 1));
+}
+
+.dark\:text-red-50:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(253 242 242 / var(--tw-text-opacity, 1));
+}
+
 .dark\:placeholder-gray-400:is(.dark *)::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(156 163 175 / var(--tw-placeholder-opacity, 1));
