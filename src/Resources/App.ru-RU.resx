@@ -124,7 +124,7 @@
     <value>Сервисы</value>
   </data>
   <data name="LABORATORIES" xml:space="preserve">
-    <value>Лаборатории</value>
+    <value>Лабы</value>
   </data>
   <data name="CASES" xml:space="preserve">
     <value>Кейсы</value>
@@ -133,7 +133,7 @@
     <value>Блог</value>
   </data>
   <data name="ABOUT" xml:space="preserve">
-    <value>О компании</value>
+    <value>О нас</value>
   </data>
   <data name="CONTACTS" xml:space="preserve">
     <value>Контакты</value>

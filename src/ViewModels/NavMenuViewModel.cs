@@ -43,4 +43,9 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
     public void Profile()
     {
     }
+
+    [RelayCommand]
+    public void SelectLanguage(string language)
+    {
+    }
 }

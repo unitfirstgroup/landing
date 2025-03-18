@@ -1,0 +1,14 @@
+﻿<li>
+    <button class="flex flex-row items-center gap-2 rounded-lg p-2">
+        <img alt="@Language" src="@ImageSource"/>
+    </button>
+</li>
+
+@code {
+
+    [Parameter]
+    public string ImageSource { set; get; }
+
+    [Parameter]
+    public string Language { set; get; }
+}

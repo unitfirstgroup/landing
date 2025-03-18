@@ -21,20 +21,20 @@
 @code {
 
     Theme Theme;
-    
+
     /// <summary>
-    ///     Entry point
+    /// Entry point
     /// </summary>
     /// <returns></returns>
     protected override void OnInitialized()
     {
         Console.WriteLine($"{nameof(App)} {nameof(OnInitialized)} at {DateTime.UtcNow.Ticks}");
-        
+
         // cascade value
         Theme = ApplicationThemeService.Theme;
 
         Console.WriteLine($"Organization default theme loaded.\n" +
-                          $"OrganizationName: {Theme.Organization}");
+        $"OrganizationName: {Theme.Organization}");
     }
 
     protected override async Task OnInitializedAsync()
@@ -42,8 +42,7 @@
         // browser
         var dimensions = await BrowserService.Initialize();
         Console.WriteLine($"{nameof(App)}: {nameof(OnInitializedAsync)}\n" +
-                          $"Browser service loaded.\n" +
-                          $"Dimensions: [{dimensions.Width} px x {dimensions.Height} px]");
+        $"Browser service loaded.\n" +
+        $"Dimensions: [{dimensions.Width} px x {dimensions.Height} px]");
     }
 }
-

@@ -1,14 +1,17 @@
 ﻿@inherits MvvmComponentBase<NavMenuViewModel>
 
 <!-- Main navigation container -->
-<nav class="flex items-center justify-between gap-x-1 bg-white px-5 py-2.5 text-black @ViewModel.Theme.Dark dark:bg-gray-900 dark:text-white sm:gap-x-2 lg:gap-x-6" aria-label="Global">
+<nav class="flex items-center justify-between gap-x-1 bg-white px-1 py-2.5 text-black dark:bg-gray-900 @ViewModel.Theme.Dark dark:text-white sm:gap-x-2 md:px-5 lg:gap-x-6"
+    aria-label="Global">
     <div class="flex @ViewModel.Theme.Dark bg-white px-2 dark:bg-yellow-400 sm:px-6 lg:px-8">
         <a href="./">
             <div class="flex items-center justify-center">
                 <span class="sr-only"></span>
                 <img src="@ViewModel.Theme.Logo" class="h-10 max-w-none p-1" alt="logo">
                 <div class="flex hidden lg:flex">
-                    <p class="flex items-center justify-center text-nowrap p-2 text-center align-middle font-sans text-xs font-bold text-black dark:text-black sm:text-xs md:text-xl lg:block lg:text-xl xl:text-xl 2xl:text-xl">@ViewModel.Theme.Organization</p>
+                    <p
+                        class="flex items-center justify-center text-nowrap p-2 text-center align-middle font-sans text-xs font-bold text-black dark:text-black sm:text-xs md:text-xl lg:block lg:text-xl xl:text-xl 2xl:text-xl">
+                        @ViewModel.Theme.Organization</p>
                 </div>
             </div>
         </a>
@@ -17,12 +20,13 @@
     <div class="flex hidden items-center justify-center gap-x-2 p-6 lg:flex">
         @foreach (var navItem in @ViewModel.Model.NavItems)
         {
-            <a class="flex h-10 items-center rounded-md bg-white px-8 font-medium text-black dark:bg-gray-900 dark:text-white" href="@navItem.Link">@navItem.Name</a>
+            <a class="flex h-10 items-center rounded-md bg-white px-8 font-bold text-black dark:bg-gray-900 dark:text-white"
+                href="@navItem.Link">@navItem.Name</a>
         }
     </div>
 
     <div class="flex basis-auto items-end justify-end gap-x-6 p-6 px-4">
-        
+
         @* <button id="languageButton" data-dropdown-toggle="languages"
                 class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white p-2.5 text-sm text-gray-500 text-black hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700" type="button">
             <span class="flex flex-row items-center gap-2 rounded-lg p-2">
@@ -51,12 +55,11 @@
             </ul>
         </div>
  *@
- 
-        <LanguageSelector Dark="@ViewModel.Theme.Dark"></LanguageSelector>
+
+        <LanguageSelector Dark="@ViewModel.Theme.Dark" Languages="@ViewModel.Model.Languages" SelectedLanguage="@ViewModel.Model.SelectedLanguage"></LanguageSelector>
         <DarkModeSwitch Switch="@ViewModel.DarkModeSwitch"></DarkModeSwitch>
-        <button type="button"
-                @onclick="@ViewModel.GetStarted"
-                class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-rose-600 px-2.5 py-2.5 text-center text-sm text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+        <button type="button" @onclick="@ViewModel.GetStarted"
+            class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-rose-600 px-2.5 py-2.5 text-center text-sm text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
             @ViewModel.Model.GetStarted
         </button>
     </div>

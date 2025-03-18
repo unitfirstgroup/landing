@@ -1,11 +1,17 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
     content: ["./**/*.{razor,html,cshtml}", "./node_modules/flowbite/**/*.js"],
     theme: {
         extend: {
+            colors: {
+                primary: bg-r,
+                secondary: colors.blue
+            },
             fontFamily: {
-                display: "Oswald, ui-serif",
-                sans: "Passion One, sans",
-                serif: 'Merriweather", "serif'
+                display: "Roboto, ui-serif",
+                sans: "Roboto, sans",
+                serif: 'Roboto", "serif'
             }
         }
     },
