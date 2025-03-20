@@ -1,5 +1,5 @@
 ﻿<li>
-    <button class="flex flex-row items-center gap-2 rounded-lg p-2">
+    <button class="flex flex-row items-center gap-2 rounded-lg p-2" @onclick="ListItemClicked">
         <img alt="@Language" src="@ImageSource"/>
     </button>
 </li>
@@ -11,4 +11,17 @@
 
     [Parameter]
     public string Language { set; get; }
+
+    [Parameter]
+    public Action<string>? LanguageSelected { get; set; }
+
+    public void ListItemClicked()
+    {
+        if (LanguageSelected == null)
+            return;
+
+        Console.WriteLine("ListItemClicked");
+        LanguageSelected?.Invoke(Language);
+    }
+
 }
