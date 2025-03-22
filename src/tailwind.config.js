@@ -5,7 +5,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: bg-r,
+                primary: colors.red,
                 secondary: colors.blue
             },
             fontFamily: {

@@ -49,7 +49,7 @@ public class ApplicationThemeService : IApplicationThemeService
             {
                 new LanguageListItemModel { Language = "en-US", ImageSource = "images/us.svg" },
                 new LanguageListItemModel { Language = "ru-RU", ImageSource = "images/ru.svg" },
-                new LanguageListItemModel { Language = "sp-SP", ImageSource = "images/sp.svg" }
+                new LanguageListItemModel { Language = "es-ES", ImageSource = "images/es.svg" }
             }),
             SelectedLanguage = language
         };

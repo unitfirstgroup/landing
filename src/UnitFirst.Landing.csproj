@@ -30,7 +30,7 @@
     <EmbeddedResource Update="Properties\Resources.ru-RU.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\App.sp-SP.resx">
+    <EmbeddedResource Update="Resources\App.es-ES.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\App.resx">
