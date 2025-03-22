@@ -1,9 +1,7 @@
 ﻿using Blazored.LocalStorage;
-using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
@@ -22,11 +20,14 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
     {
         var theme = applicationThemeService.Theme;
         var accept = localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey);
+        var dark = localStorage.GetItemAsString(LocalStorageConstants.DarkKey);
         Model = new IndexModel()
         {
             Organization = theme.Organization,
             Hide = accept == "accept" ? "hidden": "",
+            Dark = dark == "dark" ? dark : ""
         };
+        theme.Dark = Model.Dark;
 
         browserService.GetDimensions().ContinueWith(task => Console.WriteLine($"[{task.Result.Width:N0} x {task.Result.Height:N0}]"));
         Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");

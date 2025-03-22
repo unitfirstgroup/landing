@@ -57,8 +57,8 @@ public class ApplicationThemeService : IApplicationThemeService
 
     public void DarkModeSwitch(Theme theme)
     {
-        theme.Dark = string.IsNullOrWhiteSpace(theme.Dark) ? "dark" : null;
-
+        theme.Dark = string.IsNullOrWhiteSpace(theme.Dark) ? "dark" : "";
+        _localStorage.SetItemAsString(LocalStorageConstants.DarkKey, theme.Dark);
         Console.WriteLine(
             $"Organization theme changed. OrganizationName: {theme.Organization}. DarkMode: {theme.Dark == "dark"}");
     }
