@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.Localization;
@@ -14,7 +15,7 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
 {
     public ElementReference MyTarget { get; set; }
     public string Organization { get; set; }
-
+    
     public override Task OnInitializedAsync()
     {
         var theme = applicationThemeService.Theme;
