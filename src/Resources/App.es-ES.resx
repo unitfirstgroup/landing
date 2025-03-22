@@ -138,4 +138,22 @@
   <data name="CONTACTS" xml:space="preserve">
     <value>Contactos</value>
   </data>
+  <data name="THESIS_0" xml:space="preserve">
+    <value>UnitFirst es una empresa líder en TI que ofrece soluciones innovadoras para empresas y particulares.</value>
+  </data>
+    <data name="THESIS_0_DESC" xml:space="preserve">
+    <value>Nuestro equipo de profesionales experimentados, apasionados por la tecnología y la innovación, se compromete a ofrecer soluciones de alta calidad que satisfagan las necesidades de nuestros clientes y superen sus expectativas.</value>
+  </data>
+  <data name="THESIS_0_ACTION" xml:space="preserve">
+    <value>Empezar</value>
+  </data>
+    <data name="THESIS_1" xml:space="preserve">
+    <value>Nuestros servicios</value>
+  </data>
+    <data name="THESIS_1_DESC" xml:space="preserve">
+    <value>Ofrecemos una gama de servicios que incluyen desarrollo de software, consultoría de TI, ciberseguridad y más.</value>
+  </data>
+    <data name="THESIS_1_ACTION" xml:space="preserve">
+    <value>Más información</value>
+  </data>
 </root>

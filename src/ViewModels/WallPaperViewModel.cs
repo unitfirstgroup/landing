@@ -2,13 +2,14 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
 namespace UnitFirst.Landing.ViewModels;
 
 public partial class WallPaperViewModel(IApplicationStateService applicationStateService,
-        IApplicationThemeService applicationThemeService, NavigationManager navigationManager)
+        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
 {
     [ObservableProperty] private WallPaperModel _model;
@@ -21,16 +22,16 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
             {
                 new()
                 {
-                    Main = "UnitFirst is a leading IT company providing innovative solutions for businesses and individuals.",
-                    Description = "Our team of experienced professionals with a passion for technology and innovation. We are committed to delivering high-quality solutions that meet our clients' needs and exceed their expectations.",
-                    ButtonText = "Get Started",
+                    Main = localizer["THESIS_0"].Value,
+                    Description = localizer["THESIS_0_DESC"].Value,
+                    ButtonText = localizer["THESIS_0_ACTION"].Value,
                     ButtonClick = GetStartedClicked
                 },
                 new()
                 {
-                    Main = "Our Services",
-                    Description = "We offer a range of services including software development, IT consulting, cybersecurity, and more.",
-                    ButtonText = "Get more info",
+                    Main = localizer["THESIS_1"].Value,
+                    Description = localizer["THESIS_1_DESC"].Value,
+                    ButtonText = localizer["THESIS_1_ACTION"].Value,
                     ButtonClick = GetMoreInfoClicked
                 }
             }
