@@ -1,4 +1,4 @@
-﻿<div class="bg-gray-100 @Theme.Dark">
+﻿<div class="bg-gray-100 @Theme.Dark @Hide">
     <div class="fixed bottom-0 left-0 w-full border-t border-gray-200 bg-white shadow">
         <div class="container mx-auto flex items-center justify-between px-4 py-2">
             <p class="text-sm text-gray-700">We use cookies to ensure you get the best experience on our website.
@@ -9,7 +9,7 @@
                         class="inline-flex h-10 w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-2.5 py-2.5 text-center text-sm text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
                     Accept
                 </button>
-                <button class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border bg-gray-300 px-5 py-2.5 text-center text-sm font-medium shadow-lg focus:ring-4 focus:outline-none dark:bg-gray-300 sm:px-2.5">
+                <button @onclick="Decline" class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border bg-gray-300 px-5 py-2.5 text-center text-sm font-medium shadow-lg focus:ring-4 focus:outline-none dark:bg-gray-300 sm:px-2.5">
                     Decline
                 </button>
             </div>
@@ -24,4 +24,6 @@
     [Parameter] public Action Accept { get; set; }
 
     [Parameter] public Action Decline { get; set; }
+
+    [Parameter] public string Hide { get; set; }
 }

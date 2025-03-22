@@ -1,10 +1,14 @@
 ﻿@page "/"
 @inherits MvvmComponentBase<IndexViewModel>
 
-<PageTitle>@ViewModel.Organization</PageTitle>
-<div @ref="@ViewModel.MyTarget" @onpointerdown="@ViewModel.LeftClick" @onmouseout="ViewModel.MouseOut" @onmouseover="ViewModel.MouseOver">
+<PageTitle>@ViewModel.Model.Organization</PageTitle>
+<div @ref="@ViewModel.Model.MyTarget" 
+     @onpointerdown="@ViewModel.LeftClick" 
+     @onmouseout="ViewModel.MouseOut" 
+     @onmouseover="ViewModel.MouseOver">
     <WallPaper></WallPaper>
     <AcceptUsing Theme="@ViewModel.Theme" 
                  Accept="@ViewModel.Accept"
-                 Decline="@ViewModel.Decline"></AcceptUsing>
+                 Decline="@ViewModel.Decline"
+                 Hide="@ViewModel.Model.Hide"></AcceptUsing>
 </div>

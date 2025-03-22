@@ -1,31 +1,34 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Blazored.LocalStorage;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.Localization;
+using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
+using UnitFirst.Landing.Models;
 using UnitFirst.Landing.Services;
 
 namespace UnitFirst.Landing.ViewModels;
 
 public partial class IndexViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
-        BrowserService browserService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
+        BrowserService browserService, NavigationManager navigationManager, ISyncLocalStorageService localStorage)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
 {
-    public ElementReference MyTarget { get; set; }
-    public string Organization { get; set; }
+    public IndexModel Model { get; set; }
     
     public override Task OnInitializedAsync()
     {
         var theme = applicationThemeService.Theme;
-        Organization = theme.Organization;
+        var accept = localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey);
+        Model = new IndexModel()
+        {
+            Organization = theme.Organization,
+            Hide = accept == "accept" ? "hidden": "",
+        };
 
         browserService.GetDimensions().ContinueWith(task => Console.WriteLine($"[{task.Result.Width:N0} x {task.Result.Height:N0}]"));
-
-        var localizedString = localizer["GET_STARTED"];
-        Console.WriteLine($"{localizedString.Name}: {localizedString.Value}");
-
         Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");
         
         return base.OnInitializedAsync();
@@ -66,12 +69,16 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void Accept()
     {
+        Model.Hide = "hidden";
+        localStorage.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "accept");
         Console.WriteLine("Accept");
     }
 
     [RelayCommand]
     public void Decline()
     {
+        Model.Hide = "hidden";
+        localStorage.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "decline");
         Console.WriteLine("Decline");
     }
 }
