@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using Blazored.LocalStorage;
 using Microsoft.Extensions.Localization;
+using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
@@ -10,11 +12,20 @@ public class ApplicationThemeService : IApplicationThemeService
     private const string OrganizationId = "organizationId";
     private const string DarkMode = "darkMode";
     private readonly IStringLocalizer<App> _localizer;
+    private readonly ISyncLocalStorageService _localStorage;
 
 
-    public ApplicationThemeService(IStringLocalizer<App> localizer)
+    public ApplicationThemeService(IStringLocalizer<App> localizer, ISyncLocalStorageService localStorage)
     {
         _localizer = localizer ?? throw new ArgumentNullException();
+        _localStorage = localStorage;
+
+        var language = localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
+        if (string.IsNullOrEmpty(language))
+        {
+            language = "en-US";
+        }
+
         Theme = new Theme
         {
             Organization = "UnitFirst",
@@ -39,7 +50,8 @@ public class ApplicationThemeService : IApplicationThemeService
                 new LanguageListItemModel { Language = "en-US", ImageSource = "images/us.svg" },
                 new LanguageListItemModel { Language = "ru-RU", ImageSource = "images/ru.svg" },
                 new LanguageListItemModel { Language = "sp-SP", ImageSource = "images/sp.svg" }
-            })
+            }),
+            SelectedLanguage = language
         };
     }
 

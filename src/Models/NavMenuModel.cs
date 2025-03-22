@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
-using UnitFirst.Landing.Components;
 
 namespace UnitFirst.Landing.Models
 {
@@ -12,12 +11,18 @@ namespace UnitFirst.Landing.Models
 
         [ObservableProperty] private ObservableCollection<LanguageListItemModel> _languages;
 
-        [ObservableProperty] private string _selectedLanguage;
+        [ObservableProperty] private LanguageListItemModel _selectedLanguage;
 
         public NavMenuModel(Theme theme)
         {
             _navItems = theme.NavItems;
             _languages = theme.Languages;
+            _selectedLanguage = theme.Languages.FirstOrDefault(x => x.Language == theme.SelectedLanguage) ??
+                                new LanguageListItemModel()
+                                {
+                                    Language = "en-US",
+                                    ImageSource = "images/us.svg"
+                                };
         }
     }
 }

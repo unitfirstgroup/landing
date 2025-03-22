@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using UnitFirst.Landing.Components;
 
 namespace UnitFirst.Landing.Models;
 
@@ -13,4 +12,5 @@ public partial class Theme : ObservableObject
     [ObservableProperty] private bool _isLogged;
     [ObservableProperty] private Dictionary<string, string> _background;
     [ObservableProperty] private ObservableCollection<LanguageListItemModel> _languages;
+    [ObservableProperty] private string _selectedLanguage;
 }

@@ -1,5 +1,5 @@
 ﻿@using System.Collections.ObjectModel
-@inject IJSRuntime JSRuntime
+@inject IJSRuntime JsRuntime
 @inject NavigationManager Nav
 
 <div class="flex flex-row @Dark bg-white text-black dark:bg-gray-900 dark:text-white">
@@ -28,24 +28,10 @@
 
     [Parameter]
     public ObservableCollection<LanguageListItemModel> Languages { get; set; }
-    
+
     [Parameter]
     public LanguageListItemModel SelectedLanguage { get; set; }
-
-    // public void SelectLanguage(string culture)
-    // {
-    //     var js = (IJSInProcessRuntime)JSRuntime;
-    //     js.InvokeVoid("appCulture.set", new CultureInfo(culture));
-    //     Nav.NavigateTo(Nav.Uri, true);
-    // }
-
-    // public void SelectLanguageItem(string id)
-    // {
-    //     var js = (IJSInProcessRuntime)JSRuntime;
-    //     js.InvokeVoid("appCulture.set", new CultureInfo("ru-RU"));
-    //     Nav.NavigateTo(Nav.Uri, true);
-    // }
-
+    
     private void LanguageSelected(string language)
     {
         Console.WriteLine($"LanguageSelected: {language}");
@@ -53,19 +39,16 @@
         if (selected != null)
         {
             SelectedLanguage = selected;
-            
         }
         StateHasChanged();
-        // var js = (IJSInProcessRuntime)JSRuntime;
-        // var culture = new CultureInfo(selected.Language);
-        // js.InvokeVoid("appCulture.set", culture);
-        // Nav.NavigateTo(Nav.Uri, true);
-    }
 
-    protected override void OnParametersSet()
-    {
-        Console.WriteLine($"OnParametersSet");
-        SelectedLanguage = Languages.FirstOrDefault() ?? new LanguageListItemModel(){Language = "en-US", ImageSource = "images/us.svg"};
-        base.OnParametersSet();
+        if (selected != null)
+        {
+            Task.Run(() =>
+            {
+                var js = (IJSInProcessRuntime)JsRuntime;
+                js.InvokeVoidAsync("appCulture.set", selected.Language);
+            }).ContinueWith((x) => Nav.NavigateTo(Nav.Uri, true));
+        }
     }
 }
