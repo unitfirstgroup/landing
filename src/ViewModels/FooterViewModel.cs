@@ -55,15 +55,16 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
                         new(){Name = localizer["FOOTER_CONTACT_2"].Value},
                         new(){Name = localizer["FOOTER_CONTACT_3"].Value}
                     }
-                },new FooterItemModel()
+                },
+                new FooterItemModel()
                 {
-                    Category = "Documents",
+                    Category = localizer["FOOTER_DOCUMENTS"].Value,
                     CategoryItems = new ObservableCollection<FooterCategoryItem>()
                     {
-                        new(){Name = "Terms"},
-                        new(){Name = "Privacy"},
-                        new(){Name = "Security"},
-                        new(){Name = "Manage cookies"}
+                        new(){Name = localizer["FOOTER_DOCUMENT_0"].Value},
+                        new(){Name = localizer["FOOTER_DOCUMENT_1"].Value},
+                        new(){Name = localizer["FOOTER_DOCUMENT_2"].Value},
+                        new(){Name = localizer["FOOTER_DOCUMENT_3"].Value}
                     }
                 }
             })

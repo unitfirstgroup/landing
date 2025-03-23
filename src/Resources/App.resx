@@ -216,4 +216,19 @@
   <data name="FOOTER_CONTACT_3" xml:space="preserve">
     <value>+ 01 234 567 89</value>
   </data>
+  <data name="FOOTER_DOCUMENTS" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="FOOTER_DOCUMENT_0" xml:space="preserve">
+    <value>Terms</value>
+  </data>
+  <data name="FOOTER_DOCUMENT_2" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="FOOTER_DOCUMENT_3" xml:space="preserve">
+    <value>Manage cookies</value>
+  </data>
+  <data name="FOOTER_DOCUMENT_1" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
 </root>
