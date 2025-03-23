@@ -186,4 +186,19 @@
   <data name="FOOTER_PRODUCTS_3" xml:space="preserve">
     <value>Продажи и маркетинг</value>
   </data>
+  <data name="FOOTER_LINKS" xml:space="preserve">
+    <value>Полезные ссылки</value>
+  </data>
+  <data name="FOOTER_LINK_0" xml:space="preserve">
+    <value>Цены</value>
+  </data>
+  <data name="FOOTER_LINK_1" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="FOOTER_LINK_2" xml:space="preserve">
+    <value>Ордера</value>
+  </data>
+  <data name="FOOTER_LINK_3" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
 </root>

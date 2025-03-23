@@ -36,13 +36,14 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
                 },
                 new FooterItemModel()
                 {
-                    Category = "Useful links",
+                    //Category = "Useful links",
+                    Category = localizer["FOOTER_LINKS"].Value,
                     CategoryItems = new ObservableCollection<FooterCategoryItem>()
                     {
-                        new(){Name = "Pricing"},
-                        new(){Name = "Settings"},
-                        new(){Name = "Orders"},
-                        new(){Name = "Help"}
+                        new(){Name = localizer["FOOTER_LINK_0"].Value},
+                        new(){Name = localizer["FOOTER_LINK_1"].Value},
+                        new(){Name = localizer["FOOTER_LINK_2"].Value},
+                        new(){Name = localizer["FOOTER_LINK_3"].Value}
                     }
                 },
                 new FooterItemModel()
