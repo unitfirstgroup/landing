@@ -36,7 +36,6 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
                 },
                 new FooterItemModel()
                 {
-                    //Category = "Useful links",
                     Category = localizer["FOOTER_LINKS"].Value,
                     CategoryItems = new ObservableCollection<FooterCategoryItem>()
                     {
@@ -48,13 +47,13 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
                 },
                 new FooterItemModel()
                 {
-                    Category = "Contact",
+                    Category = localizer["FOOTER_CONTACTS"].Value,
                     CategoryItems = new ObservableCollection<FooterCategoryItem>()
                     {
-                        new(){Name = "New York, NY 10311, US"},
-                        new(){Name = "info@projectfabric.com"},
-                        new(){Name = "+ 01 234 567 88"},
-                        new(){Name = "+ 01 234 567 89"}
+                        new(){Name = localizer["FOOTER_CONTACT_0"].Value},
+                        new(){Name = localizer["FOOTER_CONTACT_1"].Value},
+                        new(){Name = localizer["FOOTER_CONTACT_2"].Value},
+                        new(){Name = localizer["FOOTER_CONTACT_3"].Value}
                     }
                 },new FooterItemModel()
                 {

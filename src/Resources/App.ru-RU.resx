@@ -201,4 +201,19 @@
   <data name="FOOTER_LINK_3" xml:space="preserve">
     <value>Помощь</value>
   </data>
+  <data name="FOOTER_CONTACTS" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="FOOTER_CONTACT_0" xml:space="preserve">
+    <value>New York, NY 10311, US</value>
+  </data>
+  <data name="FOOTER_CONTACT_1" xml:space="preserve">
+    <value>info@projectfabric.com</value>
+  </data>
+  <data name="FOOTER_CONTACT_2" xml:space="preserve">
+    <value>+ 01 234 567 88</value>
+  </data>
+  <data name="FOOTER_CONTACT_3" xml:space="preserve">
+    <value>+ 01 234 567 89</value>
+  </data>
 </root>
