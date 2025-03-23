@@ -171,4 +171,19 @@
   <data name="ORGANIZATION_MANIFEST" xml:space="preserve">
     <value>Alta calidad y atención al cliente. Elaboramos un plan de negocios e implementamos un análisis completo de calidad y métricas.</value>
   </data>
+  <data name="FOOTER_PRODUCTS" xml:space="preserve">
+    <value>Productos</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_0" xml:space="preserve">
+    <value>Mantenedor digital empresarial</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_1" xml:space="preserve">
+    <value>Investigación de mercado</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_2" xml:space="preserve">
+    <value>Operaciones</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_3" xml:space="preserve">
+    <value>Ventas y marketing</value>
+  </data>
 </root>

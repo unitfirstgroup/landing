@@ -171,4 +171,19 @@
   <data name="ORGANIZATION_MANIFEST" xml:space="preserve">
     <value>High quality and care for our customers. Create a business plan and implementation with full coverage of quality and metrics.</value>
   </data>
+  <data name="FOOTER_PRODUCTS" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_0" xml:space="preserve">
+    <value>Business digital maintainer</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_1" xml:space="preserve">
+    <value>Market research</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_2" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_3" xml:space="preserve">
+    <value>Sales and Marketing</value>
+  </data>
 </root>

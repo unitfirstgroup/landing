@@ -171,4 +171,19 @@
   <data name="ORGANIZATION_MANIFEST" xml:space="preserve">
     <value>Высокое качество и забота о наших клиентах. Создание бизнес-плана и его реализация с полным охватом качества и показателей.</value>
   </data>
+  <data name="FOOTER_PRODUCTS" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_0" xml:space="preserve">
+    <value>Цифровая автоматизация бизнеса</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_1" xml:space="preserve">
+    <value>Исследование рынка</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_2" xml:space="preserve">
+    <value>Операции</value>
+  </data>
+  <data name="FOOTER_PRODUCTS_3" xml:space="preserve">
+    <value>Продажи и маркетинг</value>
+  </data>
 </root>

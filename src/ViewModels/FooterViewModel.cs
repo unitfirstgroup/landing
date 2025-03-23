@@ -25,13 +25,13 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
             {
                 new FooterItemModel()
                 {
-                    Category = "Products",
+                    Category = localizer["FOOTER_PRODUCTS"].Value,
                     CategoryItems = new ObservableCollection<FooterCategoryItem>()
                     {
-                        new(){Name = "Business digital maintainer"},
-                        new(){Name = "Market research"},
-                        new(){Name = "Operations"},
-                        new(){Name = "Sales and Marketing"}
+                        new(){Name = localizer["FOOTER_PRODUCTS_0"].Value},
+                        new(){Name = localizer["FOOTER_PRODUCTS_1"].Value},
+                        new(){Name = localizer["FOOTER_PRODUCTS_2"].Value},
+                        new(){Name = localizer["FOOTER_PRODUCTS_3"].Value}
                     }
                 },
                 new FooterItemModel()
