@@ -77,8 +77,35 @@
     <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
     <div class="mx-auto flex w-full flex-col items-center justify-center bg-white py-2.5 @ViewModel.Theme.Dark text-center text-black dark:bg-gray-900 dark:text-white">
         <div class="mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
-           
-            <!-- Products section -->
+           @foreach (var category in ViewModel.Model.Categories)
+            {
+                <!-- Category section -->
+                <div class="">
+                    <h6 class="mb-4 flex justify-center font-semibold uppercase">
+                        @category.Category
+                    </h6>
+                    @foreach (var categoryItem in category.CategoryItems)
+                    {
+                        <p class="mb-4 flex items-center justify-center">
+                            <a href="#!" class="text-neutral-600 dark:text-white">@categoryItem.Name</a>
+                        </p>
+                    }
+
+                 @*    <p class="mb-4 flex items-center justify-center">
+                        <a href="#!" class="text-neutral-600 dark:text-white">Business digital maintainer</a>
+                    </p>
+                    <p class="mb-4 flex items-center justify-center">
+                        <a href="#!" class="text-neutral-600 dark:text-white">Market research</a>
+                    </p>
+                    <p class="mb-4 flex items-center justify-center">
+                        <a href="#!" class="text-neutral-600 dark:text-white">Operations</a>
+                    </p>
+                    <p class="mb-4 flex items-center justify-center">
+                        <a href="#!" class="text-neutral-600 dark:text-white">Sales and Marketing</a>
+                    </p> *@
+                </div>
+            }
+         @*    <!-- Products section -->
             <div class="">
                 <h6 class="mb-4 flex justify-center font-semibold uppercase">
                     Products
@@ -179,7 +206,7 @@
                 <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Manage cookies</a>
                 </p>
-            </div>
+            </div> *@
         </div>
     </div>
 

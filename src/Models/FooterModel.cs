@@ -5,7 +5,7 @@ namespace UnitFirst.Landing.Models
 {
     public partial class FooterModel : ObservableObject
     {
-        //[ObservableProperty] private ObservableCollection<NavItem> _navItems;
+        [ObservableProperty] private ObservableCollection<FooterItemModel> _categories;
 
         [ObservableProperty] private string _socialNetworksDescription;
 
