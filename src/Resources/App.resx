@@ -138,22 +138,31 @@
   <data name="CONTACTS" xml:space="preserve">
     <value>Contacts</value>
   </data>
-    <data name="THESIS_0" xml:space="preserve">
+  <data name="THESIS_0" xml:space="preserve">
     <value>UnitFirst is a leading IT company providing innovative solutions for businesses and individuals.</value>
   </data>
-    <data name="THESIS_0_DESC" xml:space="preserve">
+  <data name="THESIS_0_DESC" xml:space="preserve">
     <value>Our team of experienced professionals with a passion for technology and innovation. We are committed to delivering high-quality solutions that meet our clients' needs and exceed their expectations.</value>
   </data>
-    <data name="THESIS_0_ACTION" xml:space="preserve">
+  <data name="THESIS_0_ACTION" xml:space="preserve">
     <value>Get Started</value>
   </data>
-    <data name="THESIS_1" xml:space="preserve">
+  <data name="THESIS_1" xml:space="preserve">
     <value>Our Services</value>
   </data>
-    <data name="THESIS_1_DESC" xml:space="preserve">
+  <data name="THESIS_1_DESC" xml:space="preserve">
     <value>We offer a range of services including software development, IT consulting, cybersecurity, and more.</value>
   </data>
-    <data name="THESIS_1_ACTION" xml:space="preserve">
+  <data name="THESIS_1_ACTION" xml:space="preserve">
     <value>Get More Info</value>
+  </data>
+  <data name="NEWSLETTER" xml:space="preserve">
+    <value>Newsletter</value>
+  </data>
+  <data name="NEWSLETTER_DESC" xml:space="preserve">
+    <value>Sign up to stay in the loop with the latest features and updates!</value>
+  </data>
+  <data name="NEWSLETTER_SUBSCRIBE" xml:space="preserve">
+    <value>Subscribe</value>
   </data>
 </root>

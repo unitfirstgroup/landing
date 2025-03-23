@@ -1,7 +1,7 @@
 ﻿<div class="mx-auto w-full @Dark bg-white text-black dark:bg-gray-900 dark:text-white">
     <div class="bg-white p-4 py-8 text-center text-black dark:bg-gray-900 dark:text-white md:py-20">
-        <h1 class="mb-6 text-3xl text-4xl font-medium tracking-tight dark:text-white">Newsletter</h1>
-        <span class="text-md mb-6 block text-neutral-600 dark:text-white md:text-lg">Sign up to stay in the loop with the latest features and updates!</span>
+        <h1 class="mb-6 text-3xl text-4xl font-medium tracking-tight dark:text-white">@Main</h1>
+        <span class="text-md mb-6 block text-neutral-600 dark:text-white md:text-lg">@Description</span>
         <div class="flex justify-center">
             <input type="email" id="email" class="mr-2 block max-h-10 w-full max-w-sm rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required>
             <button type="button"
@@ -17,6 +17,8 @@
     [Parameter] public string Dark { get; set; }
 
     [Parameter] public string Main { get; set; }
+
+    [Parameter] public string Description { get; set; }
 
     [Parameter] public string PlaceHolder { get; set; }
 

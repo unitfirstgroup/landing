@@ -34,7 +34,10 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
                     ButtonText = localizer["THESIS_1_ACTION"].Value,
                     ButtonClick = GetMoreInfoClicked
                 }
-            }
+            },
+            NewsLetter = localizer["NEWSLETTER"].Value,
+            NewsLetterDesc = localizer["NEWSLETTER_DESC"].Value,
+            SubscribeAction = localizer["NEWSLETTER_SUBSCRIBE"].Value,
         };
         return Task.CompletedTask;
     }

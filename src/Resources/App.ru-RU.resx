@@ -138,22 +138,31 @@
   <data name="CONTACTS" xml:space="preserve">
     <value>Контакты</value>
   </data>
-      <data name="THESIS_0" xml:space="preserve">
+  <data name="THESIS_0" xml:space="preserve">
     <value>UnitFirst — ведущая ИТ-компания, предлагающая инновационные решения для предприятий и частных лиц.</value>
   </data>
-    <data name="THESIS_0_DESC" xml:space="preserve">
+  <data name="THESIS_0_DESC" xml:space="preserve">
     <value>Наша команда опытных профессионалов, увлеченных технологиями и инновациями. Мы стремимся предоставлять высококачественные решения, которые отвечают потребностям наших клиентов и превосходят их ожидания.</value>
   </data>
-    <data name="THESIS_0_ACTION" xml:space="preserve">
+  <data name="THESIS_0_ACTION" xml:space="preserve">
     <value>Начать</value>
   </data>
-    <data name="THESIS_1" xml:space="preserve">
+  <data name="THESIS_1" xml:space="preserve">
     <value>Наши Сервисы</value>
   </data>
-    <data name="THESIS_1_DESC" xml:space="preserve">
+  <data name="THESIS_1_DESC" xml:space="preserve">
     <value>Мы предлагаем широкий спектр услуг, включая разработку программного обеспечения, ИТ-консалтинг, кибербезопасность и многое другое.</value>
   </data>
-    <data name="THESIS_1_ACTION" xml:space="preserve">
+  <data name="THESIS_1_ACTION" xml:space="preserve">
     <value>Детали</value>
+  </data>
+  <data name="NEWSLETTER" xml:space="preserve">
+    <value>Новости</value>
+  </data>
+  <data name="NEWSLETTER_DESC" xml:space="preserve">
+    <value>Подпишитесь, чтобы быть в курсе последних функций и обновлений!</value>
+  </data>
+  <data name="NEWSLETTER_SUBSCRIBE" xml:space="preserve">
+    <value>Подписаться</value>
   </data>
 </root>
