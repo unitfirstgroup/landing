@@ -1,7 +1,7 @@
 ﻿@inherits MvvmComponentBase<FooterViewModel>
 
 <!-- Footer container -->
-<footer class="@ViewModel.Theme.Dark">
+<footer class="@ViewModel.Theme.Dark relative w-full px-4 md:px-10 lg:px-20">
     <div class="flex flex-col items-center justify-center bg-white @ViewModel.Theme.Dark p-10 text-black dark:bg-gray-900 dark:text-white">
         <div class="flex">
             <span class="text-center dark:text-white">Get connected with us on social networks:</span>
@@ -75,51 +75,51 @@
     </div>
 
     <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
-    <div class="flex flex-col items-center justify-center bg-white py-2.5 @ViewModel.Theme.Dark text-center text-black dark:bg-gray-900 dark:text-white">
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="mx-auto flex w-full flex-col items-center justify-center bg-white py-2.5 @ViewModel.Theme.Dark text-center text-black dark:bg-gray-900 dark:text-white">
+        <div class="mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
            
             <!-- Products section -->
             <div class="">
-                <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                <h6 class="mb-4 flex justify-center font-semibold uppercase">
                     Products
                 </h6>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Business digital maintainer</a>
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Market research</a>
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Operations</a>
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Sales and Marketing</a>
                 </p>
             </div>
             <!-- Useful links section -->
             <div class="">
-                <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                <h6 class="mb-4 flex justify-center font-semibold uppercase">
                     Useful links
                 </h6>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Pricing</a>
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Settings</a>
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Orders</a>
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <a href="#!" class="text-neutral-600 dark:text-white">Help</a>
                 </p>
             </div>
             <!-- Contact section -->
             <div class="">
-                <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                <h6 class="mb-4 flex justify-center font-semibold uppercase">
                     Contact
                 </h6>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 24 24"
                          fill="currentColor"
@@ -129,7 +129,7 @@
                     </svg>
                     New York, NY 10311, US
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 24 24"
                          fill="currentColor"
@@ -139,7 +139,7 @@
                     </svg>
                     info@projectfabric.com
                 </p>
-                <p class="mb-4 flex items-center justify-center md:justify-start">
+                <p class="mb-4 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 24 24"
                          fill="currentColor"
@@ -150,7 +150,7 @@
                     </svg>
                     + 01 234 567 88
                 </p>
-                <p class="flex items-center justify-center md:justify-start">
+                <p class="flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 24 24"
                          fill="currentColor"
@@ -160,6 +160,24 @@
                               clip-rule="evenodd" />
                     </svg>
                     + 01 234 567 89
+                </p>
+            </div>
+            <!-- Agreements section -->
+            <div class="">
+                <h6 class="mb-4 flex justify-center font-semibold uppercase">
+                    Agreements
+                </h6>
+                <p class="mb-4 flex items-center justify-center">
+                    <a href="#!" class="text-neutral-600 dark:text-white">Business digital maintainer</a>
+                </p>
+                <p class="mb-4 flex items-center justify-center">
+                    <a href="#!" class="text-neutral-600 dark:text-white">Market research</a>
+                </p>
+                <p class="mb-4 flex items-center justify-center">
+                    <a href="#!" class="text-neutral-600 dark:text-white">Operations</a>
+                </p>
+                <p class="mb-4 flex items-center justify-center">
+                    <a href="#!" class="text-neutral-600 dark:text-white">Sales and Marketing</a>
                 </p>
             </div>
         </div>
