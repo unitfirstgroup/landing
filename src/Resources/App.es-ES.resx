@@ -165,4 +165,10 @@
   <data name="NEWSLETTER_SUBSCRIBE" xml:space="preserve">
     <value>Suscribir</value>
   </data>
+  <data name="SOCIAL_NETWORKS_DESC" xml:space="preserve">
+    <value>Conéctate con nosotros en las redes sociales:</value>
+  </data>
+  <data name="ORGANIZATION_MANIFEST" xml:space="preserve">
+    <value>Alta calidad y atención al cliente. Elaboramos un plan de negocios e implementamos un análisis completo de calidad y métricas.</value>
+  </data>
 </root>
