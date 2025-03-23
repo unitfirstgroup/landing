@@ -231,4 +231,7 @@
   <data name="FOOTER_DOCUMENT_1" xml:space="preserve">
     <value>Конфиденциальность</value>
   </data>
+  <data name="FOOTER_RIGHTS" xml:space="preserve">
+    <value>Все права защищены.</value>
+  </data>
 </root>

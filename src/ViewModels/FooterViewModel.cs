@@ -67,7 +67,8 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
                         new(){Name = localizer["FOOTER_DOCUMENT_3"].Value}
                     }
                 }
-            })
+            }),
+            AllRightsReserved = localizer["FOOTER_RIGHTS"].Value
         };
 
         return base.OnInitializedAsync();

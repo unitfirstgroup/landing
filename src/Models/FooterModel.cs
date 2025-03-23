@@ -10,5 +10,7 @@ namespace UnitFirst.Landing.Models
         [ObservableProperty] private string _socialNetworksDescription;
 
         [ObservableProperty] private string _organizationManifest;
+
+        [ObservableProperty] private string _allRightsReserved;
     }
 }

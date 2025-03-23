@@ -231,4 +231,7 @@
   <data name="FOOTER_DOCUMENT_1" xml:space="preserve">
     <value>Privacidad</value>
   </data>
+  <data name="FOOTER_RIGHTS" xml:space="preserve">
+    <value>Al Investigación Reservada.</value>
+  </data>
 </root>
