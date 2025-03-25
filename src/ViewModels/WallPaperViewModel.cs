@@ -25,14 +25,16 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
                     Main = localizer["THESIS_0"].Value,
                     Description = localizer["THESIS_0_DESC"].Value,
                     ButtonText = localizer["THESIS_0_ACTION"].Value,
-                    ButtonClick = GetStartedClicked
+                    ButtonClick = GetStartedClicked,
+                    Image = "images/thesis_0.jpg"
                 },
                 new()
                 {
                     Main = localizer["THESIS_1"].Value,
                     Description = localizer["THESIS_1_DESC"].Value,
                     ButtonText = localizer["THESIS_1_ACTION"].Value,
-                    ButtonClick = GetMoreInfoClicked
+                    ButtonClick = GetMoreInfoClicked,
+                    Image = "images/thesis_1.jpg"
                 }
             },
             NewsLetter = localizer["NEWSLETTER"].Value,

@@ -9,4 +9,6 @@ public class ThesisModel
     public string ButtonText { get; set; }
 
     public Action ButtonClick { get; set; }
+
+    public string Image { get; set; }
 }
