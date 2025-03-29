@@ -1,11 +1,11 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace UnitFirst.Landing.Models
+namespace UnitFirst.Landing.Models.Layout
 {
     public partial class NavMenuModel : ObservableObject
     {
-        [ObservableProperty] private ObservableCollection<NavItem> _navItems;
+        [ObservableProperty] private ObservableCollection<Layout.NavItem> _navItems;
 
         [ObservableProperty] private string _getStarted;
 

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
+using NavMenuModel = UnitFirst.Landing.Models.Layout.NavMenuModel;
 
 namespace UnitFirst.Landing.ViewModels.Layouts;
 

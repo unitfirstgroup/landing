@@ -4,6 +4,7 @@ using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
+using NavItem = UnitFirst.Landing.Models.Layout.NavItem;
 
 namespace UnitFirst.Landing.Services;
 

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
+using UnitFirst.Landing.Models.Wallpaper;
 
 namespace UnitFirst.Landing.ViewModels.Wallpaper;
 
