@@ -52,6 +52,22 @@ public partial class ServicesViewModel(IApplicationStateService applicationState
                     Image = "images/mobile-development.svg",
                     UrlText = "Mobile development",
                     Url = "#"
+                },
+                new()
+                {
+                    Name = "AI development",
+                    Description = "From predictive analytic to AI-powered healthcare diagnostics, our Artificial Intelligence services span every industry. Our expertise lies in custom AI model development, predictive analytic, machine learning implementation, natural language processing, computer vision, and AI tools for predictive maintenance.",
+                    Image = "images/ai-development.svg",
+                    UrlText = "AI development",
+                    Url = "#"
+                },
+                new()
+                {
+                    Name = "ChatGPT development",
+                    Description = "By incorporating ChatGPT, applications can provide 24/7 availability, efficient customer support, and data-driven insights. We provide consultation, customization, and integration of ChatGPT capabilities into web and mobile applications, enabling dynamic conversations, cost savings, enhanced user retention, and increased user engagement.",
+                    Image = "images/gpt-development.svg",
+                    UrlText = "ChatGPT development",
+                    Url = "#"
                 }
             },
         };
