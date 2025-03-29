@@ -10,6 +10,9 @@ using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Services;
 using UnitFirst.Landing.ViewModels;
 using UnitFirst.Landing.ViewModels.Services;
+using FooterViewModel = UnitFirst.Landing.ViewModels.Layouts.FooterViewModel;
+using NavMenuViewModel = UnitFirst.Landing.ViewModels.Layouts.NavMenuViewModel;
+using WallPaperViewModel = UnitFirst.Landing.ViewModels.Wallpaper.WallPaperViewModel;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
-namespace UnitFirst.Landing.ViewModels;
+namespace UnitFirst.Landing.ViewModels.Layouts;
 
 public partial class FooterViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager,

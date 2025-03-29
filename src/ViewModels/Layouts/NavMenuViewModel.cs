@@ -1,12 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
-namespace UnitFirst.Landing.ViewModels;
+namespace UnitFirst.Landing.ViewModels.Layouts;
 
 public partial class NavMenuViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)

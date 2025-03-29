@@ -6,7 +6,7 @@ using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
-namespace UnitFirst.Landing.ViewModels;
+namespace UnitFirst.Landing.ViewModels.Wallpaper;
 
 public partial class WallPaperViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
