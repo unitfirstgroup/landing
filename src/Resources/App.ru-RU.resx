@@ -120,22 +120,22 @@
   <data name="GET_STARTED" xml:space="preserve">
     <value>Начнем</value>
   </data>
-  <data name="SERVICES" xml:space="preserve">
+  <data name="NAV_SERVICES" xml:space="preserve">
     <value>Сервисы</value>
   </data>
-  <data name="LABORATORIES" xml:space="preserve">
+  <data name="NAV_LABORATORIES" xml:space="preserve">
     <value>Лабы</value>
   </data>
-  <data name="CASES" xml:space="preserve">
+  <data name="NAV_CASES" xml:space="preserve">
     <value>Кейсы</value>
   </data>
-  <data name="BLOG" xml:space="preserve">
+  <data name="NAV_BLOG" xml:space="preserve">
     <value>Блог</value>
   </data>
-  <data name="ABOUT" xml:space="preserve">
+  <data name="NAV_ABOUT" xml:space="preserve">
     <value>О нас</value>
   </data>
-  <data name="CONTACTS" xml:space="preserve">
+  <data name="NAV_CONTACTS" xml:space="preserve">
     <value>Контакты</value>
   </data>
   <data name="THESIS_0" xml:space="preserve">

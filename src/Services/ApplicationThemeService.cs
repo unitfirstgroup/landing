@@ -33,12 +33,12 @@ public class ApplicationThemeService : IApplicationThemeService
             Dark = "dark",
             NavItems = new ObservableCollection<NavItem>(new[]
             {
-                new NavItem { Name = _localizer["SERVICES"].Value, Link = "./services" },
-                new NavItem { Name = _localizer["LABORATORIES"].Value, Link = "./" },
-                new NavItem { Name = _localizer["CASES"].Value, Link = "./" },
-                new NavItem { Name = _localizer["BLOG"].Value, Link = "./" },
-                new NavItem { Name = _localizer["ABOUT"].Value, Link = "./" },
-                new NavItem { Name = _localizer["CONTACTS"].Value, Link = "./" }
+                new NavItem { Name = _localizer["NAV_SERVICES"].Value, Link = "./services" },
+                new NavItem { Name = _localizer["NAV_LABORATORIES"].Value, Link = "./" },
+                new NavItem { Name = _localizer["NAV_CASES"].Value, Link = "./" },
+                new NavItem { Name = _localizer["NAV_BLOG"].Value, Link = "./" },
+                new NavItem { Name = _localizer["NAV_ABOUT"].Value, Link = "./" },
+                new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
             }),
             Background = new Dictionary<string, string>(new[]
             {

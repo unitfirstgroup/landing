@@ -120,22 +120,22 @@
   <data name="GET_STARTED" xml:space="preserve">
     <value>Get Started</value>
   </data>
-  <data name="SERVICES" xml:space="preserve">
+  <data name="NAV_SERVICES" xml:space="preserve">
     <value>Services</value>
   </data>
-  <data name="LABORATORIES" xml:space="preserve">
+  <data name="NAV_LABORATORIES" xml:space="preserve">
     <value>Laboratories</value>
   </data>
-  <data name="CASES" xml:space="preserve">
+  <data name="NAV_CASES" xml:space="preserve">
     <value>Cases</value>
   </data>
-  <data name="BLOG" xml:space="preserve">
+  <data name="NAV_BLOG" xml:space="preserve">
     <value>Blog</value>
   </data>
-  <data name="ABOUT" xml:space="preserve">
+  <data name="NAV_ABOUT" xml:space="preserve">
     <value>About us</value>
   </data>
-  <data name="CONTACTS" xml:space="preserve">
+  <data name="NAV_CONTACTS" xml:space="preserve">
     <value>Contacts</value>
   </data>
   <data name="THESIS_0" xml:space="preserve">
