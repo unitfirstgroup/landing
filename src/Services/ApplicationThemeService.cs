@@ -35,7 +35,7 @@ public class ApplicationThemeService : IApplicationThemeService
             NavItems = new ObservableCollection<NavItem>(new[]
             {
                 new NavItem { Name = _localizer["NAV_SERVICES"].Value, Link = "./services" },
-                new NavItem { Name = _localizer["NAV_LABORATORIES"].Value, Link = "./" },
+                new NavItem { Name = _localizer["NAV_LABORATORIES"].Value, Link = "./laboratories" },
                 new NavItem { Name = _localizer["NAV_CASES"].Value, Link = "./" },
                 new NavItem { Name = _localizer["NAV_BLOG"].Value, Link = "./" },
                 new NavItem { Name = _localizer["NAV_ABOUT"].Value, Link = "./" },
