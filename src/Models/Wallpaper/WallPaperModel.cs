@@ -1,8 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using UnitFirst.Landing.Models.Wallpaper;
 
-namespace UnitFirst.Landing.Models
+namespace UnitFirst.Landing.Models.Wallpaper
 {
     public partial class WallPaperModel : ObservableObject
     {

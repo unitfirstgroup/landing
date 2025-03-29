@@ -4,7 +4,6 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Models;
 using UnitFirst.Landing.Models.Services;
 
 namespace UnitFirst.Landing.ViewModels.Services;

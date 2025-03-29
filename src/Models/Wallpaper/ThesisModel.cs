@@ -1,4 +1,4 @@
-﻿namespace UnitFirst.Landing.Models;
+﻿namespace UnitFirst.Landing.Models.Wallpaper;
 
 public class ThesisModel
 {
