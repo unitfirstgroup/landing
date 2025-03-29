@@ -4,10 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Models;
-using FooterCategoryItem = UnitFirst.Landing.Models.Layout.FooterCategoryItem;
-using FooterItemModel = UnitFirst.Landing.Models.Layout.FooterItemModel;
-using FooterModel = UnitFirst.Landing.Models.Layout.FooterModel;
+using UnitFirst.Landing.Models.Layout;
 
 namespace UnitFirst.Landing.ViewModels.Layouts;
 
