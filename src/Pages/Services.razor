@@ -30,15 +30,11 @@
         <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-2">
             @foreach (var service in ViewModel.Model.Services)
             {
-                <div class="flex flex-col gap-2 rounded border border-rose-600 bg-gray-100 p-2 hover:bg-gray-300 dark:bg-gray-600 dark:border-yellow-400 dark:hover:bg-gray-700">
-                    <img src="@service.Image" class="mt-4 h-20 w-20 content-center items-center justify-center self-center text-center"/>
-                    <h2 class="font-sans text-2xl font-medium text-black dark:text-white">@service.Name</h2>
-                    <h3 class="mb-6 text-sm text-black dark:text-white">@service.Description</h3>
-                    <a href="@service.Url" class="justify-center py-2 text-rose-600 underline dark:text-yellow-400">
-                        <span>@service.UrlText</span>
-                        <span class="hover:animate-ping">></span>
-                    </a>
-                </div>
+                <Card Name="@service.Name"
+                      Description="@service.Description"
+                      Image="@service.Image"
+                      Url="@service.Url"
+                      UrlText="@service.UrlText"></Card>
             }
         </div>
     </div>
