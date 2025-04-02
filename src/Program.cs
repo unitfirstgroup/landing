@@ -9,6 +9,7 @@ using UnitFirst.Landing;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Services;
 using UnitFirst.Landing.ViewModels;
+using UnitFirst.Landing.ViewModels.About;
 using UnitFirst.Landing.ViewModels.Cases;
 using UnitFirst.Landing.ViewModels.Laboratories;
 using UnitFirst.Landing.ViewModels.Services;
@@ -32,6 +33,7 @@ builder.Services.AddTransient<WallPaperViewModel>();
 builder.Services.AddTransient<ServicesViewModel>();
 builder.Services.AddTransient<LaboratoriesViewModel>();
 builder.Services.AddTransient<CasesViewModel>();
+builder.Services.AddTransient<AboutViewModel>();
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
