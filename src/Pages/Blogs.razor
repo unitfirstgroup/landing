@@ -1,0 +1,35 @@
+﻿@page "/blog"
+@inherits MvvmComponentBase<BlogsViewModel>
+<div class="mx-auto w-full bg-white @ViewModel.Theme.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10">
+    <div class="col-span-3 items-center justify-center px-4 py-8 text-center text-black dark:text-white lg:px-10">
+        <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white">
+            <span class="text-rose-600 dark:text-yellow-400">Valuable</span>
+            insights
+        </h1>
+    </div>
+
+    <div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white lg:px-24">
+        <div class="grid w-full grid-cols-3 gap-4 p-4 md:p-10 md:grid-cols-8">
+            @foreach (var item in ViewModel.Model.FilterItems)
+            {
+                <button type="button"
+                        class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+                        @onclick="@ViewModel.GetDetailsCommand.Execute">
+                    @item.Name
+                </button>
+            }
+        </div>
+        <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-4">
+            @foreach (var blog in ViewModel.Model.Blogs)
+            {
+                <Blog Image="@blog.Image"
+                      Tags="@blog.Tags"
+                      Title="@blog.Title"
+                      Author="@blog.Author"
+                      AuthorImage="@blog.AuthorImage"
+                      Date="@blog.Date"
+                      Estimate="@blog.Estimate"></Blog>
+            }
+        </div>
+    </div>
+</div>

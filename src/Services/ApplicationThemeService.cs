@@ -37,7 +37,7 @@ public class ApplicationThemeService : IApplicationThemeService
                 new NavItem { Name = _localizer["NAV_SERVICES"].Value, Link = "./services" },
                 new NavItem { Name = _localizer["NAV_LABORATORIES"].Value, Link = "./laboratories" },
                 new NavItem { Name = _localizer["NAV_CASES"].Value, Link = "./cases" },
-                new NavItem { Name = _localizer["NAV_BLOG"].Value, Link = "./" },
+                new NavItem { Name = _localizer["NAV_BLOG"].Value, Link = "./blog" },
                 new NavItem { Name = _localizer["NAV_ABOUT"].Value, Link = "./about" },
                 new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
             }),

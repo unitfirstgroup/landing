@@ -1,0 +1,47 @@
+﻿<div class="flex flex-col gap-2 rounded border border-rose-600 bg-gray-100 p-2 hover:bg-gray-300 dark:bg-gray-600 dark:border-yellow-400 dark:hover:bg-gray-700">
+    <img src="@Image" class="mt-4 content-center items-center justify-center self-center text-center"/>
+    <div class="flex w-full flex-wrap justify-start gap-2 p-2">
+        @foreach (var item in Tags)
+        {
+            <h6 class="flex w-auto min-w-10 items-center justify-center rounded-md border border-rose-600 px-1 py-1 text-center text-sm font-medium text-rose-600 shadow-lg dark:text-yellow-400 dark:border-yellow-400">
+                @item.Name
+            </h6>
+        }
+    </div>
+    <h3 class="mb-6 font-sans text-xl text-black dark:text-white">@Title</h3>
+    <div class="flex items-center space-x-2">
+        <img
+            class="h-10 w-10 rounded-full object-cover object-center"
+            src="@AuthorImage"
+            alt="random user"
+        />
+        <div>
+            <p class="font-semibold text-rose-600 dark:text-yellow-400">@Author</p>
+            <p class="text-sm font-semibold text-gray-500 dark:text-gray-200">
+                @Date &middot; @Estimate read
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Image { get; set; }
+
+    [Parameter]
+    public ObservableCollection<BlogFilterItemModel> Tags { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string AuthorImage { get; set; }
+
+    [Parameter]
+    public string Author { get; set; }
+    [Parameter]
+    public string Estimate { get; set; }
+    [Parameter]
+    public string Date { get; set; }
+}
