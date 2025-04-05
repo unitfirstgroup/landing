@@ -1,24 +1,18 @@
 ﻿using Microsoft.JSInterop;
+using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
 namespace UnitFirst.Landing.Services;
 
-public class BrowserService
+public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
 {
-    private readonly IJSRuntime _jsRuntime;
-
     private IJSObjectReference _mainModule;
     private IJSObjectReference _dimensionModule;
 
-    public BrowserService(IJSRuntime jsRuntime)
-    {
-        _jsRuntime = jsRuntime;
-    }
-
     public async Task<BrowserDimension> Initialize()
     {
-        _mainModule = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/index.js" });
-        _dimensionModule = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/window.js" });
+        _mainModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/index.js" });
+        _dimensionModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/window.js" });
         var dimensions = await GetDimensions();
         return dimensions;
     }

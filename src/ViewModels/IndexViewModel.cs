@@ -5,13 +5,15 @@ using Microsoft.AspNetCore.Components.Web;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
+using UnitFirst.Landing.Services;
 
 namespace UnitFirst.Landing.ViewModels;
 
 public partial class IndexViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
         NavigationManager navigationManager,
-        ISyncLocalStorageService localStorage)
+        ISyncLocalStorageService localStorage,
+        BrowserService browserService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
 {
     public IndexModel Model { get; set; }
@@ -41,7 +43,7 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
                           $@"Root element: {(Model.MyTarget != null)}");
 
         // TODO: Load DOM elements to applicationStateService
-
+        browserService.ShowAlert($"IndexViewModel loaded: {DateTime.UtcNow}");
         return base.Loaded();
     }
 

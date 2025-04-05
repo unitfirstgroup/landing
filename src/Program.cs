@@ -50,8 +50,6 @@ builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
 builder.Services.AddSingleton<IApplicationThemeService, ApplicationThemeService>();
 builder.Services.AddSingleton<IApplicationStateService, ApplicationStateService>();
 builder.Services.AddSingleton<BrowserService>();
-builder.Services.AddSingleton<MouseService>()
-    .AddSingleton<IMouseService>(sp => sp.GetRequiredService<MouseService>());
 
 var jsInterop = builder.Build().Services.GetRequiredService<IJSRuntime>();
 
