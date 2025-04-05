@@ -2,7 +2,7 @@
 
 <!-- Main navigation container -->
 <nav class="shadow-b flex items-center justify-between gap-x-1 border-b border-gray-200 bg-white @ViewModel.Theme.Dark text-black shadow-indigo-500/50 dark:bg-gray-900 dark:text-white sm:gap-x-2 lg:gap-x-6"
-    aria-label="Global">
+     aria-label="Global">
     <div class="flex @ViewModel.Theme.Dark border border-rose-600 bg-white px-2 dark:border-yellow-400 dark:bg-yellow-400 sm:px-6 lg:px-8">
         <a href="./">
             <div class="flex items-center justify-center">
@@ -11,28 +11,32 @@
                 <div class="flex hidden lg:flex">
                     <p
                         class="flex items-center justify-center text-nowrap p-2 text-center align-middle font-sans text-xs font-bold text-black dark:text-black sm:text-xs md:text-xl lg:block lg:text-xl xl:text-xl 2xl:text-xl">
-                        @ViewModel.Theme.Organization</p>
+                        @ViewModel.Theme.Organization
+                    </p>
                 </div>
             </div>
         </a>
     </div>
 
     <div class="flex hidden items-center justify-center gap-x-2 p-6 lg:flex">
-        @foreach (var navItem in @ViewModel.Model.NavItems)
+        @foreach (var navItem in ViewModel.Model.NavItems)
         {
             <a class="flex h-10 items-center rounded-md bg-white px-8 font-bold text-black dark:bg-gray-900 dark:text-white"
-                href="@navItem.Link">@navItem.Name</a>
+               href="@navItem.Link">
+                @navItem.Name
+            </a>
         }
     </div>
 
     <div class="flex basis-auto items-end justify-end gap-x-6 py-4">
         <LanguageSelector
-            Dark="@ViewModel.Theme.Dark" 
-            Languages="@ViewModel.Model.Languages" 
-            SelectedLanguage="@ViewModel.Model.SelectedLanguage"></LanguageSelector>
+            Dark="@ViewModel.Theme.Dark"
+            Languages="@ViewModel.Model.Languages"
+            SelectedLanguage="@ViewModel.Model.SelectedLanguage">
+        </LanguageSelector>
         <DarkModeSwitch Switch="@ViewModel.DarkModeSwitch"></DarkModeSwitch>
         <button type="button" @onclick="@ViewModel.GetStarted"
-            class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-rose-600 text-center text-sm text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+                class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-rose-600 text-center text-sm text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
             @ViewModel.Model.GetStarted
         </button>
     </div>
