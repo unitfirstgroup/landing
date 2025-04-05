@@ -10,7 +10,7 @@ namespace UnitFirst.Landing.ViewModels.Blogs;
 
 public partial class BlogsViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
+    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private BlogsModel _model;
 

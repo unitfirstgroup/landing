@@ -8,45 +8,19 @@ public interface IApplicationStateService
     
     void SubmitRegistrationForm();
 
-    Task ChangeTheme(string theme);
-    
-    void RegisterMouseOut()
-    {
-        State.MouseOutCount++;
-    }
+    void RegisterMouseOut();
 
-    void RegisterMouseOver()
-    {
-        State.MouseOverCount++;
-    }
+    void RegisterMouseOver();
 
-    void RegisterMouseMove()
-    {
-        State.MouseMoveCount++;
-    }
+    void RegisterMouseMove();
 
-    void RegisterLeftClick()
-    {
-        State.MouseLeftClickCount++;
-    }
+    void RegisterLeftClick();
 
-    void RegisterClose()
-    {
-        State.Close = true;
-    }
+    void RegisterClose();
 
-    void RegisterAcceptTherms()
-    {
-        State.UserAcceptTerms = true;
-    }
+    void RegisterAcceptTherms();
 
-    void RegisterDeclineTherms()
-    {
-        State.UserDeclineTerms = true;
-    }
+    void RegisterDeclineTherms();
 
-    void RegisterOrganization(string organization)
-    {
-        State.Organization = organization;
-    }
+    void RegisterOrganization(string organization);
 }

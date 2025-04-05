@@ -9,7 +9,7 @@ namespace UnitFirst.Landing.ViewModels.Layouts;
 
 public partial class NavMenuViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
+    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty]
     private NavMenuModel _model;

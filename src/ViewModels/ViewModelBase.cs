@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 
@@ -10,15 +11,17 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
 {
     protected readonly IApplicationStateService ApplicationStateService;
     protected readonly IApplicationThemeService ApplicationThemeService;
+    protected readonly IStringLocalizer<App> Localizer;
     protected readonly NavigationManager NavigationManager;
 
     [ObservableProperty] private Theme _theme;
     
-    protected ViewModelBase(IApplicationStateService applicationStateService, IApplicationThemeService applicationThemeService, NavigationManager navigationManager)
+    protected ViewModelBase(IApplicationStateService applicationStateService, IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
     {
         ApplicationStateService = applicationStateService;
         ApplicationThemeService = applicationThemeService;
         NavigationManager = navigationManager;
+        Localizer = localizer;
 
         Theme = applicationThemeService.Theme ?? throw new Exception("ViewModelBase load theme exception.");
         Theme.PropertyChanged += Theme_PropertyChanged;

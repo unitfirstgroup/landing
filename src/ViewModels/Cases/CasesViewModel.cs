@@ -9,8 +9,10 @@ using UnitFirst.Landing.Models.Cases;
 namespace UnitFirst.Landing.ViewModels.Cases;
 
 public partial class CasesViewModel(IApplicationStateService applicationStateService,
-        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
+        IApplicationThemeService applicationThemeService,
+        NavigationManager navigationManager,
+        IStringLocalizer<App> localizer)
+    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private CasesModel _model;
 

@@ -11,7 +11,7 @@ namespace UnitFirst.Landing.ViewModels.Layouts;
 public partial class FooterViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager,
         IStringLocalizer<App> localizer)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
+    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private FooterModel _model;
 

@@ -11,7 +11,7 @@ namespace UnitFirst.Landing.ViewModels.Laboratories;
 
 public partial class LaboratoriesViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
+    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private LaboratoriesModel _model;
 
