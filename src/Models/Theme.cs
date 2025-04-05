@@ -13,4 +13,5 @@ public partial class Theme : ObservableObject
     [ObservableProperty] private Dictionary<string, string> _background;
     [ObservableProperty] private ObservableCollection<LanguageListItemModel> _languages;
     [ObservableProperty] private string _selectedLanguage;
+    [ObservableProperty] private string _hideTherms;
 }

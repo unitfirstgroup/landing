@@ -6,13 +6,11 @@
         @Body
         <Footer></Footer>
     </div>
-    <AcceptUsing Theme="@Theme" 
-                 Hide=""></AcceptUsing>
+    <AcceptUsing Theme="@Theme"></AcceptUsing>
 </div>
-
 
 @code
 {
-    [CascadingParameter(Name="Theme")]
+    [CascadingParameter(Name = "Theme")]
     public Theme Theme { get; set; }
 }
