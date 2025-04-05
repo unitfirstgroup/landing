@@ -2,15 +2,8 @@
 @inherits MvvmComponentBase<IndexViewModel>
 
 <PageTitle>@ViewModel.Model.Organization</PageTitle>
-<div id="rootElementId"
-     @onclose="@ViewModel.Close"
-     @onpointerdown="@ViewModel.LeftClick" 
-     @onmouseout="@ViewModel.MouseOut" 
-     @onmouseover="@ViewModel.MouseOver"
-     @onmousemove="@ViewModel.MouseMove">
-    <WallPaper></WallPaper>
-    <AcceptUsing Theme="@ViewModel.Theme" 
-                 Accept="@ViewModel.Accept"
-                 Decline="@ViewModel.Decline"
-                 Hide="@ViewModel.Model.Hide"></AcceptUsing>
-</div>
+<WallPaper></WallPaper>
+<AcceptUsing Theme="@ViewModel.Theme" 
+             Accept="@ViewModel.Accept"
+             Decline="@ViewModel.Decline"
+             Hide="@ViewModel.Model.Hide"></AcceptUsing>

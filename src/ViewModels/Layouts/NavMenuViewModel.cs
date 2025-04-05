@@ -3,8 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Models;
-using NavMenuModel = UnitFirst.Landing.Models.Layout.NavMenuModel;
+using UnitFirst.Landing.Models.Layout;
 
 namespace UnitFirst.Landing.ViewModels.Layouts;
 
