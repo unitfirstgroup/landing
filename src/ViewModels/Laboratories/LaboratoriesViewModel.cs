@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models.Laboratories;
-using UnitFirst.Landing.Models.Services;
 
 namespace UnitFirst.Landing.ViewModels.Laboratories;
 
