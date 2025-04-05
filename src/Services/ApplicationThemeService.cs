@@ -4,7 +4,7 @@ using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
-using NavItem = UnitFirst.Landing.Models.Layout.NavItem;
+using UnitFirst.Landing.Models.Layout;
 
 namespace UnitFirst.Landing.Services;
 
@@ -39,12 +39,12 @@ public class ApplicationThemeService : IApplicationThemeService
                 new NavItem { Name = _localizer["NAV_CASES"].Value, Link = "./cases" },
                 new NavItem { Name = _localizer["NAV_BLOG"].Value, Link = "./blog" },
                 new NavItem { Name = _localizer["NAV_ABOUT"].Value, Link = "./about" },
-                new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
+                //new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
             }),
             Background = new Dictionary<string, string>(new[]
             {
-                new KeyValuePair<string, string>("white", "bg-blue-400"),
-                new KeyValuePair<string, string>("dark", "bg-green-500")
+                new KeyValuePair<string, string>("white", "bg-white"),
+                new KeyValuePair<string, string>("dark", "bg-gray-900")
             }),
             Languages = new ObservableCollection<LanguageListItemModel>(new[]
             {
@@ -60,8 +60,6 @@ public class ApplicationThemeService : IApplicationThemeService
     {
         theme.Dark = string.IsNullOrWhiteSpace(theme.Dark) ? "dark" : "";
         _localStorage.SetItemAsString(LocalStorageConstants.DarkKey, theme.Dark);
-        Console.WriteLine(
-            $"Organization theme changed. OrganizationName: {theme.Organization}. DarkMode: {theme.Dark == "dark"}");
     }
 
     public Theme Theme { get; }

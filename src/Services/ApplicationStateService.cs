@@ -14,7 +14,6 @@ public class ApplicationStateService(ILocalStorageService localStorageService) :
             throw new ArgumentNullException(nameof(theme));
 
         await localStorageService.SetItemAsStringAsync("theme", theme);
-        Console.WriteLine($"Theme changed to {theme}");
     }
 
     public async Task<string> LoadOrganizationId(string clientId)

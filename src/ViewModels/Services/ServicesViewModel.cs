@@ -76,12 +76,10 @@ public partial class ServicesViewModel(IApplicationStateService applicationState
     [RelayCommand]
     public void GetInTouch()
     {
-        Console.WriteLine(nameof(GetInTouch));
     }
 
     [RelayCommand]
     public void BookConsultation()
     {
-        Console.WriteLine(nameof(BookConsultation));
     }
 }

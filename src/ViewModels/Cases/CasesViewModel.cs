@@ -132,6 +132,5 @@ public partial class CasesViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void GetDetails()
     {
-        Console.WriteLine(nameof(GetDetails));
     }
 }

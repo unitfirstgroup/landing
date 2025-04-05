@@ -17,11 +17,6 @@
 
     public void ListItemClicked()
     {
-        if (LanguageSelected == null)
-            return;
-
-        Console.WriteLine("ListItemClicked");
         LanguageSelected?.Invoke(Language);
     }
-
 }

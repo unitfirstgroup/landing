@@ -93,6 +93,5 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
     [RelayCommand]
     public void GetDetails()
     {
-        Console.WriteLine(nameof(GetDetails));
     }
 }

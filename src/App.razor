@@ -1,4 +1,5 @@
 ﻿@inject IApplicationThemeService ApplicationThemeService
+@inject ISyncLocalStorageService SyncLocalStorageService
 @inject BrowserService BrowserService
 
 <CascadingAuthenticationState>
@@ -40,8 +41,8 @@
     {
         // browser
         var dimensions = await BrowserService.Initialize();
-        Console.WriteLine($"{nameof(App)}: {nameof(OnInitializedAsync)}\n" +
-        $"Browser service loaded.\n" +
-        $"Dimensions: [{dimensions.Width} px x {dimensions.Height} px]");
+        var value = $"[{dimensions.Width}x{dimensions.Height}]";
+        SyncLocalStorageService.SetItemAsString(LocalStorageConstants.BrowserDimensionsKey, value);
+        Console.WriteLine($"Browser dimensions: {value}");
     }
 }

@@ -176,6 +176,5 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void GetDetails()
     {
-        Console.WriteLine(nameof(GetDetails));
     }
 }

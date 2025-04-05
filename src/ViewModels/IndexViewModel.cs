@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Components.Web;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
-using UnitFirst.Landing.Services;
 
 namespace UnitFirst.Landing.ViewModels;
 
 public partial class IndexViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
-        BrowserService browserService, NavigationManager navigationManager, ISyncLocalStorageService localStorage)
+        NavigationManager navigationManager,
+        ISyncLocalStorageService localStorage)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager)
 {
     public IndexModel Model { get; set; }
@@ -27,9 +27,8 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
             Hide = accept == "accept" ? "hidden": "",
             Dark = dark == "dark" ? dark : ""
         };
-        theme.Dark = Model.Dark;
+        theme.Dark = dark ?? string.Empty;
 
-        browserService.GetDimensions().ContinueWith(task => Console.WriteLine($"[{task.Result.Width:N0} x {task.Result.Height:N0}]"));
         Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");
         
         return base.OnInitializedAsync();
@@ -38,7 +37,10 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
     public override Task Loaded()
     {
         Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(Loaded)}\n" +
-                          $"{nameof(Theme.Organization)}: {Theme.Organization}");
+                          $"{nameof(Theme.Organization)}: {Theme.Organization}" +
+                          $@"Root element: {(Model.MyTarget != null)}");
+
+        // TODO: Load DOM elements to applicationStateService
 
         return base.Loaded();
     }
@@ -54,17 +56,34 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
                     $"{nameof(args.ClientX)}: {args.ClientX:N0}\n" +
                     $"{nameof(args.ClientY)}: {args.ClientY:N0}\n";
 
-        Console.WriteLine($"Left click: {click}");
+        ApplicationStateService.RegisterLeftClick();
+        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseOut)}:{applicationStateService.State.MouseOutCount}");
     }
 
     public void MouseOut()
     {
-        //Console.WriteLine($"{nameof(IndexViewModel)}. MouseOut");
+        ApplicationStateService.RegisterMouseOut();
+        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseOut)}:{applicationStateService.State.MouseOutCount}");
     }
 
     public void MouseOver()
     {
-        //Console.WriteLine($"{nameof(IndexViewModel)}. MouseOver");
+        ApplicationStateService.RegisterMouseOver();
+        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseOver)}:{applicationStateService.State.MouseOverCount}");
+
+    }
+
+    public void MouseMove()
+    {
+        ApplicationStateService.RegisterMouseMove();
+        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseMove)}:{applicationStateService.State.MouseMoveCount}");
+    }
+
+    public void Close()
+    {
+        ApplicationStateService.RegisterClose();
+        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseMove)}:{applicationStateService.State.MouseMoveCount}");
+
     }
 
     [RelayCommand]
@@ -72,6 +91,7 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
     {
         Model.Hide = "hidden";
         localStorage.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "accept");
+        ApplicationStateService.RegisterAcceptTherms();
         Console.WriteLine("Accept");
     }
 
@@ -80,6 +100,9 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
     {
         Model.Hide = "hidden";
         localStorage.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "decline");
-        Console.WriteLine("Decline");
+        ApplicationStateService.RegisterDeclineTherms();
+        Console.WriteLine("Decline Therms");
     }
+
+  
 }

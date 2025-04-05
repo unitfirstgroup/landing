@@ -26,7 +26,6 @@
     {
         if (isFirstRender)
         {
-            Console.WriteLine($"{nameof(MainLayout)} OnAfterRenderAsync");
             await Js.InvokeVoidAsync("window.initializeFlowbite");
         }
     }

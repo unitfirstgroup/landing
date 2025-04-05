@@ -34,7 +34,6 @@
     
     private void LanguageSelected(string language)
     {
-        Console.WriteLine($"LanguageSelected: {language}");
         var selected = Languages.FirstOrDefault(x => x.Language == language);
         if (selected != null)
         {
