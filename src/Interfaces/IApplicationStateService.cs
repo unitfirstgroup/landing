@@ -9,9 +9,7 @@ public interface IApplicationStateService
     void SubmitRegistrationForm();
 
     Task ChangeTheme(string theme);
-
-    Task<string> LoadOrganizationId(string clientId);
-
+    
     void RegisterMouseOut()
     {
         State.MouseOutCount++;
@@ -45,5 +43,10 @@ public interface IApplicationStateService
     void RegisterDeclineTherms()
     {
         State.UserDeclineTerms = true;
+    }
+
+    void RegisterOrganization(string organization)
+    {
+        State.Organization = organization;
     }
 }

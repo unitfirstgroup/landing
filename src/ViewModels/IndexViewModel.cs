@@ -30,20 +30,17 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
             Dark = dark == "dark" ? dark : ""
         };
         theme.Dark = dark ?? string.Empty;
+        ApplicationStateService.RegisterOrganization(Model.Organization);
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(OnInitializedAsync)}|{applicationStateService.State.Organization}");
 
-        Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(OnInitializedAsync)} at {DateTime.UtcNow.Ticks}\n");
-        
         return base.OnInitializedAsync();
     }
 
     public override Task Loaded()
     {
-        Console.WriteLine($"{nameof(IndexViewModel)}. {nameof(Loaded)}\n" +
-                          $"{nameof(Theme.Organization)}: {Theme.Organization}" +
-                          $@"Root element: {(Model.MyTarget != null)}");
-
         // TODO: Load DOM elements to applicationStateService
-        browserService.ShowAlert($"IndexViewModel loaded: {DateTime.UtcNow}");
+
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(Loaded)}|{applicationStateService.State.Loaded}");
         return base.Loaded();
     }
 
@@ -59,33 +56,31 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
                     $"{nameof(args.ClientY)}: {args.ClientY:N0}\n";
 
         ApplicationStateService.RegisterLeftClick();
-        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseOut)}:{applicationStateService.State.MouseOutCount}");
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(LeftClick)}|{applicationStateService.State.MouseLeftClickCount}");
     }
 
     public void MouseOut()
     {
         ApplicationStateService.RegisterMouseOut();
-        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseOut)}:{applicationStateService.State.MouseOutCount}");
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(MouseOut)}|{applicationStateService.State.MouseOutCount}");
     }
 
     public void MouseOver()
     {
         ApplicationStateService.RegisterMouseOver();
-        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseOver)}:{applicationStateService.State.MouseOverCount}");
-
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(MouseOver)}|{applicationStateService.State.MouseOverCount}");
     }
 
     public void MouseMove()
     {
         ApplicationStateService.RegisterMouseMove();
-        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseMove)}:{applicationStateService.State.MouseMoveCount}");
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(MouseMove)}|{applicationStateService.State.MouseMoveCount}");
     }
 
     public void Close()
     {
         ApplicationStateService.RegisterClose();
-        Console.WriteLine($"{nameof(IndexViewModel)}:{nameof(MouseMove)}:{applicationStateService.State.MouseMoveCount}");
-
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(Close)}|{applicationStateService.State.Close}");
     }
 
     [RelayCommand]
@@ -94,7 +89,7 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
         Model.Hide = "hidden";
         localStorage.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "accept");
         ApplicationStateService.RegisterAcceptTherms();
-        Console.WriteLine("Accept");
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(Accept)}|{applicationStateService.State.UserAcceptTerms}");
     }
 
     [RelayCommand]
@@ -103,8 +98,6 @@ public partial class IndexViewModel(IApplicationStateService applicationStateSer
         Model.Hide = "hidden";
         localStorage.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "decline");
         ApplicationStateService.RegisterDeclineTherms();
-        Console.WriteLine("Decline Therms");
+        Console.WriteLine($"{DateTime.UtcNow.Ticks}|{nameof(IndexViewModel)}|{nameof(Decline)}|{applicationStateService.State.UserDeclineTerms}");
     }
-
-  
 }
