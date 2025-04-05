@@ -3,7 +3,7 @@
 @inject IBrowserService BrowserService
 
 <CascadingAuthenticationState>
-    <CascadingValue Value="Theme">
+    <CascadingValue Name="Theme" Value="Theme">
         <Router AppAssembly="@typeof(App).Assembly">
             <Found Context="routeData">
                 <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
@@ -19,8 +19,8 @@
 </CascadingAuthenticationState>
 
 @code {
-
-    Theme Theme;
+    [CascadingParameter(Name="Theme")]
+    private Theme Theme { get; set; }
 
     /// <summary>
     /// Entry point
@@ -30,6 +30,8 @@
     {
         // cascade value
         Theme = ApplicationThemeService.Theme;
+        Theme.PropertyChanged += ThemeOnPropertyChanged;
+
         Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
     }
 
@@ -77,5 +79,8 @@
         Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(ShouldRender)}|{string.Empty}");
         return base.ShouldRender();
     }
-
+    private void ThemeOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        StateHasChanged();
+    }
 }

@@ -1,6 +1,4 @@
 ﻿@inherits LayoutComponentBase
-@inject IApplicationThemeService ApplicationThemeService;
-@inject IJSRuntime Js
 
 <div class="flex size-full @Theme.Dark flex-col bg-white text-black dark:bg-gray-900 dark:text-white">
     <div class="flex size-full flex-col @Theme.Dark bg-white px-10 text-black dark:bg-gray-900 dark:text-white">
@@ -13,25 +11,6 @@
 
 @code
 {
-    public Theme Theme;
-
-    protected override void OnInitialized()
-    {
-        Theme = ApplicationThemeService.Theme ?? throw new Exception("ViewModelBase load theme exception.");
-        Theme.PropertyChanged += ThemeOnPropertyChanged;
-        base.OnInitialized();
-    }
-
-    protected override async Task OnAfterRenderAsync(bool isFirstRender)
-    {
-        if (isFirstRender)
-        {
-            await Js.InvokeVoidAsync("window.initializeFlowbite");
-        }
-    }
-
-    private void ThemeOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        StateHasChanged();
-    }
+    [CascadingParameter(Name="Theme")]
+    public Theme Theme { get; set; }
 }
