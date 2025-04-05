@@ -8,7 +8,6 @@ using Microsoft.JSInterop;
 using UnitFirst.Landing;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Services;
-using UnitFirst.Landing.ViewModels;
 using UnitFirst.Landing.ViewModels.About;
 using UnitFirst.Landing.ViewModels.Blogs;
 using UnitFirst.Landing.ViewModels.Cases;
@@ -28,7 +27,6 @@ builder.Services.AddLocalization(options =>
 
 builder.Services.AddTransient<NavMenuViewModel>();
 builder.Services.AddTransient<FooterViewModel>();
-builder.Services.AddTransient<IndexViewModel>();
 builder.Services.AddTransient<WallPaperViewModel>();
 builder.Services.AddTransient<ServicesViewModel>();
 builder.Services.AddTransient<LaboratoriesViewModel>();
