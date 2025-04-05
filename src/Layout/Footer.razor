@@ -76,7 +76,7 @@
     <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
     <div class="mx-auto flex w-full flex-col items-center justify-center bg-white py-2.5 @ViewModel.Theme.Dark text-center text-black dark:bg-gray-900 dark:text-white">
         <div class="mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
-           @foreach (var category in ViewModel.Model.Categories)
+            @foreach (var category in ViewModel.Model.Categories)
             {
                 <!-- Category section -->
                 <div class="">
@@ -101,4 +101,9 @@
         <a class="font-semibold" href="/">@ViewModel.Theme.Organization</a><span>.</span>
         <span>@ViewModel.Model.AllRightsReserved</span>
     </div>
+    
+    <AcceptUsing Theme="@ViewModel.Theme"
+                 Hide="@ViewModel.Theme.HideTherms"
+                 AcceptCommand="@ViewModel.AcceptThermsCommand"
+                 DeclineCommand="@ViewModel.DeclineThermsCommand"></AcceptUsing>
 </footer>

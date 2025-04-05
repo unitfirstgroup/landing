@@ -46,7 +46,7 @@
         Theme.Dark = SyncLocalStorageService.GetItemAsString(LocalStorageConstants.DarkKey) ?? string.Empty;
 
         // therms
-        Theme.HideTherms = SyncLocalStorageService.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ?? string.Empty;
+        Theme.HideTherms = "accept" == SyncLocalStorageService.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ? "hidden" : string.Empty;
 
         //
         Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnInitializedAsync)}|{value}");
@@ -89,10 +89,6 @@
     }
     private void ThemeOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName == "HideTherms")
-        {
-            SyncLocalStorageService.SetItemAsString(LocalStorageConstants.AcceptThermsKey, Theme.HideTherms);
-        }
         StateHasChanged();
     }
 }

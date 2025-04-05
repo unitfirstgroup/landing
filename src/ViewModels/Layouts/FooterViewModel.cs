@@ -1,8 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using Blazored.LocalStorage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models.Layout;
 
@@ -10,7 +12,8 @@ namespace UnitFirst.Landing.ViewModels.Layouts;
 
 public partial class FooterViewModel(IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager,
-        IStringLocalizer<App> localizer)
+        IStringLocalizer<App> localizer,
+        ISyncLocalStorageService syncLocalStorageService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private FooterModel _model;
@@ -77,5 +80,19 @@ public partial class FooterViewModel(IApplicationStateService applicationStateSe
     [RelayCommand]
     public void GetStarted()
     {
+    }
+
+    [RelayCommand]
+    public void AcceptTherms()
+    {
+        syncLocalStorageService.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "accept");
+        Theme.HideTherms = "hidden";
+    }
+
+    [RelayCommand]
+    public void DeclineTherms()
+    {
+        syncLocalStorageService.SetItemAsString(LocalStorageConstants.AcceptThermsKey, "decline");
+        Theme.HideTherms = "hidden";
     }
 }
