@@ -47,4 +47,9 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
     public void SelectLanguage(string language)
     {
     }
+
+    public void DarkModeSwitch()
+    {
+        ApplicationThemeService.DarkModeSwitch(Theme);
+    }
 }
