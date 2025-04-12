@@ -29,7 +29,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                     Image = "images/it-solution.png",
                     Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new NameDescriptionModel() { Name = "IoT" },
+                        new NameDescriptionModel() { Name = "IoT", Selected = true },
                         new NameDescriptionModel() { Name = "Development" },
                     }),
                     Title = "IoT Solutions for Education: Overview & Best Practices",

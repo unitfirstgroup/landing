@@ -1,0 +1,36 @@
+﻿<button type="button"
+        class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 @BackgroundColor px-5 py-2.5 text-center text-sm font-medium @TextColor shadow-lg dark:@BackgroundColorDark dark:@TextColorDark dark:border-yellow-300 sm:px-2.5" 
+        @onclick="OnClick">
+    @Text
+</button>
+
+@code {
+
+    [Parameter]
+    public bool IsSelected { get; set; } = false;
+
+    [Parameter]
+    public string Text { get; set; } = "";
+
+    [Parameter]
+    public string BackgroundColor { get; set; } = "bg-white";
+
+    [Parameter]
+    public string BackgroundColorDark { get; set; } = "bg-gray-900";
+
+    [Parameter]
+    public string TextColor { get; set; } = "text-rose-600";
+
+    [Parameter]
+    public string TextColorDark { get; set; } = "text-yellow-400";
+    
+    private void OnClick()
+    {
+        IsSelected = !IsSelected;
+        BackgroundColor = IsSelected ? "bg-rose-600" : "bg-white";
+        BackgroundColorDark = IsSelected ? "bg-yellow-400" : "bg-gray-900";
+        TextColor = IsSelected ? "text-white" : "text-rose-600";
+        TextColorDark = IsSelected ? "text-white" : "text-yellow-400";
+    }
+
+}

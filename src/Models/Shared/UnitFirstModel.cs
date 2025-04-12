@@ -6,5 +6,6 @@ namespace UnitFirst.Landing.Models.Shared
     {
         [ObservableProperty] private bool _hide;
         [ObservableProperty] private bool _focus;
+        [ObservableProperty] private bool _selected;
     }
 }
