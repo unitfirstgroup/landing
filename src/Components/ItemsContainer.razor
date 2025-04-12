@@ -19,7 +19,7 @@
         }
     </div>
     <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-4">
-        @foreach (TItem item in Source ?? new ObservableCollection<TItem>())
+        @foreach (TItem item in @Items)
         {
             @ChildContent(item)
         }
@@ -38,12 +38,12 @@
     public string SearchPlaceholder { get; set; }
 
     [Parameter]
-    public ObservableCollection<TItem> Source { get; set; }
-
-    [Parameter]
-    public ObservableCollection<TItem> Filtered { get; set; }
+    public ObservableCollection<TItem> Items { get; set; }
 
     [Parameter]
     public RenderFragment<TItem> ChildContent { get; set; }
+
+    [Parameter]
+    public Action FilterChanged { get; set; }
 
 }
