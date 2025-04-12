@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
@@ -20,17 +19,26 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     {
         _model = new BlogsModel()
         {
-            Tags = new ObservableCollection<TagModel>(new[]
+            Filter = new FilterModel()
             {
-                new TagModel { TagName = "All", Selected = true },
-                new TagModel { TagName = "AI" },
-                new TagModel { TagName = "IoT" },
-                new TagModel { TagName = "Enterprise" },
-                new TagModel { TagName = "StartUps" },
-                new TagModel { TagName = "Guides" },
-                new TagModel { TagName = "Development" },
-                new TagModel { TagName = "UnitFirst" },
-            }),
+                SearchModel = new SearchModel()
+                {
+                    Placeholder = "Search blog via input key words...",
+                    Value = "",
+                    RaiseSearchCommand = RaiseSearchCommand
+                },
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel { TagName = "All", Selected = true },
+                    new TagModel { TagName = "AI" },
+                    new TagModel { TagName = "IoT" },
+                    new TagModel { TagName = "Enterprise" },
+                    new TagModel { TagName = "StartUps" },
+                    new TagModel { TagName = "Guides" },
+                    new TagModel { TagName = "Development" },
+                    new TagModel { TagName = "UnitFirst" },
+                }),
+            },
             Blogs = new ObservableCollection<BlogModel>
             {
                 new()
@@ -139,22 +147,12 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                     Date = "27 March 2025"
                 },
             },
-            SearchPlaceholder = "Search blog via input key words...",
-            SearchText = ""
+            SearchBlogs = new ObservableCollection<BlogModel>()
         };
-
-        _model.PropertyChanged += ModelOnPropertyChanged;
 
         return Task.CompletedTask;
     }
 
-    private void ModelOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        if (e.PropertyName == nameof(Model.SearchText))
-        {
-
-        }
-    }
 
     [RelayCommand]
     public void GetDetails()
@@ -162,9 +160,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     }
 
     [RelayCommand]
-    public void Filter()
+    public void RaiseSearch()
     {
-        var selectedTags = Model.Tags.Where(x => x.Selected).Select(x => x.TagName).Distinct();
-        Console.WriteLine($"Filter start. Search: {Model.SearchText}. Tags: {string.Join('\n', selectedTags)}");
+        var selectedTags = Model.Filter.Tags.Where(x => x.Selected).Select(x => x.TagName).Distinct();
+        Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join('\n', selectedTags)}");
     }
 }

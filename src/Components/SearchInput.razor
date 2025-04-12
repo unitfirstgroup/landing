@@ -1,23 +1,10 @@
 ﻿<input type="text"
+       @bind-value="@SearchModel.Value"
        class="flex w-full rounded-lg border-2 border-red-600 px-4 py-2 dark:border-yellow-400"
-       placeholder="@Placeholder"
-       value="@Value"
-       @onchange="@OnChange"/>
+       placeholder="@SearchModel.Placeholder"/>
 
 @code {
 
     [Parameter]
-    public string Placeholder { get; set; } = "";
-
-    [Parameter]
-    public string Value { get; set; } = "";
-
-    [Parameter]
-    public IRelayCommand FilterCommand { get; set; }
-
-    private void OnChange()
-    {
-        FilterCommand.Execute(null);
-    }
-
+    public SearchModel SearchModel { get; set; }
 }

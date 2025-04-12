@@ -1,22 +1,19 @@
-﻿@using UnitFirst.Landing.Models.Shared
-@typeparam TItem
+﻿@typeparam TItem
 
 <div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white lg:px-24">
         
     <div class="flex justify-center px-4 py-2 md:px-10">
         <SearchInput
-            Placeholder="@SearchPlaceholder"
-            Value="@SearchText"
-            FilterCommand="@FilterCommand">
+            SearchModel="@Filter.SearchModel">
         </SearchInput>
     </div>
 
     <div class="grid w-full grid-cols-3 gap-4 p-4 md:p-10 md:grid-cols-8">
-        @foreach (var item in @Tags)
+        @foreach (var item in @Filter.Tags)
         {
             <ToggleButton
                 Text="@item.TagName"
-                FilterCommand="@FilterCommand"
+                FilterCommand="@Filter.SearchModel.RaiseSearchCommand"
                 IsSelected="@item.Selected">
             </ToggleButton>
         }
@@ -31,14 +28,16 @@
 
 @code {
 
-    [Parameter]
-    public ObservableCollection<TagModel> Tags { get; set; }
+    protected override Task OnInitializedAsync()
+    {
+        Filter.SearchModel.PropertyChanged += OnSearchInputChanged;
+        return base.OnInitializedAsync();
+    }
 
-    [Parameter]
-    public string SearchText { get; set; }
-
-    [Parameter]
-    public string SearchPlaceholder { get; set; }
+    private void OnSearchInputChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        Filter.SearchModel.RaiseSearchCommand.Execute(null);
+    }
 
     [Parameter]
     public ObservableCollection<TItem> Items { get; set; }
@@ -47,6 +46,6 @@
     public RenderFragment<TItem> ChildContent { get; set; }
 
     [Parameter]
-    public IRelayCommand FilterCommand { get; set; }
+    public FilterModel Filter { get; set; }
 
 }

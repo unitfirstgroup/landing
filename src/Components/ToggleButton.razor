@@ -34,7 +34,7 @@
         BackgroundColorDark = IsSelected ? "bg-yellow-400" : "bg-gray-900";
         TextColor = IsSelected ? "text-white" : "text-rose-600";
         TextColorDark = IsSelected ? "text-white" : "text-yellow-400";
-        FilterCommand.Execute(null);
+        FilterCommand?.Execute(null);
     }
 
     protected override void OnParametersSet()
