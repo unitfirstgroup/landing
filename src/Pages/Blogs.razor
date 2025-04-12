@@ -9,6 +9,13 @@
     </div>
 
     <div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white lg:px-24">
+        
+        <div class="flex justify-center px-4 py-2 md:px-10">
+            <input type="text"
+                   class="flex w-full rounded-lg border-2 border-red-600 px-4 py-2 dark:border-yellow-400 dark:text-gray-800"
+                   placeholder="Search product via input key words..." />
+        </div>
+
         <div class="grid w-full grid-cols-3 gap-4 p-4 md:p-10 md:grid-cols-8">
             @foreach (var item in ViewModel.Model.FilterItems)
             {
