@@ -29,7 +29,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 },
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "All", Selected = true },
+                    new TagModel { TagName = "All", IsSelected = true },
                     new TagModel { TagName = "AI" },
                     new TagModel { TagName = "IoT" },
                     new TagModel { TagName = "Enterprise" },
@@ -46,7 +46,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                     Image = "images/it-solution.png",
                     Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new NameDescriptionModel() { Name = "IoT", Selected = true },
+                        new NameDescriptionModel() { Name = "IoT" },
                         new NameDescriptionModel() { Name = "Development" },
                     }),
                     Title = "IoT Solutions for Education: Overview & Best Practices",
@@ -162,7 +162,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void RaiseSearch()
     {
-        var selectedTags = Model.Filter.Tags.Where(x => x.Selected).Select(x => x.TagName).Distinct();
+        var selectedTags = Model.Filter.Tags.Where(x => x.IsSelected).Select(x => x.TagName).Distinct();
         Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join('\n', selectedTags)}");
     }
 }

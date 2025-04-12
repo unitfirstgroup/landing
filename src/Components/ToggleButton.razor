@@ -7,7 +7,7 @@
 @code {
 
     [Parameter]
-    public bool IsSelected { get; set; } = false;
+    public bool IsSelected { get; set; }
 
     [Parameter]
     public string Text { get; set; } = "";
@@ -25,16 +25,17 @@
     public string TextColorDark { get; set; } = "text-yellow-400";
     
     [Parameter]
-    public IRelayCommand FilterCommand { get; set; }
+    public IRelayCommand RaiseSearchCommand { get; set; }
 
     private void OnClick()
     {
-        IsSelected = !IsSelected;
+        var isSelected = !IsSelected;
+        IsSelected = isSelected;
         BackgroundColor = IsSelected ? "bg-rose-600" : "bg-white";
         BackgroundColorDark = IsSelected ? "bg-yellow-400" : "bg-gray-900";
         TextColor = IsSelected ? "text-white" : "text-rose-600";
         TextColorDark = IsSelected ? "text-white" : "text-yellow-400";
-        FilterCommand?.Execute(null);
+        RaiseSearchCommand?.Execute(null);
     }
 
     protected override void OnParametersSet()
