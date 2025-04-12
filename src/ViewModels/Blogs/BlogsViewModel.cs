@@ -164,6 +164,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void Filter()
     {
-        Console.WriteLine("Filter start");
+        var selectedTags = Model.Tags.Where(x => x.Selected).Select(x => x.TagName).Distinct();
+        Console.WriteLine($"Filter start. Search: {Model.SearchText}. Tags: {string.Join('\n', selectedTags)}");
     }
 }
