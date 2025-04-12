@@ -1,0 +1,49 @@
+﻿@typeparam TItem
+
+<div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white lg:px-24">
+        
+    <div class="flex justify-center px-4 py-2 md:px-10">
+        <input type="text"
+               class="flex w-full rounded-lg border-2 border-red-600 px-4 py-2 dark:border-yellow-400 dark:text-gray-800"
+               placeholder="@SearchPlaceholder"
+               value="@SearchText"/>
+    </div>
+
+    <div class="grid w-full grid-cols-3 gap-4 p-4 md:p-10 md:grid-cols-8">
+        @foreach (var item in @Tags)
+        {
+            <button type="button"
+                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+                @item
+            </button>
+        }
+    </div>
+    <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-4">
+        @foreach (TItem item in Source ?? new ObservableCollection<TItem>())
+        {
+            @ChildContent(item)
+        }
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public ObservableCollection<string> Tags { get; set; }
+
+    [Parameter]
+    public string SearchText { get; set; }
+
+    [Parameter]
+    public string SearchPlaceholder { get; set; }
+
+    [Parameter]
+    public ObservableCollection<TItem> Source { get; set; }
+
+    [Parameter]
+    public ObservableCollection<TItem> Filtered { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> ChildContent { get; set; }
+
+}

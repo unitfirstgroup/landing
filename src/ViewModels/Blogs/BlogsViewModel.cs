@@ -1,10 +1,12 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models.Blogs;
+using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.ViewModels.Blogs;
 
@@ -18,58 +20,17 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     {
         _model = new BlogsModel()
         {
-            FilterItems = new ObservableCollection<BlogFilterItemModel>
-            {
-                new()
-                {
-                    Name = "All",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "AI",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "IoT",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "Enterprise",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "StartUps",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "Guides",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "Development",
-                    Description = ""
-                },
-                new()
-                {
-                    Name = "UnitFirst",
-                    Description = ""
-                },
-            },
+            Tags = new ObservableCollection<string>
+                { "All", "AI", "IoT", "Enterprise", "StartUps", "Guides", "Development", "UnitFirst" },
             Blogs = new ObservableCollection<BlogModel>
             {
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "IoT" },
-                        new BlogFilterItemModel() { Name = "Development" },
+                        new NameDescriptionModel() { Name = "IoT" },
+                        new NameDescriptionModel() { Name = "Development" },
                     }),
                     Title = "IoT Solutions for Education: Overview & Best Practices",
                     AuthorImage = "https://randomuser.me/api/portraits/men/54.jpg",
@@ -80,9 +41,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -93,9 +54,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -106,9 +67,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -119,9 +80,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -132,9 +93,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -145,9 +106,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -158,9 +119,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 new()
                 {
                     Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<BlogFilterItemModel>(new[]
+                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
                     {
-                        new BlogFilterItemModel() { Name = "AI" },
+                        new NameDescriptionModel() { Name = "AI" },
                     }),
                     Title = "Integrating AI into Business: A Complete Guide For 2025",
                     AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
@@ -169,12 +130,30 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                     Date = "27 March 2025"
                 },
             },
+            SearchPlaceholder = "Search blog via input key words...",
+            SearchText = ""
         };
+
+        _model.PropertyChanged += ModelOnPropertyChanged;
+
         return Task.CompletedTask;
+    }
+
+    private void ModelOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(Model.SearchText))
+        {
+
+        }
     }
 
     [RelayCommand]
     public void GetDetails()
     {
+    }
+
+    private void Search()
+    {
+
     }
 }
