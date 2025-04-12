@@ -12,7 +12,7 @@
     <div class="grid w-full grid-cols-3 gap-4 p-4 md:p-10 md:grid-cols-8">
         @foreach (var item in @Tags)
         {
-            <ToggleButton Text="@item"></ToggleButton>
+            <ToggleButton Text="@item" FilterCommand="@FilterCommand"></ToggleButton>
    @*          <button type="button"
                     class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 bg-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg dark:bg-yellow-400 dark:border-yellow-300 dark:text-yellow-400 sm:px-2.5">
                 @item
@@ -45,6 +45,6 @@
     public RenderFragment<TItem> ChildContent { get; set; }
 
     [Parameter]
-    public Action FilterChanged { get; set; }
+    public IRelayCommand FilterCommand { get; set; }
 
 }

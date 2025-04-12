@@ -152,8 +152,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     {
     }
 
-    private void Search()
+    [RelayCommand]
+    public void Filter()
     {
-
+        Console.WriteLine("Filter start");
     }
 }
