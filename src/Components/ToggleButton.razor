@@ -37,4 +37,13 @@
         FilterCommand.Execute(null);
     }
 
+    protected override void OnParametersSet()
+    {
+        BackgroundColor = IsSelected ? "bg-rose-600" : "bg-white";
+        BackgroundColorDark = IsSelected ? "bg-yellow-400" : "bg-gray-900";
+        TextColor = IsSelected ? "text-white" : "text-rose-600";
+        TextColorDark = IsSelected ? "text-white" : "text-yellow-400";
+        base.OnParametersSet();
+    }
+
 }

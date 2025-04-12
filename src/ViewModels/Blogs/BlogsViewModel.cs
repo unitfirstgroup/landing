@@ -20,8 +20,17 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     {
         _model = new BlogsModel()
         {
-            Tags = new ObservableCollection<string>
-                { "All", "AI", "IoT", "Enterprise", "StartUps", "Guides", "Development", "UnitFirst" },
+            Tags = new ObservableCollection<TagModel>(new[]
+            {
+                new TagModel { TagName = "All", Selected = true },
+                new TagModel { TagName = "AI" },
+                new TagModel { TagName = "IoT" },
+                new TagModel { TagName = "Enterprise" },
+                new TagModel { TagName = "StartUps" },
+                new TagModel { TagName = "Guides" },
+                new TagModel { TagName = "Development" },
+                new TagModel { TagName = "UnitFirst" },
+            }),
             Blogs = new ObservableCollection<BlogModel>
             {
                 new()

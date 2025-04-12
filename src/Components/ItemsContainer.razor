@@ -1,22 +1,20 @@
-﻿@typeparam TItem
+﻿@using UnitFirst.Landing.Models.Shared
+@typeparam TItem
 
 <div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white lg:px-24">
         
     <div class="flex justify-center px-4 py-2 md:px-10">
-        <input type="text"
-               class="flex w-full rounded-lg border-2 border-red-600 px-4 py-2 dark:border-yellow-400 dark:text-gray-800"
-               placeholder="@SearchPlaceholder"
-               value="@SearchText"/>
+       <SearchInput Placeholder="@SearchPlaceholder" Value="@SearchText" FilterCommand="@FilterCommand"></SearchInput>
     </div>
 
     <div class="grid w-full grid-cols-3 gap-4 p-4 md:p-10 md:grid-cols-8">
         @foreach (var item in @Tags)
         {
-            <ToggleButton Text="@item" FilterCommand="@FilterCommand"></ToggleButton>
-   @*          <button type="button"
-                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 bg-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg dark:bg-yellow-400 dark:border-yellow-300 dark:text-yellow-400 sm:px-2.5">
-                @item
-            </button> *@
+            <ToggleButton
+                Text="@item.TagName"
+                FilterCommand="@FilterCommand"
+                IsSelected="@item.Selected">
+            </ToggleButton>
         }
     </div>
     <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-4">
@@ -30,7 +28,7 @@
 @code {
 
     [Parameter]
-    public ObservableCollection<string> Tags { get; set; }
+    public ObservableCollection<TagModel> Tags { get; set; }
 
     [Parameter]
     public string SearchText { get; set; }
