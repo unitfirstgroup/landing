@@ -23,7 +23,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
                 new()
                 {
                     Name = "Healthcare",
-                    Description = "Patient management systems, telemedicine platforms, IoT-powered applications, AI-powered diagnostics, data analytics and visualization – these are several solution types we are experts at developing. All solutions are HIPPA compliant, GDPR, HITECH, FDA, and other requirements compliant.",
+                    Description = "Patient management systems, medicine platforms, IoT-powered applications, AI-powered diagnostics, data analytics and visualization – these are several solution types we are experts at developing. All solutions are HIPPA compliant, GDPR, HITECH, FDA, and other requirements compliant.",
                     Image = "images/healthcare-lab.svg",
                     UrlText = "Healthcare",
                     Url = "#"

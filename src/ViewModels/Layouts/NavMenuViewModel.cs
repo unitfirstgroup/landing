@@ -8,7 +8,7 @@ using UnitFirst.Landing.Models.Layout;
 namespace UnitFirst.Landing.ViewModels.Layouts;
 
 public partial class NavMenuViewModel(IApplicationStateService applicationStateService,
-        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
+        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer, IBrowserService browserService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty]
@@ -25,7 +25,8 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
     [RelayCommand]
     public void GetStarted()
     {
-        navigationManager.NavigateTo("./registration");
+        browserService.ShowAlert("WBHOO");
+        // navigationManager.NavigateTo("./registration");
     }
 
     [RelayCommand]

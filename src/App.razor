@@ -1,4 +1,5 @@
-﻿@inject IApplicationThemeService ApplicationThemeService
+﻿@using UnitFirst.Landing.Extensions
+@inject IApplicationThemeService ApplicationThemeService
 @inject ISyncLocalStorageService SyncLocalStorageService
 @inject IBrowserService BrowserService
 
@@ -29,64 +30,62 @@
     protected override void OnInitialized()
     {
         // cascade value
-        Theme = ApplicationThemeService.Theme;
+        Theme = ApplicationThemeService.LoadTheme();
         Theme.PropertyChanged += ThemeOnPropertyChanged;
 
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
     }
 
     protected override async Task OnInitializedAsync()
     {
-        // browser
-        var dimensions = await BrowserService.Initialize();
+        // browser init
+        await BrowserService.Initialize();
+       
+        // dimensions
+        var dimensions = await BrowserService.GetDimensions();
         var value = $"[{dimensions.Width}x{dimensions.Height}]";
         SyncLocalStorageService.SetItemAsString(LocalStorageConstants.BrowserDimensionsKey, value);
 
-        // dark
-        Theme.Dark = SyncLocalStorageService.GetItemAsString(LocalStorageConstants.DarkKey) ?? string.Empty;
-
-        // therms
-        Theme.HideTherms = "accept" == SyncLocalStorageService.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ? "hidden" : string.Empty;
-
         //
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnInitializedAsync)}|{value}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitializedAsync)}|Dimensions: {value}");
     }
 
     protected override void OnAfterRender(bool firstRender)
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnAfterRender)}|{firstRender}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnAfterRender)}|First render: {firstRender}");
         base.OnAfterRender(firstRender);
     }
 
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnAfterRenderAsync)}|{firstRender}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnAfterRenderAsync)}|First render: {firstRender}");
         return base.OnAfterRenderAsync(firstRender);
     }
 
     protected override void OnParametersSet()
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnParametersSet)}|{string.Empty}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnParametersSet)}|{string.Empty}");
         base.OnParametersSet();
     }
 
     protected override Task OnParametersSetAsync()
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(OnParametersSetAsync)}|{string.Empty}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnParametersSetAsync)}|{string.Empty}");
         return base.OnParametersSetAsync();
     }
 
     public override Task SetParametersAsync(ParameterView parameters)
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(SetParametersAsync)}|{string.Empty}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(SetParametersAsync)}|{string.Empty}");
         return base.SetParametersAsync(parameters);
     }
 
     protected override bool ShouldRender()
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss.fff")}|{nameof(App)}|{nameof(ShouldRender)}|{string.Empty}");
+        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(ShouldRender)}|{string.Empty}");
         return base.ShouldRender();
     }
+
     private void ThemeOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
         StateHasChanged();

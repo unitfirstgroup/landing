@@ -10,28 +10,29 @@ namespace UnitFirst.Landing.Services;
 
 public class ApplicationThemeService : IApplicationThemeService
 {
-    private const string OrganizationId = "organizationId";
-    private const string DarkMode = "darkMode";
     private readonly IStringLocalizer<App> _localizer;
     private readonly ISyncLocalStorageService _localStorage;
-
+    private readonly Theme _theme;
 
     public ApplicationThemeService(IStringLocalizer<App> localizer, ISyncLocalStorageService localStorage)
     {
         _localizer = localizer ?? throw new ArgumentNullException();
         _localStorage = localStorage;
 
-        var language = localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
+        var language = _localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
         if (string.IsNullOrEmpty(language))
         {
             language = "en-US";
         }
 
-        Theme = new Theme
+        var dark = _localStorage.GetItemAsString(LocalStorageConstants.DarkKey) ?? string.Empty;
+        var hideTherms = "accept" == _localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ? "hidden" : string.Empty;
+
+        _theme = new Theme
         {
             Organization = "UnitFirst",
             Logo = "images/simple-logo.svg",
-            Dark = "dark",
+            Dark = dark,
             NavItems = new ObservableCollection<NavItem>(new[]
             {
                 new NavItem { Name = _localizer["NAV_SERVICES"].Value, Link = "./services" },
@@ -52,8 +53,14 @@ public class ApplicationThemeService : IApplicationThemeService
                 new LanguageListItemModel { Language = "ru-RU", ImageSource = "images/ru.svg" },
                 new LanguageListItemModel { Language = "es-ES", ImageSource = "images/es.svg" }
             }),
-            SelectedLanguage = language
+            SelectedLanguage = language,
+            HideTherms = hideTherms
         };
+    }
+
+    public Theme LoadTheme()
+    {
+        return _theme;
     }
 
     public void DarkModeSwitch(Theme theme)
@@ -61,6 +68,4 @@ public class ApplicationThemeService : IApplicationThemeService
         theme.Dark = string.IsNullOrWhiteSpace(theme.Dark) ? "dark" : "";
         _localStorage.SetItemAsString(LocalStorageConstants.DarkKey, theme.Dark);
     }
-
-    public Theme Theme { get; }
 }

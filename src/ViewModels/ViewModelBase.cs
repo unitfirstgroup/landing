@@ -23,7 +23,7 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
         NavigationManager = navigationManager;
         Localizer = localizer;
 
-        Theme = applicationThemeService.Theme ?? throw new Exception("ViewModelBase load theme exception.");
+        Theme = applicationThemeService.LoadTheme() ?? throw new Exception("ViewModelBase load theme exception.");
         Theme.PropertyChanged += Theme_PropertyChanged;
     }
 

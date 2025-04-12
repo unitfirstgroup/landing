@@ -4,7 +4,7 @@ namespace UnitFirst.Landing.Interfaces;
 
 public interface IApplicationThemeService
 {
-    Theme Theme { get; }
+    Theme LoadTheme();
     
     void DarkModeSwitch(Theme theme);
 }

@@ -7,22 +7,20 @@ namespace UnitFirst.Landing.Services;
 public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
 {
     private IJSObjectReference _mainModule;
-    private IJSObjectReference _dimensionModule;
+    private IJSObjectReference _windowModule;
 
-    public async Task<BrowserDimension> Initialize()
+    public async Task Initialize()
     {
         _mainModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/index.js" });
-        _dimensionModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/window.js" });
-        var dimensions = await GetDimensions();
-        return dimensions;
+        _windowModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/window.js" });
     }
 
     public async Task<BrowserDimension> GetDimensions()
     {
-        var dimension = await _dimensionModule.InvokeAsync<BrowserDimension>("getDimensions");
+        var dimension = await _windowModule.InvokeAsync<BrowserDimension>("getDimensions");
         return dimension;
     }
-
+    
     public async Task ShowDimensions(BrowserDimension dimension)
     {
         await _mainModule.InvokeVoidAsync("showAlert", $"Width: {dimension.Width}. Height: {dimension.Height}");
@@ -31,5 +29,12 @@ public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
     public async Task ShowAlert(string alertText)
     {
         await _mainModule.InvokeVoidAsync("showAlert", alertText);
+    }
+
+    public async Task GetAllElements()
+    {
+        var elements = await _windowModule.InvokeAsync<object>("getAllElements");
+
+        Console.WriteLine(elements != null);
     }
 }
