@@ -185,17 +185,35 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 if (!isSearchEmpty)
                 {
                     if (blogModel.Title.Contains(Model.Filter.SearchModel.Value))
-                        Model.Blogs.Add(blogModel);
+                    {
+                        if (selectedTags.Any())
+                        {
+                            foreach (var enabledTag in selectedTags)
+                            {
+                                if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
+                                {
+                                    Model.Blogs.Add(blogModel);
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Model.Blogs.Add(blogModel);
+                        }
+                    }
                     else
                         continue;
                 }
-
-                foreach (var enabledTag in selectedTags)
+                else
                 {
-                    if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
+                    foreach (var enabledTag in selectedTags)
                     {
-                        Model.Blogs.Add(blogModel);
-                        break;
+                        if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
+                        {
+                            Model.Blogs.Add(blogModel);
+                            break;
+                        }
                     }
                 }
             }
