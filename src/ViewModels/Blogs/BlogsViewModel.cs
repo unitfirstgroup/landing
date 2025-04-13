@@ -144,6 +144,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                     new TagModel { TagName = "StartUps" },
                     new TagModel { TagName = "Guides" },
                     new TagModel { TagName = "Development" },
+                    new TagModel { TagName = "UI/UX" },
                     new TagModel { TagName = "UnitFirst" }
                 }),
             },
