@@ -50,6 +50,7 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
 
     private void GetMoreInfoClicked()
     {
+        navigationManager.NavigateTo("services");
     }
 
     [RelayCommand]
