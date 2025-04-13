@@ -11,6 +11,6 @@ public partial class BlogModel : ObservableObject
     [ObservableProperty] private string _date;
     [ObservableProperty] private string _estimate;
     [ObservableProperty] private string _image;
-    [ObservableProperty] private ObservableCollection<NameDescriptionModel> _tags;
+    [ObservableProperty] private ObservableCollection<TagModel> _tags;
     [ObservableProperty] private string _title;
 }

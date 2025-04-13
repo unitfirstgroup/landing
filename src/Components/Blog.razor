@@ -5,7 +5,7 @@
         @foreach (var item in Tags)
         {
             <h6 class="flex w-auto min-w-10 items-center justify-center rounded-md border border-rose-600 px-1 py-1 text-center text-sm font-medium text-rose-600 shadow-lg dark:text-yellow-400 dark:border-yellow-400">
-                @item.Name
+                @item.TagName
             </h6>
         }
     </div>
@@ -31,7 +31,7 @@
     public string Image { get; set; }
 
     [Parameter]
-    public ObservableCollection<NameDescriptionModel> Tags { get; set; }
+    public ObservableCollection<TagModel> Tags { get; set; }
 
     [Parameter]
     public string Title { get; set; }

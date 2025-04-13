@@ -15,6 +15,115 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
 {
     [ObservableProperty] private BlogsModel _model;
 
+    private readonly List<BlogModel> _blogs = new()
+    {
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "IoT" },
+                    new TagModel() { TagName = "Development" },
+                }),
+                Title = "IoT Solutions for Education: Overview & Best Practices",
+                AuthorImage = "https://randomuser.me/api/portraits/men/54.jpg",
+                Author = "Toni Montana",
+                Estimate = "3 min",
+                Date = "25 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+            new()
+            {
+                Image = "images/it-solution.png",
+                Tags = new ObservableCollection<TagModel>(new[]
+                {
+                    new TagModel() { TagName = "AI" },
+                }),
+                Title = "Integrating AI into Business: A Complete Guide For 2025",
+                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
+                Author = "Poni Koni",
+                Estimate = "12 min",
+                Date = "27 March 2025"
+            },
+        };
+
     public override Task OnInitializedAsync()
     {
         _model = new BlogsModel()
@@ -39,115 +148,7 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                     new TagModel { TagName = "UnitFirst" }
                 }),
             },
-            Blogs = new ObservableCollection<BlogModel>
-            {
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "IoT" },
-                        new NameDescriptionModel() { Name = "Development" },
-                    }),
-                    Title = "IoT Solutions for Education: Overview & Best Practices",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/54.jpg",
-                    Author = "Toni Montana",
-                    Estimate = "3 min",
-                    Date = "25 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-                new()
-                {
-                    Image = "images/it-solution.png",
-                    Tags = new ObservableCollection<NameDescriptionModel>(new[]
-                    {
-                        new NameDescriptionModel() { Name = "AI" },
-                    }),
-                    Title = "Integrating AI into Business: A Complete Guide For 2025",
-                    AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                    Author = "Poni Koni",
-                    Estimate = "12 min",
-                    Date = "27 March 2025"
-                },
-            },
-            SearchBlogs = new ObservableCollection<BlogModel>()
+            Blogs = new ObservableCollection<BlogModel>(_blogs)
         };
 
         return Task.CompletedTask;
@@ -162,9 +163,58 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void RaiseSearch()
     {
+        Model.Blogs.Clear();
+
         var selectedTags = Model.Filter.Tags
-            .Where(x => x.Select is { IsSelected: true })
-            .Select(x => x.TagName).Distinct();
-        Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join('\n', selectedTags)}");
+            .Where(x => x.Select is { IsSelected: true }).Distinct();
+
+        if (!selectedTags.Any() && string.IsNullOrEmpty(Model.Filter.SearchModel.Value))
+        {
+            var allTag = Model.Filter.Tags.FirstOrDefault(x => x.TagName == "All");
+            if (allTag != null)
+            {
+                allTag.Select.IsSelected = true;
+            }
+        }
+
+        if (selectedTags.Any(x => x.TagName != "All"))
+        {
+            var allTag = Model.Filter.Tags.FirstOrDefault(x => x.TagName == "All");
+            if (allTag != null)
+            {
+                allTag.Select.IsSelected = false;
+            }
+        }
+
+        if (string.IsNullOrEmpty(Model.Filter.SearchModel.Value) && selectedTags.FirstOrDefault()?.TagName == "All")
+        {
+            foreach (var blogModel in _blogs)
+            {
+                Model.Blogs.Add(blogModel);
+            }
+        }
+        else
+        {
+            foreach (var blogModel in _blogs)
+            {
+                if (!string.IsNullOrEmpty(Model.Filter.SearchModel.Value))
+                {
+                    Model.Blogs.Add(blogModel);
+                    break;
+                }
+
+                foreach (var enabledTag in Model.Filter.Tags.Where(x => x.Select.IsSelected))
+                {
+                    if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
+                    {
+                        Model.Blogs.Add(blogModel);
+                        break;
+                    }
+                }
+            }
+        }
+
+        NotifyStateChanged();
+        Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join(',', selectedTags.Select(x => x.TagName))}");
     }
 }
