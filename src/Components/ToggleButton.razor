@@ -31,7 +31,7 @@
 @code {
 
     [Parameter]
-    public bool IsSelected { get; set; }
+    public SelectModel? Select { get; set; }
 
     [Parameter]
     public string Text { get; set; } = "";
@@ -53,23 +53,40 @@
 
     private void OnClick()
     {
-        var isSelected = !IsSelected;
-        IsSelected = isSelected;
+        var isSelected = !Select?.IsSelected ?? true;
 
-        BackgroundColor = IsSelected ? "bg-rose-600" : "bg-white";
-        BackgroundColorDark = IsSelected ? "bg-yellow-400" : "bg-gray-900";
-        TextColor = IsSelected ? "text-white" : "text-rose-600";
-        TextColorDark = IsSelected ? "text-white" : "text-yellow-400";
+        UpdateElement(isSelected);
 
         RaiseSearchCommand.Execute(null);
     }
 
+    private void UpdateElement(bool isSelected)
+    {
+        if (Select != null)
+        {
+            Console.WriteLine($"UpdateElement: {isSelected} -> {Select.IsSelected}");
+            Select.IsSelected = isSelected;
+        }
+
+        BackgroundColor = isSelected ? "bg-rose-600" : "bg-white";
+        BackgroundColorDark = isSelected ? "bg-yellow-400" : "bg-gray-900";
+        TextColor = isSelected ? "text-white" : "text-rose-600";
+        TextColorDark = isSelected ? "text-white" : "text-yellow-400";
+
+        
+    }
+
     protected override void OnParametersSet()
     {
-        BackgroundColor = IsSelected ? "bg-rose-600" : "bg-white";
-        BackgroundColorDark = IsSelected ? "bg-yellow-400" : "bg-gray-900";
-        TextColor = IsSelected ? "text-white" : "text-rose-600";
-        TextColorDark = IsSelected ? "text-white" : "text-yellow-400";
+        if (Select == null)
+        {
+            UpdateElement(false);
+        }
+        else
+        {
+            UpdateElement(Select.IsSelected);
+        }
+
         base.OnParametersSet();
     }
 

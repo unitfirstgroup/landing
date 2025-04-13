@@ -29,14 +29,14 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 },
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "All", IsSelected = true },
-                    new TagModel { TagName = "AI" },
-                    new TagModel { TagName = "IoT" },
-                    new TagModel { TagName = "Enterprise" },
-                    new TagModel { TagName = "StartUps" },
-                    new TagModel { TagName = "Guides" },
-                    new TagModel { TagName = "Development" },
-                    new TagModel { TagName = "UnitFirst" },
+                    new TagModel { TagName = "All", Select = new SelectModel { IsSelected = true } },
+                    new TagModel { TagName = "AI", Select = new SelectModel() },
+                    new TagModel { TagName = "IoT", Select = new SelectModel() },
+                    new TagModel { TagName = "Enterprise", Select = new SelectModel() },
+                    new TagModel { TagName = "StartUps", Select = new SelectModel() },
+                    new TagModel { TagName = "Guides", Select = new SelectModel() },
+                    new TagModel { TagName = "Development", Select = new SelectModel() },
+                    new TagModel { TagName = "UnitFirst", Select = new SelectModel() },
                 }),
             },
             Blogs = new ObservableCollection<BlogModel>
@@ -162,7 +162,9 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void RaiseSearch()
     {
-        var selectedTags = Model.Filter.Tags.Where(x => x.IsSelected).Select(x => x.TagName).Distinct();
+        var selectedTags = Model.Filter.Tags
+            .Where(x => x.Select is { IsSelected: true })
+            .Select(x => x.TagName).Distinct();
         Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join('\n', selectedTags)}");
     }
 }
