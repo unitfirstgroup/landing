@@ -30,13 +30,13 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
                     new TagModel { TagName = "All", Select = new SelectModel { IsSelected = true } },
-                    new TagModel { TagName = "AI", Select = new SelectModel() },
-                    new TagModel { TagName = "IoT", Select = new SelectModel() },
-                    new TagModel { TagName = "Enterprise", Select = new SelectModel() },
-                    new TagModel { TagName = "StartUps", Select = new SelectModel() },
-                    new TagModel { TagName = "Guides", Select = new SelectModel() },
-                    new TagModel { TagName = "Development", Select = new SelectModel() },
-                    new TagModel { TagName = "UnitFirst", Select = new SelectModel() },
+                    new TagModel { TagName = "AI" },
+                    new TagModel { TagName = "IoT" },
+                    new TagModel { TagName = "Enterprise" },
+                    new TagModel { TagName = "StartUps" },
+                    new TagModel { TagName = "Guides" },
+                    new TagModel { TagName = "Development" },
+                    new TagModel { TagName = "UnitFirst" }
                 }),
             },
             Blogs = new ObservableCollection<BlogModel>
