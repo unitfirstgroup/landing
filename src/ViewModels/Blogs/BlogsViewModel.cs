@@ -138,7 +138,6 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
                 },
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "All", Select = new SelectModel { IsSelected = true } },
                     new TagModel { TagName = "AI" },
                     new TagModel { TagName = "IoT" },
                     new TagModel { TagName = "Enterprise" },
@@ -168,25 +167,10 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
         var selectedTags = Model.Filter.Tags
             .Where(x => x.Select is { IsSelected: true }).Distinct();
 
-        if (!selectedTags.Any() && string.IsNullOrEmpty(Model.Filter.SearchModel.Value))
-        {
-            var allTag = Model.Filter.Tags.FirstOrDefault(x => x.TagName == "All");
-            if (allTag != null)
-            {
-                allTag.Select.IsSelected = true;
-            }
-        }
+        var isTagSelected = selectedTags.Any();
+        var isSearchEmpty = string.IsNullOrEmpty(Model.Filter.SearchModel.Value);
 
-        if (selectedTags.Any(x => x.TagName != "All"))
-        {
-            var allTag = Model.Filter.Tags.FirstOrDefault(x => x.TagName == "All");
-            if (allTag != null)
-            {
-                allTag.Select.IsSelected = false;
-            }
-        }
-
-        if (string.IsNullOrEmpty(Model.Filter.SearchModel.Value) && selectedTags.FirstOrDefault()?.TagName == "All")
+        if (isSearchEmpty && isTagSelected == false)
         {
             foreach (var blogModel in _blogs)
             {
@@ -197,13 +181,15 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
         {
             foreach (var blogModel in _blogs)
             {
-                if (!string.IsNullOrEmpty(Model.Filter.SearchModel.Value))
+                if (!isSearchEmpty)
                 {
-                    Model.Blogs.Add(blogModel);
-                    break;
+                    if (blogModel.Title.Contains(Model.Filter.SearchModel.Value))
+                        Model.Blogs.Add(blogModel);
+                    else
+                        continue;
                 }
 
-                foreach (var enabledTag in Model.Filter.Tags.Where(x => x.Select.IsSelected))
+                foreach (var enabledTag in selectedTags)
                 {
                     if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
                     {
