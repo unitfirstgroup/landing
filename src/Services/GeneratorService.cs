@@ -45,13 +45,14 @@ public class GeneratorService : IGeneratorService
 
     private void WriteModel(GeneratorModel model)
     {
+        var fileName = $"{model.Name}Model.cs";
+
         var path = $"{ROOT}\\Models\\{model.Name}";
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
         }
 
-        var fileName = $"{model.Name}Model.cs";
         var fullPath = Path.Combine(path, fileName);
         Console.WriteLine($"{nameof(WriteModel)}: {fullPath}");
         try
@@ -67,13 +68,14 @@ public class GeneratorService : IGeneratorService
 
     private void WriteViewModel(GeneratorModel model)
     {
+        var fileName = $"{model.Name}ViewModel.cs";
+
         var path = $"{ROOT}\\ViewModels\\{model.Name}";
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
         }
 
-        var fileName = $"{model.Name}ViewModel.cs";
         var fullPath = Path.Combine(path, fileName);
         Console.WriteLine($"{nameof(WriteViewModel)}: {fullPath}");
         try
@@ -89,13 +91,21 @@ public class GeneratorService : IGeneratorService
 
     private void WritePage(GeneratorModel model)
     {
-        var path = $"{ROOT}\\Pages";
         var fileName = $"{model.Name}.razor";
+
+        var path = $"{ROOT}\\Pages";
         var fullPath = Path.Combine(path, fileName);
+        var viewModel = $"{model.Name}ViewModel";
         Console.WriteLine($"{nameof(WritePage)}: {fullPath}");
+
+        var lines = new[] {
+            $"@page \"/{model.Tag.TagName}\"",
+            $"@inherits MvvmComponentBase<{viewModel}>",
+            "<div class=\"mx-auto w-full bg-white @ViewModel.Theme.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10\"></div>"
+        };
         try
         {
-            File.WriteAllText(fullPath, "<div class=\"mx-auto w-full bg-white @ViewModel.Theme.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10\"></div>");
+            File.WriteAllLines(fullPath, lines);
         }
         catch (Exception e)
         {
