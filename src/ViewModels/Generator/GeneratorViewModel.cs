@@ -19,7 +19,7 @@ public partial class GeneratorViewModel(IGeneratorService generatorService, IApp
     {
         _model = new GeneratorModel()
         {
-            Name = "Company Features",
+            Name = "Features",
             Description = "Represents key features.",
             Kind = "Page",
             Tag = new TagModel { TagName = "/features" },
