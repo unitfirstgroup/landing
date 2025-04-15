@@ -50,6 +50,7 @@ builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
 builder.Services.AddSingleton<IApplicationThemeService, ApplicationThemeService>();
 builder.Services.AddSingleton<IApplicationStateService, ApplicationStateService>();
 builder.Services.AddSingleton<IBrowserService, BrowserService>();
+builder.Services.AddSingleton<IGeneratorService, GeneratorService>();
 
 var jsInterop = builder.Build().Services.GetRequiredService<IJSRuntime>();
 var appLanguage = await jsInterop.InvokeAsync<string>("appCulture.get");

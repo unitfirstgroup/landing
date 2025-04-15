@@ -9,11 +9,13 @@ using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.ViewModels.Generator;
 
-public partial class GeneratorViewModel(IApplicationStateService applicationStateService,
+public partial class GeneratorViewModel(IGeneratorService generatorService, IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private GeneratorModel _model;
+
+
 
     public override Task OnInitializedAsync()
     {
@@ -37,13 +39,7 @@ public partial class GeneratorViewModel(IApplicationStateService applicationStat
     [RelayCommand]
     public void Generate()
     {
-        // page
-        // viewmodel
-        // model
-        // dependency injection
-        // resources
-        // translations
-
-        Console.WriteLine("Generate");
+        generatorService.Generate(_model);
+        Console.WriteLine("Page generated.");
     }
 }
