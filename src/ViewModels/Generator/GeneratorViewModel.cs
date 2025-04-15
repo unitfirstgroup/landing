@@ -15,8 +15,6 @@ public partial class GeneratorViewModel(IGeneratorService generatorService, IApp
 {
     [ObservableProperty] private GeneratorModel _model;
 
-
-
     public override Task OnInitializedAsync()
     {
         _model = new GeneratorModel()
@@ -28,12 +26,6 @@ public partial class GeneratorViewModel(IGeneratorService generatorService, IApp
             Category = "Software Development",
         };
         return Task.CompletedTask;
-    }
-
-    public override Task Loaded()
-    {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(GeneratorViewModel)}|{nameof(Loaded)}|");
-        return base.Loaded();
     }
 
     [RelayCommand]
