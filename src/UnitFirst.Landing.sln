@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitFirst.Landing", "UnitFirst.Landing.csproj", "{DCC47027-A440-4DDB-BB82-696B8198A9D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landing.Generator.Test", "..\Landing.Generator.Test\Landing.Generator.Test.csproj", "{A42456C8-990C-43D0-8001-B7C704F10633}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DCC47027-A440-4DDB-BB82-696B8198A9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCC47027-A440-4DDB-BB82-696B8198A9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCC47027-A440-4DDB-BB82-696B8198A9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42456C8-990C-43D0-8001-B7C704F10633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42456C8-990C-43D0-8001-B7C704F10633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42456C8-990C-43D0-8001-B7C704F10633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42456C8-990C-43D0-8001-B7C704F10633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

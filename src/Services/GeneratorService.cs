@@ -28,33 +28,42 @@ public class GeneratorService : IGeneratorService
 
     private void WriteTranslations(GeneratorModel model)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void WriteResources(GeneratorModel model)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void WriteDI(GeneratorModel model)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void WriteModel(GeneratorModel model)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void WriteViewModel(GeneratorModel model)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void WritePage(GeneratorModel model)
     {
-        var path = $"{ROOT}\\Pages\\{model.Name}";
+        var path = $"{ROOT}\\Pages\\{model.Name}.razor";
+        Console.WriteLine($"{nameof(WritePage)}: {path}");
+        try
+        {
+            File.WriteAllText(path, "razor content");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
         
-        File.WriteAllText(path, "razor content");
     }
 }
