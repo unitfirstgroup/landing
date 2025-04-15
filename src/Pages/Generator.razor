@@ -1,0 +1,34 @@
+﻿@page "/generator"
+@inherits MvvmComponentBase<UnitFirst.Landing.ViewModels.Generator.GeneratorViewModel>
+<div class="mx-auto w-full bg-white @ViewModel.Theme.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10">
+    <div class="col-span-3 items-center justify-center px-4 py-8 text-center text-black dark:text-white lg:px-10">
+        <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white">
+            <span class="text-rose-600 dark:text-yellow-400">AI</span>
+            Generator
+        </h1>
+        <span class="mb-6 block text-lg dark:text-white">AI Generator provide full solution to represent everything in digital world.</span>
+
+        <div class="flex flex-row content-center items-center justify-center gap-8">
+            <span class="text-rose-600 dark:text-yellow-400">@ViewModel.Model.Name</span>
+            <span class="text-rose-600 dark:text-yellow-400">@ViewModel.Model.Description</span>
+            <span class="text-rose-600 dark:text-yellow-400">@ViewModel.Model.Category</span>
+            <span class="text-rose-600 dark:text-yellow-400">@ViewModel.Model.Kind</span>
+            <button type="button"
+                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+                    @onclick="@ViewModel.GenerateCommand.Execute">
+                Generate
+            </button>
+        </div>
+    </div>
+    
+    <div class="h-20 border border-rose-600 bg-gray-200 text-center text-black dark:border-yellow-400 dark:text-white">
+        @* <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white">
+            Categories of our
+            <span class="text-rose-600 dark:text-yellow-400">services</span>
+        </h1>
+        <span class="mb-6 block text-lg text-black dark:text-white">For over a decade, we have been accumulating knowledge and expertise in several services that became our specialization.</span>
+        <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-2">
+            Scene
+        </div> *@
+    </div>
+</div>
