@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace UnitFirst.Landing.Models.Shared;
 
-public partial class FilterModel : UnitFirstModel
+public partial class FilterModel : UIElementModel
 {
     [ObservableProperty] private SearchModel _searchModel;
 
