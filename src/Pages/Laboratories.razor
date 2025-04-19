@@ -1,6 +1,6 @@
 ﻿@page "/laboratories"
 @inherits MvvmComponentBase<LaboratoriesViewModel>
-<div class="mx-auto w-full bg-white @ViewModel.Theme.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10">
+<UIElementsContainer UiElementModel="@ViewModel.UiElementModel">
     <UserAccent AccentText="Digital"
                 Text="laboratories"
                 Details="We’ve built expert knowledge in a range of industries. Search any kind of industry and find the best applicable laboratory."
@@ -17,4 +17,4 @@
               UrlText="@context.UrlText">
         </Card>
     </ItemsContainer>
-</div>
+</UIElementsContainer>
