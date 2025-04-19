@@ -19,6 +19,11 @@ public partial class GeneratorModel : ObservableObject
     [ObservableProperty] private string _kind;
 
     /// <summary>
+    /// Is collection of entities
+    /// </summary>
+    [ObservableProperty] private bool _isCollection;
+
+    /// <summary>
     /// <remarks></remarks>
     /// </summary>
     [ObservableProperty] private string _description;

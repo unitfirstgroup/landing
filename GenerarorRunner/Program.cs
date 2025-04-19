@@ -15,6 +15,7 @@ namespace GenerarorRunner
                 Name = "Features",
                 Description = "Represents key features.",
                 Kind = "Page",
+                IsCollection = true,
                 Tag = new TagModel { TagName = "/features" },
                 Category = "Software Development",
             };

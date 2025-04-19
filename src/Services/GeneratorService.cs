@@ -21,11 +21,17 @@ public class GeneratorService : IGeneratorService
         WritePage(model);
         WriteViewModel(model);
         WriteModel(model);
+        WriteImport(model);
         WriteDI(model);
         WriteResources(model);
         WriteTranslations(model);
 
         return true;
+    }
+
+    private void WriteImport(GeneratorModel model)
+    {
+        //throw new NotImplementedException();
     }
 
     private void WriteTranslations(GeneratorModel model)
