@@ -15,14 +15,6 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager,
         localizer) where TItem : BaseModel
 {
-    protected List<TItem> _items;
-    protected List<TagModel> _tags;
-
-    public override Task OnInitializedAsync()
-    {
-        _items = dataService.LoadData();
-        _tags = dataService.LoadTags();
-
-        return base.OnInitializedAsync();
-    }
+    protected List<TItem> _items = dataService.LoadData();
+    protected List<TagModel> _tags = dataService.LoadTags();
 }

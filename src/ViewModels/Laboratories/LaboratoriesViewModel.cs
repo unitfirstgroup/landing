@@ -1,8 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
-using System.Collections.ObjectModel;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
 using UnitFirst.Landing.Models.Laboratories;
@@ -19,20 +19,19 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
     : MultipleItemsViewModelBase<LaboratoryModel>(applicationStateService, applicationThemeService, navigationManager,
         localizer, searchService, dataService)
 {
-
     [ObservableProperty] private MultipleItemsModelBase<LaboratoryModel> _model;
 
     public override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
 
-        _model = new MultipleItemsModelBase<LaboratoryModel>()
+        _model = new MultipleItemsModelBase<LaboratoryModel>
         {
-            Filter = new FilterModel()
+            Filter = new FilterModel
             {
                 Dark = Theme.Dark,
                 Tags = new ObservableCollection<TagModel>(_tags),
-                SearchModel = new SearchModel()
+                SearchModel = new SearchModel
                 {
                     RaiseSearchCommand = SearchCommand,
                     Placeholder = "Search digital laboratory for your requirements..."
@@ -48,14 +47,6 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
         Console.WriteLine("Get Details");
     }
 
-
-    public void UpdateDataGrid(IEnumerable<LaboratoryModel> filtered)
-    {
-        Model.Filtered.Clear();
-        foreach (var laboratoryModel in filtered) Model.Filtered.Add(laboratoryModel);
-        NotifyStateChanged();
-    }
-
     [RelayCommand]
     public void Search()
     {
@@ -63,5 +54,11 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
 
         UpdateDataGrid(filtered);
     }
-
+    
+    public void UpdateDataGrid(IEnumerable<LaboratoryModel> filtered)
+    {
+        Model.Filtered.Clear();
+        foreach (var laboratoryModel in filtered) Model.Filtered.Add(laboratoryModel);
+        NotifyStateChanged();
+    }
 }
