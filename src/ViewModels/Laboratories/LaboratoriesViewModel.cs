@@ -18,7 +18,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
 {
     [ObservableProperty] private LaboratoriesModel _model;
 
-    private List<LaboratoryModel> _labs = new()
+    private readonly List<LaboratoryModel> _labs = new()
     {
         new()
         {
@@ -30,7 +30,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Healthcare", Select = new SelectModel()}
+                new TagModel(){TagName = "Healthcare"}
             })
         },
         new()
@@ -43,7 +43,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Media", Select = new SelectModel()}
+                new TagModel(){TagName = "Media"}
             })
         },
         new()
@@ -56,7 +56,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Transport", Select = new SelectModel()}
+                new TagModel(){TagName = "Transport"}
             })
         },
         new()
@@ -69,7 +69,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Business", Select = new SelectModel()}
+                new TagModel(){TagName = "Business"}
             })
         },
         new()
@@ -82,7 +82,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Media", Select = new SelectModel()}
+                new TagModel(){TagName = "Education"}
             })
         },
         new()
@@ -95,7 +95,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Business", Select = new SelectModel()}
+                new TagModel(){TagName = "Business"}
             })
         },
         new()
@@ -108,7 +108,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Business", Select = new SelectModel()}
+                new TagModel(){TagName = "Business"}
             })
         },
         new()
@@ -121,10 +121,19 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             Url = "#",
             Tags = new ObservableCollection<TagModel>(new []
             {
-                new TagModel(){TagName = "Business", Select = new SelectModel()}
+                new TagModel(){TagName = "Business"}
             })
         }
     };
+
+    private readonly List<TagModel> _tags = new(new[]
+    {
+        new TagModel { TagName = "Healthcare", Select = new SelectModel() { IsSelected = false } },
+        new TagModel { TagName = "Education", Select = new SelectModel() { IsSelected = false } },
+        new TagModel { TagName = "Transport", Select = new SelectModel() { IsSelected = false } },
+        new TagModel { TagName = "Business", Select = new SelectModel() { IsSelected = false } },
+        new TagModel { TagName = "Media", Select = new SelectModel() { IsSelected = false } },
+    });
 
     public override Task OnInitializedAsync()
     {
@@ -132,19 +141,9 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
         {
             Filter = new FilterModel()
             {
-                SearchModel = new SearchModel()
-                {
-                    Placeholder = "Choose domain area and take our digital service.",
-                    RaiseSearchCommand = SearchLaboratoriesCommand
-                },
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel { TagName = "All", Select = new SelectModel() { IsSelected = true } },
-                    new TagModel { TagName = "Healthcare", Select = new SelectModel() { IsSelected = false } },
-                    new TagModel { TagName = "Finances", Select = new SelectModel() { IsSelected = false } },
-                    new TagModel { TagName = "Education", Select = new SelectModel() { IsSelected = false } }
-                }),
-                Dark = Theme.Dark
+                Dark = Theme.Dark,
+                Tags = new ObservableCollection<TagModel>(_tags),
+                SearchModel = new SearchModel() { RaiseSearchCommand = SearchLaboratoriesCommand }
             },
             Laboratories = new ObservableCollection<LaboratoryModel>(_labs)
         };
