@@ -147,19 +147,24 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             },
             Laboratories = new ObservableCollection<LaboratoryModel>(_labs)
         };
-        return Task.CompletedTask;
+        return base.OnInitializedAsync();
     }
 
     [RelayCommand]
     public void SearchLaboratories()
     {
         var filtered = searchService.Search(_labs, Model.Filter);
+
+        UpdateDataGrid(filtered);
+    }
+
+    private void UpdateDataGrid(List<LaboratoryModel> filtered)
+    {
         Model.Laboratories.Clear();
         foreach (var laboratoryModel in filtered)
         {
             Model.Laboratories.Add(laboratoryModel);
         }
-
         NotifyStateChanged();
     }
 
