@@ -10,7 +10,10 @@ using UnitFirst.Landing.Models.Shared;
 namespace UnitFirst.Landing.ViewModels.Blogs;
 
 public partial class BlogsViewModel(IApplicationStateService applicationStateService,
-        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
+        IApplicationThemeService applicationThemeService,
+        NavigationManager navigationManager,
+        IStringLocalizer<App> localizer,
+        ISearchService<BlogModel> searchService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private BlogsModel _model;
@@ -163,63 +166,18 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void RaiseSearch()
     {
+        var filtered = searchService.Search(_blogs, Model.Filter);
+        if (filtered == null)
+            return;
+
+
         Model.Blogs.Clear();
-
-        var selectedTags = Model.Filter.Tags
-            .Where(x => x.Select is { IsSelected: true }).Distinct();
-
-        var isTagSelected = selectedTags.Any();
-        var isSearchEmpty = string.IsNullOrEmpty(Model.Filter.SearchModel.Value);
-
-        if (isSearchEmpty && isTagSelected == false)
+        foreach (var blogModel in filtered)
         {
-            foreach (var blogModel in _blogs)
-            {
-                Model.Blogs.Add(blogModel);
-            }
-        }
-        else
-        {
-            foreach (var blogModel in _blogs)
-            {
-                if (!isSearchEmpty)
-                {
-                    if (blogModel.Title.Contains(Model.Filter.SearchModel.Value))
-                    {
-                        if (selectedTags.Any())
-                        {
-                            foreach (var enabledTag in selectedTags)
-                            {
-                                if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
-                                {
-                                    Model.Blogs.Add(blogModel);
-                                    break;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Model.Blogs.Add(blogModel);
-                        }
-                    }
-                    else
-                        continue;
-                }
-                else
-                {
-                    foreach (var enabledTag in selectedTags)
-                    {
-                        if (blogModel.Tags.Any(x => x.TagName == enabledTag.TagName))
-                        {
-                            Model.Blogs.Add(blogModel);
-                            break;
-                        }
-                    }
-                }
-            }
+            Model.Blogs.Add(blogModel);
         }
 
         NotifyStateChanged();
-        Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join(',', selectedTags.Select(x => x.TagName))}");
+        //Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join(',', selectedTags.Select(x => x.TagName))}");
     }
 }

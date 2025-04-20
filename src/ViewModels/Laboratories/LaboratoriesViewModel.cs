@@ -28,14 +28,19 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
         {
             Filter = new FilterModel()
             {
-                SearchModel = new SearchModel(),
+                SearchModel = new SearchModel()
+                {
+                    Placeholder = "Choose domain area and take our digital service.",
+                    RaiseSearchCommand = SearchLaboratoriesCommand
+                },
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
                     new TagModel { TagName = "All", Select = new SelectModel() { IsSelected = true } },
                     new TagModel { TagName = "Healthcare", Select = new SelectModel() { IsSelected = false } },
                     new TagModel { TagName = "Finances", Select = new SelectModel() { IsSelected = false } },
                     new TagModel { TagName = "Education", Select = new SelectModel() { IsSelected = false } }
-                })
+                }),
+                Dark = Theme.Dark
             },
             Laboratories = new ObservableCollection<LaboratoryModel>
             {
@@ -114,6 +119,11 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
             },
         };
         return Task.CompletedTask;
+    }
+
+    [RelayCommand]
+    public void SearchLaboratories()
+    {
     }
 
     [RelayCommand]
