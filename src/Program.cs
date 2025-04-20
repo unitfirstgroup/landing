@@ -55,6 +55,7 @@ builder.Services.AddSingleton<IBrowserService, BrowserService>();
 builder.Services.AddSingleton<IGeneratorService, GeneratorService>();
 builder.Services.AddTransient<ISearchService<BlogModel>, SearchService<BlogModel>>();
 builder.Services.AddTransient<ISearchService<LaboratoryModel>, SearchService<LaboratoryModel>>();
+builder.Services.AddTransient<IDataService<LaboratoryModel>, LaboratoryDataService>();
 
 var jsInterop = builder.Build().Services.GetRequiredService<IJSRuntime>();
 var appLanguage = await jsInterop.InvokeAsync<string>("appCulture.get");

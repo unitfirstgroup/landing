@@ -8,7 +8,7 @@
                 ButtonText="Get details">
     </UserAccent>
     <ItemsContainer TItem="LaboratoryModel"
-                    Items="@ViewModel.Model.Laboratories"
+                    Items="@ViewModel.Model.Filtered"
                     Filter="@ViewModel.Model.Filter"
                     Context="laboratoryContext">
         <Card Name="@laboratoryContext.Name"

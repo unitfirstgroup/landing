@@ -1,11 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models.Shared;
 using UnitFirst.Landing.Models;
+using System.Collections.ObjectModel;
 
 namespace UnitFirst.Landing.ViewModels;
 
@@ -18,8 +18,7 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager,
     localizer) where TItem : BaseModel
 {
-    [ObservableProperty] private ObservableCollection<TItem> _filtered;
-    [ObservableProperty] private FilterModel _filter;
+    [ObservableProperty] private MultipleItemsModelBase<TItem> _model;
 
     protected List<TItem> _items;
     protected List<TagModel> _tags;
@@ -29,15 +28,26 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
         _items = dataService.LoadData();
         _tags = dataService.LoadTags();
 
+        _model = new MultipleItemsModelBase<TItem>()
+        {
+            Filter = new FilterModel()
+            {
+                Dark = Theme.Dark,
+                Tags = new ObservableCollection<TagModel>(_tags),
+                SearchModel = new SearchModel() { RaiseSearchCommand = SearchCommand }
+            },
+            Filtered = new ObservableCollection<TItem>(_items)
+        };
+
         return base.OnInitializedAsync();
     }
 
     public void UpdateDataGrid(IEnumerable<TItem> filtered)
     {
-        Filtered.Clear();
+        Model.Filtered.Clear();
         foreach (var laboratoryModel in filtered)
         {
-            Filtered.Add(laboratoryModel);
+            Model.Filtered.Add(laboratoryModel);
         }
         NotifyStateChanged();
     }
@@ -45,7 +55,7 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
     [RelayCommand]
     public void Search()
     {
-        var filtered = searchService.Search(_items, Filter);
+        var filtered = searchService.Search(_items, Model.Filter);
 
         UpdateDataGrid(filtered);
     }
