@@ -8,6 +8,7 @@ using Microsoft.JSInterop;
 using UnitFirst.Landing;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models.Blogs;
+using UnitFirst.Landing.Models.Laboratories;
 using UnitFirst.Landing.Services;
 using UnitFirst.Landing.ViewModels.About;
 using UnitFirst.Landing.ViewModels.Blogs;
@@ -53,6 +54,7 @@ builder.Services.AddSingleton<IApplicationStateService, ApplicationStateService>
 builder.Services.AddSingleton<IBrowserService, BrowserService>();
 builder.Services.AddSingleton<IGeneratorService, GeneratorService>();
 builder.Services.AddTransient<ISearchService<BlogModel>, SearchService<BlogModel>>();
+builder.Services.AddTransient<ISearchService<LaboratoryModel>, SearchService<LaboratoryModel>>();
 
 var jsInterop = builder.Build().Services.GetRequiredService<IJSRuntime>();
 var appLanguage = await jsInterop.InvokeAsync<string>("appCulture.get");

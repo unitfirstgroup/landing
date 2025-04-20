@@ -9,7 +9,7 @@ public class SearchService<T> : ISearchService<T> where T : IValueTagsSearchServ
     {
         var list = new List<T>();
         var selectedTags = filter.Tags
-            .Where(x => x.Select is { IsSelected: true }).Distinct();
+            .Where(x => x.Select is { IsSelected: true }).Distinct().ToList();
 
         var isTagSelected = selectedTags.Any();
         var isSearchEmpty = string.IsNullOrEmpty(filter.SearchModel.Value);
@@ -17,26 +17,26 @@ public class SearchService<T> : ISearchService<T> where T : IValueTagsSearchServ
         if (isSearchEmpty && isTagSelected == false)
             list.AddRange(items);
         else
-            foreach (var blogModel in items)
+            foreach (var item in items)
                 if (!isSearchEmpty)
                 {
-                    if (!blogModel.Value.Contains(filter.SearchModel.Value))
+                    if (!item.Value.Contains(filter.SearchModel.Value))
                         continue;
 
                     if (selectedTags.Any())
                     {
-                        if (selectedTags.Any(enabledTag => blogModel.TagModels.Any(x => x.TagName == enabledTag.TagName)))
-                            list.Add(blogModel);
+                        if (selectedTags.Any(enabledTag => item.Tags.Any(x => x.TagName == enabledTag.TagName)))
+                            list.Add(item);
                     }
                     else
                     {
-                        list.Add(blogModel);
+                        list.Add(item);
                     }
                 }
                 else
                 {
-                    if (selectedTags.Any(enabledTag => blogModel.TagModels.Any(x => x.TagName == enabledTag.TagName)))
-                        list.Add(blogModel);
+                    if (selectedTags.Any(enabledTag => item.Tags.Any(x => x.TagName == enabledTag.TagName)))
+                        list.Add(item);
                 }
 
         return list;
