@@ -1,6 +1,7 @@
 ﻿@page "/laboratories"
 @inherits MvvmComponentBase<LaboratoriesViewModel>
-<UIElementsContainer UiElementModel="@ViewModel.UiElementModel">
+<UIElementsContainer UiElementModel="@ViewModel.UiElementModel"
+                     TItem="LaboratoriesModel">
     <UserAccent AccentText="Digital"
                 Text="laboratories"
                 Details="We’ve built expert knowledge in a range of industries. Search any kind of industry and find the best applicable laboratory."
@@ -9,12 +10,13 @@
     </UserAccent>
     <ItemsContainer TItem="LaboratoryModel"
                     Items="@ViewModel.Model.Laboratories"
-                    Filter="@ViewModel.Model.Filter">
-        <Card Name="@context.Name"
-              Description="@context.Description"
-              Image="@context.Image"
-              Url="@context.Url"
-              UrlText="@context.UrlText">
+                    Filter="@ViewModel.Model.Filter"
+                    Context="laboratoryContext">
+        <Card Name="@laboratoryContext.Name"
+              Description="@laboratoryContext.Description"
+              Image="@laboratoryContext.Image"
+              Url="@laboratoryContext.Url"
+              UrlText="@laboratoryContext.UrlText">
         </Card>
     </ItemsContainer>
 </UIElementsContainer>

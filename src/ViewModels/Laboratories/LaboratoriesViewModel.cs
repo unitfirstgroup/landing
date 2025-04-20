@@ -15,15 +15,8 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
 {
     [ObservableProperty] private LaboratoriesModel _model;
 
-    [ObservableProperty] private UIElementModel _uiElementModel;
-
     public override Task OnInitializedAsync()
     {
-        _uiElementModel = new UIElementModel()
-        {
-            Dark = Theme.Dark,
-        };
-
         _model = new LaboratoriesModel()
         {
             Filter = new FilterModel()

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models;
+using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.ViewModels;
 
@@ -15,7 +16,9 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
     protected readonly NavigationManager NavigationManager;
 
     [ObservableProperty] private Theme _theme;
-    
+
+    [ObservableProperty] private UIElementModel _uiElementModel;
+
     protected ViewModelBase(IApplicationStateService applicationStateService, IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
     {
         ApplicationStateService = applicationStateService;
@@ -25,6 +28,8 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
 
         Theme = applicationThemeService.LoadTheme() ?? throw new Exception("ViewModelBase load theme exception.");
         Theme.PropertyChanged += Theme_PropertyChanged;
+
+        UiElementModel = new UIElementModel { Dark = Theme.Dark };
     }
 
     private void Theme_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)

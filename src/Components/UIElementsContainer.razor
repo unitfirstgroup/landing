@@ -1,4 +1,6 @@
-﻿<div class="mx-auto w-full bg-white @UiElementModel.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10">
+﻿@typeparam TItem
+
+<div class="mx-auto w-full bg-white @UiElementModel.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10">
     @ChildContent
 </div>
 
@@ -6,5 +8,5 @@
     [Parameter] public UIElementModel UiElementModel { get; set; }
 
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public RenderFragment<TItem> ChildContent { get; set; }
 }
