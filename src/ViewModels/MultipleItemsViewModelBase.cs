@@ -2,10 +2,10 @@
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
-using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Models.Shared;
-using UnitFirst.Landing.Models;
 using System.Collections.ObjectModel;
+using UnitFirst.Landing.Interfaces;
+using UnitFirst.Landing.Models;
+using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.ViewModels;
 
@@ -16,12 +16,12 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
         ISearchService<TItem> searchService,
         IDataService<TItem> dataService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager,
-    localizer) where TItem : BaseModel
+        localizer) where TItem : BaseModel
 {
-    [ObservableProperty] private MultipleItemsModelBase<TItem> _model;
-
     protected List<TItem> _items;
     protected List<TagModel> _tags;
+
+    [ObservableProperty] private MultipleItemsModelBase<TItem> _model;
 
     public override Task OnInitializedAsync()
     {
@@ -45,10 +45,7 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
     public void UpdateDataGrid(IEnumerable<TItem> filtered)
     {
         Model.Filtered.Clear();
-        foreach (var laboratoryModel in filtered)
-        {
-            Model.Filtered.Add(laboratoryModel);
-        }
+        foreach (var laboratoryModel in filtered) Model.Filtered.Add(laboratoryModel);
         NotifyStateChanged();
     }
 
@@ -59,5 +56,4 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
 
         UpdateDataGrid(filtered);
     }
-
 }
