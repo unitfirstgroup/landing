@@ -13,7 +13,8 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
         IApplicationThemeService applicationThemeService,
         NavigationManager navigationManager,
         IStringLocalizer<App> localizer,
-        ISearchService<TItem> searchService)
+        ISearchService<TItem> searchService,
+        IDataService<TItem> dataService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager,
     localizer) where TItem : BaseModel
 {
@@ -21,11 +22,13 @@ public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStat
     [ObservableProperty] private FilterModel _filter;
 
     protected List<TItem> _items;
-
     protected List<TagModel> _tags;
 
     public override Task OnInitializedAsync()
     {
+        _items = dataService.LoadData();
+        _tags = dataService.LoadTags();
+
         return base.OnInitializedAsync();
     }
 
