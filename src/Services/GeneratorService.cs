@@ -43,13 +43,46 @@ public class GeneratorService : IGeneratorService
 
     private void WriteDI(GeneratorModel model)
     {
-        //throw new NotImplementedException();
+        var fileName = "Program.cs";
+        var fullPath = Path.Combine(ROOT, fileName);
+        Console.WriteLine($"{nameof(WriteDI)}: {fullPath}");
+        try
+        {
+            var queue = new Queue<string>();
+            var lines = File.ReadAllLines(fullPath);
+            foreach (var line in lines)
+            {
+                queue.Enqueue(line);
+                if (line == "@using UnitFirst.Landing.Models;")
+                {
+                    queue.Enqueue($"@using UnitFirst.Landing.Models.{model.Name}");
+                }
+
+                if (line == "@using UnitFirst.Landing.ViewModels")
+                {
+                    queue.Enqueue($"@using UnitFirst.Landing.ViewModels.{model.Name}");
+                }
+
+                if (line == "builder.Services.AddTransient<FooterViewModel>();")
+                {
+                    queue.Enqueue(Environment.NewLine);
+                    queue.Enqueue($"builder.Services.AddTransient<{model.Name}ViewModel>();");
+                    queue.Enqueue($"builder.Services.AddTransient<ISearchService<{model.Name}Model>, SearchService<{model.Name}Model>>();");
+                    queue.Enqueue($"builder.Services.AddTransient<IDataService<{model.Name}Model>, {model.Name}DataService>();");
+                }
+            }
+
+            File.WriteAllLines(fullPath, queue);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     private void WriteImport(GeneratorModel model)
     {
-        //throw new NotImplementedException();
-        //C:\Work\unitfirst\landing\src\_Imports.razor
         var fileName = "_Imports.razor";
         var fullPath = Path.Combine(ROOT, fileName);
         Console.WriteLine($"{nameof(WriteImport)}: {fullPath}");
