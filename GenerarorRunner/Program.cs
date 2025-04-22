@@ -10,13 +10,14 @@ namespace GenerarorRunner
         static void Main(string[] args)
         {
             // Arrange
+            var name = "Feature";
             var model = new GeneratorModel()
             {
-                Name = "Features",
-                Description = "Represents key features.",
+                Name = name,
+                Description = $"Represents {name.ToLowerInvariant()} collection.",
                 Kind = "Page",
                 IsCollection = true,
-                Tag = new TagModel { TagName = "/features" },
+                Tag = new TagModel { TagName = $"/{name.ToLowerInvariant()}" },
                 Category = "Software Development",
             };
             IGeneratorService generatorService = new GeneratorService();
