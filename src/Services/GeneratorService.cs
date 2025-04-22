@@ -6,9 +6,7 @@ namespace UnitFirst.Landing.Services;
 public class GeneratorService : IGeneratorService
 {
     public const string ROOT = "C:\\Work\\unitfirst\\landing\\src";
-    //public const string ROOT = "C:\\Users\\DeLL\\Downloads";
-    public const string TEMPLATE_MANY = "Laboratories";
-    public const string TEMPLATE_SINGLE = "Laboratory";
+    public const string DESTINATION = "C:\\Work\\unitfirst\\landing\\src";
 
     public bool Generate(GeneratorModel model)
     {
@@ -19,13 +17,14 @@ public class GeneratorService : IGeneratorService
         // resources
         // translations
 
-        //WritePage(model);
-        //WriteComponent(model);
-        WriteViewModel(model);
-        WriteModel(model);
         WriteDataService(model);
         WriteImport(model);
         WriteDI(model);
+        WriteModel(model);
+        WriteViewModel(model);
+        WriteComponent(model);
+        WritePage(model);
+
         WriteResources(model);
         WriteTranslations(model);
 
@@ -54,9 +53,9 @@ public class GeneratorService : IGeneratorService
 
     private void WriteDataService(GeneratorModel model)
     {
-        var fileName = $"{model.Name}Model.cs";
+        var fileName = $"{model.Name}DataService.cs";
 
-        var path = $"{ROOT}\\Services\\{model.Name}";
+        var path = $"{DESTINATION}\\Services";
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
@@ -84,7 +83,7 @@ public class GeneratorService : IGeneratorService
     {
         var fileName = $"{model.Name}Model.cs";
 
-        var path = $"{ROOT}\\Models\\{model.Name}";
+        var path = $"{DESTINATION}\\Models\\{model.Name}";
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
@@ -92,13 +91,12 @@ public class GeneratorService : IGeneratorService
 
         var fullPath = Path.Combine(path, fileName);
         Console.WriteLine($"{nameof(WriteViewModel)}: {fullPath}");
-        var cloneModelPath = $"{ROOT}\\Models\\LaboratoryModel.cs";
+        var cloneModelPath = $"{ROOT}\\Models\\CloneBaseModel.cs";
         try
         {
             var clone = File.ReadAllText(cloneModelPath);
             var updated = clone
-                .Replace("LaboratoryModel", $"{model.Name}Model")
-                .Replace("", "");
+                .Replace("CloneBaseModel", $"{model.Name}Model");
             File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
@@ -112,7 +110,7 @@ public class GeneratorService : IGeneratorService
     {
         var fileName = $"{model.Name}ViewModel.cs";
 
-        var path = $"{ROOT}\\ViewModels\\{model.Name}";
+        var path = $"{DESTINATION}\\ViewModels\\{model.Name}";
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
@@ -139,7 +137,12 @@ public class GeneratorService : IGeneratorService
 
     private void WriteComponent(GeneratorModel model)
     {
-        var path = $"{ROOT}\\Components";
+        var path = $"{DESTINATION}\\Components";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
         var fullPath = Path.Combine(path, $"{model.Name}.razor");
        
         Console.WriteLine($"{nameof(WriteComponent)}: {fullPath}");
@@ -162,15 +165,18 @@ public class GeneratorService : IGeneratorService
 
     private void WritePage(GeneratorModel model)
     {
-        var fileName = $"{model.Name}.razor";
+        var path = $"{DESTINATION}\\Pages";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
 
-        var path = $"{ROOT}\\Pages";
-        var fullPath = Path.Combine(path, fileName);
+        var fullPath = Path.Combine(path, $"{model.Name}.razor");
         var viewModel = $"{model.Name}ViewModel";
 
         Console.WriteLine($"{nameof(WritePage)}: {fullPath}");
 
-        var cloneViewModelPath = $"{ROOT}\\Pages\\Laboratories.razor";
+        var cloneViewModelPath = $"{ROOT}\\Pages\\CloneBasePage.razor";
         try
         {
             var clone = File.ReadAllText(cloneViewModelPath);
