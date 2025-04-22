@@ -49,6 +49,30 @@ public class GeneratorService : IGeneratorService
     private void WriteImport(GeneratorModel model)
     {
         //throw new NotImplementedException();
+        //C:\Work\unitfirst\landing\src\_Imports.razor
+        var fileName = "_Imports.razor";
+        var fullPath = Path.Combine(ROOT, fileName);
+        Console.WriteLine($"{nameof(WriteImport)}: {fullPath}");
+        try
+        {
+            var queue = new Queue<string>();
+            var lines = File.ReadAllLines(fullPath);
+            foreach (var line in lines)
+            {
+                queue.Enqueue(line);
+                if (line == "@using UnitFirst.Landing.Models.Shared")
+                {
+                    queue.Enqueue($"@using UnitFirst.Landing.Models.{model.Name}");
+                }
+            }
+
+            File.WriteAllLines(fullPath, queue);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     private void WriteDataService(GeneratorModel model)
