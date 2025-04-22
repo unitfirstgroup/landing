@@ -64,6 +64,11 @@ public class GeneratorService : IGeneratorService
                 {
                     queue.Enqueue($"@using UnitFirst.Landing.Models.{model.Name}");
                 }
+
+                if (line == "@using UnitFirst.Landing.ViewModels")
+                {
+                    queue.Enqueue($"@using UnitFirst.Landing.ViewModels.{model.Name}");
+                }
             }
 
             File.WriteAllLines(fullPath, queue);
