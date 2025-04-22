@@ -151,10 +151,12 @@ public class GeneratorService : IGeneratorService
         var cloneViewModelPath = $"{ROOT}\\ViewModels\\CloneBaseViewModel.cs";
         try
         {
+            //
             var clone = File.ReadAllText(cloneViewModelPath);
             var updated = clone
                 .Replace("BaseCloneViewModel", $"{model.Name}ViewModel")
                 .Replace("BaseModel", $"{model.Name}Model")
+                .Replace("using UnitFirst.Landing.Models;", $"using UnitFirst.Landing.Models;{Environment.NewLine}using UnitFirst.Landing.Models.{model.Name};")
                 .Replace("namespace UnitFirst.Landing.ViewModels;", $"namespace UnitFirst.Landing.ViewModels;{Environment.NewLine}namespace UnitFirst.Landing.ViewModels.{model.Name};");
             File.WriteAllText(fullPath, updated);
         }
