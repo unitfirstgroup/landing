@@ -53,14 +53,14 @@ public class GeneratorService : IGeneratorService
             foreach (var line in lines)
             {
                 queue.Enqueue(line);
-                if (line == "@using UnitFirst.Landing.Models;")
+                if (line == "using UnitFirst.Landing.Models;")
                 {
-                    queue.Enqueue($"@using UnitFirst.Landing.Models.{model.Name};");
+                    queue.Enqueue($"using UnitFirst.Landing.Models.{model.Name};");
                 }
 
-                if (line == "@using UnitFirst.Landing.ViewModels;")
+                if (line == "using UnitFirst.Landing.ViewModels;")
                 {
-                    queue.Enqueue($"@using UnitFirst.Landing.ViewModels.{model.Name};");
+                    queue.Enqueue($"using UnitFirst.Landing.ViewModels.{model.Name};");
                 }
 
                 if (line == "builder.Services.AddTransient<FooterViewModel>();")
