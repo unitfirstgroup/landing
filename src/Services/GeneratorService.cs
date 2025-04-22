@@ -97,6 +97,7 @@ public class GeneratorService : IGeneratorService
         {
             var clone = File.ReadAllText(cloneServicePath);
             var updated = clone
+                .Replace("using UnitFirst.Landing.Models;", $"using UnitFirst.Landing.Models.{model.Name};")
                 .Replace("CloneBaseDataService", $"{model.Name}DataService")
                 .Replace("BaseModel", $"{model.Name}Model");
             File.WriteAllText(fullPath, updated);
