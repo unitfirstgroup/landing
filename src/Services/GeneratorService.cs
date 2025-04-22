@@ -19,8 +19,8 @@ public class GeneratorService : IGeneratorService
         // resources
         // translations
 
-        WritePage(model);
-        WriteComponent(model);
+        //WritePage(model);
+        //WriteComponent(model);
         WriteViewModel(model);
         WriteModel(model);
         WriteDataService(model);
@@ -120,13 +120,14 @@ public class GeneratorService : IGeneratorService
 
         var fullPath = Path.Combine(path, fileName);
         Console.WriteLine($"{nameof(WriteViewModel)}: {fullPath}");
-        var cloneViewModelPath = $"{ROOT}\\ViewModels\\{model.Name}\\{fileName}";
+        var cloneViewModelPath = $"{ROOT}\\ViewModels\\CloneBaseViewModel.cs";
         try
         {
             var clone = File.ReadAllText(cloneViewModelPath);
             var updated = clone
-                .Replace("LaboratoryModel", "")
-                .Replace("", "");
+                .Replace("BaseCloneViewModel", $"{model.Name}ViewModel")
+                .Replace("BaseModel", $"{model.Name}Model")
+                .Replace("namespace UnitFirst.Landing.ViewModels;", $"namespace UnitFirst.Landing.ViewModels.{model.Name}");
             File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
