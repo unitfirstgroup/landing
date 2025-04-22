@@ -204,7 +204,7 @@ public class GeneratorService : IGeneratorService
             Directory.CreateDirectory(path);
         }
 
-        var fullPath = Path.Combine(path, $"{model.Name}.razor");
+        var fullPath = Path.Combine(path, $"{model.Name}Page.razor");
 
         Console.WriteLine($"{nameof(WritePage)}: {fullPath}");
 
