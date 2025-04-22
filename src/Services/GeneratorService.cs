@@ -96,7 +96,8 @@ public class GeneratorService : IGeneratorService
         {
             var clone = File.ReadAllText(cloneModelPath);
             var updated = clone
-                .Replace("CloneBaseModel", $"{model.Name}Model");
+                .Replace("CloneBaseModel", $"{model.Name}Model")
+                .Replace("namespace UnitFirst.Landing.Models;", $"namespace UnitFirst.Landing.Models.{model.Name};");
             File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
@@ -125,7 +126,7 @@ public class GeneratorService : IGeneratorService
             var updated = clone
                 .Replace("BaseCloneViewModel", $"{model.Name}ViewModel")
                 .Replace("BaseModel", $"{model.Name}Model")
-                .Replace("namespace UnitFirst.Landing.ViewModels;", $"namespace UnitFirst.Landing.ViewModels.{model.Name}");
+                .Replace("namespace UnitFirst.Landing.ViewModels;", $"namespace UnitFirst.Landing.ViewModels.{model.Name};");
             File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
@@ -184,7 +185,8 @@ public class GeneratorService : IGeneratorService
                 .Replace("@page \"/laboratories\"", $"@page \"{model.Tag.TagName}\"")
                 .Replace("@inherits MvvmComponentBase<LaboratoriesViewModel>", $"@inherits MvvmComponentBase<{viewModel}>")
                 .Replace("TItem=\"LaboratoryModel\"", $"TItem=\"{model.Name}Model\"")
-                .Replace("<Card",$"<{model.Name}");
+                .Replace("<Card",$"<{model.Name}")
+                .Replace("</Card>", $"</{model.Name}>");
             File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
