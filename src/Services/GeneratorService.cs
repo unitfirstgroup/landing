@@ -173,7 +173,6 @@ public class GeneratorService : IGeneratorService
         }
 
         var fullPath = Path.Combine(path, $"{model.Name}.razor");
-        var viewModel = $"{model.Name}ViewModel";
 
         Console.WriteLine($"{nameof(WritePage)}: {fullPath}");
 
@@ -182,9 +181,9 @@ public class GeneratorService : IGeneratorService
         {
             var clone = File.ReadAllText(cloneViewModelPath);
             var updated = clone
-                .Replace("@page \"/laboratories\"", $"@page \"{model.Tag.TagName}\"")
-                .Replace("@inherits MvvmComponentBase<LaboratoriesViewModel>", $"@inherits MvvmComponentBase<{viewModel}>")
-                .Replace("TItem=\"LaboratoryModel\"", $"TItem=\"{model.Name}Model\"")
+                .Replace("@page \"/base\"", $"@page \"{model.Tag.TagName}\"")
+                .Replace("@inherits MvvmComponentBase<BaseCloneViewModel>", $"@inherits MvvmComponentBase<{model.Name}ViewModel>")
+                .Replace("TItem=\"BaseModel\"", $"TItem=\"{model.Name}Model\"")
                 .Replace("<Card",$"<{model.Name}")
                 .Replace("</Card>", $"</{model.Name}>");
             File.WriteAllText(fullPath, updated);
