@@ -155,7 +155,7 @@ public class GeneratorService : IGeneratorService
             var updated = clone
                 .Replace("BaseCloneViewModel", $"{model.Name}ViewModel")
                 .Replace("BaseModel", $"{model.Name}Model")
-                .Replace("namespace UnitFirst.Landing.ViewModels;", $"namespace UnitFirst.Landing.ViewModels.{model.Name};");
+                .Replace("namespace UnitFirst.Landing.ViewModels;", $"namespace UnitFirst.Landing.ViewModels;{Environment.NewLine}namespace UnitFirst.Landing.ViewModels.{model.Name};");
             File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
