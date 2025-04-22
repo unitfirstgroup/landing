@@ -23,18 +23,13 @@ public class GeneratorService : IGeneratorService
         WriteComponent(model);
         WriteViewModel(model);
         WriteModel(model);
+        WriteDataService(model);
         WriteImport(model);
         WriteDI(model);
         WriteResources(model);
         WriteTranslations(model);
 
         return true;
-    }
-
-   
-    private void WriteImport(GeneratorModel model)
-    {
-        //throw new NotImplementedException();
     }
 
     private void WriteTranslations(GeneratorModel model)
@@ -52,7 +47,38 @@ public class GeneratorService : IGeneratorService
         //throw new NotImplementedException();
     }
 
+    private void WriteImport(GeneratorModel model)
+    {
+        //throw new NotImplementedException();
+    }
 
+    private void WriteDataService(GeneratorModel model)
+    {
+        var fileName = $"{model.Name}Model.cs";
+
+        var path = $"{ROOT}\\Services\\{model.Name}";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        var fullPath = Path.Combine(path, fileName);
+        Console.WriteLine($"{nameof(WriteDataService)}: {fullPath}");
+        var cloneServicePath = $"{ROOT}\\Services\\CloneBaseDataService.cs";
+        try
+        {
+            var clone = File.ReadAllText(cloneServicePath);
+            var updated = clone
+                .Replace("CloneBaseDataService", $"{model.Name}DataService")
+                .Replace("BaseModel", $"{model.Name}Model");
+            File.WriteAllText(fullPath, updated);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
 
     private void WriteModel(GeneratorModel model)
     {
@@ -65,10 +91,15 @@ public class GeneratorService : IGeneratorService
         }
 
         var fullPath = Path.Combine(path, fileName);
-        Console.WriteLine($"{nameof(WriteModel)}: {fullPath}");
+        Console.WriteLine($"{nameof(WriteViewModel)}: {fullPath}");
+        var cloneModelPath = $"{ROOT}\\Models\\LaboratoryModel.cs";
         try
         {
-            File.WriteAllText(fullPath, "model cs file");
+            var clone = File.ReadAllText(cloneModelPath);
+            var updated = clone
+                .Replace("LaboratoryModel", $"{model.Name}Model")
+                .Replace("", "");
+            File.WriteAllText(fullPath, updated);
         }
         catch (Exception e)
         {
