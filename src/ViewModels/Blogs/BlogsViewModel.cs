@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using UnitFirst.Landing.Interfaces;
+using UnitFirst.Landing.Models;
 using UnitFirst.Landing.Models.Blogs;
 using UnitFirst.Landing.Models.Shared;
 
@@ -13,148 +14,30 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
         IApplicationThemeService applicationThemeService,
         NavigationManager navigationManager,
         IStringLocalizer<App> localizer,
-        ISearchService<BlogModel> searchService)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
+        ISearchService<BlogModel> searchService,
+        IDataService<BlogModel> dataService)
+    : MultipleItemsViewModelBase<BlogModel>(applicationStateService, applicationThemeService, navigationManager, localizer, searchService, dataService)
 {
-    [ObservableProperty] private BlogsModel _model;
-
-    private readonly List<BlogModel> _blogs = new()
+    [ObservableProperty] private MultipleItemsModelBase<BlogModel> _model;
+    
+    public override async Task OnInitializedAsync()
     {
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "IoT" },
-                    new TagModel() { TagName = "Development" },
-                }),
-                Title = "IoT Solutions for Education: Overview & Best Practices",
-                AuthorImage = "https://randomuser.me/api/portraits/men/54.jpg",
-                Author = "Toni Montana",
-                Estimate = "3 min",
-                Date = "25 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-            new()
-            {
-                Image = "images/it-solution.png",
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel() { TagName = "AI" },
-                }),
-                Title = "Integrating AI into Business: A Complete Guide For 2025",
-                AuthorImage = "https://randomuser.me/api/portraits/men/23.jpg",
-                Author = "Poni Koni",
-                Estimate = "12 min",
-                Date = "27 March 2025"
-            },
-        };
+        await base.OnInitializedAsync();
 
-    public override Task OnInitializedAsync()
-    {
-        _model = new BlogsModel()
+        _model = new MultipleItemsModelBase<BlogModel>()
         {
             Filter = new FilterModel()
             {
+                Dark = Theme.Dark,
+                Tags = new ObservableCollection<TagModel>(_tags),
                 SearchModel = new SearchModel()
                 {
                     Placeholder = "Search blog via input key words...",
-                    Value = "",
-                    RaiseSearchCommand = RaiseSearchCommand
-                },
-                Tags = new ObservableCollection<TagModel>(new[]
-                {
-                    new TagModel { TagName = "AI" },
-                    new TagModel { TagName = "IoT" },
-                    new TagModel { TagName = "Enterprise" },
-                    new TagModel { TagName = "StartUps" },
-                    new TagModel { TagName = "Guides" },
-                    new TagModel { TagName = "Development" },
-                    new TagModel { TagName = "UI/UX" },
-                    new TagModel { TagName = "UnitFirst" }
-                }),
+                    RaiseSearchCommand = SearchCommand
+                }
             },
-            Blogs = new ObservableCollection<BlogModel>(_blogs)
+            Filtered = new ObservableCollection<BlogModel>(_items)
         };
-
-        return Task.CompletedTask;
     }
 
 
@@ -164,20 +47,17 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
     }
 
     [RelayCommand]
-    public void RaiseSearch()
+    public void Search()
     {
-        var filtered = searchService.Search(_blogs, Model.Filter);
-        if (filtered == null)
-            return;
+        var filtered = searchService.Search(_items, Model.Filter);
 
+        UpdateDataGrid(filtered);
+    }
 
-        Model.Blogs.Clear();
-        foreach (var blogModel in filtered)
-        {
-            Model.Blogs.Add(blogModel);
-        }
-
+    public void UpdateDataGrid(IEnumerable<BlogModel> filtered)
+    {
+        Model.Filtered.Clear();
+        foreach (var item in filtered) Model.Filtered.Add(item);
         NotifyStateChanged();
-        //Console.WriteLine($"Filter start. Search: {Model.Filter.SearchModel.Value}. Tags: {string.Join(',', selectedTags.Select(x => x.TagName))}");
     }
 }

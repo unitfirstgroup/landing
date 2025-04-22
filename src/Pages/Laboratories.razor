@@ -10,12 +10,12 @@
     <ItemsContainer TItem="LaboratoryModel"
                     Items="@ViewModel.Model.Filtered"
                     Filter="@ViewModel.Model.Filter"
-                    Context="laboratoryContext">
-        <Card Name="@laboratoryContext.Name"
-              Description="@laboratoryContext.Description"
-              Image="@laboratoryContext.Image"
-              Url="@laboratoryContext.Url"
-              UrlText="@laboratoryContext.UrlText">
+                    Context="context">
+        <Card Name="@context.Name"
+              Description="@context.Description"
+              Image="@context.Image"
+              Url="@context.Url"
+              UrlText="@context.UrlText">
         </Card>
     </ItemsContainer>
 </UIElementsContainer>

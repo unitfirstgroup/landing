@@ -1,26 +1,23 @@
 ﻿@page "/blog"
 @inherits MvvmComponentBase<BlogsViewModel>
-<div class="mx-auto w-full bg-white @ViewModel.Theme.Dark px-2 text-black dark:bg-gray-900 dark:text-white lg:px-10">
-    <div class="col-span-2 items-center justify-center px-4 py-8 text-center text-black dark:text-white lg:px-10">
-        <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white">
-            <span class="text-rose-600 dark:text-yellow-400">Valuable</span>
-            insights
-        </h1>
-        <span class="mb-6 block text-lg dark:text-white">Find in applicable stories that can improve your business.</span>
-    </div>
-
-    <div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white lg:px-24">
-        <ItemsContainer
-            TItem="BlogModel"
-            Items="@ViewModel.Model.Blogs"
-            Filter="@ViewModel.Model.Filter">
-            <Blog Image="@context.Image"
-                  Tags="@context.Tags"
-                  Title="@context.Title"
-                  Author="@context.Author"
-                  AuthorImage="@context.AuthorImage"
-                  Date="@context.Date"
-                  Estimate="@context.Estimate"></Blog>
-        </ItemsContainer>
-    </div>
-</div>
+<UIElementsContainer UiElementModel="@ViewModel.UiElementModel">
+    <UserAccent AccentText="Valuable"
+                Text="insights"
+                Details="Find in applicable stories that can improve your business."
+                ButtonClickCommand="@ViewModel.GetDetailsCommand"
+                ButtonText="Get details">
+    </UserAccent>
+    <ItemsContainer TItem="BlogModel"
+                    Items="@ViewModel.Model.Filtered"
+                    Filter="@ViewModel.Model.Filter"
+                    Context="context">
+        <Blog Image="@context.Image"
+              Tags="@context.Tags"
+              Title="@context.Title"
+              Author="@context.Author"
+              AuthorImage="@context.AuthorImage"
+              Date="@context.Date"
+              Estimate="@context.Estimate">
+        </Blog>
+    </ItemsContainer>
+</UIElementsContainer>

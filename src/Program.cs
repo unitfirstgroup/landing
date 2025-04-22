@@ -53,7 +53,9 @@ builder.Services.AddSingleton<IApplicationThemeService, ApplicationThemeService>
 builder.Services.AddSingleton<IApplicationStateService, ApplicationStateService>();
 builder.Services.AddSingleton<IBrowserService, BrowserService>();
 builder.Services.AddSingleton<IGeneratorService, GeneratorService>();
+
 builder.Services.AddTransient<ISearchService<BlogModel>, SearchService<BlogModel>>();
+builder.Services.AddTransient<IDataService<BlogModel>, BlogDataService>();
 builder.Services.AddTransient<ISearchService<LaboratoryModel>, SearchService<LaboratoryModel>>();
 builder.Services.AddTransient<IDataService<LaboratoryModel>, LaboratoryDataService>();
 
