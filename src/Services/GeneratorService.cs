@@ -17,13 +17,15 @@ public class GeneratorService : IGeneratorService
         // resources
         // translations
 
-        WriteDataService(model);
-        WriteImport(model);
-        WriteDI(model);
+        
         WriteModel(model);
         WriteViewModel(model);
         WriteComponent(model);
         WritePage(model);
+
+        WriteDataService(model);
+        WriteImport(model);
+        WriteDI(model);
 
         WriteResources(model);
         WriteTranslations(model);
