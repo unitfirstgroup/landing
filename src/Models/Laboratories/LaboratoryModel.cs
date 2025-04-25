@@ -9,5 +9,5 @@ public partial class LaboratoryModel : BaseModel
     [ObservableProperty] private string _name;
     [ObservableProperty] private string _url;
     [ObservableProperty] private string _urlText;
-    public override string Value => Name;
+    public override string SearchValue => Name;
 }

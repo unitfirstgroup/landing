@@ -10,5 +10,5 @@ public partial class BlogModel : BaseModel
     [ObservableProperty] private string _estimate;
     [ObservableProperty] private string _image;
     [ObservableProperty] private string _title;
-    public override string Value => _title;
+    public override string SearchValue => _title;
 }

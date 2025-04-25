@@ -8,6 +8,6 @@ namespace UnitFirst.Landing.Models
     public abstract partial class BaseModel : ObservableObject, IValueTagsSearchService
     {
         [ObservableProperty] private ObservableCollection<TagModel> _tags;
-        public abstract string Value { get; }
+        public abstract string SearchValue { get; }
     }
 }

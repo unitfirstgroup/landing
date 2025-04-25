@@ -5,7 +5,7 @@ namespace UnitFirst.Landing.Interfaces;
 
 public interface IValueTagsSearchService
 {
-    public string Value { get; }
+    public string SearchValue { get; }
 
     public ObservableCollection<TagModel> Tags { get; }
 }

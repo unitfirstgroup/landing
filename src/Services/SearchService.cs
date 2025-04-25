@@ -20,7 +20,7 @@ public class SearchService<T> : ISearchService<T> where T : IValueTagsSearchServ
             foreach (var item in items)
                 if (!isSearchEmpty)
                 {
-                    if (!item.Value.Contains(filter.SearchModel.Value))
+                    if (!item.SearchValue.Contains(filter.SearchModel.Value))
                         continue;
 
                     if (selectedTags.Any())
