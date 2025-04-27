@@ -5,13 +5,23 @@ namespace UnitFirst.Landing.Services;
 
 public class CloneBaseDataService : DataService<BaseModel>
 {
+    private readonly List<BaseModel> _items = new(new[]
+    {
+        new CloneBaseModel()
+    });
+
+    private readonly List<TagModel> _tags = new(new[]
+    {
+        new TagModel()
+    });
+
     public override List<BaseModel> LoadData()
     {
-        return new List<BaseModel>();
+        return _items;
     }
 
     public override List<TagModel> LoadTags()
     {
-        return new List<TagModel>();
+        return _tags;
     }
 }
