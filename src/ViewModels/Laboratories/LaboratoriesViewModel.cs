@@ -10,15 +10,26 @@ using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.ViewModels.Laboratories;
 
-public partial class LaboratoriesViewModel(IApplicationStateService applicationStateService,
+public partial class LaboratoriesViewModel
+    (
+        IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
         NavigationManager navigationManager,
         IStringLocalizer<App> localizer,
         ISearchService<LaboratoryModel> searchService,
-        IDataService<LaboratoryModel> dataService)
-    : MultipleItemsViewModelBase<LaboratoryModel>(applicationStateService, applicationThemeService, navigationManager,
-        localizer, searchService, dataService)
-{
+        IDataService<LaboratoryModel> dataService
+    )
+    : MultipleItemsViewModelBase<LaboratoryModel>
+    (
+        applicationStateService,
+        applicationThemeService,
+        navigationManager,
+        localizer,
+        searchService,
+        dataService
+    )
+
+    {
     [ObservableProperty] private MultipleItemsModelBase<LaboratoryModel> _model;
 
     public override async Task OnInitializedAsync()
@@ -54,7 +65,7 @@ public partial class LaboratoriesViewModel(IApplicationStateService applicationS
 
         UpdateDataGrid(filtered);
     }
-    
+
     public void UpdateDataGrid(IEnumerable<LaboratoryModel> filtered)
     {
         Model.Filtered.Clear();

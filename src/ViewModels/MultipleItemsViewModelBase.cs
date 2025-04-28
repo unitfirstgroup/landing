@@ -6,14 +6,23 @@ using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.ViewModels;
 
-public abstract partial class MultipleItemsViewModelBase<TItem>(IApplicationStateService applicationStateService,
+public abstract partial class MultipleItemsViewModelBase<TItem>
+    (
+        IApplicationStateService applicationStateService,
         IApplicationThemeService applicationThemeService,
         NavigationManager navigationManager,
         IStringLocalizer<App> localizer,
         ISearchService<TItem> searchService,
-        IDataService<TItem> dataService)
-    : ViewModelBase(applicationStateService, applicationThemeService, navigationManager,
-        localizer) where TItem : BaseModel
+        IDataService<TItem> dataService
+    )
+    : ViewModelBase
+    (
+        applicationStateService,
+        applicationThemeService,
+        navigationManager,
+        localizer
+    ) 
+    where TItem : BaseModel
 {
     protected List<TItem> _items = dataService.LoadData();
     protected List<TagModel> _tags = dataService.LoadTags();
