@@ -11,7 +11,7 @@ namespace UnitFirst.Landing.Models
 
         [ObservableProperty] private string _description;
 
-        [ObservableProperty] private ObservableCollection<TagModel> _tags;
+        [ObservableProperty] private ObservableCollection<TagModel> _tags = new();
         public virtual string SearchValue => Name;
     }
 }
