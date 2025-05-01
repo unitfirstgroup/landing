@@ -1,0 +1,36 @@
+﻿@page "/temp"
+<ThreeCharacteristic DataContext="@DataContext"></ThreeCharacteristic>
+
+@code {
+
+    [Parameter]
+    public CharacteristicComponentModel DataContext { get; set; } = new()
+    {
+        Title = "Your key to working smarter, not harder",
+        CharacteristicItems = new ObservableCollection<CharacteristicModel>(new[]
+        {
+            new CharacteristicModel()
+            {
+                Header = "Easier admin",
+                Details = "Turn tedious tasks into effortless processes with automatic data syncing for things like new hires, resignations, salary updates, and more.",
+                Value = "50%+",
+                Benefit = "more time saved"
+            },
+            new CharacteristicModel()
+            {
+                Header = "Real-time insights",
+                Details = "With built-in analytics, your team can access real-time metrics without having to manually input numbers — meaning less room for error, too.",
+                Value = "95%+",
+                Benefit = "HRIS and payroll systems supported"
+            },
+            new CharacteristicModel()
+            {
+                Header = "Streamlined workflow",
+                Details = "Cut out repetitive manual tasks so your team can free up more time to focus on strategic initiatives and the bigger-impact projects that really matter.",
+                Value = "80%+",
+                Benefit = "average matching plan adoption"
+            },
+        })
+    };
+
+}
