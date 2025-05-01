@@ -1424,6 +1424,10 @@ input:checked + .toggle-bg {
   margin-top: 0.25rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -1555,6 +1559,10 @@ input:checked + .toggle-bg {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-6\/12 {
+  width: 50%;
 }
 
 .w-64 {
@@ -1752,6 +1760,10 @@ input:checked + .toggle-bg {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-2 {
@@ -2113,6 +2125,11 @@ input:checked + .toggle-bg {
   padding-right: 0.625rem;
 }
 
+.px-28 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2189,6 +2206,10 @@ input:checked + .toggle-bg {
   padding-right: 0.5rem;
 }
 
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
 .pt-16 {
   padding-top: 4rem;
 }
@@ -2197,12 +2218,20 @@ input:checked + .toggle-bg {
   padding-top: 0.5rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pt-32 {
   padding-top: 8rem;
 }
 
 .pt-36 {
   padding-top: 9rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-8 {
@@ -2219,10 +2248,6 @@ input:checked + .toggle-bg {
 
 .font-sans {
   font-family: Roboto, sans;
-}
-
-.font-serif {
-  font-family: Roboto", "serif;
 }
 
 .text-2xl {
@@ -2255,6 +2280,11 @@ input:checked + .toggle-bg {
   line-height: 1.5rem;
 }
 
+.text-base\/7 {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2273,6 +2303,11 @@ input:checked + .toggle-bg {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-base\/8 {
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .font-bold {
