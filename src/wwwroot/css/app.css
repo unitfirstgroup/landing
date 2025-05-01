@@ -1561,10 +1561,6 @@ input:checked + .toggle-bg {
   width: 1.25rem;
 }
 
-.w-6\/12 {
-  width: 50%;
-}
-
 .w-64 {
   width: 16rem;
 }
@@ -2125,11 +2121,6 @@ input:checked + .toggle-bg {
   padding-right: 0.625rem;
 }
 
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2196,6 +2187,10 @@ input:checked + .toggle-bg {
 
 .pb-32 {
   padding-bottom: 8rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pl-2 {
@@ -2270,19 +2265,14 @@ input:checked + .toggle-bg {
   line-height: 1;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.text-base\/7 {
+.text-base\/8 {
   font-size: 1rem;
-  line-height: 1.75rem;
+  line-height: 2rem;
 }
 
 .text-lg {
@@ -2303,11 +2293,6 @@ input:checked + .toggle-bg {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-base\/8 {
-  font-size: 1rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -3009,6 +2994,10 @@ input:checked + .toggle-bg {
     width: 66.666667%;
   }
 
+  .lg\:w-6\/12 {
+    width: 50%;
+  }
+
   .lg\:max-w-none {
     max-width: none;
   }
@@ -3057,6 +3046,11 @@ input:checked + .toggle-bg {
     padding-right: 6rem;
   }
 
+  .lg\:px-28 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3096,6 +3090,11 @@ input:checked + .toggle-bg {
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:text-xl {
