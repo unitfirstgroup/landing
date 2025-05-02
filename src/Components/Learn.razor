@@ -1,0 +1,28 @@
+﻿<div class="grid w-full grid-cols-2 rounded bg-gray-300">
+    <div class="flex flex-col content-center items-center justify-center gap-y-4">
+        <h2 class="text-left text-5xl">@Title</h2>
+        <p class="text-lg font-semibold">@Details</p>
+        <button type="button"
+                class="inline-flex w-auto min-w-20 rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
+            @ButtonText
+        </button>
+    </div>
+    <div class="flex justify-end">
+        <img src="@Image" alt="Image" />
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string Details { get; set; }
+
+    [Parameter]
+    public string ButtonText { get; set; }
+
+    [Parameter]
+    public string Image { get; set; }
+}
