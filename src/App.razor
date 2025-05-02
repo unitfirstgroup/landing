@@ -1,5 +1,4 @@
-﻿@using UnitFirst.Landing.Extensions
-@inject IApplicationThemeService ApplicationThemeService
+﻿@inject IApplicationThemeService ApplicationThemeService
 @inject ISyncLocalStorageService SyncLocalStorageService
 @inject IBrowserService BrowserService
 
@@ -33,7 +32,7 @@
         Theme = ApplicationThemeService.LoadTheme();
         Theme.PropertyChanged += ThemeOnPropertyChanged;
 
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
     }
 
     protected override async Task OnInitializedAsync()
@@ -47,42 +46,42 @@
         SyncLocalStorageService.SetItemAsString(LocalStorageConstants.BrowserDimensionsKey, value);
 
         //
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitializedAsync)}|Dimensions: {value}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitializedAsync)}|Dimensions: {value}");
     }
 
     protected override void OnAfterRender(bool firstRender)
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnAfterRender)}|First render: {firstRender}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnAfterRender)}|First render: {firstRender}");
         base.OnAfterRender(firstRender);
     }
 
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnAfterRenderAsync)}|First render: {firstRender}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnAfterRenderAsync)}|First render: {firstRender}");
         return base.OnAfterRenderAsync(firstRender);
     }
 
     protected override void OnParametersSet()
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnParametersSet)}|{string.Empty}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnParametersSet)}|{string.Empty}");
         base.OnParametersSet();
     }
 
     protected override Task OnParametersSetAsync()
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnParametersSetAsync)}|{string.Empty}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnParametersSetAsync)}|{string.Empty}");
         return base.OnParametersSetAsync();
     }
 
     public override Task SetParametersAsync(ParameterView parameters)
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(SetParametersAsync)}|{string.Empty}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(SetParametersAsync)}|{string.Empty}");
         return base.SetParametersAsync(parameters);
     }
 
     protected override bool ShouldRender()
     {
-        Console.WriteLine($"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(ShouldRender)}|{string.Empty}");
+        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(ShouldRender)}|{string.Empty}");
         return base.ShouldRender();
     }
 
