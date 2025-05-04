@@ -4,7 +4,7 @@
     <div class="flex w-full flex-wrap justify-start gap-2 p-2">
         @foreach (var item in Tags)
         {
-            <h6 class="flex w-auto min-w-10 items-center justify-center rounded-md border border-rose-600 px-1 py-1 text-center text-sm font-medium text-rose-600 shadow-lg dark:text-yellow-400 dark:border-yellow-400">
+            <h6 class="main-action flex w-auto min-w-10 items-center justify-center rounded-md border border-rose-600 px-1 py-1 text-center text-sm font-medium shadow-lg dark:text-yellow-400 dark:border-yellow-400">
                 @item.TagName
             </h6>
         }
@@ -17,7 +17,7 @@
             alt="random user"
         />
         <div>
-            <p class="font-semibold text-rose-600 dark:text-yellow-400">@Author</p>
+            <p class="main-action font-semibold dark:text-yellow-400">@Author</p>
             <p class="text-sm font-semibold text-gray-500 dark:text-gray-200">
                 @Date &middot; @Estimate read
             </p>

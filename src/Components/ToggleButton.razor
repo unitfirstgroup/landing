@@ -19,7 +19,7 @@
     public string BackgroundColorDark { get; set; } = "bg-dark-main";
 
     [Parameter]
-    public string TextColor { get; set; } = "text-rose-600";
+    public string TextColor { get; set; } = "main-action";
 
     [Parameter]
     public string TextColorDark { get; set; } = "text-yellow-400";
@@ -46,7 +46,7 @@
 
         BackgroundColor = isSelected ? "bg-rose-600" : "bg-white-main";
         BackgroundColorDark = isSelected ? "bg-yellow-400" : "bg-dark-main";
-        TextColor = isSelected ? "text-white" : "text-rose-600";
+        TextColor = isSelected ? "text-white" : "main-action";
         TextColorDark = isSelected ? "text-white" : "text-yellow-400";
 
         

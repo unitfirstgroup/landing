@@ -1,6 +1,6 @@
 ﻿<div class="col-span-3 items-center justify-center px-4 py-8 text-center text-black dark:text-white lg:px-10">
     <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white">
-        <span class="text-rose-600 dark:text-yellow-400">@AccentText</span>
+        <span class="main-action dark:text-yellow-400">@AccentText</span>
         @Text
     </h1>
     @if (!string.IsNullOrEmpty(Details))
@@ -11,7 +11,7 @@
     {
         <div class="flex flex-row content-center items-center justify-center gap-8">
             <button type="button"
-                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+                    class="main-action inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium shadow-lg hover:text-white hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-yellow-400 dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
                     @onclick="@ButtonClickCommand.Execute">
                 @ButtonText
             </button>
@@ -22,7 +22,7 @@
     {
         <h1 class="mb-6 items-center justify-center py-4 text-center font-sans text-2xl font-medium tracking-tight dark:text-white">
             @SubAccentText
-            <span class="text-rose-600 dark:text-yellow-400">@SubText</span>
+            <span class="main-action dark:text-yellow-400">@SubText</span>
         </h1>
         <span class="mb-6 block text-lg text-black dark:text-white">@SubDetails</span>
     }
