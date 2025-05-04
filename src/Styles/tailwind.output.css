@@ -2385,7 +2385,7 @@ input:checked + .toggle-bg {
   color: rgb(82 82 82 / var(--tw-text-opacity, 1));
 }
 
-.main-action {
+.text-white-action {
   --tw-text-opacity: 1;
   color: rgb(225 29 72 / var(--tw-text-opacity, 1));
 }

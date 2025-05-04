@@ -2482,6 +2482,10 @@ input:checked + .toggle-bg {
   color: rgb(227 160 8 / var(--tw-text-opacity, 1));
 }
 
+.text-white-action {
+  color: oklch(0.586 0.253 17.585);
+}
+
 .underline {
   text-decoration-line: underline;
 }
