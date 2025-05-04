@@ -13,10 +13,10 @@
     public string Text { get; set; } = "";
 
     [Parameter]
-    public string BackgroundColor { get; set; } = "bg-white";
+    public string BackgroundColor { get; set; } = "bg-white-main";
 
     [Parameter]
-    public string BackgroundColorDark { get; set; } = "bg-gray-900";
+    public string BackgroundColorDark { get; set; } = "bg-dark-main";
 
     [Parameter]
     public string TextColor { get; set; } = "text-rose-600";
@@ -44,8 +44,8 @@
             Select.IsSelected = isSelected;
         }
 
-        BackgroundColor = isSelected ? "bg-rose-600" : "bg-white";
-        BackgroundColorDark = isSelected ? "bg-yellow-400" : "bg-gray-900";
+        BackgroundColor = isSelected ? "bg-rose-600" : "bg-white-main";
+        BackgroundColorDark = isSelected ? "bg-yellow-400" : "bg-dark-main";
         TextColor = isSelected ? "text-white" : "text-rose-600";
         TextColorDark = isSelected ? "text-white" : "text-yellow-400";
 

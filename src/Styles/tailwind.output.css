@@ -2009,16 +2009,16 @@ input:checked + .toggle-bg {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-900 {
+.bg-dark-main {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-900\/5 {
+.bg-dark-main\/5 {
   background-color: rgb(17 24 39 / 0.05);
 }
 
-.bg-gray-900\/50 {
+.bg-dark-main\/50 {
   background-color: rgb(17 24 39 / 0.5);
 }
 
@@ -2027,12 +2027,12 @@ input:checked + .toggle-bg {
   background-color: rgb(225 29 72 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white {
+.bg-white-main {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white\/50 {
+.bg-white-main\/50 {
   background-color: rgb(255 255 255 / 0.5);
 }
 
@@ -2563,7 +2563,7 @@ input:checked + .toggle-bg {
   background-color: rgb(225 29 72 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-white:hover {
+.hover\:bg-white-main:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
@@ -2712,12 +2712,12 @@ input:checked + .toggle-bg {
   background-color: rgb(31 41 55 / 0.5);
 }
 
-.dark\:bg-gray-900:is(.dark *) {
+.dark\:bg-dark-main:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 }
 
-.dark\:bg-gray-900\/80:is(.dark *) {
+.dark\:bg-dark-main\/80:is(.dark *) {
   background-color: rgb(17 24 39 / 0.8);
 }
 

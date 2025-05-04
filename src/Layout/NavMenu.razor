@@ -1,9 +1,9 @@
 ﻿@inherits MvvmComponentBase<NavMenuViewModel>
 
 <!-- Main navigation container -->
-<nav class="shadow-b flex items-center justify-between gap-x-1 border-b border-gray-200 bg-white @ViewModel.Theme.Dark text-black shadow-indigo-500/50 dark:bg-gray-900 dark:text-white sm:gap-x-2 lg:gap-x-6"
+<nav class="shadow-b flex items-center justify-between gap-x-1 border-b border-gray-200 bg-white-main @ViewModel.Theme.Dark text-black shadow-indigo-500/50 dark:bg-dark-main dark:text-white sm:gap-x-2 lg:gap-x-6"
      aria-label="Global">
-    <div class="flex @ViewModel.Theme.Dark border border-rose-600 bg-white px-2 dark:border-yellow-400 dark:bg-yellow-400 sm:px-6 lg:px-8">
+    <div class="flex @ViewModel.Theme.Dark border border-rose-600 bg-white-main px-2 dark:border-yellow-400 dark:bg-yellow-400 sm:px-6 lg:px-8">
         <a href="./">
             <div class="flex items-center justify-center">
                 <span class="sr-only"></span>
@@ -21,7 +21,7 @@
     <div class="flex hidden items-center justify-center gap-x-2 p-6 lg:flex">
         @foreach (var navItem in ViewModel.Model.NavItems)
         {
-            <a class="flex h-10 items-center rounded-md bg-white px-8 font-bold text-black dark:bg-gray-900 dark:text-white"
+            <a class="flex h-10 items-center rounded-md bg-white-main px-8 font-bold text-black dark:bg-dark-main dark:text-white"
                href="@navItem.Link">
                 @navItem.Name
             </a>

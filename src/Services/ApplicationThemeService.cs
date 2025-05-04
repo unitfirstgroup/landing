@@ -44,8 +44,8 @@ public class ApplicationThemeService : IApplicationThemeService
             }),
             Background = new Dictionary<string, string>(new[]
             {
-                new KeyValuePair<string, string>("white", "bg-white"),
-                new KeyValuePair<string, string>("dark", "bg-gray-900")
+                new KeyValuePair<string, string>("white", "bg-white-main"),
+                new KeyValuePair<string, string>("dark", "bg-dark-main")
             }),
             Languages = new ObservableCollection<LanguageListItemModel>(new[]
             {

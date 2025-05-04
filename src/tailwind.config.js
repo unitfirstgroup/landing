@@ -10,10 +10,10 @@ module.exports = {
                 serif: 'Roboto", "serif'
             },
             colors: {
-                'primary-white': '#1fb6ff',
-                'primary-dark': '#7e5bef',
-                'primary-accent-white': '#ff49db',
-                'primary-accent-dark': '#ff7849',
+                'white-main': '#fff',
+                'dark-main': 'oklch(0.208 0.042 265.755)', // gray-900
+                'white-action': 'oklch(0.586 0.253 17.585)',
+                'dark-action': 'oklch(0.852 0.199 91.936)'
             }
         }
     },
