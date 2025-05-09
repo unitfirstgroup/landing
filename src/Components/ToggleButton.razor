@@ -44,12 +44,10 @@
             Select.IsSelected = isSelected;
         }
 
-        BackgroundColor = isSelected ? "bg-rose-600" : "bg-white-main";
-        BackgroundColorDark = isSelected ? "bg-yellow-400" : "bg-dark-main";
-        TextColor = isSelected ? "text-white" : "text-white-action";
-        TextColorDark = isSelected ? "text-white" : "text-yellow-400";
-
-        
+        BackgroundColor = isSelected ? "bg-white-action" : "bg-white-main";
+        BackgroundColorDark = isSelected ? "bg-dark-action" : "bg-dark-main";
+        TextColor = isSelected ? "text-white-main" : "text-white-action";
+        TextColorDark = isSelected ? "text-white-main" : "text-dark-action";
     }
 
     protected override void OnParametersSet()
