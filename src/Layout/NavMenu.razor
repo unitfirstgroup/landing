@@ -21,7 +21,7 @@
     <div class="flex hidden items-center justify-center gap-x-2 p-6 lg:flex">
         @foreach (var navItem in ViewModel.Model.NavItems)
         {
-            <a class="flex h-10 items-center rounded-md bg-white-main px-8 font-bold text-black dark:bg-dark-main dark:text-white-main"
+            <a class="flex h-10 items-center rounded-md bg-white-main px-8 font-bold text-black hover:text-white-action dark:bg-dark-main dark:text-white-main dark:hover:text-dark-action"
                href="@navItem.Link">
                 @navItem.Name
             </a>

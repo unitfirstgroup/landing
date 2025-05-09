@@ -2610,6 +2610,10 @@ input:checked + .toggle-bg {
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-white-action:hover {
+  color: oklch(0.586 0.253 17.585);
+}
+
 .hover\:text-white-main:hover {
   color: oklch(0.985 0.001 106.423);
 }
@@ -2830,6 +2834,10 @@ input:checked + .toggle-bg {
 .dark\:hover\:text-blue-500:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(63 131 248 / var(--tw-text-opacity, 1));
+}
+
+.dark\:hover\:text-dark-action:hover:is(.dark *) {
+  color: oklch(0.852 0.199 91.936);
 }
 
 .dark\:hover\:text-dark-main:hover:is(.dark *) {
