@@ -8,11 +8,7 @@
         <div class="col-span-2 items-center justify-center bg-white-main p-4 py-8 text-center text-black dark:bg-dark-main dark:text-white-main md:py-20">
             <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white-main">@Main</h1>
             <span class="mb-6 block text-neutral-600 dark:text-white-main md:text-lg">@Description</span>
-            <button type="button"
-                    @onclick="@Click"
-                    class="inline-flex w-auto min-w-24 items-center justify-center rounded-lg border border-white-action px-5 py-2.5 text-center text-sm font-medium text-white-action shadow-lg hover:text-white-main hover:bg-white-action focus:ring-4 focus:outline-none dark:border-dark-action dark:text-dark-action sm:px-2.5 dark:hover:text-dark-main dark:hover:bg-dark-action">
-                @ButtonText
-            </button>
+            <ActionButton ButtonText="@ButtonText" Click="@Click"></ActionButton>
         </div>
     </div>
 </div>

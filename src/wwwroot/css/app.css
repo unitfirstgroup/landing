@@ -2816,10 +2816,6 @@ input:checked + .toggle-bg {
   background-color: oklch(0.852 0.199 91.936);
 }
 
-.dark\:hover\:bg-dark-main:hover:is(.dark *) {
-  background-color: oklch(0.21 0.034 264.665);
-}
-
 .dark\:hover\:bg-gray-600:hover:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
