@@ -2858,11 +2858,6 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.dark\:hover\:text-white-main:hover:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .dark\:focus\:border-blue-500:focus:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(63 131 248 / var(--tw-border-opacity, 1));
@@ -2875,6 +2870,10 @@ input:checked + .toggle-bg {
 
 .dark\:focus\:ring-dark-action:focus:is(.dark *) {
   --tw-ring-color: oklch(0.852 0.199 91.936);
+}
+
+.dark\:focus\:ring-dark-main:focus:is(.dark *) {
+  --tw-ring-color: oklch(0.21 0.034 264.665);
 }
 
 .dark\:focus\:ring-gray-700:focus:is(.dark *) {
