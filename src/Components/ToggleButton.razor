@@ -1,67 +1,69 @@
 ﻿<button type="button"
-        class="inline-flex w-auto min-w-20 items-center justify-center text-wrap rounded-lg border border-rose-600 @BackgroundColor px-5 py-2.5 text-center text-sm font-medium @TextColor shadow-lg dark:@BackgroundColorDark dark:@TextColorDark dark:border-yellow-300 sm:px-2.5"
+        class="@BackgroundColor @TextColor inline-flex w-auto min-w-20 items-center justify-center text-wrap rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium shadow-lg @BackgroundColorDark @TextColorDark dark:border-yellow-300 sm:px-2.5"
         @onclick="OnClick">
     @Text
 </button>
 
 @code {
 
-    [Parameter]
-    public SelectModel? Select { get; set; }
+    private Dictionary<string, string> _colors = new();
+
+    protected override void OnInitialized()
+    {
+        _colors.Add("white-bg-selected", "bg-white-action");
+        _colors.Add("white-bg-unselected", "bg-white-main");
+        _colors.Add("white-text-selected", "text-white-main");
+        _colors.Add("white-text-unselected", "text-white-action");
+
+        _colors.Add("dark-bg-selected", "dark:bg-dark-action");
+        _colors.Add("dark-bg-unselected", "dark:bg-dark-main");
+        _colors.Add("dark-text-selected", "dark:text-dark-main");
+        _colors.Add("dark-text-unselected", "dark:text-dark-action");
+
+        UpdateElement(Select.IsSelected);
+    }
 
     [Parameter]
-    public string Text { get; set; } = "";
+    public SelectModel Select { get; set; }
 
     [Parameter]
-    public string BackgroundColor { get; set; } = "bg-white-main";
+    public string Text { get; set; }
 
     [Parameter]
-    public string BackgroundColorDark { get; set; } = "bg-dark-main";
+    public string BackgroundColor { get; set; } 
 
     [Parameter]
-    public string TextColor { get; set; } = "text-white-action";
+    public string BackgroundColorDark { get; set; } 
 
     [Parameter]
-    public string TextColorDark { get; set; } = "text-yellow-400";
+    public string TextColor { get; set; } 
+
+    [Parameter]
+    public string TextColorDark { get; set; } 
 
     [Parameter]
     public IRelayCommand RaiseSearchCommand { get; set; }
 
     private void OnClick()
     {
-        var isSelected = !Select?.IsSelected ?? true;
-
+        var isSelected = !Select.IsSelected;
         UpdateElement(isSelected);
-
+        Select.IsSelected = isSelected;
         RaiseSearchCommand.Execute(null);
     }
 
     private void UpdateElement(bool isSelected)
     {
-        if (Select != null)
-        {
-            Console.WriteLine($"UpdateElement: {isSelected} -> {Select.IsSelected}");
-            Select.IsSelected = isSelected;
-        }
+        BackgroundColor = isSelected ? _colors["white-bg-selected"] : _colors["white-bg-unselected"];
+        TextColor = isSelected ? _colors["white-text-selected"] : _colors["white-text-unselected"];
 
-        BackgroundColor = isSelected ? "bg-white-action" : "bg-white-main";
-        BackgroundColorDark = isSelected ? "bg-dark-action" : "bg-dark-main";
-        TextColor = isSelected ? "text-white-main" : "text-white-action";
-        TextColorDark = isSelected ? "text-white-main" : "text-dark-action";
+        BackgroundColorDark = isSelected ? _colors["dark-bg-selected"] : _colors["dark-bg-unselected"];
+        TextColorDark = isSelected ? _colors["dark-text-selected"] : _colors["dark-text-unselected"];
+
+        Console.WriteLine($"Tag: {Text}\n" +
+                          $"BackgroundColor: {BackgroundColor}\n" +
+                          $"TextColor: {TextColor}\n" +
+                          $"BackgroundColorDark: {BackgroundColorDark}\n" +
+                          $"TextColorDark: {TextColorDark}\n");
     }
-
-    protected override void OnParametersSet()
-    {
-        if (Select == null)
-        {
-            UpdateElement(false);
-        }
-        else
-        {
-            UpdateElement(Select.IsSelected);
-        }
-
-        base.OnParametersSet();
-    }
-
 }

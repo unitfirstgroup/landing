@@ -11,7 +11,7 @@ module.exports = {
             },
             colors: {
                 'white-main': '#fff', // white
-                'dark-main': 'oklch(0.208 0.042 265.755)', // gray-900
+                'dark-main': 'oklch(0.21 0.034 264.665)', // gray-900
                 'white-action': 'oklch(0.586 0.253 17.585)', // rose-600
                 'dark-action': 'oklch(0.852 0.199 91.936)' // yellow-400
             }
