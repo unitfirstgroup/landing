@@ -1,16 +1,16 @@
-﻿<div class="mx-auto w-full @Dark bg-white-main text-black dark:bg-dark-main dark:text-white">
+﻿<div class="mx-auto w-full @Dark bg-white-main text-black dark:bg-dark-main dark:text-white-main">
     <div class="mx-auto grid w-full grid-cols-1 py-4 md:grid-cols-3">
         <div class="mx-auto grid w-full grid-cols-1 py-4">
             <div class="col-span-1"></div>
             <img src="@Image" class="col-span-1 content-center items-center justify-center self-center"/>
             <div class="col-span-1"></div>
         </div>
-        <div class="col-span-2 items-center justify-center bg-white-main p-4 py-8 text-center text-black dark:bg-dark-main dark:text-white md:py-20">
-            <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white">@Main</h1>
-            <span class="mb-6 block text-neutral-600 dark:text-white md:text-lg">@Description</span>
+        <div class="col-span-2 items-center justify-center bg-white-main p-4 py-8 text-center text-black dark:bg-dark-main dark:text-white-main md:py-20">
+            <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white-main">@Main</h1>
+            <span class="mb-6 block text-neutral-600 dark:text-white-main md:text-lg">@Description</span>
             <button type="button"
                     @onclick="@Click"
-                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-white-action px-5 py-2.5 text-center text-sm font-medium text-white-action shadow-lg hover:text-white-main hover:bg-white-action focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:text-dark-action dark:border-yellow-300 dark:text-yellow-300 dark:shadow-orange sm:px-2.5 hover:dark:bg-yellow-500 dark:hover:text-white-main dark:hover:bg-dark-action dark:focus:ring-yellow-900">
+                    class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-white-action px-5 py-2.5 text-center text-sm font-medium text-white-action shadow-lg hover:text-white-main-main hover:bg-white-action focus:ring-4 focus:outline-none focus:ring-dark-action dark:text-dark-action dark:border-dark-action dark:text-dark-action dark:shadow-orange sm:px-2.5 hover:dark:bg-dark-action dark:hover:text-white-main-main dark:hover:bg-dark-action dark:focus:ring-dark-action">
                 @ButtonText
             </button>
         </div>
