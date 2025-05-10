@@ -1715,12 +1715,12 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .\!flex-row {
   flex-direction: row !important;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -2547,10 +2547,6 @@ input:checked + .toggle-bg {
 .group:focus .group-focus\:ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
-}
-
-.dark\:border-\[\#ffffff33\]:is(.dark *) {
-  border-color: #ffffff33;
 }
 
 .dark\:border-blue-500:is(.dark *) {
