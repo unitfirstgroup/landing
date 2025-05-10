@@ -1,9 +1,10 @@
-﻿<input type="text"
-       @bind-value="@SearchModel.Value"
-       @bind-value:event="oninput"
-       class="flex w-full rounded-lg border-2 border-white-action px-4 py-2 ring-white-action dark:border-dark-action dark:ring-dark-action"
-       placeholder="@SearchModel.Placeholder"/>
-
+﻿<input 
+    @bind-value="@SearchModel.Value"
+    @bind-value:event="oninput"
+    type="text"
+    required
+    class="flex w-full rounded-lg border-2 border-white-action border-gray-300 bg-white-main px-4 py-2 text-sm text-dark-main focus:ring-white-action focus:border-white-action dark:bg-dark-main dark:border-dark-action dark:placeholder-gray-400 dark:text-white-main dark:focus:ring-dark-action dark:focus:border-dark-action"
+    placeholder="@SearchModel.Placeholder">
 @code {
 
     [Parameter]
