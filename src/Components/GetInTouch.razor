@@ -3,17 +3,17 @@
         <div class="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
             <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
                 <div>
-                    <h2 class="text-3xl font-bold tracking-tight text-dark-main dark:text-white-main">Get in touch</h2>
-                    <p class="mt-4 leading-7 text-gray-600">We'd love to hear from you! Send us a message using the contact details here and we'll get back to you as soon as possible.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-dark-main dark:text-white-main">@Title</h2>
+                    <p class="mt-4 leading-7 text-gray-600">@Greeting</p>
                 </div>
                 <div class="grid grid-cols-1 gap-6 lg:col-span-2 lg:gap-8">
                     <div class="rounded-2xl bg-gray-50 p-10 dark:bg-dark-main">
-                        <h3 class="text-base font-semibold leading-7 text-dark-main">XXX XXXXX, Founder</h3>
+                        <h3 class="text-base font-semibold leading-7 text-dark-main">@Founder</h3>
                         <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                             <div>
-                                <dt class="sr-only">Email</dt>
+                                <dt class="sr-only">@EmailTitle</dt>
                                 <dd>
-                                    <a class="text-primary font-semibold" href="mailto:hello@projectfabric.ai" target="_blank">hello@projectfabric.ai</a>
+                                    <a class="text-primary font-semibold" href="mailto:@Email" target="_blank">@Email</a>
                                 </dd>
                             </div>
                         </dl>
@@ -22,15 +22,15 @@
             </div>
             <div class="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
                 <div>
-                    <h2 class="text-3xl font-bold tracking-tight text-dark-main dark:text-white-main">Locations</h2>
-                    <p class="mt-4 leading-7 text-gray-600">Located in downtown town.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-dark-main dark:text-white-main">@LocationsTitle</h2>
+                    <p class="mt-4 leading-7 text-gray-600">@LocationDetails</p>
                 </div>
                 <div class="grid grid-cols-1 gap-6 lg:col-span-2 lg:gap-8">
                     <div class="rounded-2xl bg-gray-50 p-10 dark:bg-dark-main">
-                        <h3 class="text-base font-semibold leading-7 text-dark-main dark:text-white-main">town</h3>
+                        <h3 class="text-base font-semibold leading-7 text-dark-main dark:text-white-main">@Town</h3>
                         <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-gray-600">
-                            <p>street</p>
-                            <p>state</p>
+                            <p>@Street</p>
+                            <p>@State</p>
                         </address>
                     </div>
                 </div>
@@ -40,4 +40,33 @@
 </div>
 @code {
 
+    [Parameter]
+    public string Title { get; set; } = "Get in touch";
+
+    [Parameter]
+    public string Greeting { get; set; } = "We'd love to hear from you! Send us a message using the contact details here and we'll get back to you as soon as possible.";
+
+    [Parameter]
+    public string EmailTitle { get; set; } = "Email";
+
+    [Parameter]
+    public string Email { get; set; } = "hello@organization.com";
+
+    [Parameter]
+    public string Founder { get; set; } = "Toni Montana, Founder";
+
+    [Parameter]
+    public string LocationsTitle { get; set; } = "Locations";
+
+    [Parameter]
+    public string LocationDetails { get; set; } = "Located in downtown town.";
+
+    [Parameter]
+    public string Town { get; set; } = "New Vasuki";
+
+    [Parameter]
+    public string Street { get; set; } = "Pole Chudes, 13";
+
+    [Parameter]
+    public string State { get; set; } = "Lohovskaia Sloboda";
 }
