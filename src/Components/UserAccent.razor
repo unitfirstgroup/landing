@@ -10,7 +10,7 @@
     @if (!string.IsNullOrEmpty(ButtonText))
     {
         <div class="flex flex-row content-center items-center justify-center gap-8">
-            <ActionButton ButtonText="@ButtonText" Click="@ButtonClick"></ActionButton>
+            <ActionButton ButtonText="@ButtonText" Click="() => { ButtonClickCommand.Execute(null); }"></ActionButton>
         </div>
     }
     
@@ -39,5 +39,5 @@
 
     [Parameter] public string ButtonText { get; set; }
 
-    [Parameter] public Action ButtonClick { get; set; }
+    [Parameter] public IRelayCommand ButtonClickCommand { get; set; }
 }
