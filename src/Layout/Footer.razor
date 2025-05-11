@@ -1,8 +1,8 @@
 ﻿@inherits MvvmComponentBase<UnitFirst.Landing.ViewModels.Layouts.FooterViewModel>
 
 <!-- Footer container -->
-<footer class="@ViewModel.Theme.Dark relative w-full px-4 md:px-10 lg:px-20">
-    <div class="flex flex-col items-center justify-center bg-white-main @ViewModel.Theme.Dark p-10 text-black dark:bg-dark-main dark:text-white-main">
+<footer class="relative w-full px-4 md:px-10 lg:px-20">
+    <div class="flex flex-col items-center justify-center bg-white-main p-10 text-black dark:bg-dark-main dark:text-white-main">
         <div class="flex">
             <span class="text-center dark:text-white-main">@ViewModel.Model.SocialNetworksDescription</span>
         </div>
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
-    <div class="mx-auto flex w-full flex-col items-center justify-center bg-white-main py-2.5 @ViewModel.Theme.Dark text-center text-black dark:bg-dark-main dark:text-white-main">
+    <div class="mx-auto flex w-full flex-col items-center justify-center bg-white-main py-2.5 text-center text-black dark:bg-dark-main dark:text-white-main">
         <div class="mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
             @foreach (var category in ViewModel.Model.Categories)
             {
@@ -95,7 +95,7 @@
     </div>
 
     <!--Copyright section-->
-    <div class="bg-white-main p-10 @ViewModel.Theme.Dark text-center text-black dark:bg-dark-main dark:text-white-main">
+    <div class="bg-white-main p-10 text-center text-black dark:bg-dark-main dark:text-white-main">
         <span>©</span>
         <span>2023</span>
         <a class="font-semibold" href="/">@ViewModel.Theme.Organization</a><span>.</span>

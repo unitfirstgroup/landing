@@ -1,12 +1,12 @@
 ﻿@inherits MvvmComponentBase<UnitFirst.Landing.ViewModels.Wallpaper.WallPaperViewModel>
 
-<main class="@ViewModel.Theme.Dark">
+<main class="">
     
     @foreach (var t in @ViewModel.Model.ThesisCollection)
     {
         <Thesis Main="@t.Main"
                 Description="@t.Description"
-                Dark="@ViewModel.Theme.Dark"
+                Dark=""
                 ButtonText="@t.ButtonText"
                 Click="@t.ButtonClick"
                 Image="@t.Image"></Thesis>

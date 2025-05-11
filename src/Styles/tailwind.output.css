@@ -1592,10 +1592,6 @@ input:checked + .toggle-bg {
   min-width: 6rem;
 }
 
-.min-w-\[375px\] {
-  min-width: 375px;
-}
-
 .max-w-md {
   max-width: 28rem;
 }
@@ -2275,11 +2271,6 @@ input:checked + .toggle-bg {
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-}
-
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -2416,15 +2407,14 @@ input:checked + .toggle-bg {
  * your stylesheet by default.
  */
 
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
+@keyframes pulse {
+  50% {
+    opacity: .5;
   }
 }
 
-.hover\:animate-ping:hover {
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .hover\:cursor-not-allowed:hover {
@@ -2551,10 +2541,6 @@ input:checked + .toggle-bg {
 .group:focus .group-focus\:ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
-}
-
-.dark\:border-\[\#ffffff33\]:is(.dark *) {
-  border-color: #ffffff33;
 }
 
 .dark\:border-blue-500:is(.dark *) {
@@ -2801,10 +2787,6 @@ input:checked + .toggle-bg {
     height: 24rem;
   }
 
-  .md\:min-w-\[700px\] {
-    min-width: 700px;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2957,10 +2939,6 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1280px) {
-  .xl\:min-w-\[800px\] {
-    min-width: 800px;
-  }
-
   .xl\:max-w-xl {
     max-width: 36rem;
   }

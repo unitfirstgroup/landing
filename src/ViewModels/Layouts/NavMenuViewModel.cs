@@ -8,7 +8,10 @@ using UnitFirst.Landing.Models.Layout;
 namespace UnitFirst.Landing.ViewModels.Layouts;
 
 public partial class NavMenuViewModel(IApplicationStateService applicationStateService,
-        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer, IBrowserService browserService)
+        IApplicationThemeService applicationThemeService,
+        NavigationManager navigationManager,
+        IStringLocalizer<App> localizer,
+        IBrowserService browserService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty]
@@ -51,6 +54,8 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
 
     public void DarkModeSwitch()
     {
-        ApplicationThemeService.DarkModeSwitch(Theme);
+        //browserService.ShowAlert("ShowAlert");
+        browserService.UpdateTheme(Theme.Dark);
+        //ApplicationThemeService.DarkModeSwitch(Theme);
     }
 }

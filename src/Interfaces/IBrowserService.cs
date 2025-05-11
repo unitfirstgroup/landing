@@ -10,4 +10,6 @@ public interface IBrowserService
     public Task ShowAlert(string alertText);
 
     public Task GetAllElements();
+
+    public Task UpdateTheme(string theme);
 }
