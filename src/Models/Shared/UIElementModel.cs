@@ -7,6 +7,5 @@ namespace UnitFirst.Landing.Models.Shared
         [ObservableProperty] private bool _isHide;
         [ObservableProperty] private bool _onFocus;
         [ObservableProperty] private bool _isSelected;
-        [ObservableProperty] private string _dark;
     }
 }

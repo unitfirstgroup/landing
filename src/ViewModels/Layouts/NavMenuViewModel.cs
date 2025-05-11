@@ -54,8 +54,7 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
 
     public void DarkModeSwitch()
     {
-        //browserService.ShowAlert("ShowAlert");
-        browserService.UpdateTheme(Theme.Dark);
-        //ApplicationThemeService.DarkModeSwitch(Theme);
+        browserService.UpdateTheme();
+        ApplicationThemeService.DarkModeSwitch(Theme);
     }
 }

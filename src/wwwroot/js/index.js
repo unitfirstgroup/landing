@@ -2,11 +2,11 @@
     alert(message);
 }
 
-export function updateTheme(theme) {
+export function updateTheme() {
     var element = document.getElementById("app");
     if (element.classList.contains('dark')) {
         element.classList.remove('dark');
     } else {
-        element.classList.add(theme == 'dark' ? '' : 'dark');
+        element.classList.add('dark');
     }
 }

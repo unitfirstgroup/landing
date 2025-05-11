@@ -30,8 +30,6 @@
     {
         // cascade value
         Theme = ApplicationThemeService.LoadTheme();
-        Theme.PropertyChanged += ThemeOnPropertyChanged;
-
         Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
     }
 
@@ -85,8 +83,4 @@
         return base.ShouldRender();
     }
 
-    private void ThemeOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        StateHasChanged();
-    }
 }

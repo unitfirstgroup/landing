@@ -2,7 +2,7 @@
 @inject IJSRuntime JsRuntime
 @inject NavigationManager Nav
 
-<div class="flex flex-row @Dark bg-white-main text-black dark:bg-dark-main dark:text-white-main">
+<div class="flex flex-row bg-white-main text-black dark:bg-dark-main dark:text-white-main">
 
     <button id="languageButton" data-dropdown-toggle="languages"
             class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white-main p-2.5 text-sm text-gray-500 text-black hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:bg-dark-main dark:text-white-main dark:hover:bg-gray-700 dark:focus:ring-gray-700" type="button">
@@ -23,9 +23,6 @@
 
 @code
 {
-    [Parameter]
-    public string Dark { get; set; }
-
     [Parameter]
     public ObservableCollection<LanguageListItemModel> Languages { get; set; }
 

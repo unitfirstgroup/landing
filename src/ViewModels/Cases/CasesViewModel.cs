@@ -179,7 +179,6 @@ public partial class CasesViewModel(IApplicationStateService applicationStateSer
                             "Our employees now benefit from low management fees, access to diverse investment options, as well as great perks to support their financial wellness. The plan transfer required a minimal time investment from our end, and the administration is simple!"
                     }
                 }),
-                Dark = Theme.Dark
             }
         };
         return Task.CompletedTask;

@@ -28,7 +28,6 @@ public partial class BlogsViewModel(IApplicationStateService applicationStateSer
         {
             Filter = new FilterModel()
             {
-                Dark = Theme.Dark,
                 Tags = new ObservableCollection<TagModel>(_tags),
                 SearchModel = new SearchModel()
                 {

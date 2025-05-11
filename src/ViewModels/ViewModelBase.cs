@@ -29,7 +29,12 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
         Theme = applicationThemeService.LoadTheme() ?? throw new Exception("ViewModelBase load theme exception.");
         Theme.PropertyChanged += Theme_PropertyChanged;
 
-        UiElementModel = new UIElementModel { Dark = Theme.Dark };
+        UiElementModel = new UIElementModel
+        {
+            IsHide = false,
+            OnFocus = false,
+            IsSelected = false
+        };
     }
 
     private void Theme_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)

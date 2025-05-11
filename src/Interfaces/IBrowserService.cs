@@ -11,5 +11,5 @@ public interface IBrowserService
 
     public Task GetAllElements();
 
-    public Task UpdateTheme(string theme);
+    public Task UpdateTheme();
 }
