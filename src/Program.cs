@@ -7,11 +7,9 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
 using UnitFirst.Landing;
 using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Models;
 using UnitFirst.Landing.Models.Blogs;
 using UnitFirst.Landing.Models.Laboratories;
 using UnitFirst.Landing.Services;
-using UnitFirst.Landing.ViewModels;
 using UnitFirst.Landing.ViewModels.About;
 using UnitFirst.Landing.ViewModels.Blogs;
 using UnitFirst.Landing.ViewModels.Cases;
@@ -64,15 +62,18 @@ builder.Services.AddSingleton<IApplicationStateService, ApplicationStateService>
 builder.Services.AddSingleton<IBrowserService, BrowserService>();
 builder.Services.AddSingleton<IGeneratorService, GeneratorService>();
 
-
-
-
-
 var jsInterop = builder.Build().Services.GetRequiredService<IJSRuntime>();
 var appLanguage = await jsInterop.InvokeAsync<string>("appCulture.get");
 if (appLanguage != null)
 {
     CultureInfo cultureInfo = new CultureInfo(appLanguage);
+    CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+    CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+}
+else
+{
+    // eng is default
+    CultureInfo cultureInfo = new CultureInfo("en-US");
     CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
     CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 }
