@@ -27,7 +27,6 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
         Localizer = localizer;
 
         Theme = applicationThemeService.LoadTheme() ?? throw new Exception("ViewModelBase load theme exception.");
-        Theme.PropertyChanged += Theme_PropertyChanged;
 
         UiElementModel = new UIElementModel
         {
@@ -36,12 +35,7 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
             IsSelected = false
         };
     }
-
-    private void Theme_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
-    {
-        NotifyStateChanged();
-    }
-
+    
     protected virtual void NotifyStateChanged() => OnPropertyChanged((string?)null);
 
     public virtual async Task OnInitializedAsync()
