@@ -1,8 +1,11 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Blazored.LocalStorage;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Interfaces;
+using UnitFirst.Landing.Models;
 using UnitFirst.Landing.Models.Layout;
 
 namespace UnitFirst.Landing.ViewModels.Layouts;
@@ -11,7 +14,8 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
         IApplicationThemeService applicationThemeService,
         NavigationManager navigationManager,
         IStringLocalizer<App> localizer,
-        IBrowserService browserService)
+        IBrowserService browserService,
+        ISyncLocalStorageService localStorageService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty]
@@ -54,7 +58,11 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
 
     public void DarkModeSwitch()
     {
-        browserService.UpdateTheme();
+        browserService.DarkModeSwitch().ContinueWith(x =>
+        {
+            localStorageService.SetItemAsString(LocalStorageConstants.DarkKey, x.Result ? "dark" : "");
+        });
+        
         ApplicationThemeService.DarkModeSwitch(Theme);
     }
 }

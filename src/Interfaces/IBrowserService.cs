@@ -11,5 +11,9 @@ public interface IBrowserService
 
     public Task GetAllElements();
 
-    public Task UpdateTheme();
+    /// <summary>
+    /// Switch dark mode
+    /// </summary>
+    /// <returns>false - white, true - dark</returns>
+    public Task<bool> DarkModeSwitch();
 }

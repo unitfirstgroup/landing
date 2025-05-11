@@ -38,8 +38,8 @@ public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
         Console.WriteLine(elements != null);
     }
 
-    public async Task UpdateTheme()
+    public async Task<bool> DarkModeSwitch()
     {
-        await _mainModule.InvokeVoidAsync("updateTheme");
+        return await _mainModule.InvokeAsync<bool>("updateTheme");
     }
 }
