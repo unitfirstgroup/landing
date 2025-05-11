@@ -63,8 +63,8 @@ public class ApplicationThemeService : IApplicationThemeService
         return _theme;
     }
 
-    public void DarkModeSwitch(Theme theme)
+    public void DarkModeSwitch(string theme)
     {
-        theme.Dark = string.IsNullOrWhiteSpace(theme.Dark) ? "dark" : "";
+        _theme.Dark = theme;
     }
 }

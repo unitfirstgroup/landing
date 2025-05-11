@@ -6,5 +6,5 @@ public interface IApplicationThemeService
 {
     Theme LoadTheme();
     
-    void DarkModeSwitch(Theme theme);
+    void DarkModeSwitch(string theme);
 }

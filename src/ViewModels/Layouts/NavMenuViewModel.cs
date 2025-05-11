@@ -60,9 +60,9 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
     {
         browserService.DarkModeSwitch().ContinueWith(x =>
         {
-            localStorageService.SetItemAsString(LocalStorageConstants.DarkKey, x.Result ? "dark" : "");
+            var theme = x.Result ? "dark" : "";
+            localStorageService.SetItemAsString(LocalStorageConstants.DarkKey, theme);
+            ApplicationThemeService.DarkModeSwitch(theme);
         });
-        
-        ApplicationThemeService.DarkModeSwitch(Theme);
     }
 }
