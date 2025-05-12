@@ -1851,6 +1851,14 @@ input:checked + .toggle-bg {
   text-wrap: nowrap;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -2845,6 +2853,10 @@ input:checked + .toggle-bg {
     width: 50%;
   }
 
+  .lg\:w-3\/6 {
+    width: 50%;
+  }
+
   .lg\:w-4\/6 {
     width: 66.666667%;
   }
@@ -2887,6 +2899,11 @@ input:checked + .toggle-bg {
     padding-right: 2.5rem;
   }
 
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -2905,6 +2922,11 @@ input:checked + .toggle-bg {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .lg\:pb-20 {
