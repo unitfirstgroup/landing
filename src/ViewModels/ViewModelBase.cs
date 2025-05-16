@@ -12,8 +12,9 @@ public abstract partial class ViewModelBase : ObservableObject, IViewModelBase
 {
     protected readonly IApplicationStateService ApplicationStateService;
     protected readonly IApplicationThemeService ApplicationThemeService;
-    protected readonly IStringLocalizer<App> Localizer;
     protected readonly NavigationManager NavigationManager;
+
+    public readonly IStringLocalizer<App> Localizer;
 
     [ObservableProperty] private Theme _theme;
 
