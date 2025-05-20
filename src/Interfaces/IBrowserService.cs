@@ -6,11 +6,14 @@ public interface IBrowserService
 {
     public Task Initialize();
     public Task<BrowserDimension> GetDimensions();
-    public Task ShowDimensions(BrowserDimension dimension);
+    
+    /// <summary>
+    /// Show alert popup
+    /// </summary>
+    /// <param name="alertText"></param>
+    /// <returns></returns>
     public Task ShowAlert(string alertText);
-
-    public Task GetAllElements();
-
+    
     /// <summary>
     /// Switch dark mode
     /// </summary>

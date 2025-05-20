@@ -21,21 +21,9 @@ public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
         return dimension;
     }
     
-    public async Task ShowDimensions(BrowserDimension dimension)
-    {
-        await _mainModule.InvokeVoidAsync("showAlert", $"Width: {dimension.Width}. Height: {dimension.Height}");
-    }
-
     public async Task ShowAlert(string alertText)
     {
         await _mainModule.InvokeVoidAsync("showAlert", alertText);
-    }
-
-    public async Task GetAllElements()
-    {
-        var elements = await _windowModule.InvokeAsync<object>("getAllElements");
-
-        Console.WriteLine(elements != null);
     }
 
     public async Task<bool> DarkModeSwitch()
