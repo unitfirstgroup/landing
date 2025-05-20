@@ -1,5 +1,3 @@
-const colors = require("tailwindcss/colors");
-
 module.exports = {
     content: ["./**/*.{razor,html,cshtml}", "./node_modules/flowbite/**/*.js"],
     theme: {
