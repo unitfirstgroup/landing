@@ -7,8 +7,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
 using UnitFirst.Landing;
 using UnitFirst.Landing.Extensions;
-using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -19,6 +17,7 @@ builder.Services.AddLocalization(options =>
 {
     options.ResourcesPath = "Resources";
 });
+builder.Services.AddCoreServices(builder.Configuration);
 builder.Services.AddViewModels(builder.Configuration);
 builder.Services.AddSearchServices(builder.Configuration);
 builder.Services.AddDataServices(builder.Configuration);
@@ -32,12 +31,11 @@ builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
     config.JsonSerializerOptions.ReadCommentHandling = JsonCommentHandling.Skip;
     config.JsonSerializerOptions.WriteIndented = false;
 });
-builder.Services.AddSingleton<IApplicationThemeService, ApplicationThemeService>();
-builder.Services.AddSingleton<IApplicationStateService, ApplicationStateService>();
-builder.Services.AddSingleton<IBrowserService, BrowserService>();
 
-var jsInterop = builder.Build().Services.GetRequiredService<IJSRuntime>();
-var appLanguage = await jsInterop.InvokeAsync<string>("appCulture.get");
+var host = builder.Build();
+
+var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
+var appLanguage = await jsInterop.InvokeAsync<string?>("appCulture.get");
 if (appLanguage != null)
 {
     CultureInfo cultureInfo = new CultureInfo(appLanguage);
@@ -52,4 +50,4 @@ else
     CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 }
 
-await builder.Build().RunAsync();
+await host.RunAsync();

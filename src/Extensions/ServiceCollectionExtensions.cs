@@ -43,4 +43,13 @@ public static class ServiceCollectionExtensions
 
         return services;
     }
+
+    public static IServiceCollection AddCoreServices(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddSingleton<IApplicationThemeService, ApplicationThemeService>();
+        services.AddSingleton<IApplicationStateService, ApplicationStateService>();
+        services.AddSingleton<IBrowserService, BrowserService>();
+
+        return services;
+    }
 }
