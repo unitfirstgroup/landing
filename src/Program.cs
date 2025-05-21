@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
 using UnitFirst.Landing;
+using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Extensions;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -34,8 +35,8 @@ builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
 
 var host = builder.Build();
 
-var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
-var appLanguage = await jsInterop.InvokeAsync<string?>("appCulture.get");
+var localStorage = host.Services.GetRequiredService<ISyncLocalStorageService>();
+var appLanguage = localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
 if (appLanguage != null)
 {
     CultureInfo cultureInfo = new CultureInfo(appLanguage);
@@ -45,9 +46,11 @@ if (appLanguage != null)
 else
 {
     // eng is default
-    CultureInfo cultureInfo = new CultureInfo("en-US");
+    var defaultCulture = "en-US"; 
+    CultureInfo cultureInfo = new CultureInfo(defaultCulture);
     CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
     CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+    localStorage.SetItemAsString(LocalStorageConstants.LanguageKey, defaultCulture);
 }
 
 await host.RunAsync();
