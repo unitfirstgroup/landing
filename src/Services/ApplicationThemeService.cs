@@ -42,11 +42,6 @@ public class ApplicationThemeService : IApplicationThemeService
                 new NavItem { Name = _localizer["NAV_ABOUT"].Value, Link = "./about" },
                 //new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
             }),
-            Background = new Dictionary<string, string>(new[]
-            {
-                new KeyValuePair<string, string>("white", "bg-white-main"),
-                new KeyValuePair<string, string>("dark", "bg-dark-main")
-            }),
             Languages = new ObservableCollection<LanguageListItemModel>(new[]
             {
                 new LanguageListItemModel { Language = "en-US", ImageSource = "images/us.svg" },
