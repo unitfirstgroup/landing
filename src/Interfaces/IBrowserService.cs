@@ -24,8 +24,14 @@ public interface IBrowserService
     public Task ShowAlert(string alertText);
 
     /// <summary>
-    ///     Switch dark mode
+    ///     Switch theme
     /// </summary>
     /// <returns>false - white, true - dark</returns>
-    public Task<bool> DarkModeSwitch();
+    public Task<bool> SwitchTheme();
+
+    /// <summary>
+    ///     Switch to dark mode
+    /// </summary>
+    /// <returns>false - error, true - complete</returns>
+    public Task<bool> DarkTheme();
 }

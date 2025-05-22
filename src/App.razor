@@ -6,7 +6,7 @@
     <CascadingValue Name="Theme" Value="Theme">
         <Router AppAssembly="@typeof(App).Assembly">
             <Found Context="routeData">
-                <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+                <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
             </Found>
             <NotFound>
                 <PageTitle>Not found</PageTitle>
@@ -19,11 +19,12 @@
 </CascadingAuthenticationState>
 
 @code {
-    [CascadingParameter(Name="Theme")]
+
+    [CascadingParameter(Name = "Theme")]
     private Theme Theme { get; set; }
 
     /// <summary>
-    /// Entry point
+    ///     Entry point
     /// </summary>
     /// <returns></returns>
     protected override void OnInitialized()
@@ -35,15 +36,10 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // browser init
-        await BrowserService.Initialize();
-       
         // dimensions
         var dimensions = await BrowserService.GetDimensions();
         var value = $"[{dimensions.Width}x{dimensions.Height}]";
         SyncLocalStorageService.SetItemAsString(LocalStorageConstants.BrowserDimensionsKey, value);
-
-        //
-        Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitializedAsync)}|Dimensions: {value}");
     }
+
 }

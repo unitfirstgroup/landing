@@ -4,10 +4,11 @@ using System.Text.Json.Serialization;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.JSInterop;
 using UnitFirst.Landing;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Extensions;
+using UnitFirst.Landing.Interfaces;
+using UnitFirst.Landing.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -35,22 +36,35 @@ builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
 
 var host = builder.Build();
 
-var localStorage = host.Services.GetRequiredService<ISyncLocalStorageService>();
-var appLanguage = localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
+// browser init
+var browserService = host.Services.GetRequiredService<IBrowserService>();
+await browserService.Initialize();
+
+// culture
+var syncLocalStorageService = host.Services.GetRequiredService<ISyncLocalStorageService>();
+var appLanguage = syncLocalStorageService.GetItemAsString(LocalStorageConstants.LanguageKey);
 if (appLanguage != null)
 {
-    CultureInfo cultureInfo = new CultureInfo(appLanguage);
+    var cultureInfo = new CultureInfo(appLanguage);
     CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
     CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 }
 else
 {
     // eng is default
-    var defaultCulture = "en-US"; 
-    CultureInfo cultureInfo = new CultureInfo(defaultCulture);
+    var defaultCulture = "en-US";
+    var cultureInfo = new CultureInfo(defaultCulture);
     CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
     CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
-    localStorage.SetItemAsString(LocalStorageConstants.LanguageKey, defaultCulture);
+    syncLocalStorageService.SetItemAsString(LocalStorageConstants.LanguageKey, defaultCulture);
+}
+
+// dark
+var dark = syncLocalStorageService.GetItemAsString(LocalStorageConstants.DarkKey);
+
+if (dark == "dark")
+{
+    await browserService.DarkTheme();
 }
 
 await host.RunAsync();

@@ -6,8 +6,8 @@ namespace UnitFirst.Landing.Services;
 
 public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
 {
-    private IJSObjectReference _mainModule;
-    private IJSObjectReference _windowModule;
+    private IJSObjectReference? _mainModule;
+    private IJSObjectReference? _windowModule;
 
     public async Task Initialize()
     {
@@ -26,8 +26,13 @@ public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
         await _mainModule.InvokeVoidAsync("showAlert", alertText);
     }
 
-    public async Task<bool> DarkModeSwitch()
+    public async Task<bool> SwitchTheme()
     {
-        return await _mainModule.InvokeAsync<bool>("updateTheme");
+        return await _mainModule.InvokeAsync<bool>("switchTheme");
+    }
+
+    public async Task<bool> DarkTheme()
+    {
+        return await _mainModule.InvokeAsync<bool>("darkTheme");
     }
 }
