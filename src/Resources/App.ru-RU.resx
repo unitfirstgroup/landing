@@ -234,4 +234,19 @@
   <data name="FOOTER_RIGHTS" xml:space="preserve">
     <value>Все права защищены.</value>
   </data>
+  <data name="ORGANIZATION" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="ABOUT_ORGANIZATION_MAIN" xml:space="preserve">
+    <value>UnitFirst, основанная в 2011 году, является студией разработки программного обеспечения с гордой историей предоставления высококачественных решений клиентам в различных отраслях. Имея 14-летний опыт работы, мы отточили свои навыки в разработке инновационных, масштабируемых и надежных программных продуктов, которые отвечают меняющимся потребностям наших клиентов.</value>
+  </data>
+  <data name="ABOUT_MISSION" xml:space="preserve">
+    <value>Начните цифровую трансформацию своего бизнеса с правильного шага.</value>
+  </data>
+  <data name="ABOUT_MISSION_DETAILS" xml:space="preserve">
+    <value>Наша миссия — сделать так, чтобы любому человеку было легко начать цифровую трансформацию бизнеса. С нашим генератором бизнес-планов на базе искусственного интеллекта вы можете получить комплексный бизнес-план за считанные минуты и бесплатное цифровое решение.</value>
+  </data>
+  <data name="ABOUT_TITLE" xml:space="preserve">
+    <value>Игформация о</value>
+  </data>
 </root>

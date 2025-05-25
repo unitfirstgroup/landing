@@ -25,7 +25,7 @@ public class ApplicationThemeService : IApplicationThemeService
 
         _theme = new Theme
         {
-            Organization = "UnitFirst",
+            Organization = localizer["ORGANIZATION"].Value,
             Logo = "images/simple-logo.svg",
             Dark = dark,
             NavItems = new ObservableCollection<NavItem>(new[]
@@ -34,8 +34,7 @@ public class ApplicationThemeService : IApplicationThemeService
                 new NavItem { Name = localizer["NAV_LABORATORIES"].Value, Link = "./laboratories" },
                 new NavItem { Name = localizer["NAV_CASES"].Value, Link = "./cases" },
                 new NavItem { Name = localizer["NAV_BLOG"].Value, Link = "./blog" },
-                new NavItem { Name = localizer["NAV_ABOUT"].Value, Link = "./about" },
-                //new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
+                new NavItem { Name = localizer["NAV_ABOUT"].Value, Link = "./about" }
             }),
             Languages = new ObservableCollection<LanguageListItemModel>(new[]
             {

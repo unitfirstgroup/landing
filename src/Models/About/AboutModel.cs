@@ -4,5 +4,7 @@ namespace UnitFirst.Landing.Models.About;
 
 public partial class AboutModel : ObservableObject
 {
-    [ObservableProperty] private string _socialNetworksDescription;
+    [ObservableProperty] private AboutOrganizationModel _aboutOrganization;
+
+    //[ObservableProperty] private ObservableCollection<StatisticModel> _statistics;
 }

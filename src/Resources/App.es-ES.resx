@@ -234,4 +234,19 @@
   <data name="FOOTER_RIGHTS" xml:space="preserve">
     <value>Al Investigación Reservada.</value>
   </data>
+  <data name="ORGANIZATION" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="ABOUT_ORGANIZATION_MAIN" xml:space="preserve">
+    <value>Fundado en 2011, UnitFirst es un estudio de desarrollo de software con una sólida trayectoria ofreciendo soluciones de alta calidad a clientes de diversas industrias. Con 14 años de experiencia, hemos perfeccionado nuestras habilidades en el desarrollo de productos de software innovadores, escalables y confiables que satisfacen las necesidades cambiantes de nuestros clientes.</value>
+  </data>
+  <data name="ABOUT_MISSION" xml:space="preserve">
+    <value>Empiece la transformación digital de su negocio con el pie derecho.</value>
+  </data>
+  <data name="ABOUT_MISSION_DETAILS" xml:space="preserve">
+    <value>Nuestra misión es facilitarle a cualquier persona la transformación digital de su negocio. Con nuestro generador de planes de negocios con inteligencia artificial, puede obtener un plan de negocios completo en minutos y su solución digital gratis.</value>
+  </data>
+  <data name="ABOUT_TITLE" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
 </root>

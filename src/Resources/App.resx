@@ -234,4 +234,19 @@
   <data name="FOOTER_RIGHTS" xml:space="preserve">
     <value>All Rights Reserved.</value>
   </data>
+  <data name="ORGANIZATION" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="ABOUT_ORGANIZATION_MAIN" xml:space="preserve">
+    <value>Established in 2011, UnitFirst is a software development studio with a proud history of delivering high-quality solutions to clients across various industries. With 14 years of experience under our belt, we've honed our skills in developing innovative, scalable, and reliable software products that meet the evolving needs of our clients.</value>
+  </data>
+  <data name="ABOUT_MISSION" xml:space="preserve">
+    <value>Start your business digital transformation on the right foot.</value>
+  </data>
+  <data name="ABOUT_MISSION_DETAILS" xml:space="preserve">
+    <value>We're on a mission to make it easy for anyone to start a business digital transformation. With our AI-powered business plan generator, you can get a comprehensive business plan in minutes and your digital solution free.</value>
+  </data>
+  <data name="ABOUT_TITLE" xml:space="preserve">
+    <value>About</value>
+  </data>
 </root>
