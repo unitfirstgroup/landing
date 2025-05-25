@@ -41,11 +41,17 @@ public partial class AboutViewModel : ViewModelBase
                     new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
                     new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
                 })
+            },
+            GetInTouch = new GetInTouchModel()
+            {
+                Title = Localizer.GetString("GET_IN_TOUCH_TITLE").Value,
+                Greeting = Localizer.GetString("GET_IN_TOUCH_GREETING").Value,
+                Email = Localizer.GetString("GET_IN_TOUCH_EMAIL").Value,
             }
         };
         return base.OnInitializedAsync();
     }
-
+    
     [RelayCommand]
     public void GetStarted()
     {

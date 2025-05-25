@@ -1,24 +1,15 @@
 ﻿<div class="flex flex-col py-8">
-    <h1 class="w-full self-center p-2 text-center text-2xl font-medium tracking-tight sm:text-4xl lg:p-12 lg:w-1/2">@Title</h1>
-    <p class="self-center p-2 text-center text-lg leading-8 lg:p-12 lg:w-5/6">@Greeting</p>
+    <h1 class="w-full self-center p-2 text-center text-2xl font-medium tracking-tight sm:text-4xl lg:p-12 lg:w-1/2">@DataContext.Title</h1>
+    <p class="self-center p-2 text-center text-lg leading-8 lg:p-12 lg:w-5/6">@DataContext.Greeting</p>
     <input type="email" 
            readonly
            class="mr-2 max-h-10 w-full max-w-sm self-center rounded-lg border border-white-action bg-white-main object-center text-center text-sm text-dark-main focus:ring-white-action focus:border-white-action dark:bg-dark-main dark:border-dark-action dark:placeholder-gray-400 dark:text-white-main dark:focus:ring-dark-action dark:focus:border-dark-action"
-           value="@Email" 
+           value="@DataContext.Email" 
            required>
 </div>
 
 @code {
-
-    [Parameter]
-    public string Title { get; set; } = "Get in touch";
-
-    [Parameter]
-    public string Greeting { get; set; } = "We'd love to hear from you! Send us a message with your idea using the contact details here and we'll generate solution for you soon as possible.";
     
     [Parameter]
-    public string Email { get; set; } = "hello@organization.com";
-
-    [Parameter]
-    public string Founder { get; set; } = "Toni Montana, Founder";
+    public GetInTouchModel DataContext { get; set; }
 }

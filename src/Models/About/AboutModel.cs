@@ -6,5 +6,5 @@ public partial class AboutModel : ObservableObject
 {
     [ObservableProperty] private AboutOrganizationModel _aboutOrganization;
 
-    //[ObservableProperty] private ObservableCollection<StatisticModel> _statistics;
+    [ObservableProperty] private GetInTouchModel _getInTouch;
 }

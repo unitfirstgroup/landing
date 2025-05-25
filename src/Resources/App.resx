@@ -249,4 +249,13 @@
   <data name="ABOUT_TITLE" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="GET_IN_TOUCH_TITLE" xml:space="preserve">
+    <value>Get in touch</value>
+  </data>
+  <data name="GET_IN_TOUCH_GREETING" xml:space="preserve">
+    <value>We'd love to hear from you! Send us a message with your idea using the contact details here and we'll generate solution for you soon as possible.</value>
+  </data>
+  <data name="GET_IN_TOUCH_EMAIL" xml:space="preserve">
+    <value>unitfirstgroup@gmail.com</value>
+  </data>
 </root>
