@@ -10,23 +10,18 @@ namespace UnitFirst.Landing.Services;
 
 public class ApplicationThemeService : IApplicationThemeService
 {
-    private readonly IStringLocalizer<App> _localizer;
-    private readonly ISyncLocalStorageService _localStorage;
     private readonly Theme _theme;
 
     public ApplicationThemeService(IStringLocalizer<App> localizer, ISyncLocalStorageService localStorage)
     {
-        _localizer = localizer ?? throw new ArgumentNullException();
-        _localStorage = localStorage;
-
-        var language = _localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
+        var language = localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
         if (string.IsNullOrEmpty(language))
         {
             language = "en-US";
         }
 
-        var dark = _localStorage.GetItemAsString(LocalStorageConstants.DarkKey) ?? string.Empty;
-        var hideTherms = "accept" == _localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ? "hidden" : string.Empty;
+        var dark = localStorage.GetItemAsString(LocalStorageConstants.DarkKey) ?? string.Empty;
+        var hideTherms = "accept" == localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ? "hidden" : string.Empty;
 
         _theme = new Theme
         {
@@ -35,11 +30,11 @@ public class ApplicationThemeService : IApplicationThemeService
             Dark = dark,
             NavItems = new ObservableCollection<NavItem>(new[]
             {
-                new NavItem { Name = _localizer["NAV_SERVICES"].Value, Link = "./services" },
-                new NavItem { Name = _localizer["NAV_LABORATORIES"].Value, Link = "./laboratories" },
-                new NavItem { Name = _localizer["NAV_CASES"].Value, Link = "./cases" },
-                new NavItem { Name = _localizer["NAV_BLOG"].Value, Link = "./blog" },
-                new NavItem { Name = _localizer["NAV_ABOUT"].Value, Link = "./about" },
+                new NavItem { Name = localizer["NAV_SERVICES"].Value, Link = "./services" },
+                new NavItem { Name = localizer["NAV_LABORATORIES"].Value, Link = "./laboratories" },
+                new NavItem { Name = localizer["NAV_CASES"].Value, Link = "./cases" },
+                new NavItem { Name = localizer["NAV_BLOG"].Value, Link = "./blog" },
+                new NavItem { Name = localizer["NAV_ABOUT"].Value, Link = "./about" },
                 //new NavItem { Name = _localizer["NAV_CONTACTS"].Value, Link = "./" }
             }),
             Languages = new ObservableCollection<LanguageListItemModel>(new[]
