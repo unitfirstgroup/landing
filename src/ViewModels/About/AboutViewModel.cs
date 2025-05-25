@@ -34,12 +34,12 @@ public partial class AboutViewModel : ViewModelBase
                 MissionDetails = Localizer.GetString("ABOUT_MISSION_DETAILS").Value,
                 Statistics = new ObservableCollection<StatisticModel>(new[]
                 {
-                    new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
-                    new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
-                    new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
-                    new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
-                    new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
-                    new StatisticModel() { Name = "a", Value = "12", Icon = "images/satisfaction-rate.svg" },
+                    new StatisticModel() { Name = Localizer.GetString("ABOUT_SATISFACTION_RATE").Value, Value = "97%", Icon = "images/satisfaction-rate.svg" },
+                    new StatisticModel() { Name = Localizer.GetString("ABOUT_SUCCESSFUL_PROJECTS").Value, Value = "23+", Icon = "images/satisfaction-rate.svg" },
+                    new StatisticModel() { Name = Localizer.GetString("ABOUT_COUNTRIES").Value, Value = "7", Icon = "images/satisfaction-rate.svg" },
+                    new StatisticModel() { Name = Localizer.GetString("ABOUT_SENIOR_SPECIALISTS").Value, Value = "70%", Icon = "images/satisfaction-rate.svg" },
+                    new StatisticModel() { Name = Localizer.GetString("ABOUT_CLIENT_ENGAGEMENT").Value, Value = "3+", Icon = "images/satisfaction-rate.svg" },
+                    new StatisticModel() { Name = Localizer.GetString("ABOUT_YEARS_ON_MARKET").Value, Value = "15+", Icon = "images/satisfaction-rate.svg" },
                 })
             },
             GetInTouch = new GetInTouchModel()

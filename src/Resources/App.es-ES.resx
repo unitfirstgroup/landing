@@ -258,4 +258,22 @@
   <data name="GET_IN_TOUCH_EMAIL" xml:space="preserve">
     <value>unitfirstgroup@gmail.com</value>
   </data>
+  <data name="ABOUT_SATISFACTION_RATE" xml:space="preserve">
+    <value>Índice de satisfacción</value>
+  </data>
+  <data name="ABOUT_SUCCESSFUL_PROJECTS" xml:space="preserve">
+    <value>Proyectos exitosos</value>
+  </data>
+  <data name="ABOUT_COUNTRIES" xml:space="preserve">
+    <value>Países</value>
+  </data>
+  <data name="ABOUT_SENIOR_SPECIALISTS" xml:space="preserve">
+    <value>Especialistas superiores</value>
+  </data>
+  <data name="ABOUT_CLIENT_ENGAGEMENT" xml:space="preserve">
+    <value>Años de compromiso con el cliente</value>
+  </data>
+  <data name="ABOUT_YEARS_ON_MARKET" xml:space="preserve">
+    <value>Años en el mercado</value>
+  </data>
 </root>

@@ -247,7 +247,7 @@
     <value>Наша миссия — сделать так, чтобы любому человеку было легко начать цифровую трансформацию бизнеса. С нашим генератором бизнес-планов на базе искусственного интеллекта вы можете получить комплексный бизнес-план за считанные минуты и бесплатное цифровое решение.</value>
   </data>
   <data name="ABOUT_TITLE" xml:space="preserve">
-    <value>Игформация о</value>
+    <value>Информация о</value>
   </data>
   <data name="GET_IN_TOUCH_TITLE" xml:space="preserve">
     <value>Свяжитесь с нами</value>
@@ -257,5 +257,23 @@
   </data>
   <data name="GET_IN_TOUCH_EMAIL" xml:space="preserve">
     <value>unitfirstgroup@gmail.com</value>
+  </data>
+  <data name="ABOUT_SATISFACTION_RATE" xml:space="preserve">
+    <value>Уровень удовлетворенности</value>
+  </data>
+  <data name="ABOUT_SUCCESSFUL_PROJECTS" xml:space="preserve">
+    <value>Успешные проекты</value>
+  </data>
+  <data name="ABOUT_COUNTRIES" xml:space="preserve">
+    <value>Страны</value>
+  </data>
+  <data name="ABOUT_SENIOR_SPECIALISTS" xml:space="preserve">
+    <value>Старшие специалисты</value>
+  </data>
+  <data name="ABOUT_CLIENT_ENGAGEMENT" xml:space="preserve">
+    <value>Годы работы с клиентами</value>
+  </data>
+  <data name="ABOUT_YEARS_ON_MARKET" xml:space="preserve">
+    <value>Лет на рынке</value>
   </data>
 </root>
