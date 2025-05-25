@@ -42,27 +42,27 @@ public partial class AboutViewModel : ViewModelBase
                     new StatisticModel()
                     {
                         Name = Localizer.GetString("ABOUT_SUCCESSFUL_PROJECTS").Value, Value = "23+",
-                        Icon = "images/satisfaction-rate.svg"
+                        Icon = "images/successful-project.svg"
                     },
                     new StatisticModel()
                     {
                         Name = Localizer.GetString("ABOUT_COUNTRIES").Value, Value = "7",
-                        Icon = "images/satisfaction-rate.svg"
+                        Icon = "images/countries.svg"
                     },
                     new StatisticModel()
                     {
                         Name = Localizer.GetString("ABOUT_SENIOR_SPECIALISTS").Value, Value = "70%",
-                        Icon = "images/satisfaction-rate.svg"
+                        Icon = "images/senior-specialist.svg"
                     },
                     new StatisticModel()
                     {
                         Name = Localizer.GetString("ABOUT_CLIENT_ENGAGEMENT").Value, Value = "3+",
-                        Icon = "images/satisfaction-rate.svg"
+                        Icon = "images/client-engagement.svg"
                     },
                     new StatisticModel()
                     {
                         Name = Localizer.GetString("ABOUT_YEARS_ON_MARKET").Value, Value = "15+",
-                        Icon = "images/satisfaction-rate.svg"
+                        Icon = "images/reputation.svg"
                     },
                 })
             },
