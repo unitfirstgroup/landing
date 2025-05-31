@@ -26,12 +26,6 @@ module.exports = {
             }
         }
     },
-    plugins: [
-        require("flowbite/plugin")({
-            charts: true,
-            forms: true,
-            tooltips: true
-        })
-    ],
+    plugins: [],
     darkMode: "class"
 };
