@@ -12,6 +12,22 @@ public class ApplicationThemeService : IApplicationThemeService
 {
     private readonly Theme _theme;
 
+    private readonly Dictionary<string, string> _navItems = new()
+    {
+        { "NAV_SERVICES", "./services" },
+        { "NAV_LABORATORIES", "./laboratories" },
+        { "NAV_CASES", "./cases" },
+        { "NAV_BLOG", "./blog" },
+        { "NAV_ABOUT", "./about" },
+    };
+
+    private readonly Dictionary<string, string> _languages = new()
+    {
+        { "en-US", "images/us.svg" },
+        { "ru-RU", "images/ru.svg" },
+        { "es-ES", "images/es.svg" },
+    };
+
     public ApplicationThemeService(IStringLocalizer<App> localizer, ISyncLocalStorageService localStorage)
     {
         var language = localStorage.GetItemAsString(LocalStorageConstants.LanguageKey);
@@ -21,27 +37,26 @@ public class ApplicationThemeService : IApplicationThemeService
         }
 
         var dark = localStorage.GetItemAsString(LocalStorageConstants.DarkKey) ?? string.Empty;
-        var hideTherms = "accept" == localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey) ? "hidden" : string.Empty;
+        var hideTherms = "accept" == localStorage.GetItemAsString(LocalStorageConstants.AcceptThermsKey)
+            ? "hidden"
+            : string.Empty;
 
         _theme = new Theme
         {
             Organization = localizer["ORGANIZATION"].Value,
             Logo = "images/simple-logo.svg",
             Dark = dark,
-            NavItems = new ObservableCollection<NavItem>(new[]
+            NavItems = new ObservableCollection<NavItem>(_navItems.Select(x => new NavItem()
             {
-                new NavItem { Name = localizer["NAV_SERVICES"].Value, Link = "./services" },
-                new NavItem { Name = localizer["NAV_LABORATORIES"].Value, Link = "./laboratories" },
-                new NavItem { Name = localizer["NAV_CASES"].Value, Link = "./cases" },
-                new NavItem { Name = localizer["NAV_BLOG"].Value, Link = "./blog" },
-                new NavItem { Name = localizer["NAV_ABOUT"].Value, Link = "./about" }
-            }),
-            Languages = new ObservableCollection<LanguageListItemModel>(new[]
-            {
-                new LanguageListItemModel { Language = "en-US", ImageSource = "images/us.svg" },
-                new LanguageListItemModel { Language = "ru-RU", ImageSource = "images/ru.svg" },
-                new LanguageListItemModel { Language = "es-ES", ImageSource = "images/es.svg" }
-            }),
+                Name = localizer[x.Key],
+                Link = x.Value
+            })),
+            Languages = new ObservableCollection<LanguageListItemModel>(_languages.Select(x =>
+                new LanguageListItemModel()
+                {
+                    Language = localizer[x.Key],
+                    ImageSource = x.Value
+                })),
             SelectedLanguage = language,
             HideTherms = hideTherms
         };
