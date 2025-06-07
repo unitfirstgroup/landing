@@ -348,4 +348,28 @@
   <data name="SERVICES_GPT_IMG" xml:space="preserve">
     <value>images/gpt-development.svg</value>
   </data>
+  <data name="SERVICES_ACCENT_WORD" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="SERVICES_TITLE" xml:space="preserve">
+    <value>сервис</value>
+  </data>
+  <data name="SERVICES_DESC" xml:space="preserve">
+    <value>At UnitFirst, we provide end-to-end software development backed by industry-specific expertise, advisory support, and system maintenance, including maintenance of complex legacy solutions. Our software engineering services encompass both the classic outsourcing model and staff augmentation.</value>
+  </data>
+  <data name="SERVICES_CAT_ACCENT_WORD" xml:space="preserve">
+    <value>сервисы</value>
+  </data>
+  <data name="SERVICES_CAT_TITLE" xml:space="preserve">
+    <value>Категории наших</value>
+  </data>
+  <data name="SERVICES_CAT_DESC" xml:space="preserve">
+    <value>На протяжении более десяти лет мы накапливали знания и опыт в различных услугах, которые стали нашей специализацией.</value>
+  </data>
+  <data name="SERVICES_GET_IN_TOUCH" xml:space="preserve">
+    <value>Свяжитесь с нами</value>
+  </data>
+  <data name="SERVICES_BOOK_CONSULTATION" xml:space="preserve">
+    <value>Забронируйте бесплатную консультацию</value>
+  </data>
 </root>

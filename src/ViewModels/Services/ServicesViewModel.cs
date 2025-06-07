@@ -18,6 +18,14 @@ public partial class ServicesViewModel(IApplicationStateService applicationState
     {
         _model = new ServicesModel()
         {
+            AccentWord = localizer["SERVICES_ACCENT_WORD"].Value,
+            Title = localizer["SERVICES_TITLE"].Value,
+            Description = localizer["SERVICES_DESC"].Value,
+            CategoryAccentWord = localizer["SERVICES_CAT_ACCENT_WORD"].Value,
+            CategoryTitle = localizer["SERVICES_CAT_TITLE"].Value,
+            CategoryDescription = localizer["SERVICES_CAT_DESC"].Value,
+            GetInTouch = Localizer["SERVICES_GET_IN_TOUCH"].Value,
+            BookConsultation = Localizer["SERVICES_BOOK_CONSULTATION"].Value,
             Services = new ObservableCollection<ServiceModel>
             {
                 new()

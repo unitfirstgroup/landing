@@ -325,13 +325,13 @@
     <value>images/mobile-development.svg</value>
   </data>
   <data name="SERVICES_AI" xml:space="preserve">
-    <value>desarrollo de IA</value>
+    <value>Desarrollo de IA</value>
   </data>
   <data name="SERVICES_AI_DESC" xml:space="preserve">
     <value>Desde el análisis predictivo hasta el diagnóstico sanitario basado en IA, nuestros servicios de Inteligencia Artificial abarcan todos los sectores. Nos especializamos en el desarrollo de modelos de IA personalizados, el análisis predictivo, la implementación de aprendizaje automático, el procesamiento del lenguaje natural, la visión artificial y las herramientas de IA para el mantenimiento predictivo.</value>
   </data>
   <data name="SERVICES_AI_URL" xml:space="preserve">
-    <value>desarrollo de IA</value>
+    <value>Desarrollo de IA</value>
   </data>
   <data name="SERVICES_AI_IMG" xml:space="preserve">
     <value>images/ai-development.svg</value>
@@ -347,5 +347,29 @@
   </data>
   <data name="SERVICES_GPT_IMG" xml:space="preserve">
     <value>images/gpt-development.svg</value>
+  </data>
+  <data name="SERVICES_ACCENT_WORD" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="SERVICES_TITLE" xml:space="preserve">
+    <value>servicio</value>
+  </data>
+  <data name="SERVICES_DESC" xml:space="preserve">
+    <value>At UnitFirst, we provide end-to-end software development backed by industry-specific expertise, advisory support, and system maintenance, including maintenance of complex legacy solutions. Our software engineering services encompass both the classic outsourcing model and staff augmentation.</value>
+  </data>
+  <data name="SERVICES_CAT_ACCENT_WORD" xml:space="preserve">
+    <value>servicios</value>
+  </data>
+  <data name="SERVICES_CAT_TITLE" xml:space="preserve">
+    <value>Category of our</value>
+  </data>
+  <data name="SERVICES_CAT_DESC" xml:space="preserve">
+    <value>Durante más de una década, hemos ido acumulando conocimientos y experiencia en diversos servicios que se convirtieron en nuestra especialización.</value>
+  </data>
+  <data name="SERVICES_GET_IN_TOUCH" xml:space="preserve">
+    <value>Ponte en contacto con nosotros</value>
+  </data>
+  <data name="SERVICES_BOOK_CONSULTATION" xml:space="preserve">
+    <value>Reserva una consulta gratuita</value>
   </data>
 </root>

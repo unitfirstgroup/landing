@@ -3,22 +3,22 @@
 <div class="mx-auto w-full bg-white-main px-2 text-black dark:bg-dark-main dark:text-white-main lg:px-10">
     <div class="col-span-3 items-center justify-center px-4 py-8 text-center text-black dark:text-white-main lg:px-10">
         <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white-main">
-            <span class="text-white-action dark:text-dark-action">Software</span>
-            service
+            <span class="text-white-action dark:text-dark-action">@ViewModel.Model.AccentWord</span>
+                @ViewModel.Model.Title
         </h1>
-        <span class="mb-6 block text-lg dark:text-white-main">At UnitFirst, we provide end-to-end software development backed by industry-specific expertise, advisory support, and system maintenance, including maintenance of complex legacy solutions. Our software engineering services encompass both the classic outsourcing model and staff augmentation.</span>
+        <span class="mb-6 block text-lg dark:text-white-main">@ViewModel.Model.Description</span>
         <div class="flex flex-row content-center items-center justify-center gap-8">
-            <ActionButton ButtonText="Get in Touch" Click="@ViewModel.GetInTouch"></ActionButton>
-            <ActionButton ButtonText="Book free consultation" Click="@ViewModel.BookConsultation"></ActionButton>
+            <ActionButton ButtonText=@ViewModel.Model.GetInTouch Click="@ViewModel.GetInTouch"></ActionButton>
+            <ActionButton ButtonText=@ViewModel.Model.BookConsultation Click="@ViewModel.BookConsultation"></ActionButton>
         </div>
     </div>
     
     <div class="items-center justify-center px-2 py-4 text-center text-black dark:text-white-main lg:px-24">
         <h1 class="mb-6 items-center justify-center text-center font-sans text-4xl font-medium tracking-tight dark:text-white-main">
-            Categories of our
-            <span class="text-white-action dark:text-dark-action">services</span>
+            @ViewModel.Model.CategoryTitle
+            <span class="text-white-action dark:text-dark-action">@ViewModel.Model.CategoryAccentWord</span>
         </h1>
-        <span class="mb-6 block text-lg text-black dark:text-white-main">For over a decade, we have been accumulating knowledge and expertise in several services that became our specialization.</span>
+        <span class="mb-6 block text-lg text-black dark:text-white-main">@ViewModel.Model.CategoryDescription</span>
         <div class="grid w-full grid-cols-1 gap-8 p-4 md:p-10 md:grid-cols-2">
             @foreach (var service in ViewModel.Model.Services)
             {
