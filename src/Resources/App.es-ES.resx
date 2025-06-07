@@ -276,4 +276,76 @@
   <data name="ABOUT_YEARS_ON_MARKET" xml:space="preserve">
     <value>Años en el mercado</value>
   </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT" xml:space="preserve">
+    <value>Desarrollo de software a medida</value>
+  </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT_DESC" xml:space="preserve">
+    <value>Desarrollamos soluciones a medida para las necesidades y requisitos específicos de su negocio. El desarrollo a medida implica un ciclo completo de desarrollo de software adaptado a sus necesidades en cuanto a presupuesto, plazos, pila tecnológica, tecnologías avanzadas y otros aspectos.</value>
+  </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT_URL" xml:space="preserve">
+    <value>Desarrollo de software a medida</value>
+  </data>
+  <data name="SERVICES_IOT" xml:space="preserve">
+    <value>Desarrollo de IoT</value>
+  </data>
+  <data name="SERVICES_IOT_DESC" xml:space="preserve">
+    <value>Desarrollamos sistemas IoT de cualquier escala, desde flotas de unos pocos dispositivos hasta cientos. El desarrollo de IoT es nuestra especialidad, por lo que contamos con la experiencia suficiente para ofrecer servicios de consultoría y desarrollo. Nuestros servicios incluyen el cálculo del ROI, la identificación de oportunidades de implementación de IoT para empresas específicas, la visualización de datos mediante paneles informativos, el diseño de sistemas eficaces de gestión de dispositivos, la protección de componentes vulnerables, la optimización de la transferencia de datos y el uso de la red, y mucho más. Ofrecemos más de 10 años de experiencia en la ejecución exitosa de proyectos IoT.</value>
+  </data>
+  <data name="SERVICES_IOT_URL" xml:space="preserve">
+    <value>Desarrollo de IoT</value>
+  </data>
+  <data name="SERVICES_WEB" xml:space="preserve">
+    <value>Desarrollo web</value>
+  </data>
+  <data name="SERVICES_WEB_DESC" xml:space="preserve">
+    <value>Desarrollamos aplicaciones web escalables, de alto rendimiento y seguras. Si bien las diferentes soluciones web pueden parecer similares a primera vista, abordamos cada una de forma única, aprovechando nuestra experiencia para garantizar que la aplicación cumpla con las expectativas de los usuarios, impulse el crecimiento del negocio, genere valor y se mantenga competitiva a largo plazo.</value>
+  </data>
+  <data name="SERVICES_WEB_URL" xml:space="preserve">
+    <value>Desarrollo web</value>
+  </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT_IMG" xml:space="preserve">
+    <value>images/custom-development.svg</value>
+  </data>
+  <data name="SERVICES_IOT_IMG" xml:space="preserve">
+    <value>images/iot-platform.svg</value>
+  </data>
+  <data name="SERVICES_WEB_IMG" xml:space="preserve">
+    <value>images/web-development.svg</value>
+  </data>
+  <data name="SERVICES_MOBILE" xml:space="preserve">
+    <value>Desarrollo móvil</value>
+  </data>
+  <data name="SERVICES_MOBILE_DESC" xml:space="preserve">
+    <value>Nuestro equipo de desarrolladores móviles expertos y diseñadores creativos crea excelentes aplicaciones para iOS, Android y multiplataforma, creando interfaces sencillas e intuitivas y creando experiencias de usuario excepcionales. Sabemos cómo atraer y fidelizar a los usuarios, y la satisfacción de los usuarios es la clave del éxito de una empresa.</value>
+  </data>
+  <data name="SERVICES_MOBILE_URL" xml:space="preserve">
+    <value>Desarrollo móvil</value>
+  </data>
+  <data name="SERVICES_MOBILE_IMG" xml:space="preserve">
+    <value>images/mobile-development.svg</value>
+  </data>
+  <data name="SERVICES_AI" xml:space="preserve">
+    <value>desarrollo de IA</value>
+  </data>
+  <data name="SERVICES_AI_DESC" xml:space="preserve">
+    <value>Desde el análisis predictivo hasta el diagnóstico sanitario basado en IA, nuestros servicios de Inteligencia Artificial abarcan todos los sectores. Nos especializamos en el desarrollo de modelos de IA personalizados, el análisis predictivo, la implementación de aprendizaje automático, el procesamiento del lenguaje natural, la visión artificial y las herramientas de IA para el mantenimiento predictivo.</value>
+  </data>
+  <data name="SERVICES_AI_URL" xml:space="preserve">
+    <value>desarrollo de IA</value>
+  </data>
+  <data name="SERVICES_AI_IMG" xml:space="preserve">
+    <value>images/ai-development.svg</value>
+  </data>
+  <data name="SERVICES_GPT" xml:space="preserve">
+    <value>Desarrollo de ChatGPT</value>
+  </data>
+  <data name="SERVICES_GPT_DESC" xml:space="preserve">
+    <value>Al incorporar ChatGPT, las aplicaciones pueden ofrecer disponibilidad 24/7, atención al cliente eficiente y análisis basado en datos. Ofrecemos consultoría, personalización e integración de las funciones de ChatGPT en aplicaciones web y móviles, lo que permite conversaciones dinámicas, ahorro de costes, mayor retención de usuarios y mayor interacción.</value>
+  </data>
+  <data name="SERVICES_GPT_URL" xml:space="preserve">
+    <value>Desarrollo de ChatGPT</value>
+  </data>
+  <data name="SERVICES_GPT_IMG" xml:space="preserve">
+    <value>images/gpt-development.svg</value>
+  </data>
 </root>

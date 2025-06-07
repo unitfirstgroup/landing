@@ -276,4 +276,76 @@
   <data name="ABOUT_YEARS_ON_MARKET" xml:space="preserve">
     <value>Лет на рынке</value>
   </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT" xml:space="preserve">
+    <value>Разработка программного обеспечения на заказ</value>
+  </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT_DESC" xml:space="preserve">
+    <value>Мы разрабатываем индивидуальные решения для конкретных бизнес-нужд и требований. Индивидуальная разработка означает разработку программного обеспечения полного цикла, адаптированную к вашему случаю с учетом бюджета, сроков, технологического стека, передовых технологий и других аспектов.</value>
+  </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT_URL" xml:space="preserve">
+    <value>Разработка программного обеспечения на заказ</value>
+  </data>
+  <data name="SERVICES_IOT" xml:space="preserve">
+    <value>Разработка интернета вещей</value>
+  </data>
+  <data name="SERVICES_IOT_DESC" xml:space="preserve">
+    <value>Мы разрабатываем системы IoT любого масштаба, от парков из нескольких устройств до сотен. Разработка IoT — наша специализация, поэтому у нас достаточно опыта, чтобы предоставлять консалтинговые услуги наряду с услугами по разработке. Наши услуги включают расчет ROI, определение возможностей внедрения IoT для конкретных предприятий, визуализацию данных с помощью информативных панелей мониторинга, проектирование эффективных систем управления устройствами, защиту уязвимых компонентов, оптимизацию передачи данных и использования сети и многое другое. Мы предлагаем более 10 лет опыта в реализации успешных проектов IoT.</value>
+  </data>
+  <data name="SERVICES_IOT_URL" xml:space="preserve">
+    <value>Разработка интернета вещей</value>
+  </data>
+  <data name="SERVICES_WEB" xml:space="preserve">
+    <value>Веб-разработка</value>
+  </data>
+  <data name="SERVICES_WEB_DESC" xml:space="preserve">
+    <value>Мы разрабатываем масштабируемые, высокопроизводительные и безопасные веб-приложения. Хотя на первый взгляд разные веб-решения могут показаться похожими, мы подходим к каждому из них по-своему, используя наш опыт, чтобы гарантировать, что приложение соответствует ожиданиям пользователей, стимулирует рост бизнеса, обеспечивает ценность и остается конкурентоспособным с течением времени.</value>
+  </data>
+  <data name="SERVICES_WEB_URL" xml:space="preserve">
+    <value>Веб-разработка</value>
+  </data>
+  <data name="SERVICES_CUSTOM_DEVELOPMENT_IMG" xml:space="preserve">
+    <value>images/custom-development.svg</value>
+  </data>
+  <data name="SERVICES_IOT_IMG" xml:space="preserve">
+    <value>images/iot-platform.svg</value>
+  </data>
+  <data name="SERVICES_WEB_IMG" xml:space="preserve">
+    <value>images/web-development.svg</value>
+  </data>
+  <data name="SERVICES_MOBILE" xml:space="preserve">
+    <value>Разработка мобильных приложений</value>
+  </data>
+  <data name="SERVICES_MOBILE_DESC" xml:space="preserve">
+    <value>Наша команда опытных мобильных разработчиков и креативных дизайнеров создает отличные приложения для iOS, Android и кроссплатформенные приложения, создавая простые и интуитивно понятные интерфейсы и формируя превосходный пользовательский опыт. Мы знаем, как вовлекать и удерживать пользователей, а счастливые пользователи означают, что бизнес будет процветать.</value>
+  </data>
+  <data name="SERVICES_MOBILE_URL" xml:space="preserve">
+    <value>Разработка мобильных приложений</value>
+  </data>
+  <data name="SERVICES_MOBILE_IMG" xml:space="preserve">
+    <value>images/mobile-development.svg</value>
+  </data>
+  <data name="SERVICES_AI" xml:space="preserve">
+    <value>Разработка ИИ</value>
+  </data>
+  <data name="SERVICES_AI_DESC" xml:space="preserve">
+    <value>От предиктивной аналитики до диагностики здравоохранения на базе ИИ, наши услуги искусственного интеллекта охватывают все отрасли. Наша экспертиза заключается в разработке индивидуальных моделей ИИ, предиктивной аналитике, внедрении машинного обучения, обработке естественного языка, компьютерном зрении и инструментах ИИ для предиктивного обслуживания.</value>
+  </data>
+  <data name="SERVICES_AI_URL" xml:space="preserve">
+    <value>Разработка ИИ</value>
+  </data>
+  <data name="SERVICES_AI_IMG" xml:space="preserve">
+    <value>images/ai-development.svg</value>
+  </data>
+  <data name="SERVICES_GPT" xml:space="preserve">
+    <value>Разработка ChatGPT</value>
+  </data>
+  <data name="SERVICES_GPT_DESC" xml:space="preserve">
+    <value>Благодаря внедрению ChatGPT приложения могут обеспечить круглосуточную доступность, эффективную поддержку клиентов и аналитику на основе данных. Мы предоставляем консультации, настройку и интеграцию возможностей ChatGPT в веб- и мобильные приложения, обеспечивая динамичные разговоры, экономию средств, улучшенное удержание пользователей и повышенную вовлеченность пользователей.</value>
+  </data>
+  <data name="SERVICES_GPT_URL" xml:space="preserve">
+    <value>Разработка ChatGPT</value>
+  </data>
+  <data name="SERVICES_GPT_IMG" xml:space="preserve">
+    <value>images/gpt-development.svg</value>
+  </data>
 </root>

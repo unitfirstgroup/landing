@@ -22,50 +22,50 @@ public partial class ServicesViewModel(IApplicationStateService applicationState
             {
                 new()
                 {
-                    Name = "Custom software development",
-                    Description = "We develop bespoke solutions for specific business needs and requirements. Custom development means full-cycle software development adapted to your case regarding budget, timelines, tech stack, advanced technologies, and other aspects.",
-                    Image = "images/custom-development.svg",
-                    UrlText = "Custom software development",
+                    Name = localizer["SERVICES_CUSTOM_DEVELOPMENT"].Value,
+                    Description = localizer["SERVICES_CUSTOM_DEVELOPMENT_DESC"].Value,
+                    Image = localizer["SERVICES_CUSTOM_DEVELOPMENT_IMG"].Value,
+                    UrlText = localizer["SERVICES_CUSTOM_DEVELOPMENT_URL"].Value,
                     Url = "#"
                 },
                 new()
                 {
-                    Name = "IoT development",
-                    Description = "We develop IoT systems of any scale, from fleets of a few devices to hundreds. IoT development is our specialization, so we have enough expertise to provide consulting services along with development services. Our services include calculating ROI, identifying IoT implementation opportunities for specific businesses, visualizing data through informative dashboards, designing effective device management systems, securing vulnerable components, optimizing data transfer and network usage, and much more. We offer over 10 years of experience in delivering successful IoT projects.",
-                    Image = "images/iot-platform.svg",
-                    UrlText = "IoT development",
+                    Name = localizer["SERVICES_IOT"].Value,
+                    Description = localizer["SERVICES_IOT_DESC"].Value,
+                    Image = localizer["SERVICES_IOT_IMG"].Value,
+                    UrlText = localizer["SERVICES_IOT_URL"].Value,
                     Url = "#"
                 },
                 new()
                 {
-                    Name = "Web development",
-                    Description = "We develop scalable, high-performance, and secure web applications. While different web solutions may seem similar at first glance, we approach each one uniquely, leveraging our expertise to ensure the application meets user expectations, drives business growth, delivers value, and remains competitive over time.",
-                    Image = "images/web-development.svg",
-                    UrlText = "Web development",
+                    Name = localizer["SERVICES_WEB"].Value,
+                    Description = localizer["SERVICES_WEB_DESC"].Value,
+                    Image = localizer["SERVICES_WEB_IMG"].Value,
+                    UrlText = localizer["SERVICES_WEB_URL"].Value,
                     Url = "#"
                 },
                 new()
                 {
-                    Name = "Mobile development",
-                    Description = "Our team of skilled mobile developers and creative designers build excellent iOS, Android, and cross-platform applications, crafting simple and intuitive interfaces and shaping excellent user experiences. We know how to engage and retain users, and happy users mean a business will thrive.",
-                    Image = "images/mobile-development.svg",
-                    UrlText = "Mobile development",
+                    Name = localizer["SERVICES_MOBILE"].Value,
+                    Description = localizer["SERVICES_MOBILE_DESC"].Value,
+                    Image = localizer["SERVICES_MOBILE_IMG"].Value,
+                    UrlText = localizer["SERVICES_MOBILE_URL"].Value,
                     Url = "#"
                 },
                 new()
                 {
-                    Name = "AI development",
-                    Description = "From predictive analytic to AI-powered healthcare diagnostics, our Artificial Intelligence services span every industry. Our expertise lies in custom AI model development, predictive analytic, machine learning implementation, natural language processing, computer vision, and AI tools for predictive maintenance.",
-                    Image = "images/ai-development.svg",
-                    UrlText = "AI development",
+                    Name = localizer["SERVICES_AI"].Value,
+                    Description = localizer["SERVICES_AI_DESC"].Value,
+                    Image = localizer["SERVICES_AI_IMG"].Value,
+                    UrlText = localizer["SERVICES_AI_URL"].Value,
                     Url = "#"
                 },
                 new()
                 {
-                    Name = "ChatGPT development",
-                    Description = "By incorporating ChatGPT, applications can provide 24/7 availability, efficient customer support, and data-driven insights. We provide consultation, customization, and integration of ChatGPT capabilities into web and mobile applications, enabling dynamic conversations, cost savings, enhanced user retention, and increased user engagement.",
-                    Image = "images/gpt-development.svg",
-                    UrlText = "ChatGPT development",
+                    Name = localizer["SERVICES_GPT"].Value,
+                    Description = localizer["SERVICES_GPT_DESC"].Value,
+                    Image = localizer["SERVICES_GPT_IMG"].Value,
+                    UrlText = localizer["SERVICES_GPT_URL"].Value,
                     Url = "#"
                 }
             },
