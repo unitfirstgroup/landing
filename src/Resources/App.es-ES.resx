@@ -498,4 +498,16 @@
   <data name="TAG_EDUCATION" xml:space="preserve">
     <value>Educación</value>
   </data>
+  <data name="CASES_ACCENT_WORD" xml:space="preserve">
+    <value>Proyectos</value>
+  </data>
+  <data name="CASES_TITLE" xml:space="preserve">
+    <value>que desarrollamos con éxito.</value>
+  </data>
+  <data name="CASES_DESC" xml:space="preserve">
+    <value>Una mirada vale más que mil palabras.</value>
+  </data>
+  <data name="CASES_GET_DETAILS" xml:space="preserve">
+    <value>Obtener detalles</value>
+  </data>
 </root>

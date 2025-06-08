@@ -498,4 +498,16 @@
   <data name="TAG_EDUCATION" xml:space="preserve">
     <value>Образование</value>
   </data>
+  <data name="CASES_ACCENT_WORD" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
+  <data name="CASES_TITLE" xml:space="preserve">
+    <value>которые мы успешно реализовали.</value>
+  </data>
+  <data name="CASES_DESC" xml:space="preserve">
+    <value>Один взгляд стоит тысячи слов.</value>
+  </data>
+  <data name="CASES_GET_DETAILS" xml:space="preserve">
+    <value>Получить подробности</value>
+  </data>
 </root>
