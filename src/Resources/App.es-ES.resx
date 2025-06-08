@@ -483,4 +483,19 @@
   <data name="LABORATORIES_MARKETING_URL" xml:space="preserve">
     <value>Marketing</value>
   </data>
+  <data name="TAG_HEALTHCARE" xml:space="preserve">
+    <value>Cuidado de la salud</value>
+  </data>
+  <data name="TAG_MEDIA" xml:space="preserve">
+    <value>Medios de comunicación</value>
+  </data>
+  <data name="TAG_TRANSPORT" xml:space="preserve">
+    <value>Transporte</value>
+  </data>
+  <data name="TAG_BUSINESS" xml:space="preserve">
+    <value>Negocio</value>
+  </data>
+  <data name="TAG_EDUCATION" xml:space="preserve">
+    <value>Educación</value>
+  </data>
 </root>

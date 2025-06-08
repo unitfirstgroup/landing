@@ -20,7 +20,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Healthcare" }
+                    new TagModel { TagName = localizer["TAG_HEALTHCARE"].Value }
                 })
             },
             new()
@@ -32,7 +32,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Media" }
+                    new TagModel { TagName = localizer["TAG_MEDIA"].Value }
                 })
             },
             new()
@@ -44,7 +44,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Transport" }
+                    new TagModel { TagName = localizer["TAG_TRANSPORT"].Value }
                 })
             },
             new()
@@ -56,7 +56,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Business" }
+                    new TagModel { TagName = localizer["TAG_BUSINESS"].Value }
                 })
             },
             new()
@@ -68,7 +68,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Education" }
+                    new TagModel { TagName = localizer["TAG_EDUCATION"].Value }
                 })
             },
             new()
@@ -80,7 +80,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Business" }
+                    new TagModel { TagName = localizer["TAG_BUSINESS"].Value }
                 })
             },
             new()
@@ -92,7 +92,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Business" }
+                    new TagModel { TagName = localizer["TAG_BUSINESS"].Value }
                 })
             },
             new()
@@ -104,7 +104,7 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
-                    new TagModel { TagName = "Business" }
+                    new TagModel { TagName = localizer["TAG_BUSINESS"].Value }
                 })
             }
         };
@@ -114,11 +114,11 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
     {
         return new List<TagModel>(new[]
         {
-            new TagModel { TagName = "Healthcare", Select = new SelectModel { IsSelected = false } },
-            new TagModel { TagName = "Education", Select = new SelectModel { IsSelected = false } },
-            new TagModel { TagName = "Transport", Select = new SelectModel { IsSelected = false } },
-            new TagModel { TagName = "Business", Select = new SelectModel { IsSelected = false } },
-            new TagModel { TagName = "Media", Select = new SelectModel { IsSelected = false } }
+            new TagModel { TagName = localizer["TAG_HEALTHCARE"].Value, Select = new SelectModel { IsSelected = false } },
+            new TagModel { TagName = localizer["TAG_EDUCATION"].Value, Select = new SelectModel { IsSelected = false } },
+            new TagModel { TagName = localizer["TAG_TRANSPORT"].Value, Select = new SelectModel { IsSelected = false } },
+            new TagModel { TagName = localizer["TAG_BUSINESS"].Value, Select = new SelectModel { IsSelected = false } },
+            new TagModel { TagName = localizer["TAG_MEDIA"].Value, Select = new SelectModel { IsSelected = false } }
         });
     }
 }
