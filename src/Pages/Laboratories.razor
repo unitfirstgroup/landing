@@ -2,11 +2,11 @@
 @inherits MvvmComponentBase<LaboratoriesViewModel>
 <UIElementsContainer UiElementModel="@ViewModel.UiElementModel">
     <UserAccent
-        AccentText="Digital"
-        Text="laboratories"
-        Details="We’ve built expert knowledge in a range of industries. Search any kind of industry and find the best applicable laboratory."
+        AccentText=@ViewModel.Localizer["LABORATORIES_ACCENT_WORD"].Value
+        Text=@ViewModel.Localizer["LABORATORIES_TITLE"].Value
+        Details=@ViewModel.Localizer["LABORATORIES_DESC"].Value
         ButtonClickCommand="@ViewModel.GetDetailsCommand"
-        ButtonText="Get details">
+        ButtonText=@ViewModel.Localizer["LABORATORIES_GET_DETAILS"].Value>
     </UserAccent>
     <ItemsContainer
         TItem="LaboratoryModel"

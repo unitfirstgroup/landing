@@ -44,7 +44,7 @@ public partial class LaboratoriesViewModel
                 SearchModel = new SearchModel
                 {
                     RaiseSearchCommand = SearchCommand,
-                    Placeholder = "Search digital laboratory for your requirements..."
+                    Placeholder = localizer["LABORATORIES_SEARCH"].Value
                 }
             },
             Filtered = new ObservableCollection<LaboratoryModel>(_items)

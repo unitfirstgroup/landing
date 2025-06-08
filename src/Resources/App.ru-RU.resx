@@ -372,4 +372,19 @@
   <data name="SERVICES_BOOK_CONSULTATION" xml:space="preserve">
     <value>Забронируйте бесплатную консультацию</value>
   </data>
+  <data name="LABORATORIES_ACCENT_WORD" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="LABORATORIES_TITLE" xml:space="preserve">
+    <value>лаборатория</value>
+  </data>
+  <data name="LABORATORIES_DESC" xml:space="preserve">
+    <value>Мы накопили экспертные знания в различных отраслях. Найдите любую отрасль и найдите наилучшую применимую лабораторию.</value>
+  </data>
+  <data name="LABORATORIES_GET_DETAILS" xml:space="preserve">
+    <value>Получить подробности</value>
+  </data>
+  <data name="LABORATORIES_SEARCH" xml:space="preserve">
+    <value>Найдите цифровую лабораторию, соответствующую вашим требованиям...</value>
+  </data>
 </root>

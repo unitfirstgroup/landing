@@ -372,4 +372,19 @@
   <data name="SERVICES_BOOK_CONSULTATION" xml:space="preserve">
     <value>Book free consultation</value>
   </data>
+  <data name="LABORATORIES_ACCENT_WORD" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="LABORATORIES_TITLE" xml:space="preserve">
+    <value>laboratory</value>
+  </data>
+  <data name="LABORATORIES_DESC" xml:space="preserve">
+    <value>We’ve built expert knowledge in a range of industries. Search any kind of industry and find the best applicable laboratory.</value>
+  </data>
+  <data name="LABORATORIES_GET_DETAILS" xml:space="preserve">
+    <value>Get details</value>
+  </data>
+  <data name="LABORATORIES_SEARCH" xml:space="preserve">
+    <value>Search digital laboratory for your requirements...</value>
+  </data>
 </root>

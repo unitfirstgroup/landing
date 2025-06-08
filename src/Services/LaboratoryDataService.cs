@@ -1,10 +1,11 @@
-﻿using System.Collections.ObjectModel;
+﻿using Microsoft.Extensions.Localization;
+using System.Collections.ObjectModel;
 using UnitFirst.Landing.Models.Laboratories;
 using UnitFirst.Landing.Models.Shared;
 
 namespace UnitFirst.Landing.Services;
 
-public class LaboratoryDataService : DataService<LaboratoryModel>
+public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataService<LaboratoryModel>
 {
     public override List<LaboratoryModel> LoadData()
     {

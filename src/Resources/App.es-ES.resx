@@ -372,4 +372,19 @@
   <data name="SERVICES_BOOK_CONSULTATION" xml:space="preserve">
     <value>Reserva una consulta gratuita</value>
   </data>
+  <data name="LABORATORIES_ACCENT_WORD" xml:space="preserve">
+    <value>UnitFirst</value>
+  </data>
+  <data name="LABORATORIES_TITLE" xml:space="preserve">
+    <value>laboratorio</value>
+  </data>
+  <data name="LABORATORIES_DESC" xml:space="preserve">
+    <value>Contamos con un amplio conocimiento en diversas industrias. Busque en cualquier sector y encuentre el laboratorio más adecuado.</value>
+  </data>
+  <data name="LABORATORIES_GET_DETAILS" xml:space="preserve">
+    <value>Obtener detalles</value>
+  </data>
+  <data name="LABORATORIES_SEARCH" xml:space="preserve">
+    <value>Busque laboratorio digital según sus necesidades...</value>
+  </data>
 </root>
