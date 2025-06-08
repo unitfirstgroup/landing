@@ -387,4 +387,100 @@
   <data name="LABORATORIES_SEARCH" xml:space="preserve">
     <value>Busque laboratorio digital según sus necesidades...</value>
   </data>
+  <data name="LABORATORIES_HEALTHCARE" xml:space="preserve">
+    <value>Cuidado de la salud</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_DESC" xml:space="preserve">
+    <value>Sistemas de gestión de pacientes, plataformas médicas, aplicaciones basadas en IoT, diagnósticos basados ​​en IA, análisis y visualización de datos: somos expertos en el desarrollo de diversas soluciones. Todas nuestras soluciones cumplen con las normativas HIPPA, RGPD, HITECH, FDA y otros requisitos.</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_IMG" xml:space="preserve">
+    <value>images/healthcare-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_URL" xml:space="preserve">
+    <value>Cuidado de la salud</value>
+  </data>
+  <data name="LABORATORIES_MEDIA" xml:space="preserve">
+    <value>Medios y entretenimiento</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_DESC" xml:space="preserve">
+    <value>Plataformas de streaming, motores de recomendación personalizados, herramientas de gestión de redes sociales, sistemas de eventos y más. Sabemos cómo conectar con los usuarios, personalizar su experiencia y desarrollar sistemas con tiempos de inactividad mínimos, incluso en horas punta.</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_IMG" xml:space="preserve">
+    <value>images/media-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_URL" xml:space="preserve">
+    <value>Medios y entretenimiento</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS" xml:space="preserve">
+    <value>Logística</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_DESC" xml:space="preserve">
+    <value>Ofrecemos seguimiento en tiempo real, optimización de rutas, gestión de inventario, automatización de procesos y una gestión sencilla de flotas a cualquier empresa de logística. Hacemos todo lo posible para que las mercancías y el negocio sigan avanzando.</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_IMG" xml:space="preserve">
+    <value>images/logistics-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_URL" xml:space="preserve">
+    <value>Logística</value>
+  </data>
+  <data name="LABORATORIES_FINANCES" xml:space="preserve">
+    <value>Finanzas</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_DESC" xml:space="preserve">
+    <value>Software de gestión de patrimonio, herramientas de cumplimiento e informes, soluciones de procesamiento de pagos, sistemas de gestión de seguros, herramientas de presupuestación y planificación financiera: cada software que desarrollamos para la industria financiera presenta seguridad, escalabilidad y cumplimiento de las regulaciones de la industria.</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_IMG" xml:space="preserve">
+    <value>images/finances-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_URL" xml:space="preserve">
+    <value>Finanzas</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION" xml:space="preserve">
+    <value>Educación</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_DESC" xml:space="preserve">
+    <value>Aportamos innovación y compromiso a todo el proceso educativo con soluciones EdTech personalizadas. Desde portales de información para estudiantes hasta sistemas de gestión de cursos en línea, desarrollamos portales de aprendizaje electrónico intuitivos y fáciles de usar.</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_IMG" xml:space="preserve">
+    <value>images/education-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_URL" xml:space="preserve">
+    <value>Educación</value>
+  </data>
+  <data name="LABORATORIES_ESTATE" xml:space="preserve">
+    <value>Bienes raíces</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_DESC" xml:space="preserve">
+    <value>Gestione clientes, supervise el progreso de las transacciones y optimice la oferta con soluciones inmobiliarias personalizadas. Nuestra experiencia incluye software de gestión de propiedades, aplicaciones de recorridos virtuales, plataformas de anuncios en tiempo real y más.</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_IMG" xml:space="preserve">
+    <value>images/real-estate-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_URL" xml:space="preserve">
+    <value>Bienes raíces</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE" xml:space="preserve">
+    <value>Comercio electrónico</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_DESC" xml:space="preserve">
+    <value>Construimos conexiones más fuertes con los clientes a través de aplicaciones web y móviles con una experiencia de compra superior y disponibilidad 24/7.</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_IMG" xml:space="preserve">
+    <value>images/ecommerce-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_URL" xml:space="preserve">
+    <value>Comercio electrónico</value>
+  </data>
+  <data name="LABORATORIES_MARKETING" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_DESC" xml:space="preserve">
+    <value>Creamos herramientas de automatización de marketing que ayudan a optimizar las estrategias de marketing, recopilar información y alcanzar objetivos ambiciosos con los clientes.</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_URL" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
 </root>

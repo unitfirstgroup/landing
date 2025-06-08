@@ -387,4 +387,100 @@
   <data name="LABORATORIES_SEARCH" xml:space="preserve">
     <value>Найдите цифровую лабораторию, соответствующую вашим требованиям...</value>
   </data>
+  <data name="LABORATORIES_HEALTHCARE" xml:space="preserve">
+    <value>Здравоохранение</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_DESC" xml:space="preserve">
+    <value>Системы управления пациентами, медицинские платформы, приложения на базе IoT, диагностика на базе AI, аналитика и визуализация данных — вот несколько типов решений, в разработке которых мы являемся экспертами. Все решения соответствуют требованиям HIPPA, GDPR, HITECH, FDA и другим.</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_IMG" xml:space="preserve">
+    <value>images/healthcare-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_URL" xml:space="preserve">
+    <value>Здравоохранение</value>
+  </data>
+  <data name="LABORATORIES_MEDIA" xml:space="preserve">
+    <value>Медиа и развлечения</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_DESC" xml:space="preserve">
+    <value>Стриминговые платформы, персонализированные рекомендательные системы, инструменты управления социальными сетями, системы событий и многое другое. Мы знаем, как вовлекать пользователей, персонализировать их опыт и разрабатывать системы с минимальными периодами простоя, даже в периоды пикового трафика.</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_IMG" xml:space="preserve">
+    <value>images/media-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_URL" xml:space="preserve">
+    <value>Медиа и развлечения</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS" xml:space="preserve">
+    <value>Логистика</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_DESC" xml:space="preserve">
+    <value>Мы привносим отслеживание в реальном времени, оптимизацию маршрутов, управление запасами, автоматизацию процессов и простое управление автопарком в любой логистический бизнес. Мы проходим каждую милю и даже больше, чтобы товары и бизнес двигались.</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_IMG" xml:space="preserve">
+    <value>images/logistics-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_URL" xml:space="preserve">
+    <value>Логистика</value>
+  </data>
+  <data name="LABORATORIES_FINANCES" xml:space="preserve">
+    <value>Финансы</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_DESC" xml:space="preserve">
+    <value>Программное обеспечение для управления активами, инструменты обеспечения соответствия и отчетности, решения по обработке платежей, системы управления страхованием, инструменты бюджетирования и финансового планирования — каждое программное обеспечение, которое мы разрабатываем для финансовой отрасли, отличается безопасностью, масштабируемостью и соответствием отраслевым нормам.</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_IMG" xml:space="preserve">
+    <value>images/finances-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_URL" xml:space="preserve">
+    <value>Финансы</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_DESC" xml:space="preserve">
+    <value>Мы привносим инновации и вовлеченность во весь процесс обучения с помощью индивидуальных решений EdTech. От порталов студенческой информации до систем управления онлайн-курсами — мы разрабатываем удобные и простые в использовании порталы электронного обучения.</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_IMG" xml:space="preserve">
+    <value>images/education-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_URL" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="LABORATORIES_ESTATE" xml:space="preserve">
+    <value>Недвижимость</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_DESC" xml:space="preserve">
+    <value>Управляйте клиентами, отслеживайте ход сделки и оптимизируйте предложения с помощью индивидуальных решений в сфере недвижимости. Наша экспертиза включает программное обеспечение для управления недвижимостью, приложения для виртуальных туров, платформы листинга в реальном времени и многое другое.</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_IMG" xml:space="preserve">
+    <value>images/real-estate-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_URL" xml:space="preserve">
+    <value>Недвижимость</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE" xml:space="preserve">
+    <value>Электронная коммерция</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_DESC" xml:space="preserve">
+    <value>Мы выстраиваем более прочные связи с клиентами с помощью веб- и мобильных приложений, обеспечивая превосходный опыт покупок и круглосуточную доступность.</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_IMG" xml:space="preserve">
+    <value>images/ecommerce-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_URL" xml:space="preserve">
+    <value>Электронная коммерция</value>
+  </data>
+  <data name="LABORATORIES_MARKETING" xml:space="preserve">
+    <value>Маркетинг</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_DESC" xml:space="preserve">
+    <value>Мы создаем инструменты автоматизации маркетинга, которые помогают оптимизировать маркетинговые стратегии, собирать информацию и достигать смелых целей вместе с клиентами.</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_URL" xml:space="preserve">
+    <value>Маркетинг</value>
+  </data>
 </root>

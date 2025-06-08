@@ -13,11 +13,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
         {
             new()
             {
-                Name = "Healthcare",
-                Description =
-                    "Patient management systems, medicine platforms, IoT-powered applications, AI-powered diagnostics, data analytics and visualization – these are several solution types we are experts at developing. All solutions are HIPPA compliant, GDPR, HITECH, FDA, and other requirements compliant.",
-                Image = "images/healthcare-lab.svg",
-                UrlText = "Healthcare",
+                Name = localizer["LABORATORIES_HEALTHCARE"].Value,
+                Description = localizer["LABORATORIES_HEALTHCARE_DESC"].Value,
+                Image = localizer["LABORATORIES_HEALTHCARE_IMG"].Value,
+                UrlText = localizer["LABORATORIES_HEALTHCARE_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -26,11 +25,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "Media & Entertainment",
-                Description =
-                    "Streaming platforms, personalized recommendation engines, social media management tools, event systems, and more. We know how to engage users, personalize their experience and develop systems with minimal downtime periods, even during high-traffic times.",
-                Image = "images/media-lab.svg",
-                UrlText = "Media & Entertainment",
+                Name = localizer["LABORATORIES_MEDIA"].Value,
+                Description = localizer["LABORATORIES_MEDIA_DESC"].Value,
+                Image = localizer["LABORATORIES_MEDIA_IMG"].Value,
+                UrlText = localizer["LABORATORIES_MEDIA_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -39,11 +37,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "Logistics",
-                Description =
-                    "We bring real-time tracking, route optimization, inventory management, process automation, and easy fleet management to any logistics business. We go every mile and then some to keep goods and business moving.",
-                Image = "images/logistics-lab.svg",
-                UrlText = "Logistics",
+                Name = localizer["LABORATORIES_LOGISTICS"].Value,
+                Description = localizer["LABORATORIES_LOGISTICS_DESC"].Value,
+                Image = localizer["LABORATORIES_LOGISTICS_IMG"].Value,
+                UrlText = localizer["LABORATORIES_LOGISTICS_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -52,11 +49,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "Finances",
-                Description =
-                    "Wealth management software, compliance and reporting tools, payment processing solutions, insurance management systems, budgeting and financial planning tools – every software we develop for the finance industry features security, scalability, and compliance with industry regulations.",
-                Image = "images/finances-lab.svg",
-                UrlText = "Finances",
+                Name = localizer["LABORATORIES_FINANCES"].Value,
+                Description = localizer["LABORATORIES_FINANCES_DESC"].Value,
+                Image = localizer["LABORATORIES_FINANCES_IMG"].Value,
+                UrlText = localizer["LABORATORIES_FINANCES_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -65,11 +61,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "Education",
-                Description =
-                    "We bring innovation and engagement to the whole education process with custom EdTech solutions. From student information portals to online course management systems  – we develop user-friendly and easy-to-use e-learning portals.",
-                Image = "images/education-lab.svg",
-                UrlText = "Education",
+                Name = localizer["LABORATORIES_EDUCATION"].Value,
+                Description = localizer["LABORATORIES_EDUCATION_DESC"].Value,
+                Image = localizer["LABORATORIES_EDUCATION_IMG"].Value,
+                UrlText = localizer["LABORATORIES_EDUCATION_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -78,11 +73,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "Real Estate",
-                Description =
-                    "Manage customers, monitor deal progress, and optimize offerings with custom real estate solutions. Our expertise includes property management software, virtual tour applications, real-time listing platforms, and more.",
-                Image = "images/real-estate-lab.svg",
-                UrlText = "Real Estate",
+                Name = localizer["LABORATORIES_ESTATE"].Value,
+                Description = localizer["LABORATORIES_ESTATE_DESC"].Value,
+                Image = localizer["LABORATORIES_ESTATE_IMG"].Value,
+                UrlText = localizer["LABORATORIES_ESTATE_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -91,11 +85,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "eCommerce",
-                Description =
-                    "We build stronger connections with customers through web and mobile applications with superior shopping experience and 24/7 availability.",
-                Image = "images/ecommerce-lab.svg",
-                UrlText = "eCommerce",
+                Name = localizer["LABORATORIES_COMMERCE"].Value,
+                Description = localizer["LABORATORIES_COMMERCE_DESC"].Value,
+                Image = localizer["LABORATORIES_COMMERCE_IMG"].Value,
+                UrlText = localizer["LABORATORIES_COMMERCE_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {
@@ -104,11 +97,10 @@ public class LaboratoryDataService(IStringLocalizer<App> localizer) : DataServic
             },
             new()
             {
-                Name = "Marketing",
-                Description =
-                    "We build marketing automation tools that help optimize marketing strategies, gather insights, and achieve brave goals with customers.",
-                Image = "images/marketing-lab.svg",
-                UrlText = "Marketing",
+                Name = localizer["LABORATORIES_MARKETING"].Value,
+                Description = localizer["LABORATORIES_MARKETING_DESC"].Value,
+                Image = localizer["LABORATORIES_MARKETING_IMG"].Value,
+                UrlText = localizer["LABORATORIES_MARKETING_URL"].Value,
                 Url = "#",
                 Tags = new ObservableCollection<TagModel>(new[]
                 {

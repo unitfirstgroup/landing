@@ -387,4 +387,100 @@
   <data name="LABORATORIES_SEARCH" xml:space="preserve">
     <value>Search digital laboratory for your requirements...</value>
   </data>
+  <data name="LABORATORIES_HEALTHCARE" xml:space="preserve">
+    <value>Healthcare</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_DESC" xml:space="preserve">
+    <value>Patient management systems, medicine platforms, IoT-powered applications, AI-powered diagnostics, data analytics and visualization – these are several solution types we are experts at developing. All solutions are HIPPA compliant, GDPR, HITECH, FDA, and other requirements compliant.</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_IMG" xml:space="preserve">
+    <value>images/healthcare-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_HEALTHCARE_URL" xml:space="preserve">
+    <value>Healthcare</value>
+  </data>
+  <data name="LABORATORIES_MEDIA" xml:space="preserve">
+    <value>Media &amp; Entertainment</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_DESC" xml:space="preserve">
+    <value>Streaming platforms, personalized recommendation engines, social media management tools, event systems, and more. We know how to engage users, personalize their experience and develop systems with minimal downtime periods, even during high-traffic times.</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_IMG" xml:space="preserve">
+    <value>images/media-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_MEDIA_URL" xml:space="preserve">
+    <value>Media &amp; Entertainment</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS" xml:space="preserve">
+    <value>Logistics</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_DESC" xml:space="preserve">
+    <value>We bring real-time tracking, route optimization, inventory management, process automation, and easy fleet management to any logistics business. We go every mile and then some to keep goods and business moving.</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_IMG" xml:space="preserve">
+    <value>images/logistics-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_LOGISTICS_URL" xml:space="preserve">
+    <value>Logistics</value>
+  </data>
+  <data name="LABORATORIES_FINANCES" xml:space="preserve">
+    <value>Finances</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_DESC" xml:space="preserve">
+    <value>Wealth management software, compliance and reporting tools, payment processing solutions, insurance management systems, budgeting and financial planning tools – every software we develop for the finance industry features security, scalability, and compliance with industry regulations.</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_IMG" xml:space="preserve">
+    <value>images/finances-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_FINANCES_URL" xml:space="preserve">
+    <value>Finances</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_DESC" xml:space="preserve">
+    <value>We bring innovation and engagement to the whole education process with custom EdTech solutions. From student information portals to online course management systems  – we develop user-friendly and easy-to-use e-learning portals.</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_IMG" xml:space="preserve">
+    <value>images/education-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_EDUCATION_URL" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="LABORATORIES_ESTATE" xml:space="preserve">
+    <value>Real Estate</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_DESC" xml:space="preserve">
+    <value>Manage customers, monitor deal progress, and optimize offerings with custom real estate solutions. Our expertise includes property management software, virtual tour applications, real-time listing platforms, and more.</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_IMG" xml:space="preserve">
+    <value>images/real-estate-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_ESTATE_URL" xml:space="preserve">
+    <value>Real Estate</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE" xml:space="preserve">
+    <value>eCommerce</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_DESC" xml:space="preserve">
+    <value>We build stronger connections with customers through web and mobile applications with superior shopping experience and 24/7 availability.</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_IMG" xml:space="preserve">
+    <value>images/ecommerce-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_COMMERCE_URL" xml:space="preserve">
+    <value>eCommerce</value>
+  </data>
+  <data name="LABORATORIES_MARKETING" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_DESC" xml:space="preserve">
+    <value>We build marketing automation tools that help optimize marketing strategies, gather insights, and achieve brave goals with customers.</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="LABORATORIES_MARKETING_URL" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
 </root>
