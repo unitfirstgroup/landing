@@ -8,8 +8,12 @@ using UnitFirst.Landing.Models.Wallpaper;
 
 namespace UnitFirst.Landing.ViewModels.Wallpaper;
 
-public partial class WallPaperViewModel(IApplicationStateService applicationStateService,
-        IApplicationThemeService applicationThemeService, NavigationManager navigationManager, IStringLocalizer<App> localizer)
+public partial class WallPaperViewModel(
+        IApplicationStateService applicationStateService,
+        IApplicationThemeService applicationThemeService, 
+        NavigationManager navigationManager,
+        IStringLocalizer<App> localizer,
+        IDataService<ThesisModel> dataService)
     : ViewModelBase(applicationStateService, applicationThemeService, navigationManager, localizer)
 {
     [ObservableProperty] private WallPaperModel _model;
@@ -18,23 +22,7 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
     {
         _model = new WallPaperModel()
         {
-            ThesisCollection = new ObservableCollection<ThesisModel>
-            {
-                new()
-                {
-                    Main = localizer["THESIS_0"].Value,
-                    Description = localizer["THESIS_0_DESC"].Value,
-                    ButtonText = localizer["THESIS_0_ACTION"].Value,
-                    Image = "images/thesis_0.jpg"
-                },
-                new()
-                {
-                    Main = localizer["THESIS_1"].Value,
-                    Description = localizer["THESIS_1_DESC"].Value,
-                    ButtonText = localizer["THESIS_1_ACTION"].Value,
-                    Image = "images/thesis_1.jpg"
-                }
-            },
+            ThesisCollection = new ObservableCollection<ThesisModel>(dataService.LoadData()),
             NewsLetter = localizer["NEWSLETTER"].Value,
             NewsLetterDesc = localizer["NEWSLETTER_DESC"].Value,
             SubscribeAction = localizer["NEWSLETTER_SUBSCRIBE"].Value,
