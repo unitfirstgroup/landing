@@ -1,14 +1,12 @@
 ﻿@inherits MvvmComponentBase<WallPaperViewModel>
 
 <main class="">
-    
-    @foreach (var t in @ViewModel.Model.ThesisCollection)
+    @foreach (var thesis in @ViewModel.Model.ThesisCollection)
     {
-        <Thesis Main="@t.Main"
-                Description="@t.Description"
-                ButtonText="@t.ButtonText"
-                Click="@t.ButtonClick"
-                Image="@t.Image"></Thesis>
+        <Thesis
+            DataContext="thesis"
+            Click="@ViewModel.ThesisClickHandler">
+        </Thesis>
 
         <Separator></Separator>
     }

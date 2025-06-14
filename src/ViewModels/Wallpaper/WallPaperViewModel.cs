@@ -25,7 +25,6 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
                     Main = localizer["THESIS_0"].Value,
                     Description = localizer["THESIS_0_DESC"].Value,
                     ButtonText = localizer["THESIS_0_ACTION"].Value,
-                    ButtonClick = GetStartedClicked,
                     Image = "images/thesis_0.jpg"
                 },
                 new()
@@ -33,7 +32,6 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
                     Main = localizer["THESIS_1"].Value,
                     Description = localizer["THESIS_1_DESC"].Value,
                     ButtonText = localizer["THESIS_1_ACTION"].Value,
-                    ButtonClick = GetMoreInfoClicked,
                     Image = "images/thesis_1.jpg"
                 }
             },
@@ -72,5 +70,10 @@ public partial class WallPaperViewModel(IApplicationStateService applicationStat
     [RelayCommand]
     public void Submit(string par)
     {
+    }
+
+    public void ThesisClickHandler(ThesisModel thesis)
+    {
+        Console.WriteLine($"ThesisClickHandler raised. {thesis.ButtonText}");
     }
 }
