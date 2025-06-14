@@ -1,22 +1,20 @@
 ﻿@inherits MvvmComponentBase<WallPaperViewModel>
 
-<main class="">
-    @foreach (var thesis in @ViewModel.Model.ThesisCollection)
-    {
-        <Thesis
-            DataContext="thesis"
-            Click="@ViewModel.ThesisClickHandler">
-        </Thesis>
-
-        <Separator></Separator>
-    }
-
-    <Newsletter Main="@ViewModel.Model.NewsLetter"
-                Description="@ViewModel.Model.NewsLetterDesc"
-                ButtonText="@ViewModel.Model.SubscribeAction"
-                PlaceHolder="john.doe@company.com"
-                Click="@ViewModel.Subscribe">
-    </Newsletter>
+@foreach (var thesis in @ViewModel.Model.ThesisCollection)
+{
+    <Thesis
+        DataContext="thesis"
+        Click="@ViewModel.ThesisClickHandler">
+    </Thesis>
 
     <Separator></Separator>
-</main>
+}
+
+<Newsletter Main="@ViewModel.Model.NewsLetter"
+            Description="@ViewModel.Model.NewsLetterDesc"
+            ButtonText="@ViewModel.Model.SubscribeAction"
+            PlaceHolder="john.doe@company.com"
+            Click="@ViewModel.Subscribe">
+</Newsletter>
+
+<Separator></Separator>
