@@ -20,9 +20,10 @@ public partial class WallPaperViewModel(
 
     public override Task OnInitializedAsync()
     {
+        var theses = dataService.LoadData();
         _model = new WallPaperModel()
         {
-            ThesisCollection = new ObservableCollection<ThesisModel>(dataService.LoadData()),
+            ThesisCollection = new ObservableCollection<ThesisModel>(theses),
             NewsLetter = localizer["NEWSLETTER"].Value,
             NewsLetterDesc = localizer["NEWSLETTER_DESC"].Value,
             SubscribeAction = localizer["NEWSLETTER_SUBSCRIBE"].Value,
