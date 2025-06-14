@@ -1,6 +1,7 @@
 ﻿using UnitFirst.Landing.Interfaces;
 using UnitFirst.Landing.Models.Blogs;
 using UnitFirst.Landing.Models.Laboratories;
+using UnitFirst.Landing.Models.Wallpaper;
 using UnitFirst.Landing.Services;
 using UnitFirst.Landing.ViewModels.About;
 using UnitFirst.Landing.ViewModels.Blogs;
@@ -40,6 +41,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddTransient<IDataService<LaboratoryModel>, LaboratoryDataService>();
         services.AddTransient<IDataService<BlogModel>, BlogDataService>();
+        services.AddTransient<IDataService<ThesisModel>, ThesisDataService>();
 
         return services;
     }

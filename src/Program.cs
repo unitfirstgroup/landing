@@ -8,7 +8,6 @@ using UnitFirst.Landing;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Extensions;
 using UnitFirst.Landing.Interfaces;
-using UnitFirst.Landing.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
