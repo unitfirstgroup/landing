@@ -31,34 +31,17 @@ public partial class WallPaperViewModel(
         return Task.CompletedTask;
     }
 
-    private void GetStartedClicked()
-    {
-    }
-
-    private void GetMoreInfoClicked()
-    {
-        navigationManager.NavigateTo("services");
-    }
-
     [RelayCommand]
     public void StartUsing()
     {
         navigationManager.NavigateTo("registration");
     }
-
-    [RelayCommand]
-    public void Join()
-    {
-    }
+    
 
     [RelayCommand]
     public void Subscribe()
     {
-    }
-
-    [RelayCommand]
-    public void Submit(string par)
-    {
+        Console.WriteLine("Subscribed");
     }
 
     public void ThesisClickHandler(ThesisModel thesis)
