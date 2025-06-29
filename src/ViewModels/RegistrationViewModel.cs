@@ -70,5 +70,6 @@ public partial class RegistrationViewModel : ViewModelBase
         Model.Validate();
 
         _browserService.ShowAlert("Thank you for registration.");
+        NavigationManager.NavigateTo("./");
     }
 }

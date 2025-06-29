@@ -1,11 +1,11 @@
 ﻿@page "/registration"
 @inherits MvvmComponentBase<RegistrationViewModel>
 
-<div class="@ViewModel.Theme.Dark w-full bg-white text-black dark:bg-gray-900 dark:text-white">
-    <div class="mx-auto w-full max-w-2xl bg-white text-black dark:bg-gray-900 dark:text-white">
-        <div class="bg-white p-4 py-8 text-center text-black md:py-20 dark:bg-gray-900 dark:text-white">
-            <form class="bg-white text-black dark:bg-gray-900 dark:text-white">
-                <div class="mb-6 grid gap-6 bg-white text-black md:grid-cols-2 dark:bg-gray-900 dark:text-white">
+<div class="@ViewModel.Theme.Dark bg-white-main w-full text-black dark:bg-dark-main dark:text-white">
+    <div class="bg-white-main mx-auto w-full max-w-2xl text-black dark:bg-dark-main dark:text-white">
+        <div class="bg-white-main p-4 py-8 text-center text-black md:py-20 dark:bg-dark-main dark:text-white">
+            <form class="bg-white-main text-black dark:bg-dark-main dark:text-white">
+                <div class="bg-white-main mb-6 grid gap-6 text-black md:grid-cols-2 dark:bg-dark-main dark:text-white">
                     <div>
                         <label for="first_name" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">First name</label>
                         <input type="text" id="first_name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="John" value="@ViewModel.Model.FirstName">
