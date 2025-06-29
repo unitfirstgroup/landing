@@ -31,9 +31,8 @@ public partial class NavMenuViewModel(IApplicationStateService applicationStateS
 
     [RelayCommand]
     public void GetStarted()
-    {
-        browserService.ShowAlert("WBHOO");
-        // navigationManager.NavigateTo("./registration");
+    { 
+        navigationManager.NavigateTo("./registration");
     }
 
     [RelayCommand]

@@ -3,6 +3,7 @@ using UnitFirst.Landing.Models.Blogs;
 using UnitFirst.Landing.Models.Laboratories;
 using UnitFirst.Landing.Models.Wallpaper;
 using UnitFirst.Landing.Services;
+using UnitFirst.Landing.ViewModels;
 using UnitFirst.Landing.ViewModels.About;
 using UnitFirst.Landing.ViewModels.Blogs;
 using UnitFirst.Landing.ViewModels.Cases;
@@ -25,6 +26,7 @@ public static class ServiceCollectionExtensions
         services.AddTransient<ServicesViewModel>();
         services.AddTransient<CasesViewModel>();
         services.AddTransient<AboutViewModel>();
+        services.AddTransient<RegistrationViewModel>();
 
         return services;
     }

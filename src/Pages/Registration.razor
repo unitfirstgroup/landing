@@ -1,0 +1,71 @@
+﻿@page "/registration"
+@inherits MvvmComponentBase<RegistrationViewModel>
+
+<div class="@ViewModel.Theme.Dark w-full bg-white text-black dark:bg-gray-900 dark:text-white">
+    <div class="mx-auto w-full max-w-2xl bg-white text-black dark:bg-gray-900 dark:text-white">
+        <div class="bg-white p-4 py-8 text-center text-black md:py-20 dark:bg-gray-900 dark:text-white">
+            <form class="bg-white text-black dark:bg-gray-900 dark:text-white">
+                <div class="mb-6 grid gap-6 bg-white text-black md:grid-cols-2 dark:bg-gray-900 dark:text-white">
+                    <div>
+                        <label for="first_name" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">First name</label>
+                        <input type="text" id="first_name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="John" value="@ViewModel.Model.FirstName">
+                    </div>
+                    <div>
+                        <label for="last_name" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+                        <input type="text" id="last_name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Doe" value="@ViewModel.Model.LastName">
+                    </div>
+                    <div>
+                        <label for="company" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Organization</label>
+                        <input type="text" id="company" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Your organization name" value="@ViewModel.Model.Organization">
+                    </div>
+                    <div>
+                        <label for="phone" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+                        <input type="tel" id="phone" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="123-45-678" value="@ViewModel.Model.Phone">
+                    </div>
+                    <div>
+                        <label for="website" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Website URL</label>
+                        <input type="url" id="website" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="johndoe.com" value="@ViewModel.Model.Site">
+                    </div>
+                    <div>
+                        <label for="visitors" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Unique visitors (per month)</label>
+                        <input type="number" id="visitors" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="1000" value="@ViewModel.Model.Visitors">
+                    </div>
+                    <div>
+                        <label for="email" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+                        <input type="email" id="email" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="john.doe@company.com" value="@ViewModel.Model.Email">
+                    </div>
+                    <div>
+                        <label for="phone" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Domain</label>
+                        <Combobox Selection="@ViewModel.Model.SelectedDomain" Values="@ViewModel.Model.Domains"></Combobox>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="confirm_password" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Business idea</label>
+                    <input type="text" id="business_idea" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Sell high quality products with minimum prise." value="@ViewModel.Model.Idea">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                    <input type="password" id="password" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="•••••••••" value="@ViewModel.Model.Password">
+                </div>
+                <div class="mb-6">
+                    <label for="confirm_password" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+                    <input type="password" id="confirm_password" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="•••••••••" value="@ViewModel.Model.ConfirmPassword">
+                </div>
+                <div class="mb-6 flex items-start">
+                    <div class="flex h-5 items-center">
+                        <input id="remember" type="checkbox" value="" class="h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600">
+                    </div>
+                    <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-rose-600">terms and conditions</a>.</label>
+                </div>
+
+                <button type="submit"
+                        @onclick="@ViewModel.Submit"
+                        class="inline-flex w-auto min-w-20 items-center justify-center rounded-lg border border-rose-600 px-5 py-2.5 text-center text-sm font-medium text-rose-600 shadow-lg sm:px-2.5 hover:bg-rose-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:shadow-orange dark:border-yellow-300 dark:text-yellow-400 dark:text-yellow-300 hover:dark:bg-yellow-500 dark:hover:bg-yellow-400 dark:hover:text-white dark:focus:ring-yellow-900">
+                    Submit
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</div>

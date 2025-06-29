@@ -84,10 +84,12 @@ public partial class ServicesViewModel(IApplicationStateService applicationState
     [RelayCommand]
     public void GetInTouch()
     {
+        navigationManager.NavigateTo("./registration");
     }
 
     [RelayCommand]
     public void BookConsultation()
     {
+        navigationManager.NavigateTo("./registration");
     }
 }

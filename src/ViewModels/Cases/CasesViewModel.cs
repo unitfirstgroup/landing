@@ -187,5 +187,6 @@ public partial class CasesViewModel(IApplicationStateService applicationStateSer
     [RelayCommand]
     public void GetDetails()
     {
+        navigationManager.NavigateTo("./registration");
     }
 }

@@ -47,5 +47,6 @@ public partial class WallPaperViewModel(
     public void ThesisClickHandler(ThesisModel thesis)
     {
         Console.WriteLine($"ThesisClickHandler raised. {thesis.ButtonText}");
+        navigationManager.NavigateTo("./registration");
     }
 }

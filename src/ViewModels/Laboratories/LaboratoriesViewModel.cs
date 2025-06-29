@@ -55,6 +55,7 @@ public partial class LaboratoriesViewModel
     public void GetDetails()
     {
         Console.WriteLine("Get Details");
+        navigationManager.NavigateTo("./registration");
     }
 
     [RelayCommand]
