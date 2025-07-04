@@ -1,8 +1,8 @@
 ﻿@inherits MvvmComponentBase<NavMenuViewModel>
 
-<nav class="bg-white-main border-white-action flex w-full border-b dark:bg-dark-main dark:border-dark-action">
-    <div class="mx-auto flex w-full flex-wrap items-center justify-between p-4">
-        <div class="border-white-action bg-white-main flex border px-2 sm:px-6 lg:px-8 dark:border-dark-action dark:bg-dark-action">
+<nav class="flex w-full border-b border-white-action bg-white-main dark:border-dark-action dark:bg-dark-main">
+    <div class="mx-auto flex w-full flex-wrap items-center justify-between p-1 md:p-4">
+        <div class="flex border border-white-action bg-white-main px-2 sm:px-6 lg:px-8 dark:border-dark-action dark:bg-dark-action">
             <a href="./">
                 <div class="flex items-center justify-center">
                     <span class="sr-only"></span>
@@ -32,12 +32,12 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto" id="navbar-sticky">
-            <ul class="bg-white-main mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium md:bg-white-main md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse dark:bg-dark-main dark:border-gray-700 md:dark:bg-dark-main">
+        <div class="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto" id="navbar-sticky">
+            <ul class="mt-4 flex flex-col space-x-1 rounded-lg border border-gray-100 bg-white-main p-1 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white-main md:p-4 md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-dark-main md:dark:bg-dark-main">
                 @foreach (var navItem in ViewModel.Model.NavItems)
                 {
                     <li>
-                        <a href="@navItem.Link" class="bg-white-main block flex h-10 items-center rounded-md rounded-sm px-8 font-bold text-black hover:text-white-action dark:bg-dark-main dark:text-white-main dark:hover:text-dark-action" aria-current="page">@navItem.Name</a>
+                        <a href="@navItem.Link" class="block flex h-10 items-center rounded-md rounded-sm bg-white-main px-8 font-bold text-black hover:text-white-action dark:bg-dark-main dark:text-white-main dark:hover:text-dark-action" aria-current="page">@navItem.Name</a>
                     </li>
                 }
             </ul>
