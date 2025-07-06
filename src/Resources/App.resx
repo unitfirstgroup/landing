@@ -547,7 +547,7 @@
     <value>Cloud Cybersecurity for SMEs</value>
   </data>
   <data name="CASES_FINANCES" xml:space="preserve">
-    <value>Finance & Accounting Automation</value>
+    <value>Finance and Accounting Automation</value>
   </data>
   <data name="CASES_FINANCES_DESC" xml:space="preserve">
     <value>Created an AI-powered automation platform for finance and accounting, reducing manual work, minimizing errors, and allowing staff to focus on higher-value activities.</value>
@@ -556,7 +556,7 @@
     <value>images/finances-lab.svg</value>
   </data>
   <data name="CASES_FINANCES_URL" xml:space="preserve">
-    <value>Finance & Accounting Automation</value>
+    <value>Finance and Accounting Automation</value>
   </data>
   <data name="CASES_EDUCATION" xml:space="preserve">
     <value>Education</value>
@@ -607,7 +607,7 @@
     <value>Blockchain Supply Chain Platform</value>
   </data>
   <data name="CASES_MARKETING" xml:space="preserve">
-    <value>Marketing Analytics & Optimization</value>
+    <value>Marketing Analytics and Optimization</value>
   </data>
   <data name="CASES_MARKETING_DESC" xml:space="preserve">
     <value>Built a cloud platform for digital marketers, delivering real-time analytics, data visualization, and AI-driven optimization to maximize campaign ROI.</value>
@@ -616,7 +616,7 @@
     <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_MARKETING_URL" xml:space="preserve">
-    <value>Marketing Analytics & Optimization</value>
+    <value>Marketing Analytics and Optimization</value>
   </data>
   <data name="CASES_STUDENT" xml:space="preserve">
     <value>Higher Ed Student Information System</value>
