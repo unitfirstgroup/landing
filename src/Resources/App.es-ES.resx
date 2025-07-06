@@ -654,4 +654,40 @@
   <data name="CASES_HR_URL" xml:space="preserve">
     <value />
   </data>
+  <data name="FEEDBACK_ITEM_0_AUTHOR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_0_MAIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_0_DETAILS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_1_AUTHOR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_1_MAIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_1_DETAILS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_2_AUTHOR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_2_MAIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_2_DETAILS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_3_AUTHOR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_3_MAIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FEEDBACK_ITEM_3_DETAILS" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -654,4 +654,40 @@
   <data name="CASES_HR_URL" xml:space="preserve">
     <value>Customizable HR Management Software for Small Businesses</value>
   </data>
+  <data name="FEEDBACK_ITEM_0_AUTHOR" xml:space="preserve">
+    <value>Penya Gofman, Head of SelfMade</value>
+  </data>
+  <data name="FEEDBACK_ITEM_0_MAIN" xml:space="preserve">
+    <value>By selecting UnitFirst for SelfMade, we were able to enhance our benefit program while saving on plan costs and management fees.</value>
+  </data>
+  <data name="FEEDBACK_ITEM_0_DETAILS" xml:space="preserve">
+    <value>Our employees now benefit from low management fees, access to diverse investment options, as well as great perks to support their financial wellness. The plan transfer required a minimal time investment from our end, and the administration is simple!</value>
+  </data>
+  <data name="FEEDBACK_ITEM_1_AUTHOR" xml:space="preserve">
+    <value>Tosi Bosi, Head of SuperCompany</value>
+  </data>
+  <data name="FEEDBACK_ITEM_1_MAIN" xml:space="preserve">
+    <value>By selecting UnitFirst for SuperCompany, we were able to enhance our benefit program while saving on plan costs and management fees.</value>
+  </data>
+  <data name="FEEDBACK_ITEM_1_DETAILS" xml:space="preserve">
+    <value>Our employees now benefit from low management fees, access to diverse investment options, as well as great perks to support their financial wellness. The plan transfer required a minimal time investment from our end, and the administration is simple!</value>
+  </data>
+  <data name="FEEDBACK_ITEM_2_AUTHOR" xml:space="preserve">
+    <value>Tony Montana, Head of MontanaInc</value>
+  </data>
+  <data name="FEEDBACK_ITEM_2_MAIN" xml:space="preserve">
+    <value>By selecting UnitFirst for MontanaInc, we were able to enhance our benefit program while saving on plan costs and management fees.</value>
+  </data>
+  <data name="FEEDBACK_ITEM_2_DETAILS" xml:space="preserve">
+    <value>Our employees now benefit from low management fees, access to diverse investment options, as well as great perks to support their financial wellness. The plan transfer required a minimal time investment from our end, and the administration is simple!</value>
+  </data>
+  <data name="FEEDBACK_ITEM_3_AUTHOR" xml:space="preserve">
+    <value>Pan Yurik, Head of PokerGamer</value>
+  </data>
+  <data name="FEEDBACK_ITEM_3_MAIN" xml:space="preserve">
+    <value>By selecting UnitFirst for PokerGamer, we were able to enhance our benefit program while saving on plan costs and management fees.</value>
+  </data>
+  <data name="FEEDBACK_ITEM_3_DETAILS" xml:space="preserve">
+    <value>Our employees now benefit from low management fees, access to diverse investment options, as well as great perks to support their financial wellness. The plan transfer required a minimal time investment from our end, and the administration is simple!</value>
+  </data>
 </root>
