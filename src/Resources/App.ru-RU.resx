@@ -690,4 +690,7 @@
   <data name="FEEDBACK_ITEM_3_DETAILS" xml:space="preserve">
     <value>Новая система улучшила процессы и снизила издержки. Служба поддержки — на высшем уровне.</value>
   </data>
+  <data name="CASES_FEEDBACK_TITLE" xml:space="preserve">
+    <value>Что говорят наши клиенты</value>
+  </data>
 </root>

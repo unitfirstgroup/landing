@@ -26,7 +26,7 @@ public partial class CasesViewModel(IApplicationStateService applicationStateSer
             Cases = new ObservableCollection<CaseModel>(caseDataService.LoadData()),
             Feedback = new FeedbackComponentModel
             {
-                Title = "What our clients are saying",
+                Title = localizer["CASES_FEEDBACK_TITLE"].Value,
                 FeedbackItems = new ObservableCollection<FeedbackModel>(feedbackDataService.LoadData()),
             }
         };

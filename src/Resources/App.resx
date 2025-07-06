@@ -690,4 +690,7 @@
   <data name="FEEDBACK_ITEM_3_DETAILS" xml:space="preserve">
     <value>The new system improved our workflow and reduced costs. Their support team is outstanding.</value>
   </data>
+  <data name="CASES_FEEDBACK_TITLE" xml:space="preserve">
+    <value>What our clients are saying</value>
+  </data>
 </root>
