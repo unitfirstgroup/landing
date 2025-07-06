@@ -510,4 +510,148 @@
   <data name="CASES_GET_DETAILS" xml:space="preserve">
     <value>Получить подробности</value>
   </data>
+  <data name="CASES_LEARNING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_LEARNING_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_LEARNING_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_LEARNING_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_AI_HEALTH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_AI_HEALTH_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_AI_HEALTH_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_AI_HEALTH_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_SME" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_SME_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_SME_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_SME_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_FINANCES" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_FINANCES_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_FINANCES_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_FINANCES_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_EDUCATION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_EDUCATION_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_EDUCATION_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_EDUCATION_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_ESTATE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_ESTATE_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_ESTATE_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_ESTATE_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_RETAIL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_RETAIL_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_RETAIL_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_RETAIL_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_BLOCK_CHAIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_BLOCK_CHAIN_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_BLOCK_CHAIN_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_BLOCK_CHAIN_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_MARKETING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_MARKETING_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_MARKETING_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_MARKETING_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_STUDENT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_STUDENT_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_STUDENT_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_STUDENT_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_PREDICTIVE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_PREDICTIVE_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_PREDICTIVE_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_PREDICTIVE_URL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_HR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_HR_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_HR_IMG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CASES_HR_URL" xml:space="preserve">
+    <value />
+  </data>
 </root>

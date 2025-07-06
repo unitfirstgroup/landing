@@ -510,4 +510,148 @@
   <data name="CASES_GET_DETAILS" xml:space="preserve">
     <value>Get details</value>
   </data>
+  <data name="CASES_LEARNING" xml:space="preserve">
+    <value>E-Learning Platform for Corporate Training</value>
+  </data>
+  <data name="CASES_LEARNING_DESC" xml:space="preserve">
+    <value>Develop a scalable, cloud-based e-learning platform for corporate training, allowing companies to create and manage customized courses, track employee progress, and measure ROI.</value>
+  </data>
+  <data name="CASES_LEARNING_IMG" xml:space="preserve">
+    <value>images/healthcare-lab.svg</value>
+  </data>
+  <data name="CASES_LEARNING_URL" xml:space="preserve">
+    <value>E-Learning Platform for Corporate Training</value>
+  </data>
+  <data name="CASES_AI_HEALTH" xml:space="preserve">
+    <value>Artificial Intelligence for Healthcare Support</value>
+  </data>
+  <data name="CASES_AI_HEALTH_DESC" xml:space="preserve">
+    <value>Apply AI-powered chatbots and predictive analytics to healthcare systems, enabling faster patient diagnosis, improved treatment outcomes, and enhanced administrative efficiency.</value>
+  </data>
+  <data name="CASES_AI_HEALTH_IMG" xml:space="preserve">
+    <value>images/media-lab.svg</value>
+  </data>
+  <data name="CASES_AI_HEALTH_URL" xml:space="preserve">
+    <value>Artificial Intelligence for Healthcare Support</value>
+  </data>
+  <data name="CASES_SME" xml:space="preserve">
+    <value>Cloud-Based Cybersecurity Solution for SMEs</value>
+  </data>
+  <data name="CASES_SME_DESC" xml:space="preserve">
+    <value>Create a subscription-based, cloud-based cybersecurity solution tailored to small and medium-sized enterprises, offering real-time threat detection, incident response, and compliance reporting.</value>
+  </data>
+  <data name="CASES_SME_IMG" xml:space="preserve">
+    <value>images/logistics-lab.svg</value>
+  </data>
+  <data name="CASES_SME_URL" xml:space="preserve">
+    <value>Cloud-Based Cybersecurity Solution for SMEs</value>
+  </data>
+  <data name="CASES_FINANCES" xml:space="preserve">
+    <value>Intelligent Task Automation for Finance and Accounting</value>
+  </data>
+  <data name="CASES_FINANCES_DESC" xml:space="preserve">
+    <value>Develop an AI-driven task automation platform for finance and accounting departments, streamlining routine tasks, reducing manual errors, and freeing up staff for high-value tasks.</value>
+  </data>
+  <data name="CASES_FINANCES_IMG" xml:space="preserve">
+    <value>images/finances-lab.svg</value>
+  </data>
+  <data name="CASES_FINANCES_URL" xml:space="preserve">
+    <value>Intelligent Task Automation for Finance and Accounting</value>
+  </data>
+  <data name="CASES_EDUCATION" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="CASES_EDUCATION_DESC" xml:space="preserve">
+    <value>We bring innovation and engagement to the whole education process with custom EdTech solutions. From student information portals to online course management systems  – we develop user-friendly and easy-to-use e-learning portals.</value>
+  </data>
+  <data name="CASES_EDUCATION_IMG" xml:space="preserve">
+    <value>images/education-lab.svg</value>
+  </data>
+  <data name="CASES_EDUCATION_URL" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="CASES_ESTATE" xml:space="preserve">
+    <value>Real Estate</value>
+  </data>
+  <data name="CASES_ESTATE_DESC" xml:space="preserve">
+    <value>Manage customers, monitor deal progress, and optimize offerings with custom real estate solutions. Our expertise includes property management software, virtual tour applications, real-time listing platforms, and more.</value>
+  </data>
+  <data name="CASES_ESTATE_IMG" xml:space="preserve">
+    <value>images/real-estate-lab.svg</value>
+  </data>
+  <data name="CASES_ESTATE_URL" xml:space="preserve">
+    <value>Real Estate</value>
+  </data>
+  <data name="CASES_RETAIL" xml:space="preserve">
+    <value>Retail Store Operations Optimization Software</value>
+  </data>
+  <data name="CASES_RETAIL_DESC" xml:space="preserve">
+    <value>Design and implement a mobile-based software solution for retail store operations, enabling staff to manage inventory, track sales, and optimize store performance in real-time.</value>
+  </data>
+  <data name="CASES_RETAIL_IMG" xml:space="preserve">
+    <value>images/ecommerce-lab.svg</value>
+  </data>
+  <data name="CASES_RETAIL_URL" xml:space="preserve">
+    <value>Retail Store Operations Optimization Software</value>
+  </data>
+  <data name="CASES_BLOCK_CHAIN" xml:space="preserve">
+    <value>Blockchain-Based Supply Chain Management</value>
+  </data>
+  <data name="CASES_BLOCK_CHAIN_DESC" xml:space="preserve">
+    <value>Create a blockchain-based platform for supply chain management, providing end-to-end visibility, improved tracking, and enhanced collaboration between suppliers, manufacturers, and customers.</value>
+  </data>
+  <data name="CASES_BLOCK_CHAIN_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="CASES_BLOCK_CHAIN_URL" xml:space="preserve">
+    <value>Blockchain-Based Supply Chain Management</value>
+  </data>
+  <data name="CASES_MARKETING" xml:space="preserve">
+    <value>Digital Marketing Analytics and Optimization Platform</value>
+  </data>
+  <data name="CASES_MARKETING_DESC" xml:space="preserve">
+    <value>Develop a cloud-based platform for digital marketers, offering real-time analytics, data visualization, and AI-powered optimization recommendations to improve campaign ROI.</value>
+  </data>
+  <data name="CASES_MARKETING_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="CASES_MARKETING_URL" xml:space="preserve">
+    <value>Digital Marketing Analytics and Optimization Platform</value>
+  </data>
+  <data name="CASES_STUDENT" xml:space="preserve">
+    <value>Student Information System for Higher Education</value>
+  </data>
+  <data name="CASES_STUDENT_DESC" xml:space="preserve">
+    <value>Design and implement a comprehensive student information system for higher education institutions, providing a single platform for student registration, course enrollment, and academic tracking.</value>
+  </data>
+  <data name="CASES_STUDENT_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="CASES_STUDENT_URL" xml:space="preserve">
+    <value>Student Information System for Higher Education</value>
+  </data>
+  <data name="CASES_PREDICTIVE" xml:space="preserve">
+    <value>Predictive Maintenance for Industrial Equipment</value>
+  </data>
+  <data name="CASES_PREDICTIVE_DESC" xml:space="preserve">
+    <value>Develop an IoT-powered predictive maintenance platform for industrial equipment, enabling manufacturers to detect potential failures, schedule maintenance, and minimize downtime.</value>
+  </data>
+  <data name="CASES_PREDICTIVE_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="CASES_PREDICTIVE_URL" xml:space="preserve">
+    <value>Predictive Maintenance for Industrial Equipment</value>
+  </data>
+  <data name="CASES_HR" xml:space="preserve">
+    <value>Customizable HR Management Software for Small Businesses</value>
+  </data>
+  <data name="CASES_HR_DESC" xml:space="preserve">
+    <value>Create a cloud-based HR management software solution for small businesses, offering customizable workflows, employee self-service, and compliance reporting to streamline HR operations.</value>
+  </data>
+  <data name="CASES_HR_IMG" xml:space="preserve">
+    <value>images/marketing-lab.svg</value>
+  </data>
+  <data name="CASES_HR_URL" xml:space="preserve">
+    <value>Customizable HR Management Software for Small Businesses</value>
+  </data>
 </root>
