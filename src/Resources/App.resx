@@ -499,70 +499,70 @@
     <value>Education</value>
   </data>
   <data name="CASES_ACCENT_WORD" xml:space="preserve">
-    <value>Projects</value>
+    <value>Our Projects</value>
   </data>
   <data name="CASES_TITLE" xml:space="preserve">
-    <value>we successfully developed</value>
+    <value>successfully delivered solutions</value>
   </data>
   <data name="CASES_DESC" xml:space="preserve">
-    <value>One look is worth a thousand words.</value>
+    <value>A single glance tells the story.</value>
   </data>
   <data name="CASES_GET_DETAILS" xml:space="preserve">
-    <value>Get details</value>
+    <value>View details</value>
   </data>
   <data name="CASES_LEARNING" xml:space="preserve">
-    <value>E-Learning Platform for Corporate Training</value>
+    <value>Corporate E-Learning Platform</value>
   </data>
   <data name="CASES_LEARNING_DESC" xml:space="preserve">
-    <value>Develop a scalable, cloud-based e-learning platform for corporate training, allowing companies to create and manage customized courses, track employee progress, and measure ROI.</value>
+    <value>Built a scalable, cloud-based platform for corporate e-learning, enabling organizations to design and manage custom courses, monitor employee progress, and assess ROI.</value>
   </data>
   <data name="CASES_LEARNING_IMG" xml:space="preserve">
     <value>images/healthcare-lab.svg</value>
   </data>
   <data name="CASES_LEARNING_URL" xml:space="preserve">
-    <value>E-Learning Platform for Corporate Training</value>
+    <value>Corporate E-Learning Platform</value>
   </data>
   <data name="CASES_AI_HEALTH" xml:space="preserve">
-    <value>Artificial Intelligence for Healthcare Support</value>
+    <value>AI Solutions for Healthcare</value>
   </data>
   <data name="CASES_AI_HEALTH_DESC" xml:space="preserve">
-    <value>Apply AI-powered chatbots and predictive analytics to healthcare systems, enabling faster patient diagnosis, improved treatment outcomes, and enhanced administrative efficiency.</value>
+    <value>Implemented AI chatbots and predictive analytics in healthcare systems to accelerate patient diagnosis, enhance treatment results, and streamline administration.</value>
   </data>
   <data name="CASES_AI_HEALTH_IMG" xml:space="preserve">
     <value>images/media-lab.svg</value>
   </data>
   <data name="CASES_AI_HEALTH_URL" xml:space="preserve">
-    <value>Artificial Intelligence for Healthcare Support</value>
+    <value>AI Solutions for Healthcare</value>
   </data>
   <data name="CASES_SME" xml:space="preserve">
-    <value>Cloud-Based Cybersecurity Solution for SMEs</value>
+    <value>Cloud Cybersecurity for SMEs</value>
   </data>
   <data name="CASES_SME_DESC" xml:space="preserve">
-    <value>Create a subscription-based, cloud-based cybersecurity solution tailored to small and medium-sized enterprises, offering real-time threat detection, incident response, and compliance reporting.</value>
+    <value>Developed a subscription-based, cloud cybersecurity platform for small and medium businesses, providing real-time threat detection, incident management, and compliance tools.</value>
   </data>
   <data name="CASES_SME_IMG" xml:space="preserve">
     <value>images/logistics-lab.svg</value>
   </data>
   <data name="CASES_SME_URL" xml:space="preserve">
-    <value>Cloud-Based Cybersecurity Solution for SMEs</value>
+    <value>Cloud Cybersecurity for SMEs</value>
   </data>
   <data name="CASES_FINANCES" xml:space="preserve">
-    <value>Intelligent Task Automation for Finance and Accounting</value>
+    <value>Finance & Accounting Automation</value>
   </data>
   <data name="CASES_FINANCES_DESC" xml:space="preserve">
-    <value>Develop an AI-driven task automation platform for finance and accounting departments, streamlining routine tasks, reducing manual errors, and freeing up staff for high-value tasks.</value>
+    <value>Created an AI-powered automation platform for finance and accounting, reducing manual work, minimizing errors, and allowing staff to focus on higher-value activities.</value>
   </data>
   <data name="CASES_FINANCES_IMG" xml:space="preserve">
     <value>images/finances-lab.svg</value>
   </data>
   <data name="CASES_FINANCES_URL" xml:space="preserve">
-    <value>Intelligent Task Automation for Finance and Accounting</value>
+    <value>Finance & Accounting Automation</value>
   </data>
   <data name="CASES_EDUCATION" xml:space="preserve">
     <value>Education</value>
   </data>
   <data name="CASES_EDUCATION_DESC" xml:space="preserve">
-    <value>We bring innovation and engagement to the whole education process with custom EdTech solutions. From student information portals to online course management systems  – we develop user-friendly and easy-to-use e-learning portals.</value>
+    <value>We enhance the educational journey with innovative EdTech solutions, from student portals to online course management, delivering intuitive and accessible e-learning platforms.</value>
   </data>
   <data name="CASES_EDUCATION_IMG" xml:space="preserve">
     <value>images/education-lab.svg</value>
@@ -574,7 +574,7 @@
     <value>Real Estate</value>
   </data>
   <data name="CASES_ESTATE_DESC" xml:space="preserve">
-    <value>Manage customers, monitor deal progress, and optimize offerings with custom real estate solutions. Our expertise includes property management software, virtual tour applications, real-time listing platforms, and more.</value>
+    <value>Empower real estate operations with custom solutions for client management, deal tracking, and offer optimization, including property management, virtual tours, and live listings.</value>
   </data>
   <data name="CASES_ESTATE_IMG" xml:space="preserve">
     <value>images/real-estate-lab.svg</value>
@@ -583,76 +583,76 @@
     <value>Real Estate</value>
   </data>
   <data name="CASES_RETAIL" xml:space="preserve">
-    <value>Retail Store Operations Optimization Software</value>
+    <value>Retail Operations Optimization</value>
   </data>
   <data name="CASES_RETAIL_DESC" xml:space="preserve">
-    <value>Design and implement a mobile-based software solution for retail store operations, enabling staff to manage inventory, track sales, and optimize store performance in real-time.</value>
+    <value>Designed a mobile solution for retail operations, enabling staff to manage inventory, monitor sales, and optimize store performance in real time.</value>
   </data>
   <data name="CASES_RETAIL_IMG" xml:space="preserve">
     <value>images/ecommerce-lab.svg</value>
   </data>
   <data name="CASES_RETAIL_URL" xml:space="preserve">
-    <value>Retail Store Operations Optimization Software</value>
+    <value>Retail Operations Optimization</value>
   </data>
   <data name="CASES_BLOCK_CHAIN" xml:space="preserve">
-    <value>Blockchain-Based Supply Chain Management</value>
+    <value>Blockchain Supply Chain Platform</value>
   </data>
   <data name="CASES_BLOCK_CHAIN_DESC" xml:space="preserve">
-    <value>Create a blockchain-based platform for supply chain management, providing end-to-end visibility, improved tracking, and enhanced collaboration between suppliers, manufacturers, and customers.</value>
+    <value>Developed a blockchain platform for supply chain management, offering end-to-end visibility, improved tracking, and better collaboration among all parties.</value>
   </data>
   <data name="CASES_BLOCK_CHAIN_IMG" xml:space="preserve">
     <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_BLOCK_CHAIN_URL" xml:space="preserve">
-    <value>Blockchain-Based Supply Chain Management</value>
+    <value>Blockchain Supply Chain Platform</value>
   </data>
   <data name="CASES_MARKETING" xml:space="preserve">
-    <value>Digital Marketing Analytics and Optimization Platform</value>
+    <value>Marketing Analytics & Optimization</value>
   </data>
   <data name="CASES_MARKETING_DESC" xml:space="preserve">
-    <value>Develop a cloud-based platform for digital marketers, offering real-time analytics, data visualization, and AI-powered optimization recommendations to improve campaign ROI.</value>
+    <value>Built a cloud platform for digital marketers, delivering real-time analytics, data visualization, and AI-driven optimization to maximize campaign ROI.</value>
   </data>
   <data name="CASES_MARKETING_IMG" xml:space="preserve">
     <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_MARKETING_URL" xml:space="preserve">
-    <value>Digital Marketing Analytics and Optimization Platform</value>
+    <value>Marketing Analytics & Optimization</value>
   </data>
   <data name="CASES_STUDENT" xml:space="preserve">
-    <value>Student Information System for Higher Education</value>
+    <value>Higher Ed Student Information System</value>
   </data>
   <data name="CASES_STUDENT_DESC" xml:space="preserve">
-    <value>Design and implement a comprehensive student information system for higher education institutions, providing a single platform for student registration, course enrollment, and academic tracking.</value>
+    <value>Implemented a comprehensive student information system for higher education, centralizing registration, course enrollment, and academic tracking.</value>
   </data>
   <data name="CASES_STUDENT_IMG" xml:space="preserve">
     <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_STUDENT_URL" xml:space="preserve">
-    <value>Student Information System for Higher Education</value>
+    <value>Higher Ed Student Information System</value>
   </data>
   <data name="CASES_PREDICTIVE" xml:space="preserve">
-    <value>Predictive Maintenance for Industrial Equipment</value>
+    <value>Industrial Predictive Maintenance</value>
   </data>
   <data name="CASES_PREDICTIVE_DESC" xml:space="preserve">
-    <value>Develop an IoT-powered predictive maintenance platform for industrial equipment, enabling manufacturers to detect potential failures, schedule maintenance, and minimize downtime.</value>
+    <value>Created an IoT-based predictive maintenance platform for industrial equipment, helping manufacturers detect issues early, schedule service, and reduce downtime.</value>
   </data>
   <data name="CASES_PREDICTIVE_IMG" xml:space="preserve">
     <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_PREDICTIVE_URL" xml:space="preserve">
-    <value>Predictive Maintenance for Industrial Equipment</value>
+    <value>Industrial Predictive Maintenance</value>
   </data>
   <data name="CASES_HR" xml:space="preserve">
-    <value>Customizable HR Management Software for Small Businesses</value>
+    <value>HR Management for Small Business</value>
   </data>
   <data name="CASES_HR_DESC" xml:space="preserve">
-    <value>Create a cloud-based HR management software solution for small businesses, offering customizable workflows, employee self-service, and compliance reporting to streamline HR operations.</value>
+    <value>Developed a cloud HR management solution for small businesses, featuring customizable workflows, employee self-service, and compliance reporting to streamline HR tasks.</value>
   </data>
   <data name="CASES_HR_IMG" xml:space="preserve">
     <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_HR_URL" xml:space="preserve">
-    <value>Customizable HR Management Software for Small Businesses</value>
+    <value>HR Management for Small Business</value>
   </data>
   <data name="FEEDBACK_ITEM_0_AUTHOR" xml:space="preserve">
     <value>Penya Gofman, Head of SelfMade</value>
@@ -671,7 +671,7 @@
   </data>
   <data name="FEEDBACK_ITEM_1_DETAILS" xml:space="preserve">
     <value>Our employees now benefit from low management fees, access to diverse investment options, as well as great perks to support their financial wellness. The plan transfer required a minimal time investment from our end, and the administration is simple!</value>
-  </data>
+  </data>   
   <data name="FEEDBACK_ITEM_2_AUTHOR" xml:space="preserve">
     <value>Tony Montana, Head of MontanaInc</value>
   </data>
