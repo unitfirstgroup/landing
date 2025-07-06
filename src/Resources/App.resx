@@ -277,31 +277,31 @@
     <value>Years on the market</value>
   </data>
   <data name="SERVICES_CUSTOM_DEVELOPMENT" xml:space="preserve">
-    <value>Custom software development</value>
+    <value>Tailored software solutions</value>
   </data>
   <data name="SERVICES_CUSTOM_DEVELOPMENT_DESC" xml:space="preserve">
-    <value>We develop bespoke solutions for specific business needs and requirements. Custom development means full-cycle software development adapted to your case regarding budget, timelines, tech stack, advanced technologies, and other aspects.</value>
+    <value>We create custom solutions designed for your unique business needs. Our full-cycle development adapts to your budget, timeline, technology stack, and advanced requirements.</value>
   </data>
   <data name="SERVICES_CUSTOM_DEVELOPMENT_URL" xml:space="preserve">
-    <value>Custom software development</value>
+    <value>Tailored software solutions</value>
   </data>
   <data name="SERVICES_IOT" xml:space="preserve">
-    <value>IoT development</value>
+    <value>IoT solutions</value>
   </data>
   <data name="SERVICES_IOT_DESC" xml:space="preserve">
-    <value>We develop IoT systems of any scale, from fleets of a few devices to hundreds. IoT development is our specialization, so we have enough expertise to provide consulting services along with development services. Our services include calculating ROI, identifying IoT implementation opportunities for specific businesses, visualizing data through informative dashboards, designing effective device management systems, securing vulnerable components, optimizing data transfer and network usage, and much more. We offer over 10 years of experience in delivering successful IoT projects.</value>
+    <value>We build IoT systems of any size, from small device fleets to large-scale deployments. Our expertise covers consulting, ROI analysis, opportunity identification, dashboard visualization, device management, security, and network optimization, backed by over a decade of successful projects.</value>
   </data>
   <data name="SERVICES_IOT_URL" xml:space="preserve">
-    <value>IoT development</value>
+    <value>IoT solutions</value>
   </data>
   <data name="SERVICES_WEB" xml:space="preserve">
-    <value>Web development</value>
+    <value>Web application development</value>
   </data>
   <data name="SERVICES_WEB_DESC" xml:space="preserve">
-    <value>We develop scalable, high-performance, and secure web applications. While different web solutions may seem similar at first glance, we approach each one uniquely, leveraging our expertise to ensure the application meets user expectations, drives business growth, delivers value, and remains competitive over time.</value>
+    <value>We deliver scalable, secure, and high-performance web apps. Each project is approached individually to ensure it meets user needs, drives growth, and remains competitive.</value>
   </data>
   <data name="SERVICES_WEB_URL" xml:space="preserve">
-    <value>Web development</value>
+    <value>Web application development</value>
   </data>
   <data name="SERVICES_CUSTOM_DEVELOPMENT_IMG" xml:space="preserve">
     <value>images/custom-development.svg</value>
@@ -313,37 +313,37 @@
     <value>images/web-development.svg</value>
   </data>
   <data name="SERVICES_MOBILE" xml:space="preserve">
-    <value>Mobile development</value>
+    <value>Mobile app development</value>
   </data>
   <data name="SERVICES_MOBILE_DESC" xml:space="preserve">
-    <value>Our team of skilled mobile developers and creative designers build excellent iOS, Android, and cross-platform applications, crafting simple and intuitive interfaces and shaping excellent user experiences. We know how to engage and retain users, and happy users mean a business will thrive.</value>
+    <value>Our skilled team crafts outstanding iOS, Android, and cross-platform apps with intuitive interfaces and engaging user experiences, helping your business grow by delighting users.</value>
   </data>
   <data name="SERVICES_MOBILE_URL" xml:space="preserve">
-    <value>Mobile development</value>
+    <value>Mobile app development</value>
   </data>
   <data name="SERVICES_MOBILE_IMG" xml:space="preserve">
     <value>images/mobile-development.svg</value>
   </data>
   <data name="SERVICES_AI" xml:space="preserve">
-    <value>AI development</value>
+    <value>AI solutions</value>
   </data>
   <data name="SERVICES_AI_DESC" xml:space="preserve">
-    <value>From predictive analytic to AI-powered healthcare diagnostics, our Artificial Intelligence services span every industry. Our expertise lies in custom AI model development, predictive analytic, machine learning implementation, natural language processing, computer vision, and AI tools for predictive maintenance.</value>
+    <value>Our AI services cover everything from predictive analytics to healthcare diagnostics. We specialize in custom AI models, machine learning, NLP, computer vision, and predictive maintenance tools.</value>
   </data>
   <data name="SERVICES_AI_URL" xml:space="preserve">
-    <value>AI development</value>
+    <value>AI solutions</value>
   </data>
   <data name="SERVICES_AI_IMG" xml:space="preserve">
     <value>images/ai-development.svg</value>
   </data>
   <data name="SERVICES_GPT" xml:space="preserve">
-    <value>ChatGPT development</value>
+    <value>ChatGPT integration</value>
   </data>
   <data name="SERVICES_GPT_DESC" xml:space="preserve">
-    <value>By incorporating ChatGPT, applications can provide 24/7 availability, efficient customer support, and data-driven insights. We provide consultation, customization, and integration of ChatGPT capabilities into web and mobile applications, enabling dynamic conversations, cost savings, enhanced user retention, and increased user engagement.</value>
+    <value>Integrate ChatGPT for 24/7 support, efficient customer service, and actionable insights. We offer consulting, customization, and seamless integration for web and mobile apps to boost engagement and retention.</value>
   </data>
   <data name="SERVICES_GPT_URL" xml:space="preserve">
-    <value>ChatGPT development</value>
+    <value>ChatGPT integration</value>
   </data>
   <data name="SERVICES_GPT_IMG" xml:space="preserve">
     <value>images/gpt-development.svg</value>
@@ -355,43 +355,43 @@
     <value>service</value>
   </data>
   <data name="SERVICES_DESC" xml:space="preserve">
-    <value>At UnitFirst, we provide end-to-end software development backed by industry-specific expertise, advisory support, and system maintenance, including maintenance of complex legacy solutions. Our software engineering services encompass both the classic outsourcing model and staff augmentation.</value>
+    <value>At UnitFirst, we deliver comprehensive software development, industry expertise, advisory services, and system maintenance—including legacy systems. Our engineering services support both outsourcing and team extension models.</value>
   </data>
   <data name="SERVICES_CAT_ACCENT_WORD" xml:space="preserve">
     <value>services</value>
   </data>
   <data name="SERVICES_CAT_TITLE" xml:space="preserve">
-    <value>Category of our</value>
+    <value>Our service categories</value>
   </data>
   <data name="SERVICES_CAT_DESC" xml:space="preserve">
-    <value>For over a decade, we have been accumulating knowledge and expertise in several services that became our specialization.</value>
+    <value>Over the years, we’ve gained deep expertise in a variety of specialized services.</value>
   </data>
   <data name="SERVICES_GET_IN_TOUCH" xml:space="preserve">
-    <value>Get in touch</value>
+    <value>Contact us</value>
   </data>
   <data name="SERVICES_BOOK_CONSULTATION" xml:space="preserve">
-    <value>Book free consultation</value>
+    <value>Book a free consultation</value>
   </data>
   <data name="LABORATORIES_ACCENT_WORD" xml:space="preserve">
     <value>UnitFirst</value>
   </data>
   <data name="LABORATORIES_TITLE" xml:space="preserve">
-    <value>laboratory</value>
+    <value>lab</value>
   </data>
   <data name="LABORATORIES_DESC" xml:space="preserve">
-    <value>We’ve built expert knowledge in a range of industries. Search any kind of industry and find the best applicable laboratory.</value>
+    <value>We have developed deep expertise across many industries. Explore and find the most suitable lab for your needs.</value>
   </data>
   <data name="LABORATORIES_GET_DETAILS" xml:space="preserve">
-    <value>Get details</value>
+    <value>View details</value>
   </data>
   <data name="LABORATORIES_SEARCH" xml:space="preserve">
-    <value>Search digital laboratory for your requirements...</value>
+    <value>Find a digital lab tailored to your needs...</value>
   </data>
   <data name="LABORATORIES_HEALTHCARE" xml:space="preserve">
     <value>Healthcare</value>
   </data>
   <data name="LABORATORIES_HEALTHCARE_DESC" xml:space="preserve">
-    <value>Patient management systems, medicine platforms, IoT-powered applications, AI-powered diagnostics, data analytics and visualization – these are several solution types we are experts at developing. All solutions are HIPPA compliant, GDPR, HITECH, FDA, and other requirements compliant.</value>
+    <value>We develop patient management, medical platforms, IoT and AI-powered apps, analytics, and visualization tools. All solutions comply with HIPPA, GDPR, HITECH, FDA, and other standards.</value>
   </data>
   <data name="LABORATORIES_HEALTHCARE_IMG" xml:space="preserve">
     <value>images/healthcare-lab.svg</value>
@@ -403,7 +403,7 @@
     <value>Media &amp; Entertainment</value>
   </data>
   <data name="LABORATORIES_MEDIA_DESC" xml:space="preserve">
-    <value>Streaming platforms, personalized recommendation engines, social media management tools, event systems, and more. We know how to engage users, personalize their experience and develop systems with minimal downtime periods, even during high-traffic times.</value>
+    <value>We build streaming platforms, recommendation engines, social media tools, event systems, and more—ensuring personalized experiences and high availability even during peak times.</value>
   </data>
   <data name="LABORATORIES_MEDIA_IMG" xml:space="preserve">
     <value>images/media-lab.svg</value>
@@ -415,7 +415,7 @@
     <value>Logistics</value>
   </data>
   <data name="LABORATORIES_LOGISTICS_DESC" xml:space="preserve">
-    <value>We bring real-time tracking, route optimization, inventory management, process automation, and easy fleet management to any logistics business. We go every mile and then some to keep goods and business moving.</value>
+    <value>We offer real-time tracking, route optimization, inventory and fleet management, and process automation to keep your logistics operations running smoothly.</value>
   </data>
   <data name="LABORATORIES_LOGISTICS_IMG" xml:space="preserve">
     <value>images/logistics-lab.svg</value>
@@ -424,22 +424,22 @@
     <value>Logistics</value>
   </data>
   <data name="LABORATORIES_FINANCES" xml:space="preserve">
-    <value>Finances</value>
+    <value>Finance</value>
   </data>
   <data name="LABORATORIES_FINANCES_DESC" xml:space="preserve">
-    <value>Wealth management software, compliance and reporting tools, payment processing solutions, insurance management systems, budgeting and financial planning tools – every software we develop for the finance industry features security, scalability, and compliance with industry regulations.</value>
+    <value>We deliver wealth management, compliance, payment processing, insurance, budgeting, and planning tools—each built for security, scalability, and regulatory compliance.</value>
   </data>
   <data name="LABORATORIES_FINANCES_IMG" xml:space="preserve">
     <value>images/finances-lab.svg</value>
   </data>
   <data name="LABORATORIES_FINANCES_URL" xml:space="preserve">
-    <value>Finances</value>
+    <value>Finance</value>
   </data>
   <data name="LABORATORIES_EDUCATION" xml:space="preserve">
     <value>Education</value>
   </data>
   <data name="LABORATORIES_EDUCATION_DESC" xml:space="preserve">
-    <value>We bring innovation and engagement to the whole education process with custom EdTech solutions. From student information portals to online course management systems  – we develop user-friendly and easy-to-use e-learning portals.</value>
+    <value>We enhance education with custom EdTech solutions, from student portals to online course management, creating intuitive and accessible e-learning platforms.</value>
   </data>
   <data name="LABORATORIES_EDUCATION_IMG" xml:space="preserve">
     <value>images/education-lab.svg</value>
@@ -451,7 +451,7 @@
     <value>Real Estate</value>
   </data>
   <data name="LABORATORIES_ESTATE_DESC" xml:space="preserve">
-    <value>Manage customers, monitor deal progress, and optimize offerings with custom real estate solutions. Our expertise includes property management software, virtual tour applications, real-time listing platforms, and more.</value>
+    <value>We provide solutions for customer management, deal tracking, and offer optimization, including property management, virtual tours, and real-time listings.</value>
   </data>
   <data name="LABORATORIES_ESTATE_IMG" xml:space="preserve">
     <value>images/real-estate-lab.svg</value>
@@ -463,7 +463,7 @@
     <value>eCommerce</value>
   </data>
   <data name="LABORATORIES_COMMERCE_DESC" xml:space="preserve">
-    <value>We build stronger connections with customers through web and mobile applications with superior shopping experience and 24/7 availability.</value>
+    <value>We create web and mobile apps that strengthen customer relationships, offering a seamless shopping experience and round-the-clock availability.</value>
   </data>
   <data name="LABORATORIES_COMMERCE_IMG" xml:space="preserve">
     <value>images/ecommerce-lab.svg</value>
@@ -475,7 +475,7 @@
     <value>Marketing</value>
   </data>
   <data name="LABORATORIES_MARKETING_DESC" xml:space="preserve">
-    <value>We build marketing automation tools that help optimize marketing strategies, gather insights, and achieve brave goals with customers.</value>
+    <value>We develop marketing automation tools to optimize strategies, gather insights, and help you achieve ambitious goals with your clients.</value>
   </data>
   <data name="LABORATORIES_MARKETING_IMG" xml:space="preserve">
     <value>images/marketing-lab.svg</value>

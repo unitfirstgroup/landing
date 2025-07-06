@@ -2537,11 +2537,6 @@ input[type="range"]::-ms-fill-lower {
     padding-bottom: 5rem;
   }
 
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
