@@ -498,162 +498,162 @@
   <data name="TAG_EDUCATION" xml:space="preserve">
     <value>Educación</value>
   </data>
-  <data name="CASES_ACCENT_WORD" xml:space="preserve">
-    <value>Proyectos</value>
-  </data>
-  <data name="CASES_TITLE" xml:space="preserve">
-    <value>que desarrollamos con éxito.</value>
-  </data>
-  <data name="CASES_DESC" xml:space="preserve">
-    <value>Una mirada vale más que mil palabras.</value>
-  </data>
-  <data name="CASES_GET_DETAILS" xml:space="preserve">
-    <value>Obtener detalles</value>
-  </data>
-  <data name="CASES_LEARNING" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_LEARNING_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_LEARNING_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_LEARNING_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_AI_HEALTH" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_AI_HEALTH_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_AI_HEALTH_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_AI_HEALTH_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_SME" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_SME_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_SME_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_SME_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_FINANCES" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_FINANCES_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_FINANCES_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_FINANCES_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_EDUCATION" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_EDUCATION_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_EDUCATION_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_EDUCATION_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_ESTATE" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_ESTATE_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_ESTATE_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_ESTATE_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_RETAIL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_RETAIL_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_RETAIL_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_RETAIL_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_BLOCK_CHAIN" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_BLOCK_CHAIN_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_BLOCK_CHAIN_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_BLOCK_CHAIN_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_MARKETING" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_MARKETING_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_MARKETING_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_MARKETING_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_STUDENT" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_STUDENT_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_STUDENT_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_STUDENT_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_PREDICTIVE" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_PREDICTIVE_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_PREDICTIVE_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_PREDICTIVE_URL" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_HR" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_HR_DESC" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_HR_IMG" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CASES_HR_URL" xml:space="preserve">
-    <value />
-  </data>
+	<data name="CASES_ACCENT_WORD" xml:space="preserve">
+  <value>Proyectos</value>
+</data>
+	<data name="CASES_TITLE" xml:space="preserve">
+  <value>soluciones entregadas con éxito</value>
+</data>
+	<data name="CASES_DESC" xml:space="preserve">
+  <value>Una mirada vale más que mil palabras.</value>
+</data>
+	<data name="CASES_GET_DETAILS" xml:space="preserve">
+  <value>Ver detalles</value>
+</data>
+	<data name="CASES_LEARNING" xml:space="preserve">
+  <value>Plataforma de e-learning corporativo</value>
+</data>
+	<data name="CASES_LEARNING_DESC" xml:space="preserve">
+  <value>Se construyó una plataforma escalable en la nube para e-learning corporativo, permitiendo a las organizaciones diseñar y gestionar cursos personalizados, monitorear el progreso de los empleados y evaluar el ROI.</value>
+</data>
+	<data name="CASES_LEARNING_IMG" xml:space="preserve">
+  <value>images/healthcare-lab.svg</value>
+</data>
+	<data name="CASES_LEARNING_URL" xml:space="preserve">
+  <value>Plataforma de e-learning corporativo</value>
+</data>
+	<data name="CASES_AI_HEALTH" xml:space="preserve">
+  <value>Soluciones de IA para la salud</value>
+</data>
+	<data name="CASES_AI_HEALTH_DESC" xml:space="preserve">
+  <value>Implementación de chatbots de IA y análisis predictivo en sistemas de salud para acelerar el diagnóstico, mejorar los resultados del tratamiento y optimizar la administración.</value>
+</data>
+	<data name="CASES_AI_HEALTH_IMG" xml:space="preserve">
+  <value>images/media-lab.svg</value>
+</data>
+	<data name="CASES_AI_HEALTH_URL" xml:space="preserve">
+  <value>Soluciones de IA para la salud</value>
+</data>
+	<data name="CASES_SME" xml:space="preserve">
+  <value>Ciberseguridad en la nube para PYMES</value>
+</data>
+	<data name="CASES_SME_DESC" xml:space="preserve">
+  <value>Desarrollo de una plataforma de ciberseguridad basada en la nube para pequeñas y medianas empresas, con detección de amenazas en tiempo real, gestión de incidentes y herramientas de cumplimiento.</value>
+</data>
+	<data name="CASES_SME_IMG" xml:space="preserve">
+  <value>images/logistics-lab.svg</value>
+</data>
+	<data name="CASES_SME_URL" xml:space="preserve">
+  <value>Ciberseguridad en la nube para PYMES</value>
+</data>
+	<data name="CASES_FINANCES" xml:space="preserve">
+  <value>Automatización financiera y contable</value>
+</data>
+	<data name="CASES_FINANCES_DESC" xml:space="preserve">
+  <value>Creación de una plataforma de automatización financiera y contable impulsada por IA, reduciendo el trabajo manual, minimizando errores y permitiendo al personal centrarse en tareas de mayor valor.</value>
+</data>
+	<data name="CASES_FINANCES_IMG" xml:space="preserve">
+  <value>images/finances-lab.svg</value>
+</data>
+	<data name="CASES_FINANCES_URL" xml:space="preserve">
+  <value>Automatización financiera y contable</value>
+</data>
+	<data name="CASES_EDUCATION" xml:space="preserve">
+  <value>Educación</value>
+</data>
+	<data name="CASES_EDUCATION_DESC" xml:space="preserve">
+  <value>Mejoramos el proceso educativo con soluciones EdTech innovadoras, desde portales estudiantiles hasta gestión de cursos en línea, ofreciendo plataformas de aprendizaje intuitivas y accesibles.</value>
+</data>
+	<data name="CASES_EDUCATION_IMG" xml:space="preserve">
+  <value>images/education-lab.svg</value>
+</data>
+	<data name="CASES_EDUCATION_URL" xml:space="preserve">
+  <value>Educación</value>
+</data>
+	<data name="CASES_ESTATE" xml:space="preserve">
+  <value>Bienes raíces</value>
+</data>
+	<data name="CASES_ESTATE_DESC" xml:space="preserve">
+  <value>Impulsamos operaciones inmobiliarias con soluciones personalizadas para gestión de clientes, seguimiento de transacciones y optimización de ofertas, incluyendo administración de propiedades, recorridos virtuales y listados en vivo.</value>
+</data>
+	<data name="CASES_ESTATE_IMG" xml:space="preserve">
+  <value>images/real-estate-lab.svg</value>
+</data>
+	<data name="CASES_ESTATE_URL" xml:space="preserve">
+  <value>Bienes raíces</value>
+</data>
+	<data name="CASES_RETAIL" xml:space="preserve">
+  <value>Optimización de operaciones minoristas</value>
+</data>
+	<data name="CASES_RETAIL_DESC" xml:space="preserve">
+  <value>Diseño de una solución móvil para operaciones minoristas, permitiendo al personal gestionar inventario, monitorear ventas y optimizar el rendimiento de la tienda en tiempo real.</value>
+</data>
+	<data name="CASES_RETAIL_IMG" xml:space="preserve">
+  <value>images/ecommerce-lab.svg</value>
+</data>
+	<data name="CASES_RETAIL_URL" xml:space="preserve">
+  <value>Optimización de operaciones minoristas</value>
+</data>
+	<data name="CASES_BLOCK_CHAIN" xml:space="preserve">
+  <value>Plataforma blockchain para la cadena de suministro</value>
+</data>
+	<data name="CASES_BLOCK_CHAIN_DESC" xml:space="preserve">
+  <value>Desarrollo de una plataforma blockchain para la gestión de la cadena de suministro, ofreciendo visibilidad de extremo a extremo, mejor seguimiento y colaboración entre todas las partes.</value>
+</data>
+	<data name="CASES_BLOCK_CHAIN_IMG" xml:space="preserve">
+  <value>images/marketing-lab.svg</value>
+</data>
+	<data name="CASES_BLOCK_CHAIN_URL" xml:space="preserve">
+  <value>Plataforma blockchain para la cadena de suministro</value>
+</data>
+	<data name="CASES_MARKETING" xml:space="preserve">
+  <value>Análisis y optimización de marketing</value>
+</data>
+	<data name="CASES_MARKETING_DESC" xml:space="preserve">
+  <value>Desarrollo de una plataforma en la nube para marketers digitales, con análisis en tiempo real, visualización de datos y optimización basada en IA para maximizar el ROI de las campañas.</value>
+</data>
+	<data name="CASES_MARKETING_IMG" xml:space="preserve">
+  <value>images/marketing-lab.svg</value>
+</data>
+	<data name="CASES_MARKETING_URL" xml:space="preserve">
+  <value>Análisis y optimización de marketing</value>
+</data>
+	<data name="CASES_STUDENT" xml:space="preserve">
+  <value>Sistema de información estudiantil para educación superior</value>
+</data>
+	<data name="CASES_STUDENT_DESC" xml:space="preserve">
+  <value>Implementación de un sistema integral de información estudiantil para educación superior, centralizando registro, inscripción a cursos y seguimiento académico.</value>
+</data>
+	<data name="CASES_STUDENT_IMG" xml:space="preserve">
+  <value>images/marketing-lab.svg</value>
+</data>
+	<data name="CASES_STUDENT_URL" xml:space="preserve">
+  <value>Sistema de información estudiantil para educación superior</value>
+</data>
+	<data name="CASES_PREDICTIVE" xml:space="preserve">
+  <value>Mantenimiento predictivo industrial</value>
+</data>
+	<data name="CASES_PREDICTIVE_DESC" xml:space="preserve">
+  <value>Creación de una plataforma de mantenimiento predictivo basada en IoT para equipos industriales, ayudando a detectar problemas temprano, programar servicios y reducir tiempos de inactividad.</value>
+</data>
+	<data name="CASES_PREDICTIVE_IMG" xml:space="preserve">
+  <value>images/marketing-lab.svg</value>
+</data>
+	<data name="CASES_PREDICTIVE_URL" xml:space="preserve">
+  <value>Mantenimiento predictivo industrial</value>
+</data>
+	<data name="CASES_HR" xml:space="preserve">
+  <value>Gestión de RRHH para pequeñas empresas</value>
+</data>
+	<data name="CASES_HR_DESC" xml:space="preserve">
+  <value>Desarrollo de una solución de gestión de RRHH en la nube para pequeñas empresas, con flujos de trabajo personalizables, autoservicio para empleados e informes de cumplimiento para simplificar las tareas de RRHH.</value>
+</data>
+	<data name="CASES_HR_IMG" xml:space="preserve">
+  <value>images/marketing-lab.svg</value>
+</data>
+	<data name="CASES_HR_URL" xml:space="preserve">
+  <value>Gestión de RRHH para pequeñas empresas</value>
+</data>
   <data name="FEEDBACK_ITEM_0_AUTHOR" xml:space="preserve">
     <value />
   </data>

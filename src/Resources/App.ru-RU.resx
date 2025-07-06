@@ -502,157 +502,157 @@
     <value>Проекты</value>
   </data>
   <data name="CASES_TITLE" xml:space="preserve">
-    <value>которые мы успешно реализовали.</value>
+    <value>успешно реализованные решения</value>
   </data>
   <data name="CASES_DESC" xml:space="preserve">
     <value>Один взгляд стоит тысячи слов.</value>
   </data>
   <data name="CASES_GET_DETAILS" xml:space="preserve">
-    <value>Получить подробности</value>
+    <value>Посмотреть детали</value>
   </data>
   <data name="CASES_LEARNING" xml:space="preserve">
-    <value />
+    <value>Корпоративная платформа электронного обучения</value>
   </data>
   <data name="CASES_LEARNING_DESC" xml:space="preserve">
-    <value />
+    <value>Разработана масштабируемая облачная платформа для корпоративного e-learning, позволяющая организациям создавать и управлять курсами, отслеживать прогресс сотрудников и оценивать ROI.</value>
   </data>
   <data name="CASES_LEARNING_IMG" xml:space="preserve">
-    <value />
+    <value>images/healthcare-lab.svg</value>
   </data>
   <data name="CASES_LEARNING_URL" xml:space="preserve">
-    <value />
+    <value>Корпоративная платформа электронного обучения</value>
   </data>
   <data name="CASES_AI_HEALTH" xml:space="preserve">
-    <value />
+    <value>ИИ-решения для здравоохранения</value>
   </data>
   <data name="CASES_AI_HEALTH_DESC" xml:space="preserve">
-    <value />
+    <value>Внедрение чат-ботов и предиктивной аналитики на базе ИИ в медицинских системах для ускорения диагностики, улучшения результатов лечения и оптимизации администрирования.</value>
   </data>
   <data name="CASES_AI_HEALTH_IMG" xml:space="preserve">
-    <value />
+    <value>images/media-lab.svg</value>
   </data>
   <data name="CASES_AI_HEALTH_URL" xml:space="preserve">
-    <value />
+    <value>ИИ-решения для здравоохранения</value>
   </data>
   <data name="CASES_SME" xml:space="preserve">
-    <value />
+    <value>Облачная кибербезопасность для МСП</value>
   </data>
   <data name="CASES_SME_DESC" xml:space="preserve">
-    <value />
+    <value>Разработана облачная платформа кибербезопасности для малого и среднего бизнеса с обнаружением угроз в реальном времени, управлением инцидентами и инструментами соответствия.</value>
   </data>
   <data name="CASES_SME_IMG" xml:space="preserve">
-    <value />
+    <value>images/logistics-lab.svg</value>
   </data>
   <data name="CASES_SME_URL" xml:space="preserve">
-    <value />
+    <value>Облачная кибербезопасность для МСП</value>
   </data>
   <data name="CASES_FINANCES" xml:space="preserve">
-    <value />
+    <value>Автоматизация финансов и бухгалтерии</value>
   </data>
   <data name="CASES_FINANCES_DESC" xml:space="preserve">
-    <value />
+    <value>Создана платформа автоматизации финансов и бухгалтерии на базе ИИ, сокращающая ручной труд, минимизирующая ошибки и позволяющая сотрудникам сосредоточиться на более ценных задачах.</value>
   </data>
   <data name="CASES_FINANCES_IMG" xml:space="preserve">
-    <value />
+    <value>images/finances-lab.svg</value>
   </data>
   <data name="CASES_FINANCES_URL" xml:space="preserve">
-    <value />
+    <value>Автоматизация финансов и бухгалтерии</value>
   </data>
   <data name="CASES_EDUCATION" xml:space="preserve">
-    <value />
+    <value>Образование</value>
   </data>
   <data name="CASES_EDUCATION_DESC" xml:space="preserve">
-    <value />
+    <value>Мы улучшаем образовательный процесс с помощью инновационных EdTech-решений: от студенческих порталов до управления онлайн-курсами, создавая интуитивные и доступные платформы.</value>
   </data>
   <data name="CASES_EDUCATION_IMG" xml:space="preserve">
-    <value />
+    <value>images/education-lab.svg</value>
   </data>
   <data name="CASES_EDUCATION_URL" xml:space="preserve">
-    <value />
+    <value>Образование</value>
   </data>
   <data name="CASES_ESTATE" xml:space="preserve">
-    <value />
+    <value>Недвижимость</value>
   </data>
   <data name="CASES_ESTATE_DESC" xml:space="preserve">
-    <value />
+    <value>Оптимизация операций с недвижимостью с помощью индивидуальных решений для управления клиентами, отслеживания сделок и оптимизации предложений, включая управление объектами, виртуальные туры и онлайн-листинги.</value>
   </data>
   <data name="CASES_ESTATE_IMG" xml:space="preserve">
-    <value />
+    <value>images/real-estate-lab.svg</value>
   </data>
   <data name="CASES_ESTATE_URL" xml:space="preserve">
-    <value />
+    <value>Недвижимость</value>
   </data>
   <data name="CASES_RETAIL" xml:space="preserve">
-    <value />
+    <value>Оптимизация розничных операций</value>
   </data>
   <data name="CASES_RETAIL_DESC" xml:space="preserve">
-    <value />
+    <value>Разработано мобильное решение для розничной торговли, позволяющее персоналу управлять запасами, отслеживать продажи и оптимизировать работу магазина в реальном времени.</value>
   </data>
   <data name="CASES_RETAIL_IMG" xml:space="preserve">
-    <value />
+    <value>images/ecommerce-lab.svg</value>
   </data>
   <data name="CASES_RETAIL_URL" xml:space="preserve">
-    <value />
+    <value>Оптимизация розничных операций</value>
   </data>
   <data name="CASES_BLOCK_CHAIN" xml:space="preserve">
-    <value />
+    <value>Блокчейн-платформа для цепочек поставок</value>
   </data>
   <data name="CASES_BLOCK_CHAIN_DESC" xml:space="preserve">
-    <value />
+    <value>Разработана блокчейн-платформа для управления цепочками поставок, обеспечивающая прозрачность, улучшенное отслеживание и сотрудничество всех участников.</value>
   </data>
   <data name="CASES_BLOCK_CHAIN_IMG" xml:space="preserve">
-    <value />
+    <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_BLOCK_CHAIN_URL" xml:space="preserve">
-    <value />
+    <value>Блокчейн-платформа для цепочек поставок</value>
   </data>
   <data name="CASES_MARKETING" xml:space="preserve">
-    <value />
+    <value>Аналитика и оптимизация маркетинга</value>
   </data>
   <data name="CASES_MARKETING_DESC" xml:space="preserve">
-    <value />
+    <value>Создана облачная платформа для digital-маркетологов с аналитикой в реальном времени, визуализацией данных и AI-оптимизацией для максимизации ROI кампаний.</value>
   </data>
   <data name="CASES_MARKETING_IMG" xml:space="preserve">
-    <value />
+    <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_MARKETING_URL" xml:space="preserve">
-    <value />
+    <value>Аналитика и оптимизация маркетинга</value>
   </data>
   <data name="CASES_STUDENT" xml:space="preserve">
-    <value />
+    <value>Система управления студентами для вузов</value>
   </data>
   <data name="CASES_STUDENT_DESC" xml:space="preserve">
-    <value />
+    <value>Внедрена комплексная система управления студентами для вузов: регистрация, зачисление на курсы и академический учет в единой системе.</value>
   </data>
   <data name="CASES_STUDENT_IMG" xml:space="preserve">
-    <value />
+    <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_STUDENT_URL" xml:space="preserve">
-    <value />
+    <value>Система управления студентами для вузов</value>
   </data>
   <data name="CASES_PREDICTIVE" xml:space="preserve">
-    <value />
+    <value>Промышленное предиктивное обслуживание</value>
   </data>
   <data name="CASES_PREDICTIVE_DESC" xml:space="preserve">
-    <value />
+    <value>Создана IoT-платформа для предиктивного обслуживания промышленного оборудования, позволяющая выявлять проблемы на ранней стадии, планировать сервис и снижать простои.</value>
   </data>
   <data name="CASES_PREDICTIVE_IMG" xml:space="preserve">
-    <value />
+    <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_PREDICTIVE_URL" xml:space="preserve">
-    <value />
+    <value>Промышленное предиктивное обслуживание</value>
   </data>
   <data name="CASES_HR" xml:space="preserve">
-    <value />
+    <value>HR-менеджмент для малого бизнеса</value>
   </data>
   <data name="CASES_HR_DESC" xml:space="preserve">
-    <value />
+    <value>Разработано облачное HR-решение для малого бизнеса с настраиваемыми процессами, самообслуживанием сотрудников и отчетностью для упрощения HR-задач.</value>
   </data>
   <data name="CASES_HR_IMG" xml:space="preserve">
-    <value />
+    <value>images/marketing-lab.svg</value>
   </data>
   <data name="CASES_HR_URL" xml:space="preserve">
-    <value />
+    <value>HR-менеджмент для малого бизнеса</value>
   </data>
   <data name="FEEDBACK_ITEM_0_AUTHOR" xml:space="preserve">
     <value />
