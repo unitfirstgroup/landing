@@ -13,6 +13,7 @@ public class BrowserService(IJSRuntime jsRuntime) : IBrowserService
     {
         _mainModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/index.js" });
         _windowModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", new[] { "./js/window.js" });
+        await jsRuntime.InvokeVoidAsync("flowbiteInterop.initializeFlowbite");
     }
 
     public async Task<BrowserDimension> GetDimensions()
