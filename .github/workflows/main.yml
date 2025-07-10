@@ -35,7 +35,7 @@ jobs:
       
      # disable jekyll
     - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
+      run: touch src/release/wwwroot/.nojekyll
       
      # deploy to Github Pages 
     - name: Uploading files to gh-pages branch
