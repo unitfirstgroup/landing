@@ -44,4 +44,3 @@ jobs:
       with:
         branch: gh-pages
         folder: src/release/wwwroot
-        ssh-key: ${{ secrets.DEPLOY_KEY }}
