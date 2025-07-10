@@ -44,3 +44,4 @@ jobs:
       with:
         branch: gh-pages
         folder: src/release/wwwroot
+        token: ${{ secrets.TOKEN }}
