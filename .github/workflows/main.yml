@@ -30,16 +30,17 @@ jobs:
 
      # change'/' to '/unitfirstgroup/'
     - name: Change base-tag in index.html from / to unitfirstgroup
+      working-directory: src
       run: sed -i 's/<base href="\/" \/>/<base href="\/unitfirstgroup\/" \/>/g' release/wwwroot/index.html
       
      # disable jekyll
     - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
+      run: touch src/release/wwwroot/.nojekyll
       
      # deploy to Github Pages 
     - name: Uploading files to gh-pages branch
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: release/wwwroot
+        folder: src/release/wwwroot
         token: ${{ secrets.TOKEN }}
