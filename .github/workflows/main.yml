@@ -26,7 +26,7 @@ jobs:
       # publish static
     - name: Publish .NET Core Project
       working-directory: src
-      run: dotnet publish -c:Release -p:GHPages=true -o release --nologo
+      run: dotnet publish -c:Release -p:GHPages=true -o src/release --nologo
 
      # change'/' to '/unitfirstgroup/'
     - name: Change base-tag in index.html from / to unitfirstgroup
@@ -42,5 +42,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: release/wwwroot
+        folder: src/release/wwwroot
         token: ${{ secrets.TOKEN }}
