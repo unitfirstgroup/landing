@@ -25,6 +25,7 @@ jobs:
         
       # publish static
     - name: Publish .NET Core Project
+      working-directory: src
       run: dotnet publish -c:Release -p:GHPages=true -o release --nologo
 
      # change'/' to '/unitfirstgroup/'
