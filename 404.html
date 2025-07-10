@@ -14,7 +14,7 @@
     <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <!-- Main css file -->
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/output.css" />
 </head>
 
 <body>
@@ -28,20 +28,16 @@
 
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script>
-        window.initializeFlowbite = () => {
-            initFlowbite();
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/flowbite-interop.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/window.js"></script>
     <script>
         window.appCulture = {
             get: () => window.localStorage['APP_LANGUAGE'],
             set: (value) => window.localStorage['APP_LANGUAGE'] = value
         };
     </script>
-    <script src="js/index.js"></script>
-    <script src="js/window.js"></script>
     <script src="brotliloader.min.js" type="module"></script>
 </body>
 
