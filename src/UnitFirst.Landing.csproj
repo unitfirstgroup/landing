@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Content Remove="Pages\Services - Copy.razor" />
+    <Content Remove="tailwind.extension.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\" />
+    <None Include="wwwroot\css\input.css" />
+    <None Include="wwwroot\css\input.output.css" />
   </ItemGroup>
 
   <ItemGroup>

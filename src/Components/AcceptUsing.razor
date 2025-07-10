@@ -1,5 +1,5 @@
 ﻿<div class="relative z-50 @Theme.HideTherms bg-gray-100"> 
-    <div class="fixed bottom-0 left-0 w-full overflow-visible border-t border-gray-200 bg-white-main shadow">
+    <div class="fixed bottom-0 left-0 w-full overflow-visible border-t border-gray-200 bg-white-main shadow-sm">
         <div class="container mx-auto flex items-center justify-between px-4 py-2">
             <p class="text-sm text-gray-700">We use cookies to ensure you get the best experience on our website.
                 Learn more <a href="documents/dummy.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-500">here</a>.
@@ -7,12 +7,12 @@
             <div class="flex space-x-4">
                 <button type="button"
                         @onclick="() => { AcceptCommand.Execute(null); }"
-                        class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-white-action px-2.5 py-2.5 text-center text-sm text-sm font-medium text-white-action shadow-lg hover:text-white-main hover:bg-white-action focus:ring-4 focus:outline-none focus:ring-dark-action dark:text-dark-action dark:border-dark-action dark:text-dark-action dark:shadow-orange sm:px-2.5 dark:hover:bg-dark-action  dark:hover:text-white-main dark:focus:ring-dark-action">
+                        class="inline-flex h-10 w-auto min-w-24 items-center justify-center rounded-lg border border-white-action px-2.5 py-2.5 text-center text-sm text-sm font-medium text-white-action shadow-lg hover:text-white-main hover:bg-white-action focus:ring-4 focus:outline-hidden focus:ring-dark-action dark:text-dark-action dark:border-dark-action dark:text-dark-action dark:shadow-orange sm:px-2.5 dark:hover:bg-dark-action  dark:hover:text-white-main dark:focus:ring-dark-action">
                     Accept
                 </button>
                 <button type="button"
                         @onclick="() => { DeclineCommand.Execute(null); }"
-                        class="inline-flex w-auto min-w-24 items-center justify-center rounded-lg border bg-gray-300 px-5 py-2.5 text-center text-sm font-medium shadow-lg focus:ring-4 focus:outline-none dark:bg-gray-300 sm:px-2.5">
+                        class="inline-flex w-auto min-w-24 items-center justify-center rounded-lg border bg-gray-300 px-5 py-2.5 text-center text-sm font-medium shadow-lg focus:ring-4 focus:outline-hidden dark:bg-gray-300 sm:px-2.5">
                     Decline
                 </button>
             </div>

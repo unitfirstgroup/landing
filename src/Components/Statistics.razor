@@ -1,17 +1,17 @@
 ﻿<div class="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
     @foreach (var item in Items)
     {
-        <div class="relative flex flex-grow !flex-row flex-col items-center rounded border border-white-action bg-white-main bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-dark-action dark:bg-dark-main dark:text-white dark:shadow-none">
-            <div class="h-[90px] ml-[18px] flex w-auto flex-row items-center">
-                <div class="rounded-full bg-white-main p-3 dark:bg-dark-main">
-                    <span class="flex items-center text-white-action dark:text-dark-action">
+        <div class="border-white-action bg-white-main relative flex grow flex-row! flex-col items-center rounded-sm border bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-dark-action dark:bg-dark-main dark:text-white dark:shadow-none">
+            <div class="ml-[18px] flex h-[90px] w-auto flex-row items-center">
+                <div class="bg-white-main rounded-full p-3 dark:bg-dark-main">
+                    <span class="text-white-action flex items-center dark:text-dark-action">
                         <img src="@item.Icon" class="h-6 w-6 dark:bg-white" height="1em" width="1em"/>
                     </span>
                 </div>
             </div>
-            <div class="h-50 ml-4 flex w-auto flex-col justify-center">
+            <div class="ml-4 flex h-20 w-auto flex-col justify-center">
                 <p class="text-sm font-medium">@item.Name</p>
-                <h4 class="text-xl font-bold text-white-action dark:text-dark-action">@item.Value</h4>
+                <h4 class="text-white-action text-xl font-bold dark:text-dark-action">@item.Value</h4>
             </div>
         </div>
     }
