@@ -1,9 +1,9 @@
 ﻿<div class="flex flex-col py-8">
-    <h1 class="w-full self-center p-2 text-center text-2xl font-medium tracking-tight sm:text-4xl lg:p-12 lg:w-1/2">@DataContext.Title</h1>
-    <p class="self-center p-2 text-center text-lg leading-8 lg:p-12 lg:w-5/6">@DataContext.Greeting</p>
+    <h1 class="w-full self-center p-2 text-center text-2xl font-medium tracking-tight sm:text-4xl lg:w-1/2 lg:p-12">@DataContext.Title</h1>
+    <p class="self-center p-2 text-center text-lg leading-8 lg:w-5/6 lg:p-12">@DataContext.Greeting</p>
     <input type="email" 
            readonly
-           class="mr-2 max-h-10 w-full max-w-sm self-center rounded-lg border border-white-action bg-white-main object-center text-center text-sm text-dark-main focus:ring-white-action focus:border-white-action dark:bg-dark-main dark:border-dark-action dark:placeholder-gray-400 dark:text-white-main dark:focus:ring-dark-action dark:focus:border-dark-action"
+           class="border-white-action bg-white-main text-dark-main mr-2 h-10 w-full max-w-sm self-center rounded-lg border object-center text-center text-sm focus:ring-white-action focus:border-white-action dark:bg-dark-main dark:border-dark-action dark:text-white-main dark:placeholder-gray-400 dark:focus:ring-dark-action dark:focus:border-dark-action"
            value="@DataContext.Email" 
            required>
 </div>
