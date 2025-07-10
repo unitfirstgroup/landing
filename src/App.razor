@@ -29,17 +29,31 @@
     /// <returns></returns>
     protected override void OnInitialized()
     {
-        // cascade value
+    // cascade value
         Theme = ApplicationThemeService.LoadTheme();
         Console.WriteLine($@"{DateTime.UtcNow.ToDateTimeString()}|{nameof(App)}|{nameof(OnInitialized)}|{Theme.Organization}");
     }
-
-    protected override async Task OnInitializedAsync()
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // dimensions
-        var dimensions = await BrowserService.GetDimensions();
-        var value = $"[{dimensions.Width}x{dimensions.Height}]";
-        SyncLocalStorageService.SetItemAsString(LocalStorageConstants.BrowserDimensionsKey, value);
-    }
+        if (firstRender)
+        {
+            await BrowserService.Initialize();
+            
+            // dark
+            var dark = SyncLocalStorageService.GetItemAsString(LocalStorageConstants.DarkKey);
 
+            if (dark == "dark")
+            {
+                await BrowserService.DarkTheme();
+            }
+
+            // dimensions
+            var dimensions = await BrowserService.GetDimensions();
+            var value = $"[{dimensions.Width}x{dimensions.Height}]";
+            SyncLocalStorageService.SetItemAsString(LocalStorageConstants.BrowserDimensionsKey, value);
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
 }

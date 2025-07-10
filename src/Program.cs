@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using UnitFirst.Landing;
 using UnitFirst.Landing.Constants;
 using UnitFirst.Landing.Extensions;
-using UnitFirst.Landing.Interfaces;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -35,10 +34,6 @@ builder.Services.AddBlazoredLocalStorageAsSingleton(config =>
 
 var host = builder.Build();
 
-// browser init
-var browserService = host.Services.GetRequiredService<IBrowserService>();
-await browserService.Initialize();
-
 // culture
 var syncLocalStorageService = host.Services.GetRequiredService<ISyncLocalStorageService>();
 var appLanguage = syncLocalStorageService.GetItemAsString(LocalStorageConstants.LanguageKey);
@@ -56,14 +51,6 @@ else
     CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
     CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
     syncLocalStorageService.SetItemAsString(LocalStorageConstants.LanguageKey, defaultCulture);
-}
-
-// dark
-var dark = syncLocalStorageService.GetItemAsString(LocalStorageConstants.DarkKey);
-
-if (dark == "dark")
-{
-    await browserService.DarkTheme();
 }
 
 await host.RunAsync();
