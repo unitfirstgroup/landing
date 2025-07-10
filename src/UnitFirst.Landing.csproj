@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Content Remove="Pages\Services - Copy.razor" />
+    <Content Remove="tailwind.extension.json" />
   </ItemGroup>
 
   <ItemGroup>
