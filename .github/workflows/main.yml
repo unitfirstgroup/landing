@@ -35,12 +35,12 @@ jobs:
       
      # disable jekyll
     - name: Add .nojekyll file
-      run: touch src/release/wwwroot/.nojekyll
+      run: touch release/wwwroot/.nojekyll
       
      # deploy to Github Pages 
     - name: Uploading files to gh-pages branch
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: src/release/wwwroot
+        folder: release/wwwroot
         token: ${{ secrets.TOKEN }}
