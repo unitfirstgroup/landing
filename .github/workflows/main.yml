@@ -25,17 +25,14 @@ jobs:
         
       # publish static
     - name: Publish .NET Core Project
-      working-directory: src
       run: dotnet publish -c:Release -p:GHPages=true -o release --nologo
 
      # change'/' to '/unitfirstgroup/'
     - name: Change base-tag in index.html from / to unitfirstgroup
-      working-directory: src
       run: sed -i 's/<base href="\/" \/>/<base href="\/unitfirstgroup\/" \/>/g' release/wwwroot/index.html
       
      # disable jekyll
     - name: Add .nojekyll file
-      working-directory: src
       run: touch release/wwwroot/.nojekyll
       
      # deploy to Github Pages 
