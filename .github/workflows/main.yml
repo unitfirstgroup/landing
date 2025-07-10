@@ -25,7 +25,6 @@ jobs:
         
       # publish static
     - name: Publish .NET Core Project
-      working-directory: src
       run: dotnet publish ./src/UnitFirst.Landing.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
       
      # deploy to Github Pages 
