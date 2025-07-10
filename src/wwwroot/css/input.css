@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-white-main: oklch(0.985 0.001 106.423);
     --color-white-action: oklch(0.586 0.253 17.585);
